@@ -24,6 +24,11 @@ jobs:
       POSTGRES_PASSWORD: ci-local-only-password
     steps:
       - uses: actions/checkout@v4
+      - name: Validate legal catalog
+        working-directory: services/legal-catalog
+        run: |
+          python3 catalog.py ../../catalog/legal/mg
+          python3 -m unittest discover -s tests -v
       - name: Validate Compose syntax
         run: docker compose -f infrastructure/compose.yaml config --quiet
       - name: Prepare Laravel environment

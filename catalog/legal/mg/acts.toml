@@ -1,0 +1,163 @@
+# Atos normativos levantados para Minas Gerais.
+# Cada ato registra a fonte oficial, o meio pelo qual o texto foi lido e o estado
+# de verificação. Nenhum ato entra como "verified" sem leitura do texto integral.
+#
+# text_status:
+#   full_text_read      texto integral lido (fonte oficial ou espelho identificado)
+#   official_summary    só a página oficial de resumo foi lida; texto integral não obtido
+#   not_read            citado por fonte oficial, texto não lido
+#
+# review: "pending" até aprovação do Fernando no PR.
+
+collected_at = "2026-11-14"
+
+[[act]]
+id = "ief-154-2011"
+title = "Portaria IEF nº 154, de 13/10/2011 — piracema na bacia do rio São Francisco"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+published = "2011-10-13"
+official_url = "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_154_2.pdf"
+read_from = "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf"
+text_status = "full_text_read"
+in_force_evidence = "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos"
+in_force_note = "Agência Minas (05/11/2026) cita as Portarias 154, 155 e 156 como base da piracema até 28/02/2027."
+review = "pending"
+
+[[act]]
+id = "ief-155-2011"
+title = "Portaria IEF nº 155, de 13/10/2011 — piracema nas bacias do Leste"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+published = "2011-10-13"
+official_url = "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_155_2.pdf"
+read_from = "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_155_2.pdf"
+text_status = "full_text_read"
+in_force_evidence = "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos"
+in_force_note = "Mesma notícia oficial de 05/11/2026."
+review = "pending"
+
+[[act]]
+id = "ief-156-2011"
+title = "Portaria IEF nº 156, de 13/10/2011 — piracema nas bacias dos rios Grande e Paranaíba"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+published = "2011-10-13"
+official_url = "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_156_2.pdf"
+read_from = "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_156_2.pdf"
+text_status = "full_text_read"
+in_force_evidence = "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos"
+in_force_note = "Mesma notícia oficial de 05/11/2026."
+review = "pending"
+
+[[act]]
+id = "ief-31-2025"
+title = "Portaria IEF nº 31, de 29/04/2025 — ordenamento pesqueiro da bacia do rio Doce"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+published = "2025-04-29"
+official_url = "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf"
+read_from = "https://www.ief.mg.gov.br/web/ief/pesca-no-rio-doce"
+text_status = "official_summary"
+in_force_evidence = "https://www.ief.mg.gov.br/web/ief/pesca-no-rio-doce"
+in_force_note = "Página do IEF aplica a Portaria 31/2025. O PDF oficial bloqueia leitura automática; limites de captura vieram de fonte secundária e precisam de conferência no texto."
+revokes = ["ief-40-2017"]
+review = "pending"
+
+[[act]]
+id = "ief-40-2017"
+title = "Portaria IEF nº 40, de 11/05/2017 — proibição da pesca de nativas na bacia do rio Doce"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+published = "2017-05-12"
+official_url = "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf"
+read_from = "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf"
+text_status = "full_text_read"
+in_force_note = "Substituída pela Portaria IEF 31/2025. Mantida só como histórico; nenhuma regra ativa aponta para ela."
+status = "revoked"
+review = "pending"
+
+[[act]]
+id = "ief-16-2019"
+title = "Portaria IEF nº 16, de 28/02/2019 — pesca na bacia do rio Paraopeba"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+published = "2019-02-28"
+official_url = ""
+read_from = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais"
+text_status = "official_summary"
+in_force_note = "Página do IEF diz que a pesca de nativas segue proibida em toda a bacia até nova portaria. Texto integral não localizado."
+review = "pending"
+
+[[act]]
+id = "ibama-50-2007"
+title = "Portaria IBAMA nº 50, de 05/11/2007 — defeso na bacia do rio São Francisco"
+issuer = "IBAMA"
+jurisdiction = "federal"
+published = "2007-11-05"
+official_url = "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
+read_from = "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
+text_status = "full_text_read"
+in_force_note = "Vigência atual não confirmada em base oficial consolidada; a planilha de defesos do MPA (versão de 02/07/2026) não pôde ser lida."
+review = "pending"
+
+[[act]]
+id = "ibama-in-196-2008"
+title = "Instrução Normativa IBAMA nº 196, de 02/10/2008 — defeso nas bacias do Leste"
+issuer = "IBAMA"
+jurisdiction = "federal"
+published = "2008-10-03"
+official_url = ""
+read_from = "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
+text_status = "full_text_read"
+in_force_note = "Texto lido em agregador. Trecho da planilha oficial do MPA indexado em busca lista a IN 196/2008 entre os defesos vigentes; confirmar no PDF oficial."
+review = "pending"
+
+[[act]]
+id = "ibama-in-25-2009"
+title = "Instrução Normativa IBAMA nº 25, de 01/09/2009 — defeso na bacia do rio Paraná"
+issuer = "IBAMA"
+jurisdiction = "federal"
+published = "2009-09-02"
+official_url = ""
+read_from = ""
+text_status = "not_read"
+in_force_note = "Citada por órgãos estaduais como vigente. Página do texto falhou na leitura; inclui rios de MG (Prata, Tejuco, Quebra-Anzol, Salitre)."
+review = "pending"
+
+[[act]]
+id = "mg-lei-15082-2004"
+title = "Lei Estadual nº 15.082, de 27/04/2004 — rios de preservação permanente"
+issuer = "ALMG"
+jurisdiction = "estadual"
+published = "2004-04-27"
+official_url = "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15082/2004/"
+read_from = "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf"
+text_status = "full_text_read"
+in_force_note = "Não proíbe a pesca expressamente; veda atividade que ameace extinguir espécie aquática (art. 3º, III). Tratada como alerta, não como proibição."
+review = "pending"
+
+[[act]]
+id = "mma-300-2022"
+title = "Portaria MMA nº 300, de 13/12/2022 — Lista Nacional de Espécies Ameaçadas (Anexo III: peixes)"
+issuer = "MMA"
+jurisdiction = "federal"
+published = "2022-12-14"
+official_url = ""
+read_from = "https://www.lex.com.br/portaria-mma-no-300-de-13-de-dezembro-de-2022/"
+text_status = "not_read"
+in_force_note = "Atualizada pela Portaria GM/MMA nº 1.667, de 27/04/2026. Lista de espécies ainda não extraída."
+review = "pending"
+
+[[act]]
+id = "ief-guia-restricoes"
+title = "IEF — página Restrições Ambientais à Pesca em Minas Gerais"
+issuer = "IEF/MG"
+jurisdiction = "estadual"
+kind = "guidance"
+published = ""
+official_url = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais"
+read_from = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais"
+text_status = "official_summary"
+in_force_note = "Página de orientação, sem data. Usada só para regras cujo ato não foi localizado; a regra fica marcada como orientação oficial."
+review = "pending"

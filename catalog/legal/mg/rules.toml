@@ -1,0 +1,277 @@
+# Regras extraídas dos atos em acts.toml.
+#
+# basins: identificadores de catalog/legal/mg/basins.toml.
+# period.kind: "annual" (start/end em MM-DD, podendo virar o ano) ou "permanent".
+# species: "native" (autóctones da bacia), "non_native" (alóctones, exóticas, híbridos),
+#          "all" (qualquer espécie).
+# scope: "basin" (vale para toda a bacia), "buffer" (faixas de distância, lagoas etc.),
+#        "stretch" (trechos de rio nomeados). Só regras "basin" entram na matriz por bacia;
+#        "buffer" e "stretch" dependem do mapeamento geográfico (geo_mapping = "pending").
+# effect: "prohibited" ou "conditional". O catálogo não contém regras "allowed":
+#         a ausência de proibição nunca vira permissão.
+
+# --- Bacia do rio São Francisco (Portaria IEF 154/2011) ---------------------------
+
+[[rule]]
+id = "sf-defeso-nativas"
+act = "ief-154-2011"
+articles = "art. 1º; art. 2º, I"
+basins = ["sao_francisco"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Proibidos captura, posse, transporte e comércio de espécies nativas da bacia durante o defeso."
+
+[[rule]]
+id = "sf-defeso-nao-nativas"
+act = "ief-154-2011"
+articles = "art. 4º; art. 5º"
+basins = ["sao_francisco"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "non_native"
+scope = "basin"
+effect = "conditional"
+summary = "Pesca amadora e profissional, embarcada ou desembarcada, só de espécies alóctones, exóticas ou híbridas listadas no art. 5º."
+conditions = [
+  "licença válida do órgão ambiental",
+  "limite de 3 kg + 1 exemplar por pescador por dia ou jornada",
+  "linha de mão, anzol simples, vara, carretilha/molinete; garatéia só com isca artificial, até 5 varas",
+  "proibida a técnica de lambada",
+]
+
+[[rule]]
+id = "sf-defeso-faixas"
+act = "ief-154-2011"
+articles = "art. 2º, III, a–f, i, k"
+basins = ["sao_francisco"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "all"
+scope = "buffer"
+effect = "prohibited"
+geo_mapping = "pending"
+summary = "Proibida a pesca: 1.000 m a montante e a jusante de barragens, UHEs, cachoeiras e corredeiras; 500 m de confluências, desembocaduras, lagoas, canais e esgotos; 300 m de barramentos; lagoas marginais; cursos d'água com até 20 m de largura; UCs de proteção integral e 10 km no entorno sem plano de manejo."
+
+[[rule]]
+id = "sf-defeso-rios-fechados"
+act = "ief-154-2011"
+articles = "art. 2º, III, g, h, j, l, m"
+basins = ["sao_francisco"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "all"
+scope = "stretch"
+effect = "prohibited"
+geo_mapping = "pending"
+stretches = [
+  "Rio Pandeiros e todos os afluentes, em toda a extensão",
+  "Rio da Prata, da nascente à foz no Rio Paracatu, em Lagoa Grande",
+  "Rio Cipó e afluentes, da nascente à foz no Rio Paraúna",
+  "Rio Abaeté e afluentes, da nascente à foz no São Francisco",
+  "Rio do Sono, da Cachoeira das Almas (divisa João Pinheiro/Buritizeiro) à foz no Rio Paracatu",
+]
+summary = "Pesca proibida em todos os trechos listados durante o defeso."
+
+[[rule]]
+id = "sf-lagoas-marginais-federal"
+act = "ibama-50-2007"
+articles = "art. 1º, § 2º"
+basins = ["sao_francisco"]
+period = { kind = "annual", start = "11-01", end = "04-30" }
+species = "all"
+scope = "buffer"
+effect = "prohibited"
+geo_mapping = "pending"
+summary = "Pesca de qualquer natureza proibida em lagoas marginais de 1º/11 a 30/04 (federal; estende o prazo estadual)."
+
+# --- Bacias do Leste (Portaria IEF 155/2011) --------------------------------------
+
+[[rule]]
+id = "leste-defeso-nativas"
+act = "ief-155-2011"
+articles = "art. 1º; art. 7º"
+basins = ["leste"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Durante o defeso só é permitida a captura e o transporte de espécies não nativas; nativas ficam proibidas."
+
+[[rule]]
+id = "leste-defeso-nao-nativas"
+act = "ief-155-2011"
+articles = "art. 5º; art. 6º; art. 7º"
+basins = ["leste"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "non_native"
+scope = "basin"
+effect = "conditional"
+summary = "Captura de alóctones, exóticas e híbridos permitida com restrições de modalidade e cota."
+conditions = [
+  "limite de 3 kg + 1 exemplar por jornada (amador e profissional)",
+  "nos rios, só pesca desembarcada com linha de mão, caniço, vara com molinete ou carretilha",
+  "nos reservatórios, embarcada ou desembarcada; proibida a lambada",
+]
+
+[[rule]]
+id = "leste-defeso-faixas"
+act = "ief-155-2011"
+articles = "art. 2º"
+basins = ["leste"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "all"
+scope = "buffer"
+effect = "prohibited"
+geo_mapping = "pending"
+summary = "Proibida a pesca em lagoas marginais; 1.000 m de UHEs, cachoeiras e corredeiras; 300 m de outras barragens; 500 m de confluências e esgotos urbanos; cursos d'água com até 20 m de largura."
+
+[[rule]]
+id = "leste-defeso-federal"
+act = "ibama-in-196-2008"
+articles = "arts. 1º a 3º"
+basins = ["leste"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Defeso federal nas bacias do Leste (exceto São Francisco); só não nativas podem ser capturadas. A cota federal (amador 10 kg + 1) é menos restritiva que a estadual."
+
+# --- Bacias dos rios Grande e Paranaíba (Portaria IEF 156/2011) --------------------
+
+[[rule]]
+id = "gp-defeso-nativas"
+act = "ief-156-2011"
+articles = "art. 1º; art. 2º"
+basins = ["grande", "paranaiba"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Proibidos captura, transporte e armazenamento de espécies nativas durante o defeso."
+
+[[rule]]
+id = "gp-defeso-nao-nativas"
+act = "ief-156-2011"
+articles = "art. 7º"
+basins = ["grande", "paranaiba"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "non_native"
+scope = "basin"
+effect = "conditional"
+summary = "Só espécies não nativas, fora das áreas do art. 3º."
+conditions = [
+  "limite de 3 kg + 1 exemplar por dia ou jornada (amador e profissional)",
+  "nos rios só desembarcada; em reservatórios embarcada ou desembarcada",
+  "linha de mão, vara simples ou com molinete/carretilha; até 5 varas por pescador",
+  "proibido usar animais aquáticos como isca, salvo exceções do § 2º",
+  "piauçu (Leporinus macrocephalus) excluído da lista permitida",
+]
+
+[[rule]]
+id = "gp-defeso-faixas"
+act = "ief-156-2011"
+articles = "art. 3º, I–V"
+basins = ["grande", "paranaiba"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "all"
+scope = "buffer"
+effect = "prohibited"
+geo_mapping = "pending"
+summary = "Proibida a pesca em lagoas marginais; 500 m de confluências e esgotos; 1.500 m a montante e jusante de barragens de UHE, mecanismos de transposição, cachoeiras e corredeiras; 500 m a jusante de outras barragens."
+
+[[rule]]
+id = "gp-defeso-trechos-fechados"
+act = "ief-156-2011"
+articles = "art. 3º, VI–XVII"
+basins = ["grande", "paranaiba"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "all"
+scope = "stretch"
+effect = "prohibited"
+geo_mapping = "pending"
+stretches = [
+  "Rio das Mortes, da nascente à Cachoeira das Lavras, a jusante de Severiano Rezende",
+  "Rio Grande, entre a ponte rodoferroviária de Ribeirão Vermelho e a barragem da UHE Camargos",
+  "Rio Grande, da jusante da UHE Porto Colômbia à ponte Engenheiro Gumercindo Penteado (Planura/MG–Colômbia/SP)",
+  "Rio Paranaíba, da nascente ao município de Lagamar",
+  "Rio Paranaíba, da jusante da UHE Emborcação à ponte Estelita Campos (BR-050)",
+  "Rio Paranaíba, entre a UHE Itumbiara e a ponte da BR-153 (Itumbiara/GO–Araporã/MG)",
+  "Rio Paranaíba, da jusante da UHE Cachoeira Dourada até 500 m a jusante da confluência do Rio Meia Ponte",
+  "Rio Paranaíba, da jusante da UHE São Simão à ponte da BR-365 (Santa Vitória/MG–São Simão/GO)",
+  "Rios Quebra-Anzol e Araguari e afluentes, incluindo os formadores do reservatório de Nova Ponte",
+  "Rio Tijuco (Tejuco), da nascente em Uberaba à foz no reservatório de São Simão, e afluentes",
+  "Rio da Prata, da nascente em Veríssimo à foz no Rio Tijuco, e afluentes",
+  "Rio Araguari, da PCH Amador Aguiar II (Capim Branco II) à ponte de Tupaciguara (MG-223)",
+]
+summary = "Pesca proibida em todos os trechos listados durante o defeso."
+
+# --- Bacia do rio Doce (Portaria IEF 31/2025) --------------------------------------
+
+[[rule]]
+id = "doce-nativas-permanente"
+act = "ief-31-2025"
+articles = "a conferir no texto integral"
+basins = ["doce"]
+period = { kind = "permanent" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Pesca de espécies autóctones proibida o ano todo em toda a bacia do Doce em MG; capturas acidentais devolvidas vivas."
+
+[[rule]]
+id = "doce-nao-nativas"
+act = "ief-31-2025"
+articles = "a conferir no texto integral"
+basins = ["doce"]
+period = { kind = "permanent" }
+species = "non_native"
+scope = "basin"
+effect = "conditional"
+summary = "Só espécies exóticas, alóctones ou híbridas, com petrechos listados; redes de emalhar vedadas."
+conditions = [
+  "carteira de pesca obrigatória",
+  "amador: 10 kg + 1 exemplar acima do tamanho mínimo (fonte secundária; conferir no texto)",
+  "profissional: sem limite de quantidade (fonte secundária; conferir no texto)",
+  "durante o defeso valem também as regras da Portaria IEF 155/2011 (mais restritivas)",
+]
+
+# --- Bacia do rio Paraopeba (Portaria IEF 16/2019) ----------------------------------
+
+[[rule]]
+id = "paraopeba-nativas-permanente"
+act = "ief-16-2019"
+articles = "texto integral não obtido"
+basins = ["paraopeba"]
+period = { kind = "permanent" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Pesca de nativas proibida em toda a bacia do Paraopeba até nova portaria, segundo a página oficial do IEF; capturas acidentais devolvidas."
+
+[[rule]]
+id = "paraopeba-nao-nativas"
+act = "ief-16-2019"
+articles = "texto integral não obtido"
+basins = ["paraopeba"]
+period = { kind = "permanent" }
+species = "non_native"
+scope = "basin"
+effect = "conditional"
+summary = "Só exóticas, alóctones ou híbridas, com petrechos permitidos; pesca profissional proibida (Decretos 43.713/2004 e 47.383/2018, segundo o IEF)."
+conditions = [
+  "somente pesca amadora",
+  "petrechos e cotas a conferir no texto da portaria",
+]
+
+# --- Regras estaduais gerais (orientação oficial do IEF) ----------------------------
+
+[[rule]]
+id = "mg-ucs-estaduais"
+act = "ief-guia-restricoes"
+articles = "orientação oficial"
+basins = ["mg"]
+period = { kind = "permanent" }
+species = "all"
+scope = "buffer"
+effect = "prohibited"
+geo_mapping = "pending"
+summary = "Qualquer modalidade de pesca proibida em Unidades de Conservação estaduais, salvo pesca científica autorizada."

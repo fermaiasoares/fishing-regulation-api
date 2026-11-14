@@ -1,0 +1,45 @@
+# Listas de espécies citadas pelos atos. "origin" é relativa à bacia indicada.
+# As listas oficiais não são exaustivas: uma espécie fora da lista NÃO é presumida
+# não nativa. Sem classificação, a avaliação deve resultar em "undetermined".
+
+[[list]]
+id = "ief-154-2011-art5"
+act = "ief-154-2011"
+basin = "sao_francisco"
+note = "Art. 5º, IV lista autóctones (piranha, pirambeba, camboge/tamoatá) entre as capturáveis, mas o art. 4º só permite não nativas; o texto não resolve o conflito. Tratar como undetermined."
+aloctone = ["Tucunaré (Cichla spp.)", "Tambaqui", "Apaiari", "Pescada-do-piauí", "Pacu (caranha amarela)", "Caranha preta / pirapitinga", "Cachara", "Trairão", "Piranha vermelha", "Piranha preta"]
+exotic = ["Tilápias", "Bagre africano", "Catfish", "Carpa comum", "Carpa espelho", "Carpa capim", "Carpa prateada", "Carpa cabeçuda", "Black bass"]
+hybrid = ["Tambacu (tambaqui × pacu)", "Pintachara (pintado × cachara)"]
+native_listed_as_capturable = ["Piranha (Pygocentrus piraya)", "Pirambeba", "Camboge / tamoatá"]
+
+[[list]]
+id = "ief-155-2011-art7"
+act = "ief-155-2011"
+basin = "leste"
+non_native = ["Tucunaré", "Tilápia", "Bagre africano", "Tambaqui", "Carpas (todas)", "Catfish", "Pacu", "Piranha", "Cachara", "Tambacu", "Camarão gigante da Malásia"]
+
+[[list]]
+id = "ief-156-2011-art7"
+act = "ief-156-2011"
+basin = "grande,paranaiba"
+non_native = ["Apaiari", "Bagre africano", "Black bass", "Carpas (todas)", "Pescada-do-piauí", "Peixe-rei", "Sardinha-de-água-doce", "Piranha preta", "Tilápia", "Tucunaré", "Zoiudo"]
+excluded = ["Piauçu (Leporinus macrocephalus)"]
+
+[[list]]
+id = "ief-doce-autoctones"
+act = "ief-31-2025"
+basin = "doce"
+source_url = "https://meioambiente.mg.gov.br/documents/d/ief/especies_de_peixes_autoctones_do_rio_doce"
+note = "Documento do IEF com cabeçalho da Portaria 40/2017, ainda publicado pela página da Portaria 31/2025. Lista não exaustiva."
+native = [
+  "Geophagus brasiliensis", "Henochilus weatlandii", "Rhamdia quelen", "Crenicichla lacustris",
+  "Oligosarcus argenteus", "Cichlasoma facetum", "Delturus carinotus", "Hypostomus luetkeni",
+  "Hypostomus affinis", "Loricariichthys castaneus", "Neoplecostomus espiritosantensis", "Hypostomus sp.",
+  "Pachyurus adspersus", "Trachelyopterus striatulus", "Prochilodus vimboides", "Pseudauchenipterus affinis",
+  "Astyanax scabripinnis", "Astyanax bimaculatus", "Astyanax fasciatus", "Moenkhausia doceana",
+  "Astyanax aff. taeniatus", "Oligosarcus solitarius", "Pimelodus maculatus", "Pimelodella aff. harttii",
+  "Lycengraulis sp.", "Hoplerythrinus unitaeniatus", "Brycon devillei", "Leporinus steindachneri",
+  "Leporinus conirostris", "Leporinus copelandii", "Brycon opalinus", "Brycon nattereri",
+  "Gymnotus carapo", "Cyphocharax gilbert", "Steindachneridion doceanum", "Mugil sp.",
+  "Hypomasticus mormyrops", "Hoplias malabaricus",
+]
