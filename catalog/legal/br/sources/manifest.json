@@ -6,8 +6,8 @@
   "bytes": 14703,
   "kind": "html",
   "retrieved_at": "2026-11-15T21:30:44+00:00",
-  "extractor": "legal-sources/2",
-  "segments": 21,
+  "extractor": "legal-sources/3",
+  "segments": 26,
   "text_chars": 6083
  },
  "ibama-in-25-2009": {
@@ -17,8 +17,8 @@
   "bytes": 21494,
   "kind": "html",
   "retrieved_at": "2026-11-15T21:30:45+00:00",
-  "extractor": "legal-sources/2",
-  "segments": 44,
+  "extractor": "legal-sources/3",
+  "segments": 63,
   "text_chars": 12303
  },
  "mma-1666-2026": {
@@ -28,7 +28,7 @@
   "bytes": 69155,
   "kind": "html",
   "retrieved_at": "2026-11-15T03:33:13+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 52,
   "text_chars": 13419
  },

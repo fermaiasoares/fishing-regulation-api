@@ -109,7 +109,7 @@
    "name": "Território nacional"
   },
   {
-   "definition": "Área de aplicação da IN IBAMA 196/2008, exceto o São Francisco. Limites a conferir no texto oficial; em MG está ligada às bacias do Leste da Portaria IEF 155/2011.",
+   "definition": "Bacias hidrográficas do Leste em Sergipe, Bahia, Minas Gerais e Espírito Santo, exceto a bacia do rio São Francisco (IN IBAMA 196/2008, art. 1º). Em MG está ligada às bacias do Leste da Portaria IEF 155/2011.",
    "geo_mapping": "derived",
    "id": "br:leste",
    "name": "Bacias hidrográficas do Leste (IN IBAMA 196/2008)",
@@ -162,11 +162,25 @@
   },
   {
    "act": "ibama-in-196-2008",
-   "articles": "arts. 1º a 3º",
+   "articles": "arts. 1º, 2º e 7º",
    "basins": [
     "br:leste"
    ],
    "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, nas áreas de abrangência das bacias hidrográficas do Leste, nos estados de Sergipe, Bahia, Minas Gerais e Espírito Santo, excetuando-se a área da bacia hidrográfica do rio São Francisco",
+     "segment": "art1"
+    },
+    {
+     "quote": "Proibir a pesca, anualmente, no período de 1º de novembro a 28 de fevereiro",
+     "segment": "art2"
+    },
+    {
+     "quote": "Permitir a captura e o transporte somente de espécies não nativas (alóctones e exóticas), híbridos e camarão gigante da Malásia (Macrobrachium rosembergii)",
+     "segment": "art7"
+    }
+   ],
    "id": "leste-defeso-federal",
    "period": {
     "end": "02-28",
@@ -175,7 +189,7 @@
    },
    "scope": "basin",
    "species": "native",
-   "summary": "Defeso federal nas bacias do Leste (exceto São Francisco); só não nativas podem ser capturadas. A cota federal (amador 10 kg + 1) é menos restritiva que a estadual."
+   "summary": "Defeso federal nas bacias do Leste em SE, BA, MG e ES (exceto São Francisco): no período de proteção à reprodução só podem ser capturadas e transportadas espécies não nativas (alóctones e exóticas), híbridos e camarão-da-malásia. A cota federal do amador (10 kg + 1 exemplar) é menos restritiva que a estadual."
   },
   {
    "act": "ibama-50-2007",
@@ -197,9 +211,31 @@
   }
  ],
  "sources": {
+  "ibama-in-196-2008": {
+   "bytes": 14703,
+   "extractor": "legal-sources/3",
+   "kind": "html",
+   "official": false,
+   "retrieved_at": "2026-11-15T21:30:44+00:00",
+   "segments": 26,
+   "sha256": "a1b05f62c29da2aefc16de945b4bb453041afbc034f921c740fe1bea38434701",
+   "text_chars": 6083,
+   "url": "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
+  },
+  "ibama-in-25-2009": {
+   "bytes": 21494,
+   "extractor": "legal-sources/3",
+   "kind": "html",
+   "official": false,
+   "retrieved_at": "2026-11-15T21:30:45+00:00",
+   "segments": 63,
+   "sha256": "b5ccac5dea888fe6f3ce7a73939f90be3d219810a186fa66cdc74faa2fa93746",
+   "text_chars": 12303,
+   "url": "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html"
+  },
   "mma-1666-2026": {
    "bytes": 69155,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "html",
    "official": false,
    "retrieved_at": "2026-11-15T03:33:13+00:00",
@@ -2694,6 +2730,7 @@
   }
  ],
  "verified_rules": [
-  "br-ameacadas-protecao-integral"
+  "br-ameacadas-protecao-integral",
+  "leste-defeso-federal"
  ]
 }

@@ -31,13 +31,18 @@ summary = "Pesca de qualquer categoria, modalidade e petrecho proibida nas lagoa
 [[rule]]
 id = "leste-defeso-federal"
 act = "ibama-in-196-2008"
-articles = "arts. 1º a 3º"
+articles = "arts. 1º, 2º e 7º"
 basins = ["leste"]
 period = { kind = "annual", start = "11-01", end = "02-28" }
 species = "native"
 scope = "basin"
 effect = "prohibited"
-summary = "Defeso federal nas bacias do Leste (exceto São Francisco); só não nativas podem ser capturadas. A cota federal (amador 10 kg + 1) é menos restritiva que a estadual."
+summary = "Defeso federal nas bacias do Leste em SE, BA, MG e ES (exceto São Francisco): no período de proteção à reprodução só podem ser capturadas e transportadas espécies não nativas (alóctones e exóticas), híbridos e camarão-da-malásia. A cota federal do amador (10 kg + 1 exemplar) é menos restritiva que a estadual."
+evidence = [
+  { segment = "art1", quote = "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, nas áreas de abrangência das bacias hidrográficas do Leste, nos estados de Sergipe, Bahia, Minas Gerais e Espírito Santo, excetuando-se a área da bacia hidrográfica do rio São Francisco" },
+  { segment = "art2", quote = "Proibir a pesca, anualmente, no período de 1º de novembro a 28 de fevereiro" },
+  { segment = "art7", quote = "Permitir a captura e o transporte somente de espécies não nativas (alóctones e exóticas), híbridos e camarão gigante da Malásia (Macrobrachium rosembergii)" },
+]
 
 [[rule]]
 id = "br-ameacadas-protecao-integral"
