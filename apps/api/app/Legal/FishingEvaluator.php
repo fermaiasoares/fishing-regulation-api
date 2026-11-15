@@ -58,6 +58,7 @@ final class FishingEvaluator
                 'jurisdictions' => $location['jurisdictions'],
                 'water_domain' => self::WATER_DOMAIN_UNDETERMINED,
                 'lineage' => $location['lineage'],
+                'districts' => $location['districts'],
                 'areas' => $location['areas'],
             ],
             'species' => ['input' => $speciesName, 'classification' => null, 'matches' => [], 'threatened' => []],
@@ -252,7 +253,8 @@ final class FishingEvaluator
                 'legal_rules.*',
                 'legal_acts.code as act_code', 'legal_acts.title as act_title',
                 'legal_acts.official_url as act_official_url', 'legal_acts.read_from as act_read_from',
-                'legal_acts.kind as act_kind',
+                'legal_acts.kind as act_kind', 'legal_acts.issuer as act_issuer',
+                'legal_acts.published_on as act_published_on',
                 'legal_catalog_versions.jurisdiction as jurisdiction',
             ]);
 
@@ -270,6 +272,8 @@ final class FishingEvaluator
                 'code' => $row->act_code,
                 'title' => $row->act_title,
                 'kind' => $row->act_kind,
+                'issuer' => $row->act_issuer,
+                'published_on' => $row->act_published_on,
                 'url' => $row->act_official_url ?? $row->act_read_from,
             ],
             'articles' => $row->articles,
@@ -302,11 +306,30 @@ final class FishingEvaluator
             'summary' => $rule['summary'],
             'act' => $rule['act'],
             'articles' => $rule['articles'],
+            'citation' => self::citation($rule['act'], $rule['articles']),
             'period' => $period,
             'species_scope' => $rule['species_scope'],
             'stretches' => $rule['stretches'] ?: null,
             'verified' => $rule['verified'],
             'evidence' => $rule['evidence'],
         ], fn ($value) => $value !== null);
+    }
+
+    /**
+     * Formal reference the fisher can use to find the norm without a link:
+     * "Portaria IEF nº 154, de 13/10/2011, art. 4º, II (IEF/MG)".
+     */
+    private static function citation(array $act, ?string $articles): string
+    {
+        if ($act['kind'] !== 'norm') {
+            return $act['title'].' ('.$act['issuer'].')';
+        }
+
+        $name = trim(explode(' — ', $act['title'], 2)[0]);
+        if ($articles !== null && $articles !== '') {
+            $name .= ', '.$articles;
+        }
+
+        return $name.' ('.$act['issuer'].')';
     }
 }

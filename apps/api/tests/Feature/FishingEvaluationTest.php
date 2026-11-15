@@ -66,6 +66,12 @@ class FishingEvaluationTest extends TestCase
         $this->assertSame(['doce-nativas-permanente'], array_column($result['rules'], 'code'));
         $this->assertTrue($result['rules'][0]['verified']);
         $this->assertSame('ief-31-2025', $result['rules'][0]['act']['code']);
+        $this->assertSame('IEF/MG', $result['rules'][0]['act']['issuer']);
+        $this->assertSame('2025-04-29', $result['rules'][0]['act']['published_on']);
+        $this->assertSame(
+            'Portaria IEF nº 31, de 29/04/2025, art. 3º; art. 4º, parágrafo único (IEF/MG)',
+            $result['rules'][0]['citation'],
+        );
         $this->assertSame('art3', $result['rules'][0]['evidence'][0]['segment']);
         $this->assertSame(['br', 'mg'], array_column($result['catalogs'], 'jurisdiction'));
         $this->assertNotEmpty($result['catalogs'][1]['checksum_sha256']);

@@ -19,7 +19,7 @@ final class LegalAreaResolver
 
     /**
      * @param  list<int>  $catalogVersionIds  published version of each jurisdiction
-     * @return array{geographic_match: bool, matched: list<string>, unpublished: list<string>, states: list<string>, jurisdictions: list<string>, lineage: list<string>, areas: list<array{code: string, name: string, jurisdiction: string}>}
+     * @return array{geographic_match: bool, matched: list<string>, unpublished: list<string>, states: list<string>, jurisdictions: list<string>, lineage: list<string>, districts: list<array{code: string, name: string, area: string, source: string}>, areas: list<array{code: string, name: string, jurisdiction: string}>}
      */
     public function at(float $latitude, float $longitude, array $catalogVersionIds): array
     {
@@ -28,12 +28,13 @@ final class LegalAreaResolver
             throw new InvalidArgumentException('Latitude or longitude outside WGS 84 bounds.');
         }
 
-        $matched = DB::table('legal_area_geometries')
-            ->whereRaw('ST_Covers(geometry, ST_SetSRID(ST_MakePoint(?, ?), 4326))', [$longitude, $latitude])
-            ->distinct()
-            ->orderBy('legal_area_code')
-            ->pluck('legal_area_code')
-            ->all();
+        $features = DB::table('legal_area_geometries')
+            ->join('geographic_dataset_versions', 'geographic_dataset_versions.id', '=', 'legal_area_geometries.dataset_version_id')
+            ->join('geographic_datasets', 'geographic_datasets.id', '=', 'geographic_dataset_versions.dataset_id')
+            ->whereRaw('ST_Covers(legal_area_geometries.geometry, ST_SetSRID(ST_MakePoint(?, ?), 4326))', [$longitude, $latitude])
+            ->orderBy('legal_area_code')->orderBy('source_feature_id')
+            ->get(['legal_area_code', 'source_feature_id', 'source_feature_name', 'geographic_datasets.publisher']);
+        $matched = $features->pluck('legal_area_code')->unique()->values()->all();
 
         $areas = DB::table('legal_areas')
             ->whereIn('catalog_version_id', $catalogVersionIds)
@@ -85,6 +86,13 @@ final class LegalAreaResolver
             'states' => $states,
             'jurisdictions' => $jurisdictions,
             'lineage' => $lineage,
+            // The official features that placed the point in its area (e.g. MG's hydrographic district).
+            'districts' => $features->map(fn ($feature) => [
+                'code' => $feature->source_feature_id,
+                'name' => $feature->source_feature_name ?? $feature->source_feature_id,
+                'area' => $feature->legal_area_code,
+                'source' => $feature->publisher,
+            ])->values()->all(),
             'areas' => array_map(fn (string $code) => [
                 'code' => $code,
                 'name' => $areas[$code]->name,

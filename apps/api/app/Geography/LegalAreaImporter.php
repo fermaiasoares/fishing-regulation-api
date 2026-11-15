@@ -64,7 +64,10 @@ final class LegalAreaImporter
             $datasetId = $this->datasetId($manifest);
             $existing = DB::table('geographic_dataset_versions')
                 ->where('dataset_id', $datasetId)->where('checksum_sha256', $versionChecksum)->value('id');
-            if ($existing !== null && DB::table('legal_area_geometries')->where('dataset_version_id', $existing)->exists()) {
+            // A version loaded before feature names were stored is loaded again to fill them.
+            if ($existing !== null
+                && DB::table('legal_area_geometries')->where('dataset_version_id', $existing)->exists()
+                && ! DB::table('legal_area_geometries')->where('dataset_version_id', $existing)->whereNull('source_feature_name')->exists()) {
                 return ['dataset_version_id' => (int) $existing, 'created' => false, 'features' => 0, 'repaired' => [], 'by_area' => []];
             }
 
@@ -74,6 +77,7 @@ final class LegalAreaImporter
                 CREATE TEMPORARY TABLE legal_area_import ON COMMIT DROP AS
                 WITH features AS (SELECT json_array_elements((?::json)->'features') AS feature)
                 SELECT upper(trim(coalesce(feature->'properties'->>'sigla', feature->'properties'->>'SIGLA'))) AS sigla,
+                       nullif(trim(coalesce(feature->'properties'->>'nome', feature->'properties'->>'NOME')), '') AS nome,
                        ST_SetSRID(ST_GeomFromGeoJSON(feature->>'geometry'), ?) AS geometry
                 FROM features
                 SQL, [$raw, $srid]);
@@ -104,8 +108,8 @@ final class LegalAreaImporter
 
             $repaired = DB::table('legal_area_import')->whereRaw('NOT ST_IsValid(geometry)')->orderBy('sigla')->pluck('sigla')->all();
             DB::insert(<<<'SQL'
-                INSERT INTO legal_area_geometries (legal_area_code, dataset_version_id, source_feature_id, geometry, created_at, updated_at)
-                SELECT mapping.value, ?, import.sigla,
+                INSERT INTO legal_area_geometries (legal_area_code, dataset_version_id, source_feature_id, source_feature_name, geometry, created_at, updated_at)
+                SELECT mapping.value, ?, import.sigla, coalesce(import.nome, import.sigla),
                        ST_Multi(ST_CollectionExtract(ST_MakeValid(ST_Transform(import.geometry, 4326)), 3)), now(), now()
                 FROM legal_area_import AS import
                 JOIN json_each_text(?::json) AS mapping ON mapping.key = import.sigla

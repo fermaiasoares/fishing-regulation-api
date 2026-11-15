@@ -61,6 +61,7 @@ class LegalAreaImportTest extends TestCase
         $row = DB::selectOne('SELECT bool_and(ST_IsValid(geometry)) AS valid, min(ST_SRID(geometry)) AS srid FROM legal_area_geometries WHERE dataset_version_id = ?', [$result['dataset_version_id']]);
         $this->assertTrue($row->valid);
         $this->assertSame(4326, $row->srid);
+        $this->assertSame(['DO1' => 'Teste A', 'SF3' => 'Teste B'], DB::table('legal_area_geometries')->orderBy('source_feature_id')->pluck('source_feature_name', 'source_feature_id')->all());
 
         $again = (new LegalAreaImporter)->import($directory);
         $this->assertFalse($again['created']);
@@ -131,6 +132,9 @@ class LegalAreaImportTest extends TestCase
             $this->assertContains('br', $match['lineage'], $town);
         }
         $this->assertFalse($resolver->at(-23.5505, -46.6333, $versionIds)['geographic_match'], 'São Paulo is outside MG');
+
+        $caratinga = $resolver->at(-19.9802, -42.1408, $versionIds)['districts'];
+        $this->assertSame([['code' => 'DO5', 'name' => 'DO5: Rio Caratinga', 'area' => 'mg:doce', 'source' => 'Igam / IDE-Sisema']], $caratinga);
 
         $this->postJson('/api/fishing/evaluate', [
             'latitude' => -19.7895, 'longitude' => -42.1393, 'species' => 'Pimelodus maculatus', 'date' => '2027-06-15',

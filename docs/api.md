@@ -27,14 +27,17 @@ Limite: 60 requisições por minuto por cliente.
 | --- | --- |
 | `status` | `prohibited`, `conditional` ou `undetermined` |
 | `location.areas` | áreas legais do ponto, da mais específica à mais ampla, com `code`, `name` e `jurisdiction` (ex.: `mg:doce`, `mg:leste`, `mg`, `br:leste`, `br`) |
+| `location.districts` | feições oficiais que localizaram o ponto, com `code`, `name`, `area` e `source` (em MG, a Circunscrição Hidrográfica, ex.: `DO5: Rio Caratinga`) |
 | `location.states` | estados cujas áreas contêm o ponto (ex.: `["mg"]`); perto de divisas poderá ter mais de um |
 | `location.jurisdictions` | jurisdições cujas normas foram avaliadas (ex.: `["br", "mg"]`) |
 | `location.water_domain` | domínio do corpo d'água (`federal`, `state` ou `undetermined`); por ora sempre `undetermined` |
 | `species.threatened` | categoria na Lista Nacional de ameaçadas, quando houver |
 | `species.classification` | `native`, `non_native`, `excluded` (excluída de uma permissão), `conflicting` ou `unknown`, com as entradas das listas oficiais que casaram |
 | `rules` | regras que decidiram o status: `jurisdiction`, ato, artigos, período, `verified` e `evidence` (segmento + trecho literal da norma) |
+| `rules[].citation` | referência formal para o pescador localizar a norma sem link: tipo, número e data do ato, artigos e órgão expedidor (ex.: `Portaria IEF nº 154, de 13/10/2011, art. 4º, II (IEF/MG)`) |
+| `rules[].act` | `code`, `title`, `kind`, `issuer` (órgão expedidor), `published_on` e `url` (opcional: link informativo, pode não abrir; a referência que vale é `citation`) |
 | `conditions` | condições a cumprir quando `conditional`, cada uma com `text`, `rule` e `jurisdiction` |
-| `location_restrictions` | faixas, lagoas, trechos e UCs ativos na data, ainda não verificados geograficamente, cada um com `jurisdiction` |
+| `location_restrictions` | faixas, lagoas, trechos e UCs ativos na data, ainda não verificados geograficamente, cada um com `jurisdiction` e `citation` |
 | `gaps` | o que impede uma resposta mais firme |
 | `catalogs` | um item por catálogo usado: `jurisdiction`, `version_id`, `checksum_sha256`, `published_at` |
 | `disclaimer` | aviso de que a resposta não substitui a norma oficial |
