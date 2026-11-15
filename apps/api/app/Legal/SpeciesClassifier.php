@@ -36,24 +36,31 @@ final class SpeciesClassifier
     ];
 
     /**
-     * @param  list<string>  $areaLineage
-     * @return array{classification: string, matches: list<array{list: string, act: string, entry: string, classification: string}>}
+     * @param  list<string>  $areaLineage  qualified area codes of the point ("mg:doce", "br")
+     * @param  list<int>  $catalogVersionIds  published version of each applicable jurisdiction
+     * @return array{classification: string, matches: list<array{list: string, act: string, entry: string, classification: string}>, threatened: list<array{list: string, act: string, name: string, category: string, valid_from: ?string}>}
      */
-    public function classify(string $name, array $areaLineage, int $catalogVersionId): array
+    public function classify(string $name, array $areaLineage, array $catalogVersionIds): array
     {
         $query = self::normalize($name);
         $matches = [];
 
         $lists = DB::table('legal_species_lists')
             ->join('legal_acts', 'legal_acts.id', '=', 'legal_species_lists.legal_act_id')
-            ->where('legal_species_lists.catalog_version_id', $catalogVersionId)
+            ->whereIn('legal_species_lists.catalog_version_id', $catalogVersionIds)
             ->orderBy('legal_species_lists.code')
             ->get(['legal_species_lists.code', 'legal_species_lists.payload', 'legal_acts.code as act_code']);
 
+        $threatenedLists = [];
         foreach ($lists as $list) {
             $payload = json_decode($list->payload, true);
             $listAreas = array_map('trim', explode(',', (string) ($payload['basin'] ?? '')));
             if (array_intersect($listAreas, $areaLineage) === []) {
+                continue;
+            }
+            if (isset($payload['threatened'])) {
+                $threatenedLists[] = [$list, $payload];
+
                 continue;
             }
             foreach (self::KEYS as $key => $classification) {
@@ -74,7 +81,62 @@ final class SpeciesClassifier
             default => $classes[0],
         };
 
-        return ['classification' => $classification, 'matches' => $matches];
+        return [
+            'classification' => $classification,
+            'matches' => $matches,
+            'threatened' => self::threatened($query, $matches, $threatenedLists),
+        ];
+    }
+
+    /**
+     * Threatened-species lists only carry scientific names, so the query is
+     * checked directly and through the scientific names of the entries it
+     * matched in other lists (e.g. "tambaqui" -> Colossoma macropomum).
+     */
+    private static function threatened(string $query, array $matches, array $lists): array
+    {
+        $names = [$query => true];
+        foreach ($matches as $match) {
+            foreach (self::scientificNames($match['entry']) as $name) {
+                $names[$name] = true;
+            }
+        }
+        $found = [];
+        foreach ($lists as [$list, $payload]) {
+            foreach ($payload['threatened'] as $species) {
+                if (isset($names[self::normalize($species['name'])])) {
+                    $found[] = [
+                        'list' => $list->code,
+                        'act' => $list->act_code,
+                        'name' => $species['name'],
+                        'category' => $species['category'],
+                        'valid_from' => $payload['valid_from'] ?? null,
+                    ];
+                }
+            }
+        }
+
+        return $found;
+    }
+
+    /** Binomial names of an entry, excluding "spp."/"sp." and hybrid crosses. */
+    private static function scientificNames(string $entry): array
+    {
+        if (preg_match('/\((.*)\)\s*$/u', $entry, $parts)) {
+            $inner = trim($parts[1]);
+        } elseif (preg_match('/^[A-Z][a-z]+ [a-z]+$/u', $entry)) {
+            $inner = $entry;
+        } else {
+            return [];
+        }
+        if (! preg_match('/^[A-Z][a-z]+\s/u', $inner) || preg_match('/\s[xX×]\s/u', $inner)) {
+            return [];
+        }
+
+        return array_values(array_filter(
+            array_map(fn ($name) => self::normalize($name), preg_split('/\s+e\s+|\s*,\s*/u', $inner)),
+            fn ($name) => preg_match('/^[a-z]+ [a-z]+$/', $name) === 1 && ! preg_match('/ spp?$/', $name),
+        ));
     }
 
     public static function normalize(string $value): string

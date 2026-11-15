@@ -3,7 +3,7 @@
 # basins: identificadores de catalog/legal/mg/basins.toml.
 # period.kind: "annual" (start/end em MM-DD, podendo virar o ano) ou "permanent".
 # species: "native" (autóctones da bacia), "non_native" (alóctones, exóticas, híbridos),
-#          "all" (qualquer espécie).
+#          "all" (qualquer espécie), "threatened" (espécie presente em species_list).
 # scope: "basin" (vale para toda a bacia), "buffer" (faixas de distância, lagoas etc.),
 #        "stretch" (trechos de rio nomeados). Só regras "basin" entram na matriz por bacia;
 #        "buffer" e "stretch" dependem do mapeamento geográfico (geo_mapping = "pending").
@@ -103,18 +103,6 @@ evidence = [
   { segment = "art2/III/m", quote = "No rio do Sono, da Cachoeira das Almas divisa de municípios de João Pinheiro e Buritizeiro até sua foz no rio Paracatu" },
 ]
 
-[[rule]]
-id = "sf-lagoas-marginais-federal"
-act = "ibama-50-2007"
-articles = "art. 1º, § 2º"
-basins = ["sao_francisco"]
-period = { kind = "annual", start = "11-01", end = "04-30" }
-species = "all"
-scope = "buffer"
-effect = "prohibited"
-geo_mapping = "pending"
-summary = "Pesca de qualquer categoria, modalidade e petrecho proibida nas lagoas marginais de 1º/11 a 30/04 (federal; estende o prazo estadual)."
-
 # --- Bacias do Leste (Portaria IEF 155/2011) --------------------------------------
 
 [[rule]]
@@ -172,17 +160,6 @@ evidence = [
   { segment = "art2/IV", quote = "A menos de 500m (quinhentos metros) da confluência do rio principal com seus afluentes e das saídas de esgotos urbanos" },
   { segment = "art2/V", quote = "Nos cursos d’água, cuja lâmina d’água possua largura igual ou inferior a 20 metros" },
 ]
-
-[[rule]]
-id = "leste-defeso-federal"
-act = "ibama-in-196-2008"
-articles = "arts. 1º a 3º"
-basins = ["leste"]
-period = { kind = "annual", start = "11-01", end = "02-28" }
-species = "native"
-scope = "basin"
-effect = "prohibited"
-summary = "Defeso federal nas bacias do Leste (exceto São Francisco); só não nativas podem ser capturadas. A cota federal (amador 10 kg + 1) é menos restritiva que a estadual."
 
 # --- Bacias dos rios Grande e Paranaíba (Portaria IEF 156/2011) --------------------
 

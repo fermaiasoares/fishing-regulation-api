@@ -3,9 +3,12 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from catalog import evaluate, export_json, in_period, is_verified, load, matrix_markdown, validate
+import json
 
-CATALOG_DIR = Path(__file__).resolve().parents[3] / "catalog" / "legal" / "mg"
+from catalog import evaluate, export_json, in_period, is_verified, lineage, load, matrix_markdown, qualify, validate
+
+LEGAL_DIR = Path(__file__).resolve().parents[3] / "catalog" / "legal"
+CATALOG_DIR = LEGAL_DIR / "mg"
 DEFESO = date(2026, 12, 15)
 OFF_SEASON = date(2027, 6, 15)
 
@@ -14,9 +17,11 @@ class CatalogTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls):
         cls.catalog = load(CATALOG_DIR)
+        cls.federal = cls.catalog.linked["br"]
 
     def test_catalog_is_consistent(self):
         self.assertEqual(validate(self.catalog), [])
+        self.assertEqual(validate(self.federal), [])
 
     def test_no_rule_grants_permission(self):
         self.assertTrue(all(rule["effect"] != "allowed" for rule in self.catalog.rules))
@@ -29,8 +34,9 @@ class CatalogTest(unittest.TestCase):
         broken = copy.deepcopy(self.catalog)
         broken.rules[0]["act"] = "ief-40-2017"
         self.assertIn("revoked", " ".join(validate(broken)))
-        broken.rules[0]["act"] = "ibama-in-25-2009"
-        self.assertIn("was not read", " ".join(validate(broken)))
+        federal = copy.deepcopy(self.federal)
+        federal.rules[0]["act"] = "ibama-in-25-2009"
+        self.assertIn("was not read", " ".join(validate(federal)))
 
     def test_defeso_prohibits_natives_in_every_basin(self):
         for basin in ("sao_francisco", "paraopeba", "grande", "paranaiba", "leste", "doce"):
@@ -72,9 +78,9 @@ class CatalogTest(unittest.TestCase):
         self.assertFalse(in_period(piracema, date(2027, 3, 1)))
 
     def test_every_rule_with_stored_text_is_verified_against_it(self):
-        stored = [rule for rule in self.catalog.rules if rule["act"] in self.catalog.segments]
+        stored = [(c, rule) for c in (self.catalog, self.federal) for rule in c.rules if rule["act"] in c.segments]
         self.assertGreaterEqual(len(stored), 13)
-        self.assertTrue(all(is_verified(self.catalog, rule) for rule in stored))
+        self.assertTrue(all(is_verified(c, rule) for c, rule in stored))
 
     def test_altered_quote_is_rejected(self):
         broken = copy.deepcopy(self.catalog)
@@ -96,14 +102,75 @@ class CatalogTest(unittest.TestCase):
         species["non_native"].append("Dourado (Salminus brasiliensis)")
         self.assertIn("'Salminus brasiliensis' not found in ief-156-2011 art7/IV", " ".join(validate(broken)))
 
+    def test_threatened_list_is_loaded_from_the_official_annex(self):
+        listed = next(item for item in self.federal.species_lists if item["id"] == "mma-1667-2026-anexo-i")
+        names = {entry["name"]: entry["category"] for entry in listed["threatened"]}
+        self.assertEqual(names["Pseudoplatystoma corruscans"], "VU")
+        self.assertEqual(names["Steindachneridion doceanum"], "EN")
+        self.assertTrue(all(entry["group"] in listed["groups"] for entry in listed["threatened"]))
+        rule = next(r for r in self.federal.rules if r["id"] == "br-ameacadas-protecao-integral")
+        self.assertTrue(is_verified(self.federal, rule))
+
+    def test_threatened_rules_need_a_list(self):
+        broken = copy.deepcopy(self.federal)
+        next(r for r in broken.rules if r["id"] == "br-ameacadas-protecao-integral")["species_list"] = "inexistente"
+        self.assertIn("threatened rule needs a species_list", " ".join(validate(broken)))
+
     def test_unverified_rules_are_flagged_as_gaps(self):
         result = evaluate(self.catalog, "paraopeba", OFF_SEASON, "native")
         self.assertIn("paraopeba-nativas-permanente: sem trecho literal conferido no texto armazenado", result.gaps)
 
     def test_export_is_canonical_and_lists_verified_rules(self):
-        exported = export_json(self.catalog, "mg")
-        self.assertEqual(exported, export_json(load(CATALOG_DIR), "mg"))
+        exported = export_json(self.catalog)
+        self.assertEqual(exported, export_json(load(CATALOG_DIR)))
         self.assertIn('"doce-nativas-permanente"', exported.split('"verified_rules"')[1])
+
+    def test_export_qualifies_every_area_code(self):
+        document = json.loads(export_json(self.catalog))
+        areas = {area["id"]: area for area in document["areas"]}
+        self.assertEqual(document["jurisdiction"], "mg")
+        self.assertEqual(areas["mg:doce"]["parent"], "mg:leste")
+        self.assertNotIn("parent", areas["mg"])
+        self.assertEqual(areas["mg:sao_francisco"]["within"], ["br:sao_francisco"])
+        doce = next(rule for rule in document["rules"] if rule["id"] == "doce-nativas-permanente")
+        self.assertEqual(doce["basins"], ["mg:doce"])
+        lists = {item["id"]: item["basin"] for item in document["species_lists"]}
+        self.assertEqual(lists["ief-156-2011-art7"], "mg:grande,mg:paranaiba")
+        federal = json.loads(export_json(self.federal))
+        self.assertEqual({rule["id"]: rule["basins"] for rule in federal["rules"]}["br-ameacadas-protecao-integral"], ["br"])
+
+    def test_lineage_reaches_federal_areas_through_within(self):
+        codes = [qualify(owner.jurisdiction, area) for owner, area in lineage(self.catalog, "doce")]
+        self.assertEqual(codes, ["mg:doce", "mg:leste", "mg", "br:leste", "br"])
+        codes = [qualify(owner.jurisdiction, area) for owner, area in lineage(self.catalog, "paraopeba")]
+        self.assertEqual(codes, ["mg:paraopeba", "mg:sao_francisco", "mg", "br:sao_francisco", "br"])
+
+    def test_federal_rules_apply_through_the_state_areas(self):
+        leste = evaluate(self.catalog, "doce", DEFESO, "native")
+        self.assertIn("leste-defeso-federal", leste.rules)
+        self.assertNotIn("leste-defeso-federal", evaluate(self.catalog, "grande", DEFESO, "native").rules)
+
+    def test_within_must_point_to_an_area_of_another_loaded_catalog(self):
+        broken = copy.deepcopy(self.catalog)
+        broken.linked = self.catalog.linked
+        broken.basins["grande"]["within"] = ["br:parana"]
+        self.assertIn("within br:parana is not an area of a loaded catalog", " ".join(validate(broken)))
+        broken.basins["grande"]["within"] = ["mg:leste"]
+        self.assertIn("must point to another jurisdiction", " ".join(validate(broken)))
+
+    def test_rule_ids_are_unique_across_jurisdictions(self):
+        broken = copy.deepcopy(self.catalog)
+        broken.linked = self.catalog.linked
+        broken.rules[0]["id"] = "br-ameacadas-protecao-integral"
+        self.assertIn("also used by catalog br", " ".join(validate(broken)))
+
+    def test_every_catalog_directory_is_a_jurisdiction_with_a_root_area(self):
+        for directory in LEGAL_DIR.iterdir():
+            if (directory / "acts.toml").exists():
+                catalog = load(directory)
+                self.assertEqual(validate(catalog), [], directory.name)
+                exported = (directory / "catalog.json").read_text()
+                self.assertEqual(exported, export_json(catalog), f"{directory.name}/catalog.json out of date")
 
     def test_matrix_lists_every_basin_and_period(self):
         table = matrix_markdown(self.catalog)

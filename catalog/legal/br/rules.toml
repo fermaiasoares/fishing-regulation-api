@@ -1,0 +1,63 @@
+# Regras extraídas dos atos em acts.toml.
+#
+# basins: identificadores de catalog/legal/br/basins.toml.
+# period.kind: "annual" (start/end em MM-DD, podendo virar o ano) ou "permanent".
+# species: "native" (autóctones da bacia), "non_native" (alóctones, exóticas, híbridos),
+#          "all" (qualquer espécie), "threatened" (espécie presente em species_list).
+# scope: "basin" (vale para toda a bacia), "buffer" (faixas de distância, lagoas etc.),
+#        "stretch" (trechos de rio nomeados). Só regras "basin" entram na matriz por bacia;
+#        "buffer" e "stretch" dependem do mapeamento geográfico (geo_mapping = "pending").
+# effect: "prohibited" ou "conditional". O catálogo não contém regras "allowed":
+#         a ausência de proibição nunca vira permissão.
+# evidence: trechos literais que fundamentam a regra, cada um com o id do segmento em
+#           sources/<ato>.segments.json. Se o texto do ato está armazenado, toda regra
+#           precisa de evidência, e cada trecho precisa existir no segmento indicado.
+
+# Normas federais. Áreas em catalog/legal/br/basins.toml; as áreas estaduais se ligam
+# a elas por "within" (ver docs/adr/0001-jurisdicoes.md).
+
+[[rule]]
+id = "sf-lagoas-marginais-federal"
+act = "ibama-50-2007"
+articles = "art. 1º, § 2º"
+basins = ["sao_francisco"]
+period = { kind = "annual", start = "11-01", end = "04-30" }
+species = "all"
+scope = "buffer"
+effect = "prohibited"
+geo_mapping = "pending"
+summary = "Pesca de qualquer categoria, modalidade e petrecho proibida nas lagoas marginais de 1º/11 a 30/04 (federal; estende o prazo estadual)."
+
+[[rule]]
+id = "leste-defeso-federal"
+act = "ibama-in-196-2008"
+articles = "arts. 1º, 2º e 7º"
+basins = ["leste"]
+period = { kind = "annual", start = "11-01", end = "02-28" }
+species = "native"
+scope = "basin"
+effect = "prohibited"
+summary = "Defeso federal nas bacias do Leste em SE, BA, MG e ES (exceto São Francisco): no período de proteção à reprodução só podem ser capturadas e transportadas espécies não nativas (alóctones e exóticas), híbridos e camarão-da-malásia. A cota federal do amador (10 kg + 1 exemplar) é menos restritiva que a estadual."
+evidence = [
+  { segment = "art1", quote = "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, nas áreas de abrangência das bacias hidrográficas do Leste, nos estados de Sergipe, Bahia, Minas Gerais e Espírito Santo, excetuando-se a área da bacia hidrográfica do rio São Francisco" },
+  { segment = "art2", quote = "Proibir a pesca, anualmente, no período de 1º de novembro a 28 de fevereiro" },
+  { segment = "art7", quote = "Permitir a captura e o transporte somente de espécies não nativas (alóctones e exóticas), híbridos e camarão gigante da Malásia (Macrobrachium rosembergii)" },
+]
+
+[[rule]]
+id = "br-ameacadas-protecao-integral"
+act = "mma-1666-2026"
+articles = "art. 3º, caput e §§ 1º, 2º e 4º; art. 12"
+basins = ["br"]
+period = { kind = "permanent" }
+species = "threatened"
+species_list = "mma-1667-2026-anexo-i"
+scope = "basin"
+effect = "prohibited"
+summary = "Espécies da Lista Nacional (Portaria GM/MMA 1.667/2026) nas categorias EW, CR, EN e VU: captura, transporte, armazenamento e comercialização proibidos o ano todo, em qualquer bacia. Exceções: pesquisa autorizada, exemplares de aquicultura licenciada e captura incidental liberada viva. A portaria não excetua populações introduzidas fora da área nativa."
+evidence = [
+  { segment = "art3", quote = "ficam protegidas de modo integral, incluindo, entre outras medidas, a proibição de captura, transporte, armazenamento, guarda, manejo, beneficiamento e comercialização." },
+  { segment = "art3/par2", quote = "As restrições estabelecidas no caput não se aplicam a exemplares provenientes do cultivo na aquicultura em estabelecimentos devidamente licenciados pelo órgão ambiental competente." },
+  { segment = "art3/par4", quote = "As restrições estabelecidas no caput não se aplicam a exemplares capturados incidentalmente, desde que liberados vivos ou descartados no ato da captura" },
+  { segment = "art12", quote = "as proibições de que trata o art. 3º entrarão em vigor após o prazo de cento e oitenta dias contados da publicação desta Portaria." },
+]

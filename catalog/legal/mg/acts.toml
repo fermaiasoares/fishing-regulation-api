@@ -108,51 +108,6 @@ in_force_note = "Página do IEF diz que a pesca de nativas segue proibida em tod
 review = "pending"
 
 [[act]]
-id = "ibama-50-2007"
-title = "Portaria IBAMA nº 50, de 05/11/2007 — defeso na bacia do rio São Francisco"
-issuer = "IBAMA"
-jurisdiction = "federal"
-published = "2007-11-05"
-official_url = "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
-read_from = "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
-text_status = "full_text_read"
-in_force_note = "Vigência atual não confirmada em base oficial consolidada; a planilha de defesos do MPA (versão de 02/07/2026) não pôde ser lida."
-download_urls = [
-  "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf",
-]
-review = "pending"
-
-[[act]]
-id = "ibama-in-196-2008"
-title = "Instrução Normativa IBAMA nº 196, de 02/10/2008 — defeso nas bacias do Leste"
-issuer = "IBAMA"
-jurisdiction = "federal"
-published = "2008-10-03"
-official_url = ""
-read_from = "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
-text_status = "full_text_read"
-in_force_note = "Texto lido em agregador. Trecho da planilha oficial do MPA indexado em busca lista a IN 196/2008 entre os defesos vigentes; confirmar no PDF oficial."
-download_urls = [
-  "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html",
-]
-review = "pending"
-
-[[act]]
-id = "ibama-in-25-2009"
-title = "Instrução Normativa IBAMA nº 25, de 01/09/2009 — defeso na bacia do rio Paraná"
-issuer = "IBAMA"
-jurisdiction = "federal"
-published = "2009-09-02"
-official_url = ""
-read_from = ""
-text_status = "not_read"
-in_force_note = "Citada por órgãos estaduais como vigente. Página do texto falhou na leitura; inclui rios de MG (Prata, Tejuco, Quebra-Anzol, Salitre)."
-download_urls = [
-  "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html",
-]
-review = "pending"
-
-[[act]]
 id = "mg-lei-15082-2004"
 title = "Lei Estadual nº 15.082, de 27/04/2004 — rios de preservação permanente"
 issuer = "ALMG"
@@ -168,18 +123,6 @@ download_urls = [
 review = "pending"
 
 [[act]]
-id = "mma-300-2022"
-title = "Portaria MMA nº 300, de 13/12/2022 — Lista Nacional de Espécies Ameaçadas (Anexo III: peixes)"
-issuer = "MMA"
-jurisdiction = "federal"
-published = "2022-12-14"
-official_url = ""
-read_from = "https://www.lex.com.br/portaria-mma-no-300-de-13-de-dezembro-de-2022/"
-text_status = "not_read"
-in_force_note = "Atualizada pela Portaria GM/MMA nº 1.667, de 27/04/2026. Lista de espécies ainda não extraída."
-review = "pending"
-
-[[act]]
 id = "ief-guia-restricoes"
 title = "IEF — página Restrições Ambientais à Pesca em Minas Gerais"
 issuer = "IEF/MG"
@@ -190,16 +133,4 @@ official_url = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientai
 read_from = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais"
 text_status = "official_summary"
 in_force_note = "Página de orientação, sem data. Usada só para regras cujo ato não foi localizado; a regra fica marcada como orientação oficial."
-review = "pending"
-
-[[act]]
-id = "ibama-in-195-2008"
-title = "Instrução Normativa IBAMA nº 195, de 02/10/2008 — defeso nas bacias do Sudeste"
-issuer = "IBAMA"
-jurisdiction = "federal"
-published = "2008-10-03"
-official_url = ""
-read_from = ""
-text_status = "not_read"
-in_force_note = "Cobre as bacias do Sudeste exceto Paraná e São Francisco; pode se sobrepor à IN 196/2008 em MG (ex.: Paraíba do Sul). Ler antes de gerar regra."
 review = "pending"

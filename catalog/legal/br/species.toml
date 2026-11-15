@@ -1,0 +1,17 @@
+# Listas de espécies citadas pelos atos, transcritas do texto armazenado em
+# sources/<ato>.txt (grafia original preservada, inclusive erros como "Cicla").
+# "basin" indica a área onde a classificação vale (códigos separados por vírgula).
+#
+# As listas não são exaustivas: uma espécie fora da lista NÃO é presumida não
+# nativa. Sem classificação, a avaliação resulta em "undetermined".
+# Formato de cada entrada: "Nome comum ou Outro nome (Nome científico e Outro)".
+# Em híbridos, o parêntese descreve o cruzamento e não classifica os genitores.
+
+[[list]]
+id = "mma-1667-2026-anexo-i"
+act = "mma-1667-2026"
+basin = "br"
+source_csv = "sources/mma-1667-2026.annex.csv"
+groups = ["Peixes Continentais", "Invertebrados de Água Doce"]
+valid_from = "2026-10-27"
+note = "Anexo I extraído do PDF oficial por annex_1667.py. Lista nacional: vale em qualquer bacia e para qualquer origem da espécie. valid_from segue o art. 12 da Portaria 1.666/2026 (180 dias após 28/04/2026 para espécies novas na lista); como o anexo não identifica quais são novas, a data é aplicada a todas. Só nomes científicos."

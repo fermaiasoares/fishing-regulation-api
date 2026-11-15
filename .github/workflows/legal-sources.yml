@@ -1,12 +1,12 @@
 name: Legal sources
 
-# Downloads the official texts listed in catalog/legal/mg/acts.toml, extracts and
+# Downloads the official texts listed in catalog/legal/*/acts.toml, extracts and
 # segments them, and commits the result to the pull request branch so that every
 # rule can be checked against the exact text it cites.
 on:
   pull_request:
     paths:
-      - catalog/legal/mg/acts.toml
+      - catalog/legal/*/acts.toml
       - services/legal-catalog/sources.py
       - .github/workflows/legal-sources.yml
   workflow_dispatch:
@@ -31,7 +31,17 @@ jobs:
         run: sudo apt-get update -qq && sudo apt-get install -y -qq poppler-utils
       - name: Download, extract and segment
         working-directory: services/legal-catalog
-        run: python3 sources.py ../../catalog/legal/mg | tee ../../legal-sources-report.json
+        run: |
+          python3 - <<'EOF' > ../../legal-sources-report.json
+          import json, pathlib, subprocess
+          report = {}
+          for directory in sorted(pathlib.Path('../../catalog/legal').iterdir()):
+              if (directory / 'acts.toml').exists():
+                  output = subprocess.run(['python3', 'sources.py', str(directory)], check=True, capture_output=True, text=True).stdout
+                  report.update({f'{directory.name}/{act}': entry for act, entry in json.loads(output).items()})
+          print(json.dumps(report, ensure_ascii=False, indent=1))
+          EOF
+          cat ../../legal-sources-report.json
       - name: Summary
         run: |
           python3 - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
@@ -46,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add catalog/legal/mg/sources
+          git add catalog/legal/*/sources
           if git diff --cached --quiet; then
             echo "No changes in legal sources."
           else

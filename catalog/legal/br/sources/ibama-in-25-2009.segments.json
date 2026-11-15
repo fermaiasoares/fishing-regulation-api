@@ -1,0 +1,317 @@
+[
+ {
+  "id": "preamble",
+  "label": "Preâmbulo",
+  "text": "Instrução Normativa IBAMA nº 25 de 01/09/2009 Instrução Normativa IBAMA nº 25 de 01/09/2009 Norma Federal - Publicado no DO em 02 set 2009 Estabelece normas de pesca para o período de proteção à reprodução natural dos peixes, anualmente, de 1º de novembro a 28 de fevereiro, na bacia hidrográfica do rio Paraná. O PRESIDENTE DO INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVÁVEIS IBAMA, no uso das suas atribuições legais previstas no art. 22, inciso V, do Anexo I, da Estrutura regimental, aprovada pelo Decreto nº 6.099, de 26 de abril de 2007; Considerando o disposto no Decreto nº 5.583, de 16 de novembro de 2005, que autoriza o IBAMA a estabelecer normas para a gestão do uso sustentável dos recursos pesqueiros de que trata o § 6º do art. 27 da Lei nº 10.683, de 28 de maio de 2003; Considerando a Lei nº 9.959, de 29 de junho de 2009, que dispõe sobre a Política Nacional de Desenvolvimento Sustentável da Aquicultura e da Pesca. Considerando a Lei nº 11.959, de 29 de junho de 2009, que dispõe sobre a Política Nacional de Desenvolvimento Sustentável da Aquicultura e da Pesca; Considerando que as lagoas marginais são áreas de proteção permanente e possibilitam a conservação dos ambientes onde as espécies ictíicas tenham garantia de sua sobrevivência pelo menos durante a fase inicial de seu desenvolvimento; Considerando o que consta do Processo IBAMA nº 02001.004122/2007-75, que trata do defeso da reprodução dos peixes da bacia hidrográfica do rio Paraná, Resolve:"
+ },
+ {
+  "id": "art1",
+  "label": "Art. 1",
+  "text": "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, anualmente, de 1º de novembro a 28 de fevereiro, na bacia hidrográfica do rio Paraná."
+ },
+ {
+  "id": "art1/par1",
+  "label": "§ 1",
+  "text": "Entende-se por bacia hidrográfica: o rio principal, seus formadores, afluentes, lagos, lagoas marginais, reservatórios e demais coleções de água inseridas na bacia de contribuição do rio."
+ },
+ {
+  "id": "art1/par2",
+  "label": "§ 2",
+  "text": "Esta Instrução Normativa não se aplica ao reservatório do Paranoá (Lago Paranoá), em Brasília/DF, cujo ordenamento pesqueiro é de competência do Distrito Federal."
+ },
+ {
+  "id": "art2",
+  "label": "Art. 2",
+  "text": "Proibir a captura, o transporte e o armazenamento de espécies nativas da bacia hidrográfica do rio Paraná, inclusive espécies utilizadas para fins ornamentais e de aquariofilia."
+ },
+ {
+  "id": "art2/par1",
+  "label": "§ 1",
+  "text": "Entende-se por espécie nativa: espécie de origem e ocorrência natural da bacia hidrográfica em questão."
+ },
+ {
+  "id": "art2/par2",
+  "label": "§ 2",
+  "text": "Este artigo não se aplica a manutenção de espécies para fins de aquariofilia mantidos em residências, sem finalidade comercial, ou aquários públicos de exposição devidamente registrados junto ao IBAMA como Zoológicos e criadouros científicos."
+ },
+ {
+  "id": "art3",
+  "label": "Art. 3",
+  "text": "Proibir a pesca para todas as categorias e modalidades:"
+ },
+ {
+  "id": "art3/I",
+  "label": "I",
+  "text": "nas lagoas marginais;"
+ },
+ {
+  "id": "art3/II",
+  "label": "II",
+  "text": "a menos de quinhentos metros (500m) de confluências e desembocaduras de rios, lagoas, canais e tubulações de esgoto;"
+ },
+ {
+  "id": "art3/III",
+  "label": "III",
+  "text": "até um mil e quinhentos metros (1.500m) a montante e a jusante das barragens de reservatórios de empreendimento hidrelétrico, e de mecanismos de transposição de peixes;"
+ },
+ {
+  "id": "art3/IV",
+  "label": "IV",
+  "text": "até um mil e quinhentos metros (1.500m) a montante e a jusante de cachoeiras e corredeiras;"
+ },
+ {
+  "id": "art3/V",
+  "label": "V",
+  "text": "no rio Grande, no trecho compreendido entre a jusante da barragem da UHE Funil nos municípios de Lavras e Perdões, e a ponte rodoferroviária que interliga os municípios de Lavras e Ribeirão Vermelho, ambos no estado de Minas Gerais;"
+ },
+ {
+  "id": "art3/VI",
+  "label": "VI",
+  "text": "no rio Grande, no trecho a jusante da barragem da UHE de Porto Colômbia até a ponte Engenheiro Gumercindo Penteado (nos municípios de Planura/MG e Colômbia/SP), exceto para fins de transporte, embarque e desembarque, em que se considera como ponto de referencia o Porto Sakuma na margem do estado de São Paulo e o Porto Rio Grande na margem do estado de Minas Gerais."
+ },
+ {
+  "id": "art3/VII",
+  "label": "VII",
+  "text": "no rio Paranaíba, no trecho compreendido entre a jusante da barragem da UHE São Simão e a ponte rodoviária da BR 365 (nos municípios de Santa Vitória/MG e São Simão/GO);"
+ },
+ {
+  "id": "art3/VIII",
+  "label": "VIII",
+  "text": "no rio Paranaíba, no trecho compreendido entre a UHE Itumbiara e a ponte rodoviária da BR 153 nos municípios de Itumbiara (GO) e Araporã (MG);"
+ },
+ {
+  "id": "art3/IX",
+  "label": "IX",
+  "text": "no rio Paranaíba, no trecho compreendido entre a jusante da UHE de Emborcação até a ponte Estelita Campos na BR 050;"
+ },
+ {
+  "id": "art3/X",
+  "label": "X",
+  "text": "no rio Mogi-Guaçu, até dois mil metros (2.000m) a montante e a jusante da corredeira, situada próximo à ponte do bairro Taquari-Ponte, no município de Leme/SP;"
+ },
+ {
+  "id": "art3/XI",
+  "label": "XI",
+  "text": "no rio Pardo/SP, no trecho compreendido entre a jusante da barragem da UHE de Limoeiro até sua foz;"
+ },
+ {
+  "id": "art3/XII",
+  "label": "XII",
+  "text": "no rio Paranapanema, no trecho entre a barragem de Rosana/SP e a sua foz, na divisa dos estados de São Paulo e Paraná (Porto Maringá);"
+ },
+ {
+  "id": "art3/XIII",
+  "label": "XIII",
+  "text": "no rio Tietê, no trecho compreendido entre a jusante da barragem da Usina de Nova Avanhandava até a foz do Ribeirão Palmeiras, no município de Buritama/SP;"
+ },
+ {
+  "id": "art3/XIV",
+  "label": "XIV",
+  "text": "nos rios da Prata, Tejuco, Quebra-Anzol, Salitre e seus respectivos afluentes, no estado de Minas Gerais; nos rios Aguapeí, do Peixe, Santo Anastácio, Anhumas, Xavantes, Arigó, Veado, Moinho e São José dos Dourados (afluentes do rio Paraná), Três Irmãos, Jacaré-Pepira e seus respectivos afluentes, no estado de São Paulo; rio Iguaçu e rios com afluência direta ao reservatório de Itaipu, bem como os rios, Ocoí, São Francisco Falso, São Francisco Verdadeiro, Arroio Guaçu, Ivaí, Piquirí, das Cinzas, Tibagí e seus afluentes no estado do Paraná;"
+ },
+ {
+  "id": "art3/XV",
+  "label": "XV",
+  "text": "No rio Bela Vista, em toda a sua extensão e nos canais e lagos artificiais do Parque da Piracema, da UHE Itaipu Binacional, no estado do Paraná;"
+ },
+ {
+  "id": "art3/XVI",
+  "label": "XVI",
+  "text": "nos corpos d'água de domínio dos estados em que a legislação estadual específica assim o determinar;"
+ },
+ {
+  "id": "art3/XVII",
+  "label": "XVII",
+  "text": "com o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta Instrução Normativa;"
+ },
+ {
+  "id": "art3/XVIII",
+  "label": "XVIII",
+  "text": "nos entornos do Parque Estadual Morro do Diabo (SP), do Parque Estadual do Rio do Peixe (SP), do Parque Estadual do Rio Aguapeí (SP), da Estação Ecológica do Mico-Leão-Preto (SP);do Parque Estadual de Ivinhema (MS); do Parque Nacional de Ilha Grande (PR/MS); da Estação Ecológica do Caiuá (PR) e do Parque Nacional do Iguaçu (PR)."
+ },
+ {
+  "id": "art3/par1",
+  "label": "§ 1",
+  "text": "Para efeito desta Instrução Normativa entende-se por lagoa marginal os alagados, alagadiços, lagos, lagoas, banhados, canais ou poços naturais situados em áreas alagáveis da planície de inundação, que apresentam comunicação permanente ou intermitente com o rio principal ou canais secundários, podendo, em alguns casos, ser alimentados exclusivamente pelo lençol freático."
+ },
+ {
+  "id": "art3/par2",
+  "label": "§ 2",
+  "text": "Entende-se por entorno ou zona de amortecimento o raio de 10 km ao redor das Unidades de Conservação ou a área de entorno estabelecida pelo Plano de Manejo da Unidade de Conservação."
+ },
+ {
+  "id": "art4",
+  "label": "Art. 4",
+  "text": "Proibir a realização de competições de pesca, tais como: torneios, campeonatos e gincanas."
+ },
+ {
+  "id": "art4/par1",
+  "label": "§ 1",
+  "text": "Esta proibição não se aplica a competições de pesca realizadas em reservatórios, visando a captura de espécies não nativas (alóctones e exóticas) e híbridos."
+ },
+ {
+  "id": "art4/par2",
+  "label": "§ 2",
+  "text": "Entende-se por:"
+ },
+ {
+  "id": "art4/par2/a",
+  "label": "a)",
+  "text": "espécie alóctone: espécie de origem e ocorrência natural em outras bacias brasileiras;"
+ },
+ {
+  "id": "art4/par2/b",
+  "label": "b)",
+  "text": "espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, que tenha ou não sido introduzida em águas brasileiras;"
+ },
+ {
+  "id": "art4/par2/c",
+  "label": "c)",
+  "text": "híbrido: organismo resultante do cruzamento de duas espécies."
+ },
+ {
+  "id": "art5",
+  "label": "Art. 5",
+  "text": "Proibir, nos rios da bacia , o uso de trapiche ou plataforma flutuante de qualquer natureza."
+ },
+ {
+  "id": "art6",
+  "label": "Art. 6",
+  "text": "Proibir a pesca subaquática."
+ },
+ {
+  "id": "art6/par-unico",
+  "label": "Parágrafo único",
+  "text": "Fica proibido o uso de materiais perfurantes, tais como: arpão, arbalete, fisga, bicheiro e lança."
+ },
+ {
+  "id": "art7",
+  "label": "Art. 7",
+  "text": "Permitir a pesca em rios da bacia, somente na modalidade desembarcada e utilizando linha de mão, caniço, vara com molinete ou carretilha, com o uso de iscas naturais e artificiais:"
+ },
+ {
+  "id": "art7/I",
+  "label": "I",
+  "text": "nas áreas não mencionadas no art. 3º desta Instrução Normativa;"
+ },
+ {
+  "id": "art7/II",
+  "label": "II",
+  "text": "para a captura e o transporte sem limite de cota para o pescador profissional, e cota de 10kg mais um exemplar para o pescador amador, no ato de fiscalização, somente das espécies não nativas (alóctones e exóticas) e híbridos tais como: apaiari (Astronotus ocelatus); bagre-africano (Clarias sp.); black-bass (Micropterus sp.); carpa (todas as espécies); corvina ou pescada-do-Piauí (Plagioscion squamosissimus); peixe-rei (Odontesthis sp.); sardinha-de-água-doce (Triportheus angulatus); piranha preta (Serrassalmus rombeus) tilápias (Oreochromis spp. e Tilapia spp.), tucunaré (Cichla spp.); zoiudo (Geophagus surinamensis e Geophagus proximus) e híbridos."
+ },
+ {
+  "id": "art7/par1",
+  "label": "§ 1",
+  "text": "excetua-se desta permissão o piauçu (Leporinus macrocephalus). Entende-se por:"
+ },
+ {
+  "id": "art7/par1/I",
+  "label": "I",
+  "text": "isca natural todo o atrativo (vivo ou morto, vegetal ou animal, em partes ou na forma integral, manufaturada ou industrializada) que serve como alimento aos peixes;"
+ },
+ {
+  "id": "art7/par1/II",
+  "label": "II",
+  "text": "isca artificial todo artefato não alimentar usado como atrativo na pesca."
+ },
+ {
+  "id": "art7/par2",
+  "label": "§ 2",
+  "text": "Proibir a utilização de animais aquáticos, inclusive peixes, camarões, caramujos, caranguejos, vivos ou mortos (inteiros ou em pedaços), como iscas."
+ },
+ {
+  "id": "art7/par2/I",
+  "label": "I",
+  "text": "Excetuam-se desta proibição os peixes vivos de ocorrência natural da bacia hidrográfica, oriundos de criações, acompanhados de nota fiscal ou nota de produtor."
+ },
+ {
+  "id": "art8",
+  "label": "Art. 8",
+  "text": "Permitir a pesca em reservatórios, nas modalidades desembarcada e embarcada, com linha de mão ou vara, linha e anzol, caniço simples, com molinete ou carretilha com uso de iscas naturais e artificiais:"
+ },
+ {
+  "id": "art8/I",
+  "label": "I",
+  "text": "exclusivamente espécies não nativas (alóctones e exóticas) e híbridos;"
+ },
+ {
+  "id": "art8/II",
+  "label": "II",
+  "text": "captura e transporte sem limite de cota para o pescador profissional e cota de 10 kg mais um exemplar para o pescador amador."
+ },
+ {
+  "id": "art8/par1",
+  "label": "§ 1",
+  "text": "excetua-se desta permissão o piauçu (Leporinus macrocephalus)."
+ },
+ {
+  "id": "art8/par2",
+  "label": "§ 2",
+  "text": "Proibir a utilização de animais aquáticos, inclusive peixes, camarões, caramujos, caranguejos, vivos ou mortos (inteiros ou em pedaços), como iscas."
+ },
+ {
+  "id": "art8/par2/I",
+  "label": "I",
+  "text": "Excetuam-se desta proibição os peixes vivos de ocorrência natural da bacia hidrográfica, oriundos de criações, acompanhados de nota fiscal ou nota de produtor."
+ },
+ {
+  "id": "art9",
+  "label": "Art. 9",
+  "text": "Permitir aos pescadores profissionais e amadores o transporte de pescado por via fluvial somente em locais cuja pesca embarcada é permitida."
+ },
+ {
+  "id": "art10",
+  "label": "Art. 10",
+  "text": "Permitir ao pescador profissional e amador a pesca embarcada e desembarcada, no trecho compreendido entre a Ponte Ferroviária Francisco de Sá a jusante da UHE Souza Dias (Jupiá) e a montante da barragem da UHE Sérgio Motta (Porto Primavera), apenas para a captura e transporte de espécies exóticas, alóctones e híbridos."
+ },
+ {
+  "id": "art10/par-unico",
+  "label": "Parágrafo único",
+  "text": "Excetua-se desta permissão o piauçu (leporinus macrocephalus);"
+ },
+ {
+  "id": "art11",
+  "label": "Art. 11",
+  "text": "O produto da pesca oriundo de locais com período de defeso diferenciado ou de outros países, deverá estar acompanhado de comprovante de origem, sob pena de apreensão do pescado e dos petrechos, equipamentos e instrumentos utilizados na pesca."
+ },
+ {
+  "id": "art11/par-unico",
+  "label": "Parágrafo único",
+  "text": "Entende-se por comprovante de origem, o documento emitido pelos órgãos federal, estadual, municipal, colônia de pescadores ou pescador devidamente registrado."
+ },
+ {
+  "id": "art12",
+  "label": "Art. 12",
+  "text": "Esta Instrução Normativa não se aplica ao pescado proveniente de piscicultura ou pesque-pagues/pesqueiros registrados no órgão competente e cadastrados no Instituto Brasileiro do Meio Ambiente e dos Recursos Naturais Renováveis - IBAMA, devendo estar acompanhado de nota fiscal."
+ },
+ {
+  "id": "art13",
+  "label": "Art. 13",
+  "text": "Fixar o segundo dia útil após o início do defeso como o prazo máximo para declaração ao IBAMA ou órgão estadual competente, dos estoques de peixes in natura, resfriados ou congelados, provenientes de águas continentais, armazenados por pescadores profissionais e os existentes nas colônias e associações de pescadores, nos frigoríficos, nas peixarias, nos entrepostos, nos postos de venda, nos hotéis, nos restaurantes, nos bares e similares."
+ },
+ {
+  "id": "art13/par-unico",
+  "label": "Parágrafo único",
+  "text": "O produto de que trata este artigo deverá estar acompanhado das respectivas notas fiscais."
+ },
+ {
+  "id": "art14",
+  "label": "Art. 14",
+  "text": "Excluir das proibições previstas nesta Instrução Normativa, a pesca de caráter técnico ou científico, previamente autorizada ou licenciada pelo Instituto Chico Mendes de Conservação da Biodiversidade - ICMBio, IBAMA ou órgão estadual competente."
+ },
+ {
+  "id": "art15",
+  "label": "Art. 15",
+  "text": "Aos infratores da presente Instrução Normativa serão aplicadas as penalidades e sanções, respectivamente, previstas na Lei nº 9.605, de 12 de fevereiro de 1998, no Decreto nº 6.514, de 22 de julho de 2008, na Lei nº 10.779, de 25 de novembro de 2003, e demais legislações estaduais específicas."
+ },
+ {
+  "id": "art16",
+  "label": "Art. 16",
+  "text": "Esta Instrução Normativa entra em vigor na data de sua publicação."
+ },
+ {
+  "id": "art17",
+  "label": "Art. 17",
+  "text": "Revoga-se a Instrução Normativa nº 194, de 2 de outubro de 2008. ROBERTO MESSIAS FRANCO"
+ }
+]

@@ -1,0 +1,132 @@
+[
+ {
+  "id": "preamble",
+  "label": "Preâmbulo",
+  "text": "Instrução Normativa IBAMA nº 196 de 02/10/2008 Instrução Normativa IBAMA nº 196 de 02/10/2008 Norma Federal - Publicado no DO em 03 out 2008 Estabelece normas de pesca para o período de proteção à reprodução natural dos peixes, nas áreas de abrangência das bacias hidrográficas do Leste, nos estados de Sergipe, Bahia, Minas Gerais e Espírito Santo. O PRESIDENTE DO INSTITUTO BRASILEIRO DO MEIO AMBIENTE E DOS RECURSOS NATURAIS RENOVÁVEIS - IBAMA, no uso das atribuições que lhes confere o item V do art. 22, do anexo I ao Decreto nº 6.099, de 26 de abril de 2007, que aprova a Estrutura Regimental do IBAMA, publicada no Diário Oficial da União de 27 de abril de 2007; Considerando o disposto no Decreto nº 5.583, de 16 de novembro de 2005, que autoriza o IBAMA a estabelecer normas para a gestão do uso sustentável dos recursos pesqueiros de que trata o § 6º do art. 27 da Lei nº 10.683, de 28 de maio de 2003; Considerando o Decreto-Lei nº 221, de 28 de fevereiro de 1967, que dispõe sobre a proteção e estímulos a pesca e a Lei nº 7.679, de 23 de novembro de 1998; que dispõe sobre a proibição da pesca de espécies em período de reprodução e dá outras providências; Considerando que as lagoas marginais são áreas de proteção permanente possibilitando a conservação dos ambientes onde a ictiofauna tenha garantia de sobrevivência pelo menos durante a fase inicial de seu desenvolvimento; e, Considerando, ainda, o que consta no Processo nº 02001.002136/2008-35, Resolve:"
+ },
+ {
+  "id": "art1",
+  "label": "Art. 1",
+  "text": "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, nas áreas de abrangência das bacias hidrográficas do Leste, nos estados de Sergipe, Bahia, Minas Gerais e Espírito Santo, excetuando-se a área da bacia hidrográfica do rio São Francisco, contemplada por instrução normativa específica."
+ },
+ {
+  "id": "art1/par-unico",
+  "label": "Parágrafo único",
+  "text": "Entende-se por bacia hidrográfica o rio principal, seus formadores, afluentes, lagos, lagoas marginais, reservatórios e demais coleções d'água."
+ },
+ {
+  "id": "art2",
+  "label": "Art. 2",
+  "text": "Proibir a pesca, anualmente, no período de 1º de novembro a 28 de fevereiro para a proteção à reprodução natural dos peixes, nas bacias hidrográficas referenciadas no art. 1º desta Instrução Normativa, nas seguintes áreas:"
+ },
+ {
+  "id": "art2/I",
+  "label": "I",
+  "text": "nas lagoas marginais; e"
+ },
+ {
+  "id": "art2/II",
+  "label": "II",
+  "text": "até um mil metros a montante e a jusante das barragens de reservatórios de usinas hidrelétricas, cachoeiras e corredeiras."
+ },
+ {
+  "id": "art2/par-unico",
+  "label": "Parágrafo único",
+  "text": "Entende-se por lagoas marginais alagados, alagadiços, lagos, banhados, canais ou poços naturais situados em áreas alagáveis da planície de inundação, que apresentam comunicação permanente ou intermitente com o rio principal ou canais secundários."
+ },
+ {
+  "id": "art3",
+  "label": "Art. 3",
+  "text": "Proibir, no período definido no art. 2º desta Instrução Normativa, a realização de competições de pesca tais como torneios, campeonatos e gincanas."
+ },
+ {
+  "id": "art3/par-unico",
+  "label": "Parágrafo único",
+  "text": "Esta proibição não se aplica a competições de pesca realizadas em reservatórios, visando a captura de espécies não nativas (alóctones e exóticas) e híbridos."
+ },
+ {
+  "id": "art4",
+  "label": "Art. 4",
+  "text": "Permitir, nos rios das bacias hidrográficas referenciadas no art. 1º, apenas a pesca desembarcada e utilizando somente linha de mão, caniço, vara com molinete ou carretilha, com o uso de iscas naturais ou artificiais providas ou não de garatéias, exceto pelo processo de lambada."
+ },
+ {
+  "id": "art4/par-unico",
+  "label": "Parágrafo único",
+  "text": "No estado do Espírito Santo, é permitido o uso de jiqui, jequi ou jequiá."
+ },
+ {
+  "id": "art5",
+  "label": "Art. 5",
+  "text": "Permitir, nos reservatórios das bacias hidrográficas referenciadas no art. 1º, a pesca embarcada e desembarcada utilizando apenas:"
+ },
+ {
+  "id": "art5/I",
+  "label": "I",
+  "text": "Ao pescador profissional:"
+ },
+ {
+  "id": "art5/I/a",
+  "label": "a)",
+  "text": "rede de emalhar com malha igual ou superior a cem milímetros (100mm), medida esticada entre ângulos opostos, cujo comprimento não ultrapasse 1/3 do ambiente aquático,"
+ },
+ {
+  "id": "art5/I/b",
+  "label": "b)",
+  "text": "tarrafa com malha igual ou superior a setenta milímetros (70mm), medida esticada entre ângulos opostos; e"
+ },
+ {
+  "id": "art5/I/c",
+  "label": "c)",
+  "text": "linha de mão ou vara, linha e anzol, caniço simples, com molinete ou carretilha, iscas naturais e artificiais providas ou não de garatéias, exceto pelo processo de lambada."
+ },
+ {
+  "id": "art5/II",
+  "label": "II",
+  "text": "Ao pescador amador, a utilização de linha de mão ou vara, linha e anzol, caniço simples, com molinete ou carretilha, iscas naturais e artificiais providas ou não de garatéias, exceto pelo processo de lambada."
+ },
+ {
+  "id": "art6",
+  "label": "Art. 6",
+  "text": "Proibir o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta Instrução Normativa."
+ },
+ {
+  "id": "art7",
+  "label": "Art. 7",
+  "text": "Permitir a captura e o transporte somente de espécies não nativas (alóctones e exóticas), híbridos e camarão gigante da Malásia (Macrobrachium rosembergii), sem limite de cota ao pescador profissional, e 10kg mais um exemplar ao pescador amador."
+ },
+ {
+  "id": "art8",
+  "label": "Art. 8",
+  "text": "O produto de pesca oriundo de locais com período de defeso diferenciado ou de outros países deverá estar acompanhado de comprovante de origem, sob pena de apreensão do pescado e dos petrechos, equipamentos e instrumentos utilizados na pesca."
+ },
+ {
+  "id": "art9",
+  "label": "Art. 9",
+  "text": "Esta Instrução Normativa não se aplica ao pescado proveniente de aqüiculturas registradas no Registro Geral da Pesca - RGP, da SEAP/PR, cada1stradas no Cadastro Técnico Federal - CTF, do IBAMA, e deverá estar acompanhado de nota fiscal."
+ },
+ {
+  "id": "art9/par-unico",
+  "label": "Parágrafo único",
+  "text": "Entende-se por comprovante de origem, o documento emitido pelos órgãos federal, estadual, municipal, colônia de pescadores ou pescador devidamente registrado."
+ },
+ {
+  "id": "art10",
+  "label": "Art. 10",
+  "text": "Fixar o segundo dia útil após o início do defeso como o prazo máximo para declaração ao IBAMA ou órgão estadual competente, dos estoques de peixes in natura, resfriados ou congelados, provenientes de águas continentais, estocados por pescadores profissionais e os existentes nos frigoríficos, peixarias, entrepostos, postos de venda, hotéis, restaurantes, bares e similares."
+ },
+ {
+  "id": "art11",
+  "label": "Art. 11",
+  "text": "Fica excluída das proibições previstas nesta Instrução Normativa, a pesca de caráter científico, previamente autorizada pelo IBAMA ou licenciada pelo órgão estadual competente."
+ },
+ {
+  "id": "art12",
+  "label": "Art. 12",
+  "text": "Aos infratores da presente Instrução Normativa, serão aplicadas as penalidades e sanções, respectivamente, previstas na Lei nº 9.605, de 12 de fevereiro de 1998 e no Decreto nº 6.514, de 22 de julho de 2008."
+ },
+ {
+  "id": "art13",
+  "label": "Art. 13",
+  "text": "Esta Instrução Normativa entra em vigor na data de sua publicação. ROBERTO MESSIAS FRANCO"
+ }
+]

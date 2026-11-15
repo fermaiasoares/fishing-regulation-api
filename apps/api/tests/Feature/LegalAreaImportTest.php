@@ -3,7 +3,6 @@
 namespace Tests\Feature;
 
 use App\Geography\LegalAreaImporter;
-use App\Legal\CatalogImporter;
 use App\Legal\LegalAreaResolver;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
@@ -42,7 +41,7 @@ class LegalAreaImportTest extends TestCase
         $this->directories[] = $directory;
         file_put_contents($directory.'/'.LegalAreaImporter::DATA_FILE, gzencode($raw));
         file_put_contents($directory.'/manifest.json', json_encode([
-            'dataset' => 'test-districts', 'publisher' => 'tests', 'url' => 'test://synthetic', 'license' => null,
+            'dataset' => 'test-districts', 'jurisdiction' => 'mg', 'publisher' => 'tests', 'url' => 'test://synthetic', 'license' => null,
             'source_srid' => 4674, 'sha256' => hash('sha256', $raw), 'retrieved_at' => $retrievedAt,
             'districts' => [['sigla' => 'DO1', 'area' => 'doce'], ['sigla' => 'SF3', 'area' => 'paraopeba']],
         ]));
@@ -56,7 +55,8 @@ class LegalAreaImportTest extends TestCase
         $result = (new LegalAreaImporter)->import($directory);
 
         $this->assertTrue($result['created']);
-        $this->assertSame(['doce' => 1, 'paraopeba' => 1], $result['by_area']);
+        $this->assertSame(['mg:doce' => 1, 'mg:paraopeba' => 1], $result['by_area']);
+        $this->assertSame(['mg:doce', 'mg:paraopeba'], DB::table('legal_area_geometries')->orderBy('legal_area_code')->pluck('legal_area_code')->all());
         $this->assertSame(['SF3'], $result['repaired']);
         $row = DB::selectOne('SELECT bool_and(ST_IsValid(geometry)) AS valid, min(ST_SRID(geometry)) AS srid FROM legal_area_geometries WHERE dataset_version_id = ?', [$result['dataset_version_id']]);
         $this->assertTrue($row->valid);
@@ -75,6 +75,17 @@ class LegalAreaImportTest extends TestCase
         $this->assertTrue($second['created']);
         $this->assertSame([$second['dataset_version_id']], DB::table('legal_area_geometries')->distinct()->pluck('dataset_version_id')->all());
         $this->assertSame(2, DB::table('geographic_dataset_versions')->count());
+    }
+
+    public function test_a_manifest_without_jurisdiction_needs_a_jurisdiction_directory(): void
+    {
+        $directory = $this->fixture();
+        $manifest = json_decode(file_get_contents($directory.'/manifest.json'), true);
+        unset($manifest['jurisdiction']);
+        file_put_contents($directory.'/manifest.json', json_encode($manifest));
+
+        $this->expectExceptionMessage('is not one');
+        (new LegalAreaImporter)->import($directory);
     }
 
     public function test_tampered_data_is_rejected(): void
@@ -96,30 +107,33 @@ class LegalAreaImportTest extends TestCase
         if (! is_file($directory.'/manifest.json')) {
             $this->markTestSkipped('Official districts not acquired yet.');
         }
-        $catalog = (new CatalogImporter)->import(config('legal.catalog_path'), publish: true);
+        $versionIds = array_column($this->importLegalCatalogs(), 'version_id');
         $result = (new LegalAreaImporter)->import($directory);
         $this->assertGreaterThanOrEqual(36, $result['features'] ?: DB::table('legal_area_geometries')->count());
 
         $resolver = new LegalAreaResolver;
         $towns = [
-            'Caratinga' => [-19.7895, -42.1393, 'doce'],
-            'Brumadinho' => [-20.1430, -44.2000, 'paraopeba'],
-            'Belo Horizonte' => [-19.9167, -43.9345, 'sao_francisco'],
-            'Montes Claros' => [-16.7350, -43.8617, 'sao_francisco'],
-            'Uberaba' => [-19.7472, -47.9381, 'grande'],
-            'Patos de Minas' => [-18.5789, -46.5181, 'paranaiba'],
-            'Teófilo Otoni' => [-17.8575, -41.5053, 'leste'],
-            'Juiz de Fora' => [-21.7642, -43.3496, 'leste'],
+            'Caratinga' => [-19.7895, -42.1393, 'mg:doce'],
+            'Brumadinho' => [-20.1430, -44.2000, 'mg:paraopeba'],
+            'Belo Horizonte' => [-19.9167, -43.9345, 'mg:sao_francisco'],
+            'Montes Claros' => [-16.7350, -43.8617, 'mg:sao_francisco'],
+            'Uberaba' => [-19.7472, -47.9381, 'mg:grande'],
+            'Patos de Minas' => [-18.5789, -46.5181, 'mg:paranaiba'],
+            'Teófilo Otoni' => [-17.8575, -41.5053, 'mg:leste'],
+            'Juiz de Fora' => [-21.7642, -43.3496, 'mg:leste'],
         ];
         foreach ($towns as $town => [$latitude, $longitude, $area]) {
-            $match = $resolver->at($latitude, $longitude, $catalog['version_id']);
+            $match = $resolver->at($latitude, $longitude, $versionIds);
             $this->assertSame([$area], $match['matched'], $town);
+            $this->assertSame(['mg'], $match['states'], $town);
+            $this->assertSame(['br', 'mg'], $match['jurisdictions'], $town);
             $this->assertContains('mg', $match['lineage'], $town);
+            $this->assertContains('br', $match['lineage'], $town);
         }
-        $this->assertFalse($resolver->at(-23.5505, -46.6333, $catalog['version_id'])['geographic_match'], 'São Paulo is outside MG');
+        $this->assertFalse($resolver->at(-23.5505, -46.6333, $versionIds)['geographic_match'], 'São Paulo is outside MG');
 
         $this->postJson('/api/fishing/evaluate', [
-            'latitude' => -19.7895, 'longitude' => -42.1393, 'species' => 'Prochilodus vimboides', 'date' => '2027-06-15',
+            'latitude' => -19.7895, 'longitude' => -42.1393, 'species' => 'Pimelodus maculatus', 'date' => '2027-06-15',
         ])->assertOk()->assertJsonPath('status', 'prohibited')->assertJsonPath('rules.0.code', 'doce-nativas-permanente');
     }
 }
