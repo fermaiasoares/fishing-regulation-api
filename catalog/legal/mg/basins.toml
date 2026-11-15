@@ -1,0 +1,51 @@
+# Áreas de aplicação usadas pelas regras. "parent" indica que a área está contida
+# em outra: as regras da área-mãe também valem na área-filha.
+# geo_mapping fica "pending" até a ligação com as feições do PostGIS (Sprint 2/3).
+
+[[basin]]
+id = "mg"
+name = "Território de Minas Gerais"
+definition = "Limite estadual oficial (malha IBGE)."
+geo_mapping = "pending"
+
+[[basin]]
+id = "sao_francisco"
+name = "Bacia do rio São Francisco (porção mineira)"
+parent = "mg"
+definition = "Rio principal, afluentes, lagos, lagoas, reservatórios e demais corpos d'água da bacia (Portaria IEF 154/2011, art. 1º, parágrafo único)."
+geo_mapping = "pending"
+
+[[basin]]
+id = "paraopeba"
+name = "Bacia do rio Paraopeba"
+parent = "sao_francisco"
+definition = "Sub-bacia do São Francisco."
+geo_mapping = "pending"
+
+[[basin]]
+id = "grande"
+name = "Bacia do rio Grande (porção mineira)"
+parent = "mg"
+definition = "Rio principal, formadores, afluentes, lagos, lagoas marginais e reservatórios (Portaria IEF 156/2011, art. 1º, § 1º)."
+geo_mapping = "pending"
+
+[[basin]]
+id = "paranaiba"
+name = "Bacia do rio Paranaíba (porção mineira)"
+parent = "mg"
+definition = "Idem Portaria IEF 156/2011."
+geo_mapping = "pending"
+
+[[basin]]
+id = "leste"
+name = "Bacias do Leste de Minas Gerais"
+parent = "mg"
+definition = "Todas as bacias de MG exceto Grande, Paranaíba e São Francisco (Portaria IEF 155/2011, art. 1º): Doce, Jequitinhonha, Mucuri, Pardo, Paraíba do Sul e demais bacias atlânticas."
+geo_mapping = "pending"
+
+[[basin]]
+id = "doce"
+name = "Bacia do rio Doce (porção mineira)"
+parent = "leste"
+definition = "Rio principal e todos os corpos d'água que drenam para ele, incluindo cabeceiras, afluentes, lagos, lagoas e reservatórios."
+geo_mapping = "pending"
