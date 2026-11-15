@@ -87,9 +87,40 @@ def is_verified(catalog: Catalog, rule: dict) -> bool:
     return rule.get("act") in catalog.segments and bool(rule.get("evidence")) and not evidence_errors(catalog, rule)
 
 
+SPECIES_KEYS = ("native", "non_native", "aloctone", "exotic", "hybrid", "excluded", "native_listed_as_capturable")
+
+
+def species_list_errors(catalog: Catalog) -> list[str]:
+    """Scientific names of a list must appear in the cited segment or its sub-units."""
+    errors = []
+    for item in catalog.species_lists:
+        where = f"species list {item.get('id')}"
+        if item.get("act") not in catalog.acts:
+            errors.append(f"{where}: unknown act {item.get('act')}")
+            continue
+        for area in str(item.get("basin", "")).split(","):
+            if area.strip() not in catalog.basins:
+                errors.append(f"{where}: unknown basin {area.strip()}")
+        segment = item.get("segment")
+        units = catalog.segments.get(item["act"], {})
+        if not segment or not units:
+            continue
+        text = normalize(" ".join(t for unit_id, t in units.items() if unit_id == segment or unit_id.startswith(segment + "/")))
+        if not text:
+            errors.append(f"{where}: segment {segment} not found")
+            continue
+        for key in SPECIES_KEYS:
+            for entry in item.get(key, []):
+                match = re.search(r"\((.*)\)\s*$", entry)
+                name = match.group(1) if match else entry
+                if normalize(name) not in text:
+                    errors.append(f"{where}: {name!r} not found in {item['act']} {segment}")
+    return errors
+
+
 def validate(catalog: Catalog) -> list[str]:
     """Return every problem found; an empty list means the catalog is consistent."""
-    errors = []
+    errors = species_list_errors(catalog)
     ids = [rule["id"] for rule in catalog.rules]
     errors += [f"duplicate rule id: {rule_id}" for rule_id in sorted({i for i in ids if ids.count(i) > 1})]
 

@@ -90,6 +90,12 @@ class CatalogTest(unittest.TestCase):
         rule["evidence"] = []
         self.assertIn("needs evidence", " ".join(validate(broken)))
 
+    def test_species_lists_must_match_the_cited_text(self):
+        broken = copy.deepcopy(self.catalog)
+        species = next(item for item in broken.species_lists if item["id"] == "ief-156-2011-art7")
+        species["non_native"].append("Dourado (Salminus brasiliensis)")
+        self.assertIn("'Salminus brasiliensis' not found in ief-156-2011 art7/IV", " ".join(validate(broken)))
+
     def test_unverified_rules_are_flagged_as_gaps(self):
         result = evaluate(self.catalog, "paraopeba", OFF_SEASON, "native")
         self.assertIn("paraopeba-nativas-permanente: sem trecho literal conferido no texto armazenado", result.gaps)
