@@ -26,7 +26,17 @@ Edite a senha local em `infrastructure/.env` antes da primeira subida. Gere a ch
 
 O GitHub Actions usa um banco efêmero `fishing_test` e executa a validação do Compose, as migrations, uma consulta HTTP real e a suíte Laravel. Na aba **Checks** do PR, abra **Compose, PostGIS, Redis and Laravel** para ver o passo que falhou e os logs dos serviços. A aba **Actions** também lista execuções por branch e commit.
 
-Para diagnóstico local, use `docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml ps` e `docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml logs api db redis`. Rode a suíte com `docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml exec -T api php artisan test` em um ambiente de testes isolado, com as migrations aplicadas.
+Para diagnóstico local, use `docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml ps` e `docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml logs api db redis`. 
+Rode a suíte Laravel num banco próprio, `fishing_test`. Os testes supõem que nenhum catálogo jurídico está publicado. Por isso falham no banco `fishing` depois de `legal:import --publish` ou `geo:import-legal-areas`.
+
+```sh
+docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml exec -T db psql -U fishing -d fishing -c 'CREATE DATABASE fishing_test'
+docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml exec -T db psql -U fishing -d fishing_test -c 'CREATE EXTENSION IF NOT EXISTS postgis'
+docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml exec -T -e DB_DATABASE=fishing_test api php artisan migrate --force
+docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml exec -T -e DB_DATABASE=fishing_test api php artisan test
+```
+
+Crie o banco e a extensão uma vez. Depois, rode só as migrations e os testes.
 
 ## Geografia
 
