@@ -20,7 +20,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 USER_AGENT = "fishing-regulation-api/legal-sources (+https://github.com/fermaiasoares/fishing-regulation-api)"
-TIMEOUT_SECONDS = 60
+TIMEOUT_SECONDS = 120
 EXTRACTOR = "legal-sources/2"
 
 # Case-sensitive on purpose: a wrapped line starting with "art. 4º da Lei..." is a
