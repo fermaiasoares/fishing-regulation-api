@@ -6,7 +6,7 @@
   "bytes": 469723,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:28+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 56,
   "text_chars": 12982
  },
@@ -17,7 +17,7 @@
   "bytes": 459374,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:32+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 39,
   "text_chars": 8826
  },
@@ -28,7 +28,7 @@
   "bytes": 470060,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:34+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 62,
   "text_chars": 12918
  },
@@ -39,7 +39,7 @@
   "bytes": 145263,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:36+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 44,
   "text_chars": 3924
  },
@@ -50,7 +50,7 @@
   "bytes": 324317,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:38+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 15,
   "text_chars": 4874
  },
@@ -61,7 +61,7 @@
   "bytes": 81588,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:58:41+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 23,
   "text_chars": 2809
  }
