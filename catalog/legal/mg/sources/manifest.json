@@ -1,4 +1,26 @@
 {
+ "ibama-in-196-2008": {
+  "url": "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html",
+  "official": false,
+  "sha256": "a1b05f62c29da2aefc16de945b4bb453041afbc034f921c740fe1bea38434701",
+  "bytes": 14703,
+  "kind": "html",
+  "retrieved_at": "2026-11-15T22:06:55+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 21,
+  "text_chars": 6083
+ },
+ "ibama-in-25-2009": {
+  "url": "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html",
+  "official": false,
+  "sha256": "b5ccac5dea888fe6f3ce7a73939f90be3d219810a186fa66cdc74faa2fa93746",
+  "bytes": 21494,
+  "kind": "html",
+  "retrieved_at": "2026-11-15T22:06:56+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 44,
+  "text_chars": 12303
+ },
  "ief-154-2011": {
   "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf",
   "official": false,
