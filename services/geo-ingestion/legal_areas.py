@@ -118,12 +118,33 @@ def acquire(output_dir: Path, mapping_path: Path, url: str = SOURCE_URL) -> dict
     return manifest
 
 
+def check(output_dir: Path, mapping_path: Path, basins_path: Path | None = None) -> dict:
+    """Offline check: stored file matches its hash and the current mapping."""
+    manifest = json.loads((output_dir / "manifest.json").read_text())
+    raw = gzip.decompress((output_dir / "circunscricoes_hidrograficas.geojson.gz").read_bytes())
+    if hashlib.sha256(raw).hexdigest() != manifest["sha256"]:
+        raise ValueError("stored districts do not match the manifest SHA-256")
+    mapping = load_mapping(mapping_path)
+    rows = validate(json.loads(raw), mapping)
+    if [(r["sigla"], r["area"]) for r in rows] != [(r["sigla"], r["area"]) for r in manifest["districts"]]:
+        raise ValueError("manifest districts are out of date with the area mapping; rerun the acquisition")
+    if basins_path is not None:
+        with basins_path.open("rb") as handle:
+            known = {basin["id"] for basin in tomllib.load(handle)["basin"]}
+        unknown = sorted({rule["area"] for rule in mapping} - known)
+        if unknown:
+            raise ValueError(f"area mapping uses areas missing from basins.toml: {unknown}")
+    return manifest
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output_dir", type=Path)
     parser.add_argument("--mapping", type=Path, required=True)
+    parser.add_argument("--check", action="store_true", help="verify stored data offline instead of downloading")
+    parser.add_argument("--basins", type=Path, help="basins.toml to check mapped areas against")
     args = parser.parse_args()
-    manifest = acquire(args.output_dir, args.mapping)
+    manifest = check(args.output_dir, args.mapping, args.basins) if args.check else acquire(args.output_dir, args.mapping)
     print(json.dumps({key: manifest[key] for key in ("sha256", "bytes", "feature_count")}, indent=1))
     for row in manifest["districts"]:
         print(f"{row['sigla']:6} {row['area']:16} {row['geometry_type']:13} {row['nome']}")

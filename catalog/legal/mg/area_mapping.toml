@@ -29,3 +29,73 @@ reason = "CHs PN: bacia do Rio Paranaíba (Portaria IEF 156/2011)."
 prefix = "DO"
 area = "doce"
 reason = "CHs DO1 a DO6: bacia do Rio Doce (Portaria IEF 31/2025; Leste pela 155/2011)."
+
+# Bacias atlânticas a leste: "Leste" pela Portaria IEF 155/2011 (MG exceto Grande,
+# Paranaíba e São Francisco).
+[[district]]
+prefix = "JQ"
+area = "leste"
+reason = "Jequitinhonha (JQ1 a JQ3)."
+
+[[district]]
+prefix = "MU"
+area = "leste"
+reason = "Mucuri."
+
+[[district]]
+prefix = "PA"
+area = "leste"
+reason = "Pardo."
+
+[[district]]
+prefix = "PS"
+area = "leste"
+reason = "Paraíba do Sul (PS1 e PS2)."
+
+[[district]]
+prefix = "SM"
+area = "leste"
+reason = "São Mateus."
+
+[[district]]
+prefix = "BU"
+area = "leste"
+reason = "Buranhém."
+
+[[district]]
+prefix = "IN"
+area = "leste"
+reason = "Itanhém."
+
+[[district]]
+prefix = "IP"
+area = "leste"
+reason = "Itapemirim."
+
+[[district]]
+prefix = "IU"
+area = "leste"
+reason = "Itaúnas."
+
+[[district]]
+prefix = "IB"
+area = "leste"
+reason = "Itabapoana (afluentes mineiros dos rios Preto, São João e Caparaó)."
+
+[[district]]
+prefix = "JU"
+area = "leste"
+reason = "Jucuruçu."
+
+[[district]]
+prefix = "PE"
+area = "leste"
+reason = "Peruípe."
+
+# Caso ambíguo: drena para o Tietê (bacia do Paraná), mas não é Grande nem
+# Paranaíba. Pela letra da Portaria IEF 155/2011 cairia no "Leste" por exclusão;
+# pela hidrografia, na IN IBAMA 25/2009 (Paraná). Sem regra até decisão.
+[[district]]
+prefix = "PJ"
+area = "piracicaba_jaguari"
+reason = "Rios Piracicaba e Jaguari: enquadramento legal pendente de decisão."
