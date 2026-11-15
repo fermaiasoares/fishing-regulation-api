@@ -29,6 +29,9 @@ jobs:
         run: |
           python3 catalog.py ../../catalog/legal/mg --check-export ../../catalog/legal/mg/catalog.json
           python3 -m unittest discover -s tests -v
+      - name: Test IBGE source acquisition
+        working-directory: services/geo-ingestion
+        run: python3 -m unittest discover -s tests -v
       - name: Validate Compose syntax
         run: docker compose -f infrastructure/compose.yaml config --quiet
       - name: Prepare Laravel environment
