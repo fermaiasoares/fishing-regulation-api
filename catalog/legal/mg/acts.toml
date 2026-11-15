@@ -22,6 +22,10 @@ read_from = "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_por
 text_status = "full_text_read"
 in_force_evidence = "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos"
 in_force_note = "Agência Minas (05/11/2026) cita as Portarias 154, 155 e 156 como base da piracema até 28/02/2027."
+download_urls = [
+  "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_154_2.pdf",
+  "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf",
+]
 review = "pending"
 
 [[act]]
@@ -35,6 +39,10 @@ read_from = "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_por
 text_status = "full_text_read"
 in_force_evidence = "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos"
 in_force_note = "Mesma notícia oficial de 05/11/2026."
+download_urls = [
+  "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_155_2.pdf",
+  "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_155_2.pdf",
+]
 review = "pending"
 
 [[act]]
@@ -48,6 +56,10 @@ read_from = "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_por
 text_status = "full_text_read"
 in_force_evidence = "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos"
 in_force_note = "Mesma notícia oficial de 05/11/2026."
+download_urls = [
+  "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_156_2.pdf",
+  "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_156_2.pdf",
+]
 review = "pending"
 
 [[act]]
@@ -62,6 +74,9 @@ text_status = "official_summary"
 in_force_evidence = "https://www.ief.mg.gov.br/web/ief/pesca-no-rio-doce"
 in_force_note = "Página do IEF aplica a Portaria 31/2025. O PDF oficial bloqueia leitura automática; limites de captura vieram de fonte secundária e precisam de conferência no texto."
 revokes = ["ief-40-2017"]
+download_urls = [
+  "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf",
+]
 review = "pending"
 
 [[act]]
@@ -75,6 +90,9 @@ read_from = "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_201
 text_status = "full_text_read"
 in_force_note = "Substituída pela Portaria IEF 31/2025. Mantida só como histórico; nenhuma regra ativa aponta para ela."
 status = "revoked"
+download_urls = [
+  "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf",
+]
 review = "pending"
 
 [[act]]
@@ -99,6 +117,9 @@ official_url = "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/por
 read_from = "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
 text_status = "full_text_read"
 in_force_note = "Vigência atual não confirmada em base oficial consolidada; a planilha de defesos do MPA (versão de 02/07/2026) não pôde ser lida."
+download_urls = [
+  "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf",
+]
 review = "pending"
 
 [[act]]
@@ -111,6 +132,9 @@ official_url = ""
 read_from = "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
 text_status = "full_text_read"
 in_force_note = "Texto lido em agregador. Trecho da planilha oficial do MPA indexado em busca lista a IN 196/2008 entre os defesos vigentes; confirmar no PDF oficial."
+download_urls = [
+  "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html",
+]
 review = "pending"
 
 [[act]]
@@ -123,6 +147,9 @@ official_url = ""
 read_from = ""
 text_status = "not_read"
 in_force_note = "Citada por órgãos estaduais como vigente. Página do texto falhou na leitura; inclui rios de MG (Prata, Tejuco, Quebra-Anzol, Salitre)."
+download_urls = [
+  "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html",
+]
 review = "pending"
 
 [[act]]
@@ -135,6 +162,9 @@ official_url = "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15082/2004/
 read_from = "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf"
 text_status = "full_text_read"
 in_force_note = "Não proíbe a pesca expressamente; veda atividade que ameace extinguir espécie aquática (art. 3º, III). Tratada como alerta, não como proibição."
+download_urls = [
+  "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf",
+]
 review = "pending"
 
 [[act]]
