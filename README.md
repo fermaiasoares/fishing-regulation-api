@@ -41,3 +41,7 @@ Crie o banco e a extensão uma vez. Depois, rode só as migrations e os testes.
 ## Geografia
 
 Consulte a [modelagem geográfica](docs/geography.md) para o esquema de versionamento, a política de CRS e o significado dos resultados das consultas espaciais.
+
+## App de exemplo
+
+O [PWA de exemplo](apps/pwa/README.md) consome `POST /api/fishing/evaluate` com mapa, espécie e data, para validar a API com um cliente real.

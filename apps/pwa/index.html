@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0B2F45">
+  <meta name="description" content="App de exemplo para validar a API de regras de pesca.">
+  <title>Regras de pesca</title>
+  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/icon.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="offline-banner" class="banner" hidden>Sem conexão. Mostrando consultas salvas neste aparelho.</div>
+
+  <main id="view-map" class="view">
+    <div id="map" class="map" aria-label="Mapa: toque para escolher o ponto de pesca"></div>
+
+    <section class="sheet" aria-labelledby="sheet-title">
+      <div class="grabber" aria-hidden="true"></div>
+      <h1 id="sheet-title" class="sheet-title">Onde e o que você vai pescar?</h1>
+      <p id="point-label" class="muted">Toque no mapa, use sua localização ou escolha uma cidade.</p>
+
+      <div class="chips" id="presets" role="group" aria-label="Cidades de exemplo"></div>
+
+      <form id="query" class="form" novalidate>
+        <button type="button" id="locate" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+          Usar minha localização
+        </button>
+
+        <label class="field">
+          <span>Espécie</span>
+          <input id="species" name="species" list="species-list" autocomplete="off" required minlength="2" maxlength="120" placeholder="Ex.: tilápia, dourado, Salminus brasiliensis">
+          <datalist id="species-list"></datalist>
+          <small class="error" id="species-error"></small>
+        </label>
+
+        <label class="field">
+          <span>Data da pescaria</span>
+          <input id="date" name="date" type="date" required>
+          <small class="error" id="date-error"></small>
+        </label>
+
+        <small class="error" id="point-error"></small>
+        <button type="submit" id="submit" class="btn btn-primary">Consultar regras</button>
+      </form>
+
+      <div id="summary" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <main id="view-detail" class="view" hidden></main>
+
+  <script type="module" src="/src/main.ts"></script>
+</body>
+</html>

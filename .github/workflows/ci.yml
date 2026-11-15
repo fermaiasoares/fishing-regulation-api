@@ -83,3 +83,20 @@ jobs:
       - name: Stop ephemeral CI services
         if: always()
         run: docker compose -f infrastructure/compose.yaml down -v --remove-orphans
+
+  pwa:
+    name: Sample PWA (typecheck and build)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: apps/pwa
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: apps/pwa/package-lock.json
+      - run: npm ci
+      - run: npm run build
