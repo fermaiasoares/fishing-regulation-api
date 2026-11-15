@@ -42,14 +42,15 @@ python3 -m unittest discover -s tests -v
 | [Lei 15.082/2004](https://www.almg.gov.br/legislacao-mineira/texto/LEI/15082/2004/) | Rios de preservação permanente | Sim (espelho CBH Doce) | Nenhuma: não proíbe pesca expressamente |
 | Portaria IEF 16/2019 | Paraopeba | Não localizado | 2, sem trecho conferido |
 | [Portaria IBAMA 50/2007](https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf) | São Francisco (federal) | Não (HTTP 403 para download automático) | 1, sem trecho conferido |
-| IN IBAMA 196/2008 | Leste (federal) | Não (timeout no agregador) | 1, sem trecho conferido |
-| IN IBAMA 195/2008, IN IBAMA 25/2009 | Sudeste / Paraná (federal) | Não | Nenhuma até leitura |
+| IN IBAMA 196/2008 | Leste em SE, BA, MG e ES, exceto São Francisco (federal) | Sim (agregador NormasBrasil) | 1, conferida (arts. 1º, 2º e 7º); art. 2º (lagoas marginais e 1.000 m de barragens) ainda sem regra |
+| IN IBAMA 25/2009 | Paraná (federal; inclui rios de MG) | Sim (agregador), ainda não lido | Nenhuma até leitura |
+| IN IBAMA 195/2008 | Sudeste (federal) | Não | Nenhuma até leitura |
 | Portaria GM/MMA 1.666/2026 | Brasil | Sim (LegisWeb; DOU não respondeu) | 1: proteção integral de espécies ameaçadas (art. 3º), conferida |
 | [Portaria GM/MMA 1.667/2026](https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf) | Brasil | Sim (PDF oficial) + Anexo I em CSV (`annex_1667.py`) | Lista com 351 peixes continentais e invertebrados de água doce |
 | Portaria MMA 300/2022 | Brasil | Não | Substituída pelas 1.666 e 1.667/2026 para fauna aquática |
 | [Página IEF de restrições](https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais) | MG | Orientação oficial | 1 (UCs estaduais) |
 
-13 das 18 regras têm trecho literal conferido no texto armazenado. As demais aparecem como lacuna em toda avaliação. A vigência das Portarias 154, 155 e 156 no ciclo atual está confirmada pela [Agência Minas em 05/11/2026](https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos): piracema até 28/02/2027.
+15 das 19 regras (3 federais, 16 de MG) têm trecho literal conferido no texto armazenado. As demais aparecem como lacuna em toda avaliação. A vigência das Portarias 154, 155 e 156 no ciclo atual está confirmada pela [Agência Minas em 05/11/2026](https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos): piracema até 28/02/2027.
 
 ## Situação por bacia
 
