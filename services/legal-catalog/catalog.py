@@ -1,8 +1,12 @@
-"""Validate the legal catalog and evaluate basin-level fishing status.
+"""Validate the legal catalogs and evaluate basin-level fishing status.
 
 This is a reference implementation for reviewing the catalog. The public API will
 reimplement the same rules in Laravel; this module keeps the catalog honest
 (every rule traceable to a read act) and produces the per-basin matrix.
+
+Each directory under catalog/legal is one jurisdiction ("br" for federal norms,
+"mg", "sp"... for states). Areas reach other jurisdictions through "within"
+(docs/adr/0001-jurisdicoes.md), so loading one catalog also loads its siblings.
 """
 
 import argparse
@@ -20,6 +24,18 @@ SPECIES = {"native", "non_native", "all", "threatened"}
 SCOPES = {"basin", "buffer", "stretch"}
 READ_STATUSES = {"full_text_read", "official_summary"}
 MMDD = re.compile(r"^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")
+JURISDICTION = re.compile(r"^[a-z]{2}$")
+
+
+def qualify(jurisdiction: str, area_id: str) -> str:
+    """Global area code: the root keeps the jurisdiction code ("br"), others get a prefix ("mg:doce")."""
+    return jurisdiction if area_id == jurisdiction else f"{jurisdiction}:{area_id}"
+
+
+def split_ref(ref: str) -> tuple[str, str]:
+    """Inverse of qualify: "br:leste" -> ("br", "leste"); "br" -> ("br", "br")."""
+    jurisdiction, _, area_id = ref.partition(":")
+    return jurisdiction, area_id or jurisdiction
 
 
 @dataclass
@@ -30,6 +46,8 @@ class Catalog:
     species_lists: list
     segments: dict = field(default_factory=dict)  # act id -> {segment id: text}
     sources: dict = field(default_factory=dict)  # act id -> manifest entry
+    jurisdiction: str = "mg"
+    linked: dict = field(default_factory=dict, repr=False)  # jurisdiction -> Catalog, other directories
 
 
 @dataclass
@@ -41,7 +59,8 @@ class Evaluation:
     gaps: list = field(default_factory=list)
 
 
-def load(directory: Path) -> Catalog:
+def load(directory: Path, link: bool = True) -> Catalog:
+    """Load one jurisdiction; with link=True its sibling directories are loaded too."""
     def read(name):
         with (directory / name).open("rb") as handle:
             return tomllib.load(handle)
@@ -60,7 +79,17 @@ def load(directory: Path) -> Catalog:
     for item in species_lists:
         if "source_csv" in item:
             item["threatened"] = load_threatened(directory / item["source_csv"], item.get("groups", []))
-    return Catalog(acts, read("rules.toml")["rule"], basins, species_lists, segments, sources)
+    catalog = Catalog(acts, read("rules.toml")["rule"], basins, species_lists, segments, sources, directory.name)
+    if link:
+        siblings = {
+            path.name: load(path, link=False)
+            for path in sorted(directory.parent.iterdir())
+            if path != directory and (path / "acts.toml").exists()
+        }
+        everyone = {catalog.jurisdiction: catalog, **siblings}
+        for item in everyone.values():
+            item.linked = {code: other for code, other in everyone.items() if other is not item}
+    return catalog
 
 
 def load_threatened(path: Path, groups: list[str]) -> list[dict]:
@@ -142,13 +171,28 @@ def species_list_errors(catalog: Catalog) -> list[str]:
 def validate(catalog: Catalog) -> list[str]:
     """Return every problem found; an empty list means the catalog is consistent."""
     errors = species_list_errors(catalog)
+    if not JURISDICTION.match(catalog.jurisdiction):
+        errors.append(f"catalog directory {catalog.jurisdiction!r} must be a two-letter jurisdiction code")
+    if catalog.jurisdiction not in catalog.basins or catalog.basins[catalog.jurisdiction].get("parent"):
+        errors.append(f"catalog {catalog.jurisdiction}: needs a root area with id {catalog.jurisdiction!r}")
     ids = [rule["id"] for rule in catalog.rules]
     errors += [f"duplicate rule id: {rule_id}" for rule_id in sorted({i for i in ids if ids.count(i) > 1})]
+    # Rule ids identify a rule in API answers, so they must be unique across jurisdictions too.
+    for other in catalog.linked.values():
+        errors += [f"rule id {rule_id} also used by catalog {other.jurisdiction}"
+                   for rule_id in sorted(set(ids) & {rule["id"] for rule in other.rules})]
 
     for basin in catalog.basins.values():
         parent = basin.get("parent")
         if parent is not None and parent not in catalog.basins:
             errors.append(f"basin {basin['id']}: unknown parent {parent}")
+        for ref in basin.get("within", []):
+            jurisdiction, area_id = split_ref(ref)
+            other = catalog.linked.get(jurisdiction)
+            if jurisdiction == catalog.jurisdiction:
+                errors.append(f"basin {basin['id']}: within {ref} must point to another jurisdiction (use parent)")
+            elif other is None or area_id not in other.basins:
+                errors.append(f"basin {basin['id']}: within {ref} is not an area of a loaded catalog")
 
     for act in catalog.acts.values():
         if act.get("text_status") not in READ_STATUSES | {"not_read"}:
@@ -212,14 +256,32 @@ def in_period(period: dict, day: date) -> bool:
     return key >= start or key <= end
 
 
-def lineage(catalog: Catalog, basin_id: str) -> list[str]:
-    chain = []
-    while basin_id is not None:
-        if basin_id in chain or basin_id not in catalog.basins:
-            raise ValueError(f"invalid basin lineage at {basin_id}")
-        chain.append(basin_id)
-        basin_id = catalog.basins[basin_id].get("parent")
-    return chain
+def lineage(catalog: Catalog, basin_id: str) -> list[tuple[Catalog, str]]:
+    """Every area containing basin_id: its parents, then areas of other jurisdictions
+    reached through "within" (and their parents), most specific first."""
+    result: list[tuple[Catalog, str]] = []
+    seen: set[str] = set()
+    pending = [(catalog, basin_id)]
+    while pending:
+        current, area_id = pending.pop(0)
+        chain = []
+        while area_id is not None:
+            code = qualify(current.jurisdiction, area_id)
+            if code in seen:
+                break
+            if area_id not in current.basins:
+                raise ValueError(f"invalid basin lineage at {code}")
+            seen.add(code)
+            chain.append((current, area_id))
+            area_id = current.basins[area_id].get("parent")
+        result += chain
+        for owner, area_id in chain:
+            for ref in owner.basins[area_id].get("within", []):
+                jurisdiction, target = split_ref(ref)
+                if jurisdiction not in owner.linked:
+                    raise ValueError(f"{qualify(owner.jurisdiction, area_id)}: catalog {jurisdiction} not loaded")
+                pending.append((owner.linked[jurisdiction], target))
+    return result
 
 
 def evaluate(catalog: Catalog, basin_id: str, day: date, species: str) -> Evaluation:
@@ -230,12 +292,16 @@ def evaluate(catalog: Catalog, basin_id: str, day: date, species: str) -> Evalua
     """
     if species not in {"native", "non_native"}:
         raise ValueError("species must be native or non_native")
-    chain = set(lineage(catalog, basin_id))
-    active = [
-        rule for rule in catalog.rules
-        if chain.intersection(rule["basins"]) and in_period(rule["period"], day)
-        and rule["species"] in {species, "all"}
-    ]
+    areas: dict[str, tuple[Catalog, set[str]]] = {}
+    for owner, area_id in lineage(catalog, basin_id):
+        areas.setdefault(owner.jurisdiction, (owner, set()))[1].add(area_id)
+    owners = {}
+    active = []
+    for owner, ids in areas.values():
+        for rule in owner.rules:
+            if ids.intersection(rule["basins"]) and in_period(rule["period"], day) and rule["species"] in {species, "all"}:
+                active.append(rule)
+                owners[rule["id"]] = owner
     basin_rules = [rule for rule in active if rule["scope"] == "basin"]
     result = Evaluation(status="undetermined")
     result.location_caveats = [rule["id"] for rule in active if rule["scope"] != "basin"]
@@ -253,8 +319,9 @@ def evaluate(catalog: Catalog, basin_id: str, day: date, species: str) -> Evalua
         result.gaps.append("nenhuma regra de bacia carregada para este caso")
 
     for rule_id in result.rules:
-        rule = next(r for r in catalog.rules if r["id"] == rule_id)
-        if not is_verified(catalog, rule):
+        owner = owners[rule_id]
+        rule = next(r for r in owner.rules if r["id"] == rule_id)
+        if not is_verified(owner, rule):
             result.gaps.append(f"{rule_id}: sem trecho literal conferido no texto armazenado")
     if species == "non_native":
         result.gaps.append("classificação da espécie como não nativa precisa constar de lista oficial da bacia")
@@ -281,18 +348,32 @@ def matrix_markdown(catalog: Catalog) -> str:
     return "\n".join(lines)
 
 
-EXPORT_FORMAT = "fishing-regulation-legal-catalog/1"
+EXPORT_FORMAT = "fishing-regulation-legal-catalog/2"
 
 
-def export_json(catalog: Catalog, jurisdiction: str) -> str:
-    """Canonical JSON consumed by the Laravel importer (`php artisan legal:import`)."""
+def export_json(catalog: Catalog) -> str:
+    """Canonical JSON consumed by the Laravel importer (`php artisan legal:import`).
+
+    Area codes are qualified ("mg:doce", "br") wherever they appear, so catalogs of
+    different jurisdictions can live side by side in the database.
+    """
+    q = lambda area_id: qualify(catalog.jurisdiction, area_id)
+    areas = [
+        {**basin, "id": q(basin["id"]), **({"parent": q(basin["parent"])} if basin.get("parent") else {})}
+        for basin in catalog.basins.values()
+    ]
+    rules = [{**rule, "basins": [q(area) for area in rule["basins"]]} for rule in catalog.rules]
+    species_lists = [
+        {**item, "basin": ",".join(q(area.strip()) for area in str(item.get("basin", "")).split(","))}
+        for item in catalog.species_lists
+    ]
     document = {
         "format": EXPORT_FORMAT,
-        "jurisdiction": jurisdiction,
+        "jurisdiction": catalog.jurisdiction,
         "acts": sorted(catalog.acts.values(), key=lambda act: act["id"]),
-        "areas": sorted(catalog.basins.values(), key=lambda basin: basin["id"]),
-        "rules": sorted(catalog.rules, key=lambda rule: rule["id"]),
-        "species_lists": sorted(catalog.species_lists, key=lambda item: item["id"]),
+        "areas": sorted(areas, key=lambda basin: basin["id"]),
+        "rules": sorted(rules, key=lambda rule: rule["id"]),
+        "species_lists": sorted(species_lists, key=lambda item: item["id"]),
         "sources": dict(sorted(catalog.sources.items())),
         "verified_rules": sorted(rule["id"] for rule in catalog.rules if is_verified(catalog, rule)),
     }
@@ -312,9 +393,11 @@ def main() -> None:
     if errors:
         parser.exit(1, "\n".join(errors) + "\n")
     if args.matrix:
+        if catalog.jurisdiction != "mg":
+            parser.exit(1, "the per-basin matrix is only defined for catalog/legal/mg\n")
         print(matrix_markdown(catalog))
         return
-    exported = export_json(catalog, args.directory.name)
+    exported = export_json(catalog)
     if args.export:
         args.export.write_text(exported)
     if args.check_export:

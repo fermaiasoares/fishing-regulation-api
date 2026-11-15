@@ -36,17 +36,18 @@ final class SpeciesClassifier
     ];
 
     /**
-     * @param  list<string>  $areaLineage
+     * @param  list<string>  $areaLineage  qualified area codes of the point ("mg:doce", "br")
+     * @param  list<int>  $catalogVersionIds  published version of each applicable jurisdiction
      * @return array{classification: string, matches: list<array{list: string, act: string, entry: string, classification: string}>, threatened: list<array{list: string, act: string, name: string, category: string, valid_from: ?string}>}
      */
-    public function classify(string $name, array $areaLineage, int $catalogVersionId): array
+    public function classify(string $name, array $areaLineage, array $catalogVersionIds): array
     {
         $query = self::normalize($name);
         $matches = [];
 
         $lists = DB::table('legal_species_lists')
             ->join('legal_acts', 'legal_acts.id', '=', 'legal_species_lists.legal_act_id')
-            ->where('legal_species_lists.catalog_version_id', $catalogVersionId)
+            ->whereIn('legal_species_lists.catalog_version_id', $catalogVersionIds)
             ->orderBy('legal_species_lists.code')
             ->get(['legal_species_lists.code', 'legal_species_lists.payload', 'legal_acts.code as act_code']);
 

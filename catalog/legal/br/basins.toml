@@ -1,0 +1,26 @@
+# Áreas de aplicação das normas federais. Os ids são locais; no export, no banco e na
+# API viram "br:<id>" (a raiz é "br"). Ver docs/adr/0001-jurisdicoes.md.
+#
+# Enquanto não houver geometria nacional (ANA/BHO), as áreas federais são "derived":
+# existem onde existirem áreas estaduais ligadas a elas por "within" em
+# catalog/legal/<uf>/basins.toml.
+
+[[basin]]
+id = "br"
+name = "Território nacional"
+definition = "Todo o território brasileiro. Normas de alcance nacional, como a Lista Nacional de espécies ameaçadas."
+geo_mapping = "derived"
+
+[[basin]]
+id = "sao_francisco"
+name = "Bacia hidrográfica do rio São Francisco"
+parent = "br"
+definition = "Bacia inteira, em todos os estados que atravessa (Portaria IBAMA 50/2007)."
+geo_mapping = "derived"
+
+[[basin]]
+id = "leste"
+name = "Bacias hidrográficas do Leste (IN IBAMA 196/2008)"
+parent = "br"
+definition = "Área de aplicação da IN IBAMA 196/2008, exceto o São Francisco. Limites a conferir no texto oficial; em MG está ligada às bacias do Leste da Portaria IEF 155/2011."
+geo_mapping = "derived"

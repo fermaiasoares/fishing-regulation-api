@@ -103,18 +103,6 @@ evidence = [
   { segment = "art2/III/m", quote = "No rio do Sono, da Cachoeira das Almas divisa de municípios de João Pinheiro e Buritizeiro até sua foz no rio Paracatu" },
 ]
 
-[[rule]]
-id = "sf-lagoas-marginais-federal"
-act = "ibama-50-2007"
-articles = "art. 1º, § 2º"
-basins = ["sao_francisco"]
-period = { kind = "annual", start = "11-01", end = "04-30" }
-species = "all"
-scope = "buffer"
-effect = "prohibited"
-geo_mapping = "pending"
-summary = "Pesca de qualquer categoria, modalidade e petrecho proibida nas lagoas marginais de 1º/11 a 30/04 (federal; estende o prazo estadual)."
-
 # --- Bacias do Leste (Portaria IEF 155/2011) --------------------------------------
 
 [[rule]]
@@ -172,17 +160,6 @@ evidence = [
   { segment = "art2/IV", quote = "A menos de 500m (quinhentos metros) da confluência do rio principal com seus afluentes e das saídas de esgotos urbanos" },
   { segment = "art2/V", quote = "Nos cursos d’água, cuja lâmina d’água possua largura igual ou inferior a 20 metros" },
 ]
-
-[[rule]]
-id = "leste-defeso-federal"
-act = "ibama-in-196-2008"
-articles = "arts. 1º a 3º"
-basins = ["leste"]
-period = { kind = "annual", start = "11-01", end = "02-28" }
-species = "native"
-scope = "basin"
-effect = "prohibited"
-summary = "Defeso federal nas bacias do Leste (exceto São Francisco); só não nativas podem ser capturadas. A cota federal (amador 10 kg + 1) é menos restritiva que a estadual."
 
 # --- Bacias dos rios Grande e Paranaíba (Portaria IEF 156/2011) --------------------
 
@@ -374,23 +351,3 @@ scope = "buffer"
 effect = "prohibited"
 geo_mapping = "pending"
 summary = "Qualquer modalidade de pesca proibida em Unidades de Conservação estaduais, salvo pesca científica autorizada."
-
-# --- Espécies ameaçadas (federal, todo o território) --------------------------------
-
-[[rule]]
-id = "br-ameacadas-protecao-integral"
-act = "mma-1666-2026"
-articles = "art. 3º, caput e §§ 1º, 2º e 4º; art. 12"
-basins = ["mg"]
-period = { kind = "permanent" }
-species = "threatened"
-species_list = "mma-1667-2026-anexo-i"
-scope = "basin"
-effect = "prohibited"
-summary = "Espécies da Lista Nacional (Portaria GM/MMA 1.667/2026) nas categorias EW, CR, EN e VU: captura, transporte, armazenamento e comercialização proibidos o ano todo, em qualquer bacia. Exceções: pesquisa autorizada, exemplares de aquicultura licenciada e captura incidental liberada viva. A portaria não excetua populações introduzidas fora da área nativa."
-evidence = [
-  { segment = "art3", quote = "ficam protegidas de modo integral, incluindo, entre outras medidas, a proibição de captura, transporte, armazenamento, guarda, manejo, beneficiamento e comercialização." },
-  { segment = "art3/par2", quote = "As restrições estabelecidas no caput não se aplicam a exemplares provenientes do cultivo na aquicultura em estabelecimentos devidamente licenciados pelo órgão ambiental competente." },
-  { segment = "art3/par4", quote = "As restrições estabelecidas no caput não se aplicam a exemplares capturados incidentalmente, desde que liberados vivos ou descartados no ato da captura" },
-  { segment = "art12", quote = "as proibições de que trata o art. 3º entrarão em vigor após o prazo de cento e oitenta dias contados da publicação desta Portaria." },
-]

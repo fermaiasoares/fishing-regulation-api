@@ -13,17 +13,21 @@ use InvalidArgumentException;
  * read in the source CRS (SIRGAS 2000), repaired with ST_MakeValid when needed and
  * transformed to EPSG:4326 inside PostGIS. A dataset version is imported once; a
  * new version replaces the footprints of the previous one in the same transaction.
+ *
+ * Districts map to areas of one state catalog. The jurisdiction comes from the
+ * manifest or, failing that, from the directory name (catalog/geo/mg), and the
+ * stored codes are qualified ("mg:doce") like the catalog's (docs/adr/0001-jurisdicoes.md).
  */
 final class LegalAreaImporter
 {
     public const DATA_FILE = 'circunscricoes_hidrograficas.geojson.gz';
 
-    /**
-     * @return array{dataset_version_id: int, created: bool, features: int, repaired: list<string>, by_area: array<string, int>}
-     */
     /** The decompressed file is ~41 MB; it is passed to PostgreSQL as one string. */
     private const MEMORY_LIMIT = '768M';
 
+    /**
+     * @return array{dataset_version_id: int, created: bool, features: int, repaired: list<string>, by_area: array<string, int>}
+     */
     public function import(string $directory): array
     {
         if (self::bytes((string) ini_get('memory_limit')) < self::bytes(self::MEMORY_LIMIT)) {
@@ -40,7 +44,14 @@ final class LegalAreaImporter
         // Identity of the dataset version: the content hash ignores the volatile
         // timeStamp GeoServer adds to every response; older manifests lack it.
         $versionChecksum = (string) ($manifest['content_sha256'] ?? $manifest['sha256']);
-        $areas = array_column($manifest['districts'] ?? [], 'area', 'sigla');
+        $jurisdiction = (string) ($manifest['jurisdiction'] ?? basename(rtrim($directory, '/')));
+        if (preg_match('/^[a-z]{2}$/', $jurisdiction) !== 1) {
+            throw new InvalidArgumentException("Manifest has no jurisdiction and the directory name \"{$jurisdiction}\" is not one.");
+        }
+        $areas = array_map(
+            fn (string $area) => $area === $jurisdiction ? $area : "{$jurisdiction}:{$area}",
+            array_column($manifest['districts'] ?? [], 'area', 'sigla'),
+        );
         if ($areas === []) {
             throw new InvalidArgumentException('Manifest lists no districts.');
         }

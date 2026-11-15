@@ -1,21 +1,31 @@
-# Catálogo jurídico — Minas Gerais
+# Catálogo jurídico — federal e Minas Gerais
 
 Atualizado em 14/11/2026. Todas as regras aguardam revisão do Fernando (`review = "pending"`). Nenhuma regra concede permissão: sem restrição carregada, a resposta é `undetermined`.
 
+## Jurisdições
+
+Cada diretório de `catalog/legal` é uma jurisdição com catálogo próprio ([ADR 0001](adr/0001-jurisdicoes.md)):
+
+- `br`: normas federais (IBAMA, MMA). Áreas `br`, `br:sao_francisco`, `br:leste`, por ora derivadas das áreas estaduais.
+- `mg`: normas de Minas Gerais. Cada área pode declarar `within = ["br:<id>"]`; assim `mg:sao_francisco` recebe as regras federais da bacia do São Francisco.
+
+Ids de área são locais nos TOML e viram `<jurisdição>:<id>` no `catalog.json`. Ids de regra são únicos em todo o repositório.
+
 ## Pipeline
 
-1. **Coleta** (`services/legal-catalog/sources.py`, workflow `legal-sources`): baixa a primeira URL que responder de cada ato, grava o arquivo original em `catalog/legal/mg/sources/` e registra URL, SHA-256, tamanho e data no `manifest.json`. Roda no runner do PR, que tem internet, e faz commit no próprio branch.
+1. **Coleta** (`services/legal-catalog/sources.py`, workflow `legal-sources`): baixa a primeira URL que responder de cada ato, grava o arquivo original em `catalog/legal/<jurisdição>/sources/` e registra URL, SHA-256, tamanho e data no `manifest.json`. Roda no runner do PR, que tem internet, e faz commit no próprio branch.
 2. **Extração e segmentação**: `pdftotext` ou HTML → texto sem cabeçalhos de página → segmentos com ids estáveis (`art2/III/g`, `art4/par-unico`). `sources.py --reextract` refaz essa etapa a partir dos originais, conferindo o SHA-256.
 3. **Estruturação**: regras em `rules.toml`, cada uma com `evidence` (segmento + trecho literal). Extração feita por Claude e revisada em PR.
 4. **Validação** (`catalog.py`): rejeita regra com ato revogado ou não lido, trecho que não existe no segmento citado, ou regra sem evidência quando o texto do ato está armazenado.
 5. **Exportação**: `catalog.py --export` gera `catalog.json` canônico. O CI falha se o arquivo estiver desatualizado.
-6. **Carga** (`php artisan legal:import [--publish]`): grava uma versão imutável no PostgreSQL, identificada pelo SHA-256 do `catalog.json`. Reimportar o mesmo arquivo não cria nada. A API responde pela versão publicada mais recente.
+6. **Carga** (`php artisan legal:import [--publish]`): importa todos os `catalog/legal/*/catalog.json`, cada um como versão imutável da sua jurisdição, identificada pelo SHA-256. Reimportar o mesmo arquivo não cria nada. A API responde pela versão publicada mais recente de cada jurisdição.
 
 ```bash
 cd services/legal-catalog
-python3 catalog.py ../../catalog/legal/mg                                   # valida
-python3 catalog.py ../../catalog/legal/mg --matrix                          # matriz por bacia
-python3 catalog.py ../../catalog/legal/mg --export ../../catalog/legal/mg/catalog.json
+for j in br mg; do                                                          # valida e exporta
+  python3 catalog.py ../../catalog/legal/$j --export ../../catalog/legal/$j/catalog.json
+done
+python3 catalog.py ../../catalog/legal/mg --matrix                          # matriz por bacia (inclui federais)
 python3 sources.py ../../catalog/legal/mg --reextract                       # refaz textos sem rede
 python3 -m unittest discover -s tests -v
 ```
