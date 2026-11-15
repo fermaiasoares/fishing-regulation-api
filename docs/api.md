@@ -51,6 +51,8 @@ Limite: 60 requisições por minuto por cliente.
 
 ### Limitações conhecidas
 
-- As geometrias das áreas legais dependem da ingestão da Sprint 2 (BHB250/BHO). Até lá, toda consulta real retorna `undetermined` por falta de área mapeada.
+- As áreas legais vêm das 43 Circunscrições Hidrográficas oficiais de MG (IDE-Sisema/Igam, `catalog/geo/mg`), carregadas com `php artisan geo:import-legal-areas`. Pontos fora de MG retornam `undetermined`.
+- A CH PJ1 (rios Piracicaba e Jaguari, que drenam para o Tietê) não tem regras até a decisão sobre seu enquadramento; consultas nela retornam `undetermined`.
+- A escala da camada é 1:100.000: pontos a poucas centenas de metros de um divisor de águas podem cair na bacia vizinha.
 - Não há lista oficial de nativas do São Francisco, Grande, Paranaíba e Leste no catálogo; nativas dessas bacias ficam `unknown` e, na piracema, `undetermined`.
 - O nome científico do tucunaré na Portaria IEF 154/2011 está grafado "Cicla spp."; no São Francisco ele só casa pelo nome comum.

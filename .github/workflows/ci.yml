@@ -29,9 +29,11 @@ jobs:
         run: |
           python3 catalog.py ../../catalog/legal/mg --check-export ../../catalog/legal/mg/catalog.json
           python3 -m unittest discover -s tests -v
-      - name: Test IBGE source acquisition
+      - name: Validate geographic sources
         working-directory: services/geo-ingestion
-        run: python3 -m unittest discover -s tests -v
+        run: |
+          python3 legal_areas.py ../../catalog/geo/mg --mapping ../../catalog/legal/mg/area_mapping.toml --basins ../../catalog/legal/mg/basins.toml --check
+          python3 -m unittest discover -s tests -v
       - name: Validate Compose syntax
         run: docker compose -f infrastructure/compose.yaml config --quiet
       - name: Prepare Laravel environment
@@ -58,6 +60,10 @@ jobs:
         run: |
           docker compose -f infrastructure/compose.yaml exec -T api php artisan legal:import --publish
           docker compose -f infrastructure/compose.yaml exec -T api php artisan legal:import --publish | grep -q "already imported"
+      - name: Import official legal areas twice (idempotency)
+        run: |
+          docker compose -f infrastructure/compose.yaml exec -T api php artisan geo:import-legal-areas
+          docker compose -f infrastructure/compose.yaml exec -T api php artisan geo:import-legal-areas | grep -q "already imported"
       - name: Verify geographic and legal migration rollback and reapply
         run: |
           docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate:rollback --force --step=4

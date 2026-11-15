@@ -199,48 +199,55 @@
  "areas": [
   {
    "definition": "Rio principal e todos os corpos d'água que drenam para ele, incluindo cabeceiras, afluentes, lagos, lagoas e reservatórios.",
-   "geo_mapping": "pending",
+   "geo_mapping": "mapped",
    "id": "doce",
    "name": "Bacia do rio Doce (porção mineira)",
    "parent": "leste"
   },
   {
    "definition": "Rio principal, formadores, afluentes, lagos, lagoas marginais e reservatórios (Portaria IEF 156/2011, art. 1º, § 1º).",
-   "geo_mapping": "pending",
+   "geo_mapping": "mapped",
    "id": "grande",
    "name": "Bacia do rio Grande (porção mineira)",
    "parent": "mg"
   },
   {
    "definition": "Todas as bacias de MG exceto Grande, Paranaíba e São Francisco (Portaria IEF 155/2011, art. 1º): Doce, Jequitinhonha, Mucuri, Pardo, Paraíba do Sul e demais bacias atlânticas.",
-   "geo_mapping": "pending",
+   "geo_mapping": "mapped",
    "id": "leste",
    "name": "Bacias do Leste de Minas Gerais",
    "parent": "mg"
   },
   {
-   "definition": "Limite estadual oficial (malha IBGE).",
-   "geo_mapping": "pending",
+   "definition": "Território mineiro, coberto pela união das Circunscrições Hidrográficas (DN CERH-MG 66/2020 e 95/2024).",
+   "geo_mapping": "derived",
    "id": "mg",
    "name": "Território de Minas Gerais"
   },
   {
    "definition": "Idem Portaria IEF 156/2011.",
-   "geo_mapping": "pending",
+   "geo_mapping": "mapped",
    "id": "paranaiba",
    "name": "Bacia do rio Paranaíba (porção mineira)",
    "parent": "mg"
   },
   {
    "definition": "Sub-bacia do São Francisco.",
-   "geo_mapping": "pending",
+   "geo_mapping": "mapped",
    "id": "paraopeba",
    "name": "Bacia do rio Paraopeba",
    "parent": "sao_francisco"
   },
   {
+   "definition": "CH PJ1. Drena para o Tietê (bacia do Paraná), fora das bacias do Grande e do Paranaíba. Enquadramento entre a Portaria IEF 155/2011 (Leste, por exclusão) e a IN IBAMA 25/2009 pendente de decisão; sem regras associadas.",
+   "geo_mapping": "mapped",
+   "id": "piracicaba_jaguari",
+   "name": "Bacias dos rios Piracicaba e Jaguari (porção mineira)",
+   "parent": "mg"
+  },
+  {
    "definition": "Rio principal, afluentes, lagos, lagoas, reservatórios e demais corpos d'água da bacia (Portaria IEF 154/2011, art. 1º, parágrafo único).",
-   "geo_mapping": "pending",
+   "geo_mapping": "mapped",
    "id": "sao_francisco",
    "name": "Bacia do rio São Francisco (porção mineira)",
    "parent": "mg"

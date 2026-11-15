@@ -1,0 +1,109 @@
+# Ligação entre as Circunscrições Hidrográficas (CHs) de Minas Gerais e as áreas
+# legais do catálogo (basins.toml). Fonte das CHs: IDE-Sisema/Igam, camada
+# ide_1108_mg_circunscricoes_hidrograficas_pol (DN CERH-MG 66/2020 e 95/2024).
+#
+# "code" vale para uma CH específica e tem precedência sobre "prefix";
+# "name_contains" e "federal_basin" conferem o nome e o atributo bacia_fede da CH
+# antes de aceitar a ligação.
+# Uma CH que nenhuma linha cobre faz a ingestão falhar: nada é adivinhado.
+
+[[district]]
+code = "SF3"
+federal_basin = "Rio São Francisco"
+area = "paraopeba"
+name_contains = "Paraopeba"
+reason = "SF3 é a CH do Rio Paraopeba, sub-bacia do São Francisco."
+
+[[district]]
+prefix = "SF"
+federal_basin = "Rio São Francisco"
+area = "sao_francisco"
+reason = "CHs SF1 a SF10: bacia do São Francisco (Portaria IEF 154/2011)."
+
+[[district]]
+prefix = "GD"
+federal_basin = "Rio Grande"
+area = "grande"
+reason = "CHs GD: bacia do Rio Grande (Portaria IEF 156/2011)."
+
+[[district]]
+prefix = "PN"
+federal_basin = "Rio Paranaíba"
+area = "paranaiba"
+reason = "CHs PN: bacia do Rio Paranaíba (Portaria IEF 156/2011)."
+
+[[district]]
+prefix = "DO"
+federal_basin = "Rio Doce"
+area = "doce"
+reason = "CHs DO1 a DO6: bacia do Rio Doce (Portaria IEF 31/2025; Leste pela 155/2011)."
+
+# Bacias atlânticas a leste: "Leste" pela Portaria IEF 155/2011 (MG exceto Grande,
+# Paranaíba e São Francisco).
+[[district]]
+prefix = "JQ"
+area = "leste"
+reason = "Jequitinhonha (JQ1 a JQ3)."
+
+[[district]]
+prefix = "MU"
+area = "leste"
+reason = "Mucuri."
+
+[[district]]
+prefix = "PA"
+area = "leste"
+reason = "Pardo."
+
+[[district]]
+prefix = "PS"
+area = "leste"
+reason = "Paraíba do Sul (PS1 e PS2)."
+
+[[district]]
+prefix = "SM"
+area = "leste"
+reason = "São Mateus."
+
+[[district]]
+prefix = "BU"
+area = "leste"
+reason = "Buranhém."
+
+[[district]]
+prefix = "IN"
+area = "leste"
+reason = "Itanhém."
+
+[[district]]
+prefix = "IP"
+area = "leste"
+reason = "Itapemirim."
+
+[[district]]
+prefix = "IU"
+area = "leste"
+reason = "Itaúnas."
+
+[[district]]
+prefix = "IB"
+area = "leste"
+reason = "Itabapoana (afluentes mineiros dos rios Preto, São João e Caparaó)."
+
+[[district]]
+prefix = "JU"
+area = "leste"
+reason = "Jucuruçu."
+
+[[district]]
+prefix = "PE"
+area = "leste"
+reason = "Peruípe."
+
+# Caso ambíguo: drena para o Tietê (bacia do Paraná), mas não é Grande nem
+# Paranaíba. Pela letra da Portaria IEF 155/2011 cairia no "Leste" por exclusão;
+# pela hidrografia, na IN IBAMA 25/2009 (Paraná). Sem regra até decisão.
+[[district]]
+prefix = "PJ"
+area = "piracicaba_jaguari"
+reason = "Rios Piracicaba e Jaguari: enquadramento legal pendente de decisão."
