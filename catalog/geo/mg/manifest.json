@@ -1,0 +1,274 @@
+{
+ "dataset": "ide-sisema-circunscricoes-hidrograficas",
+ "publisher": "Igam / IDE-Sisema",
+ "layer": "IDE:ide_1108_mg_circunscricoes_hidrograficas_pol",
+ "url": "https://geoserver.meioambiente.mg.gov.br/IDE/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=IDE%3Aide_1108_mg_circunscricoes_hidrograficas_pol&maxFeatures=10000000&outputFormat=application%2Fjson&srsName=EPSG:4674",
+ "metadata_url": "https://idesisema.meioambiente.mg.gov.br/geonetwork/srv/api/records/061bca40-9d5e-42a2-a99f-4c0042a5e821",
+ "legal_basis": "DN CERH-MG nº 66/2020, alterada pela DN CERH-MG nº 95/2024",
+ "license": "Acesso livre (metadado IDE-Sisema); sem licença nomeada",
+ "source_srid": 4674,
+ "sha256": "0126fc7043019f01af91a32bfa9f2e47d9b7afa06839fd92ad229c7057e5e72e",
+ "bytes": 41462001,
+ "retrieved_at": "2026-11-15T02:34:27+00:00",
+ "feature_count": 43,
+ "districts": [
+  {
+   "sigla": "BU1",
+   "nome": "BU1: Rio Buranhém",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "DO1",
+   "nome": "DO1: Rio Piranga",
+   "area": "doce",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "DO2",
+   "nome": "DO2: Rio Piracicaba",
+   "area": "doce",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "DO3",
+   "nome": "DO3: Rio Santo Antônio",
+   "area": "doce",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "DO4",
+   "nome": "DO4: Rio Suaçuí Grande",
+   "area": "doce",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "DO5",
+   "nome": "DO5: Rio Caratinga",
+   "area": "doce",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "DO6",
+   "nome": "DO6: Águas do rio Manhuaçu",
+   "area": "doce",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD1",
+   "nome": "GD1: Afluentes Mineiros do Alto rio Grande",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD2",
+   "nome": "GD2: Vertentes do Rio Grande",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD3",
+   "nome": "GD3: Entorno do reservatório de Furnas",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD4",
+   "nome": "GD4: Rio Verde",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD5",
+   "nome": "GD5: Rio Sapucaí",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD6",
+   "nome": "GD6: Afluentes Mineiros dos rios Mogi-Guaçu e Pardo",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD7",
+   "nome": "GD7: Afluentes do Médio rio Grande",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "GD8",
+   "nome": "GD8: Afluentes do Baixo rio Grande",
+   "area": "grande",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "IB1",
+   "nome": "IB1: Afluentes Mineiros  dos  Preto (Itabapoana) rio São João e rio Caparaó",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "IN1",
+   "nome": "IN1: Rio Itanhém",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "IP1",
+   "nome": "IP1: Rio Itapemirim",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "IU1",
+   "nome": "IU1: Rio Itaúnas",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "JQ1",
+   "nome": "JQ1: Afluentes Mineiros do Alto rio Jequitinhonha",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "JQ2",
+   "nome": "JQ2: Rio Araçuaí",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "JQ3",
+   "nome": "JQ3: Afluentes Mineiros do Médio e Baixo rio Jequitinhonha",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "JU1",
+   "nome": "JU1: Rio Jucuruçu",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "MU1",
+   "nome": "MU: Afluentes Mineiros do rio Mucuri",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PA1",
+   "nome": "PA1: Rio Mosquito e demais afluentes Mineiros do Rio Pardo",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PE1",
+   "nome": "PE1: Rio Peruípe",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PJ1",
+   "nome": "PJ: Rios Piracicaba e Jaguari",
+   "area": "piracicaba_jaguari",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PN1",
+   "nome": "PN1: Afluentes Mineiros do Alto rio Paranaíba",
+   "area": "paranaiba",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PN2",
+   "nome": "PN2: Rio Araguari",
+   "area": "paranaiba",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PN3",
+   "nome": "PN3: Afluentes Mineiros do Baixo rio Paranaíba",
+   "area": "paranaiba",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PS1",
+   "nome": "PS1: Afluentes Mineiros dos Rios Preto e Paraibuna",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "PS2",
+   "nome": "PS2: Afluentes Mineiros dos Rios Pomba e Muriaé",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF1",
+   "nome": "SF1: Afluentes do Alto rio São Francisco",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF2",
+   "nome": "SF2: Rio Pará",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF3",
+   "nome": "SF3: Rio Paraopeba",
+   "area": "paraopeba",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF4",
+   "nome": "SF4: Entorno da represa de Três Marias",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF5",
+   "nome": "SF5: Rio das Velhas",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF6",
+   "nome": "SF6: Rios Jequitaí e Pacuí",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF7",
+   "nome": "SF7: Rio Paracatu",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF8",
+   "nome": "SF8: Rio Urucuia",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF9",
+   "nome": "SF9: Afluentes Mineiros do Médio rio São Francisco",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SF10",
+   "nome": "SF10: Rio Verde Grande",
+   "area": "sao_francisco",
+   "geometry_type": "MultiPolygon"
+  },
+  {
+   "sigla": "SM1",
+   "nome": "SM1:  Rio São Mateus",
+   "area": "leste",
+   "geometry_type": "MultiPolygon"
+  }
+ ]
+}
