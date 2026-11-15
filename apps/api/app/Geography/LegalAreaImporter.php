@@ -21,8 +21,14 @@ final class LegalAreaImporter
     /**
      * @return array{dataset_version_id: int, created: bool, features: int, repaired: list<string>, by_area: array<string, int>}
      */
+    /** The decompressed file is ~41 MB; it is passed to PostgreSQL as one string. */
+    private const MEMORY_LIMIT = '768M';
+
     public function import(string $directory): array
     {
+        if (self::bytes((string) ini_get('memory_limit')) < self::bytes(self::MEMORY_LIMIT)) {
+            ini_set('memory_limit', self::MEMORY_LIMIT);
+        }
         $manifest = $this->readJson($directory.'/manifest.json');
         $raw = @gzdecode((string) @file_get_contents($directory.'/'.self::DATA_FILE));
         if ($raw === false || $raw === '') {
@@ -31,6 +37,9 @@ final class LegalAreaImporter
         if (! hash_equals((string) ($manifest['sha256'] ?? ''), hash('sha256', $raw))) {
             throw new InvalidArgumentException('Data file does not match the SHA-256 in the manifest.');
         }
+        // Identity of the dataset version: the content hash ignores the volatile
+        // timeStamp GeoServer adds to every response; older manifests lack it.
+        $versionChecksum = (string) ($manifest['content_sha256'] ?? $manifest['sha256']);
         $areas = array_column($manifest['districts'] ?? [], 'area', 'sigla');
         if ($areas === []) {
             throw new InvalidArgumentException('Manifest lists no districts.');
@@ -40,10 +49,10 @@ final class LegalAreaImporter
             throw new InvalidArgumentException("Unsupported source SRID {$srid}.");
         }
 
-        return DB::transaction(function () use ($manifest, $raw, $areas, $srid) {
+        return DB::transaction(function () use ($manifest, $raw, $areas, $srid, $versionChecksum) {
             $datasetId = $this->datasetId($manifest);
             $existing = DB::table('geographic_dataset_versions')
-                ->where('dataset_id', $datasetId)->where('checksum_sha256', $manifest['sha256'])->value('id');
+                ->where('dataset_id', $datasetId)->where('checksum_sha256', $versionChecksum)->value('id');
             if ($existing !== null && DB::table('legal_area_geometries')->where('dataset_version_id', $existing)->exists()) {
                 return ['dataset_version_id' => (int) $existing, 'created' => false, 'features' => 0, 'repaired' => [], 'by_area' => []];
             }
@@ -68,11 +77,11 @@ final class LegalAreaImporter
 
             $versionId = $existing ?? DB::table('geographic_dataset_versions')->insertGetId([
                 'dataset_id' => $datasetId,
-                'version' => substr($manifest['retrieved_at'], 0, 10).'-'.substr($manifest['sha256'], 0, 12),
+                'version' => substr($manifest['retrieved_at'], 0, 10).'-'.substr($versionChecksum, 0, 12),
                 'source_url' => $manifest['url'],
                 'collected_at' => $manifest['retrieved_at'],
                 'license' => $manifest['license'] ?? null,
-                'checksum_sha256' => $manifest['sha256'],
+                'checksum_sha256' => $versionChecksum,
                 'source_crs' => "EPSG:{$srid}",
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -116,6 +125,21 @@ final class LegalAreaImporter
             'created_at' => now(),
             'updated_at' => now(),
         ]));
+    }
+
+    private static function bytes(string $value): int
+    {
+        if ($value === '-1') {
+            return PHP_INT_MAX;
+        }
+        $number = (int) $value;
+
+        return match (strtoupper(substr(trim($value), -1))) {
+            'G' => $number * 1024 ** 3,
+            'M' => $number * 1024 ** 2,
+            'K' => $number * 1024,
+            default => $number,
+        };
     }
 
     private function readJson(string $path): array

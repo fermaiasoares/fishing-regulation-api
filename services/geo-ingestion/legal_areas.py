@@ -93,6 +93,15 @@ def validate(collection: dict, mapping: list[dict]) -> list[dict]:
     return sorted(rows, key=lambda row: (re.sub(r"\d+$", "", row["sigla"]), int(re.sub(r"^\D+", "", row["sigla"]) or 0)))
 
 
+VOLATILE_KEYS = ("timeStamp",)
+
+
+def content_sha256(collection: dict) -> str:
+    """Hash of the data itself, ignoring per-response fields such as GeoServer's timeStamp."""
+    stable = {key: value for key, value in collection.items() if key not in VOLATILE_KEYS}
+    return hashlib.sha256(json.dumps(stable, sort_keys=True, separators=(",", ":"), ensure_ascii=False).encode()).hexdigest()
+
+
 def acquire(output_dir: Path, mapping_path: Path, url: str = SOURCE_URL) -> dict:
     request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
     with urllib.request.urlopen(request, timeout=300) as response:
@@ -101,13 +110,17 @@ def acquire(output_dir: Path, mapping_path: Path, url: str = SOURCE_URL) -> dict
     rows = validate(collection, load_mapping(mapping_path))
 
     output_dir.mkdir(parents=True, exist_ok=True)
-    digest = hashlib.sha256(raw).hexdigest()
     data_path = output_dir / "circunscricoes_hidrograficas.geojson.gz"
     manifest_path = output_dir / "manifest.json"
     previous = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
-    if previous.get("sha256") != digest:
+    content = content_sha256(collection)
+    if previous.get("content_sha256") == content and data_path.exists():
+        # Same data as stored: keep the stored bytes and their hash untouched.
+        raw = gzip.decompress(data_path.read_bytes())
+    else:
         # mtime=0 keeps the gzip bytes reproducible for identical content.
         data_path.write_bytes(gzip.compress(raw, mtime=0))
+    digest = hashlib.sha256(raw).hexdigest()
     manifest = {
         "dataset": "ide-sisema-circunscricoes-hidrograficas",
         "publisher": "Igam / IDE-Sisema",
@@ -118,14 +131,17 @@ def acquire(output_dir: Path, mapping_path: Path, url: str = SOURCE_URL) -> dict
         "license": "Acesso livre (metadado IDE-Sisema); sem licença nomeada",
         "source_srid": SOURCE_SRID,
         "sha256": digest,
+        "content_sha256": content,
         "bytes": len(raw),
-        "retrieved_at": previous.get("retrieved_at") if previous.get("sha256") == digest
+        "retrieved_at": previous.get("retrieved_at") if previous.get("content_sha256") == content
         else datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
         "feature_count": len(rows),
         "districts": rows,
     }
-    if previous.get("sha256") and previous["sha256"] != digest:
-        manifest["previous_sha256"] = previous["sha256"]
+    if previous.get("content_sha256") == content and previous.get("previous_content_sha256"):
+        manifest["previous_content_sha256"] = previous["previous_content_sha256"]
+    elif previous.get("content_sha256") and previous["content_sha256"] != content:
+        manifest["previous_content_sha256"] = previous["content_sha256"]
     manifest_path.write_text(json.dumps(manifest, ensure_ascii=False, indent=1) + "\n")
     return manifest
 
@@ -136,6 +152,8 @@ def check(output_dir: Path, mapping_path: Path, basins_path: Path | None = None)
     raw = gzip.decompress((output_dir / "circunscricoes_hidrograficas.geojson.gz").read_bytes())
     if hashlib.sha256(raw).hexdigest() != manifest["sha256"]:
         raise ValueError("stored districts do not match the manifest SHA-256")
+    if manifest.get("content_sha256") and content_sha256(json.loads(raw)) != manifest["content_sha256"]:
+        raise ValueError("stored districts do not match the manifest content SHA-256")
     mapping = load_mapping(mapping_path)
     rows = validate(json.loads(raw), mapping)
     if [(r["sigla"], r["area"]) for r in rows] != [(r["sigla"], r["area"]) for r in manifest["districts"]]:

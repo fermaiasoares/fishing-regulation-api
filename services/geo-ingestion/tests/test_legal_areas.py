@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from legal_areas import area_for, check, load_mapping, validate  # noqa: E402
+from legal_areas import area_for, check, content_sha256, load_mapping, validate  # noqa: E402
 
 MAPPING = Path(__file__).resolve().parents[3] / "catalog" / "legal" / "mg" / "area_mapping.toml"
 BASINS = MAPPING.with_name("basins.toml")
@@ -44,6 +44,12 @@ class LegalAreasTest(unittest.TestCase):
             validate({"type": "FeatureCollection", "features": [feature("GD3", "x", "Rio Doce")]}, self.mapping)
         with self.assertRaisesRegex(ValueError, "expected it to mention 'Paraopeba'"):
             validate({"type": "FeatureCollection", "features": [feature("SF3", "SF3: Rio Pará")]}, self.mapping)
+
+    def test_content_hash_ignores_the_response_timestamp(self):
+        first = {"type": "FeatureCollection", "timeStamp": "2026-11-15T02:34:22.793Z", "features": [feature("GD1", "a")]}
+        second = first | {"timeStamp": "2026-11-15T02:37:39.153Z"}
+        self.assertEqual(content_sha256(first), content_sha256(second))
+        self.assertNotEqual(content_sha256(first), content_sha256(first | {"features": [feature("GD2", "b")]}))
 
     def test_rejects_duplicates_and_bad_geometry(self):
         with self.assertRaisesRegex(ValueError, "duplicate"):

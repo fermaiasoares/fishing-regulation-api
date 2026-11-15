@@ -8,6 +8,7 @@
  "license": "Acesso livre (metadado IDE-Sisema); sem licença nomeada",
  "source_srid": 4674,
  "sha256": "9b13c72b55e4875d9fabd955752d086a03584c14dcda8dc010590802e44c96e1",
+ "content_sha256": "80c7b5a1b5605497b234f98a37e135df9f6769ab4c375f7051f69041cc599302",
  "bytes": 41462001,
  "retrieved_at": "2026-11-15T02:37:45+00:00",
  "feature_count": 43,
@@ -270,6 +271,5 @@
    "area": "leste",
    "geometry_type": "MultiPolygon"
   }
- ],
- "previous_sha256": "0126fc7043019f01af91a32bfa9f2e47d9b7afa06839fd92ad229c7057e5e72e"
+ ]
 }
