@@ -2,31 +2,39 @@
 # legais do catálogo (basins.toml). Fonte das CHs: IDE-Sisema/Igam, camada
 # ide_1108_mg_circunscricoes_hidrograficas_pol (DN CERH-MG 66/2020 e 95/2024).
 #
-# "code" vale para uma CH específica e tem precedência sobre "prefix".
+# "code" vale para uma CH específica e tem precedência sobre "prefix";
+# "name_contains" e "federal_basin" conferem o nome e o atributo bacia_fede da CH
+# antes de aceitar a ligação.
 # Uma CH que nenhuma linha cobre faz a ingestão falhar: nada é adivinhado.
 
 [[district]]
 code = "SF3"
+federal_basin = "Rio São Francisco"
 area = "paraopeba"
+name_contains = "Paraopeba"
 reason = "SF3 é a CH do Rio Paraopeba, sub-bacia do São Francisco."
 
 [[district]]
 prefix = "SF"
+federal_basin = "Rio São Francisco"
 area = "sao_francisco"
 reason = "CHs SF1 a SF10: bacia do São Francisco (Portaria IEF 154/2011)."
 
 [[district]]
 prefix = "GD"
+federal_basin = "Rio Grande"
 area = "grande"
 reason = "CHs GD: bacia do Rio Grande (Portaria IEF 156/2011)."
 
 [[district]]
 prefix = "PN"
+federal_basin = "Rio Paranaíba"
 area = "paranaiba"
 reason = "CHs PN: bacia do Rio Paranaíba (Portaria IEF 156/2011)."
 
 [[district]]
 prefix = "DO"
+federal_basin = "Rio Doce"
 area = "doce"
 reason = "CHs DO1 a DO6: bacia do Rio Doce (Portaria IEF 31/2025; Leste pela 155/2011)."
 

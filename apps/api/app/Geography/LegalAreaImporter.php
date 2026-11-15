@@ -31,23 +31,41 @@ final class LegalAreaImporter
         if (! hash_equals((string) ($manifest['sha256'] ?? ''), hash('sha256', $raw))) {
             throw new InvalidArgumentException('Data file does not match the SHA-256 in the manifest.');
         }
-        $collection = json_decode($raw, true, 512, JSON_THROW_ON_ERROR);
         $areas = array_column($manifest['districts'] ?? [], 'area', 'sigla');
-        if ($areas === [] || count($collection['features'] ?? []) !== count($areas)) {
-            throw new InvalidArgumentException('Manifest districts do not match the data file.');
+        if ($areas === []) {
+            throw new InvalidArgumentException('Manifest lists no districts.');
         }
         $srid = (int) ($manifest['source_srid'] ?? 0);
         if ($srid !== 4674 && $srid !== 4326) {
             throw new InvalidArgumentException("Unsupported source SRID {$srid}.");
         }
 
-        return DB::transaction(function () use ($manifest, $collection, $areas, $srid) {
+        return DB::transaction(function () use ($manifest, $raw, $areas, $srid) {
             $datasetId = $this->datasetId($manifest);
             $existing = DB::table('geographic_dataset_versions')
                 ->where('dataset_id', $datasetId)->where('checksum_sha256', $manifest['sha256'])->value('id');
             if ($existing !== null && DB::table('legal_area_geometries')->where('dataset_version_id', $existing)->exists()) {
                 return ['dataset_version_id' => (int) $existing, 'created' => false, 'features' => 0, 'repaired' => [], 'by_area' => []];
             }
+
+            // The file (tens of MB) is parsed by PostgreSQL, not decoded in PHP.
+            DB::statement('DROP TABLE IF EXISTS legal_area_import');
+            DB::statement(<<<'SQL'
+                CREATE TEMPORARY TABLE legal_area_import ON COMMIT DROP AS
+                WITH features AS (SELECT json_array_elements((?::json)->'features') AS feature)
+                SELECT upper(trim(coalesce(feature->'properties'->>'sigla', feature->'properties'->>'SIGLA'))) AS sigla,
+                       ST_SetSRID(ST_GeomFromGeoJSON(feature->>'geometry'), ?) AS geometry
+                FROM features
+                SQL, [$raw, $srid]);
+
+            $siglas = DB::table('legal_area_import')->pluck('sigla')->all();
+            sort($siglas);
+            $expected = array_keys($areas);
+            sort($expected);
+            if ($siglas !== $expected) {
+                throw new InvalidArgumentException('Districts in the data file do not match the manifest.');
+            }
+
             $versionId = $existing ?? DB::table('geographic_dataset_versions')->insertGetId([
                 'dataset_id' => $datasetId,
                 'version' => substr($manifest['retrieved_at'], 0, 10).'-'.substr($manifest['sha256'], 0, 12),
@@ -64,32 +82,22 @@ final class LegalAreaImporter
                 ->whereIn('dataset_version_id', DB::table('geographic_dataset_versions')->where('dataset_id', $datasetId)->select('id'))
                 ->delete();
 
-            $repaired = [];
-            $byArea = [];
-            foreach ($collection['features'] as $feature) {
-                $properties = array_change_key_case($feature['properties'] ?? []);
-                $sigla = strtoupper(trim((string) ($properties['sigla'] ?? '')));
-                if (! isset($areas[$sigla])) {
-                    throw new InvalidArgumentException("District {$sigla} is not in the manifest.");
-                }
-                $row = DB::selectOne(<<<'SQL'
-                    WITH source AS (SELECT ST_SetSRID(ST_GeomFromGeoJSON(?), ?) AS geometry)
-                    INSERT INTO legal_area_geometries (legal_area_code, dataset_version_id, source_feature_id, geometry, created_at, updated_at)
-                    SELECT ?, ?, ?, ST_Multi(ST_CollectionExtract(ST_MakeValid(ST_Transform(geometry, 4326)), 3)), now(), now()
-                    FROM source
-                    RETURNING (SELECT NOT ST_IsValid(geometry) FROM source) AS repaired
-                    SQL, [json_encode($feature['geometry']), $srid, $areas[$sigla], $versionId, $sigla]);
-                if ($row->repaired) {
-                    $repaired[] = $sigla;
-                }
-                $byArea[$areas[$sigla]] = ($byArea[$areas[$sigla]] ?? 0) + 1;
-            }
+            $repaired = DB::table('legal_area_import')->whereRaw('NOT ST_IsValid(geometry)')->orderBy('sigla')->pluck('sigla')->all();
+            DB::insert(<<<'SQL'
+                INSERT INTO legal_area_geometries (legal_area_code, dataset_version_id, source_feature_id, geometry, created_at, updated_at)
+                SELECT mapping.value, ?, import.sigla,
+                       ST_Multi(ST_CollectionExtract(ST_MakeValid(ST_Transform(import.geometry, 4326)), 3)), now(), now()
+                FROM legal_area_import AS import
+                JOIN json_each_text(?::json) AS mapping ON mapping.key = import.sigla
+                SQL, [$versionId, json_encode($areas)]);
+
+            $byArea = array_count_values($areas);
             ksort($byArea);
 
             return [
                 'dataset_version_id' => (int) $versionId,
                 'created' => true,
-                'features' => count($collection['features']),
+                'features' => count($siglas),
                 'repaired' => $repaired,
                 'by_area' => $byArea,
             ];

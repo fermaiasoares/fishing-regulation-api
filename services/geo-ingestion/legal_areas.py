@@ -38,10 +38,13 @@ def load_mapping(path: Path) -> list[dict]:
         return tomllib.load(handle)["district"]
 
 
-def area_for(sigla: str, mapping: list[dict]) -> str:
+def area_for(sigla: str, mapping: list[dict], name: str | None = None) -> str:
     """Legal area of a district code such as "SF3"; exact codes win over prefixes."""
     exact = [rule for rule in mapping if rule.get("code") == sigla]
     if exact:
+        expected = exact[0].get("name_contains")
+        if expected and name is not None and expected.casefold() not in name.casefold():
+            raise ValueError(f"district {sigla} is named {name!r}, expected it to mention {expected!r}")
         return exact[0]["area"]
     prefix = re.match(r"^[A-Z]+", sigla)
     matches = [rule for rule in mapping if prefix and rule.get("prefix") == prefix.group(0)]
@@ -70,6 +73,15 @@ def validate(collection: dict, mapping: list[dict]) -> list[dict]:
         if geometry.get("type") not in GEOMETRY_TYPES or not geometry.get("coordinates"):
             raise ValueError(f"district {sigla} has invalid geometry type {geometry.get('type')}")
         seen.add(sigla)
+        federal = str(properties.get("bacia_fede") or "").strip()
+        rule = next((r for r in mapping if r.get("code") == sigla), None) or next(
+            (r for r in mapping if r.get("prefix") and re.match(r"^[A-Z]+", sigla).group(0) == r["prefix"]), None)
+        if rule and rule.get("federal_basin") and rule["federal_basin"] != federal:
+            raise ValueError(f"district {sigla} belongs to {federal!r}, but the mapping expects {rule['federal_basin']!r}")
+        if sigla in {rule.get("code") for rule in mapping}:
+            area = area_for(sigla, mapping, name)  # a renamed district must fail loudly
+            rows.append({"sigla": sigla, "nome": name, "area": area, "geometry_type": geometry["type"]})
+            continue
         try:
             area = area_for(sigla, mapping)
         except ValueError:

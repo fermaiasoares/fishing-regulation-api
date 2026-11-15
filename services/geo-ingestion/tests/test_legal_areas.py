@@ -14,9 +14,13 @@ BASINS = MAPPING.with_name("basins.toml")
 SQUARE = {"type": "Polygon", "coordinates": [[[0, 0], [1, 0], [1, 1], [0, 1], [0, 0]]]}
 
 
-def feature(sigla, nome):
+FEDERAL = {"GD": "Rio Grande", "SF": "Rio São Francisco", "DO": "Rio Doce", "PN": "Rio Paranaíba"}
+
+
+def feature(sigla, nome, federal=None):
     # Synthetic geometry: only the attributes matter for these tests.
-    return {"type": "Feature", "properties": {"sigla": sigla, "nome": nome}, "geometry": SQUARE}
+    properties = {"sigla": sigla, "nome": nome, "bacia_fede": federal or FEDERAL.get(sigla[:2], "")}
+    return {"type": "Feature", "properties": properties, "geometry": SQUARE}
 
 
 class LegalAreasTest(unittest.TestCase):
@@ -34,6 +38,12 @@ class LegalAreasTest(unittest.TestCase):
     def test_unknown_districts_are_never_guessed(self):
         with self.assertRaisesRegex(ValueError, "XX1"):
             validate({"type": "FeatureCollection", "features": [feature("XX1", "Inexistente")]}, self.mapping)
+
+    def test_mapping_is_checked_against_official_attributes(self):
+        with self.assertRaisesRegex(ValueError, "belongs to 'Rio Doce'"):
+            validate({"type": "FeatureCollection", "features": [feature("GD3", "x", "Rio Doce")]}, self.mapping)
+        with self.assertRaisesRegex(ValueError, "expected it to mention 'Paraopeba'"):
+            validate({"type": "FeatureCollection", "features": [feature("SF3", "SF3: Rio Pará")]}, self.mapping)
 
     def test_rejects_duplicates_and_bad_geometry(self):
         with self.assertRaisesRegex(ValueError, "duplicate"):
