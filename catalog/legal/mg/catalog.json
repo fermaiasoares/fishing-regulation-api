@@ -812,7 +812,7 @@
  "sources": {
   "ief-154-2011": {
    "bytes": 469723,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "pdf",
    "official": false,
    "retrieved_at": "2026-11-15T01:56:28+00:00",
@@ -823,7 +823,7 @@
   },
   "ief-155-2011": {
    "bytes": 459374,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "pdf",
    "official": false,
    "retrieved_at": "2026-11-15T01:56:32+00:00",
@@ -834,7 +834,7 @@
   },
   "ief-156-2011": {
    "bytes": 470060,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "pdf",
    "official": false,
    "retrieved_at": "2026-11-15T01:56:34+00:00",
@@ -845,7 +845,7 @@
   },
   "ief-31-2025": {
    "bytes": 145263,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "pdf",
    "official": true,
    "retrieved_at": "2026-11-15T01:56:36+00:00",
@@ -856,7 +856,7 @@
   },
   "ief-40-2017": {
    "bytes": 324317,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "pdf",
    "official": true,
    "retrieved_at": "2026-11-15T01:56:38+00:00",
@@ -867,7 +867,7 @@
   },
   "mg-lei-15082-2004": {
    "bytes": 81588,
-   "extractor": "legal-sources/2",
+   "extractor": "legal-sources/3",
    "kind": "pdf",
    "official": false,
    "retrieved_at": "2026-11-15T01:58:41+00:00",
