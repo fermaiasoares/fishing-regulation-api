@@ -1,0 +1,222 @@
+[
+ {
+  "id": "preamble",
+  "label": "Preâmbulo",
+  "text": "GOVERNO DO ESTADO DE MINAS GERAIS PORTARIA IEF Nº 31 DE 29 DE ABRIL DE 2025 Dispõe sobre o ordenamento pesqueiro na bacia do rio Doce. (Publicação – Diário do Executivo – “Minas Gerais” – 30/04/2025) O DIRETOR-GERAL DO INSTITUTO ESTADUAL DE FLORESTAS-IEF, no uso da atribuição que lhe confere o inciso I do art. 14 do Decreto nº 47.892, de 23 de março de 2020, e tendo em vista o disposto na Lei Federal nº 11.959, de 29 de junho de 2009, na Lei nº. 14.181, de 17 de janeiro de 2002, no Decreto Estadual n° 43.713 de 14 de janeiro de 2004, e na cláusula 5 do Anexo 10 do Acordo Judicial para Reparação Integral e Definitiva Relativa ao Rompimento da Barragem de Fundão, RESOLVE:"
+ },
+ {
+  "id": "art1",
+  "label": "Art. 1",
+  "text": "Fica estabelecido o ordenamento pesqueiro da bacia do rio Doce."
+ },
+ {
+  "id": "art1/par-unico",
+  "label": "Parágrafo único",
+  "text": "O ordenamento pesqueiro de que trata esta portaria será implantado em regime de manejo adaptativo e revisado conforme novos estudos científicos, incluindo a avaliação dos estoques pesqueiros da bacia mediante ampla participação da cadeia da pesca e da comunidade científica, forem conduzidos."
+ },
+ {
+  "id": "art2",
+  "label": "Art. 2",
+  "text": "Para os fins desta portaria considera-se:"
+ },
+ {
+  "id": "art2/I",
+  "label": "I",
+  "text": "bacia: o rio principal e o conjunto de corpos d’água que drenam para ele, incluindo seus formadores e afluentes, lagos e lagoas, reservatórios e demais coleções d’água;"
+ },
+ {
+  "id": "art2/II",
+  "label": "II",
+  "text": "espécie autóctone: espécie de origem ou ocorrência natural na própria bacia;"
+ },
+ {
+  "id": "art2/III",
+  "label": "III",
+  "text": "espécie alóctone: espécie de origem ou ocorrência natural em outras bacias hidrográficas brasileiras, quer tenha ou não já sido introduzida na bacia;"
+ },
+ {
+  "id": "art2/IV",
+  "label": "IV",
+  "text": "espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, quer tenha ou não já sido introduzida em águas brasileiras; GOVERNO DO ESTADO DE MINAS GERAIS"
+ },
+ {
+  "id": "art2/V",
+  "label": "V",
+  "text": "espécime híbrido: espécime resultante do cruzamento entre diferentes espécies."
+ },
+ {
+  "id": "art2/VI",
+  "label": "VI",
+  "text": "artes e petrechos de pesca: instrumentos ou aparelhos empregados na pesca."
+ },
+ {
+  "id": "art3",
+  "label": "Art. 3",
+  "text": "Fica vedada a pesca de espécies autóctones em toda a bacia do rio Doce, nos limites do Estado de Minas Gerais."
+ },
+ {
+  "id": "art4",
+  "label": "Art. 4",
+  "text": "É permitida a captura e o transporte de espécies alóctones, de espécies exóticas e de espécimes híbridos desde que observados os seguintes requisitos:"
+ },
+ {
+  "id": "art4/I",
+  "label": "I",
+  "text": "para pescador amador:"
+ },
+ {
+  "id": "art4/I/a",
+  "label": "a)",
+  "text": "licença de pesca devida;"
+ },
+ {
+  "id": "art4/I/b",
+  "label": "b)",
+  "text": "limite de cota de 10 kg (dez quilogramas) mais um exemplar de qualquer tamanho acima do mínimo estabelecido pela legislação vigente;"
+ },
+ {
+  "id": "art4/II",
+  "label": "II",
+  "text": "para pescador profissional:"
+ },
+ {
+  "id": "art4/II/a",
+  "label": "a)",
+  "text": "licença de pesca devida;"
+ },
+ {
+  "id": "art4/II/b",
+  "label": "b)",
+  "text": "sem limite de cota."
+ },
+ {
+  "id": "art4/par-unico",
+  "label": "Parágrafo único",
+  "text": "Em caso de captura acidental de espécie autóctone, os espécimes deverão ser devolvidos imediatamente ao corpo d’água, sendo permitida a coleta de no máximo 1 kg (um quilograma) mais um exemplar em caso de morte acidental do animal durante o manuseio."
+ },
+ {
+  "id": "art5",
+  "label": "Art. 5",
+  "text": "Os petrechos empregados para pesca amadora na bacia do rio Doce, nos limites do Estado de Minas Gerais, ficam restritos a:"
+ },
+ {
+  "id": "art5/I",
+  "label": "I",
+  "text": "anzol simples ou múltiplo;"
+ },
+ {
+  "id": "art5/II",
+  "label": "II",
+  "text": "linha de mão;"
+ },
+ {
+  "id": "art5/III",
+  "label": "III",
+  "text": "vara ou caniço;"
+ },
+ {
+  "id": "art5/IV",
+  "label": "IV",
+  "text": "molinete ou carretilha;"
+ },
+ {
+  "id": "art5/V",
+  "label": "V",
+  "text": "iscas artificiais ou naturais;"
+ },
+ {
+  "id": "art5/VI",
+  "label": "VI",
+  "text": "embarcação."
+ },
+ {
+  "id": "art6",
+  "label": "Art. 6",
+  "text": "Os petrechos empregados na pesca profissional na bacia do rio Doce, nos limites do Estado de Minas Gerais, ficam restritos a:"
+ },
+ {
+  "id": "art6/I",
+  "label": "I",
+  "text": "tarrafa;"
+ },
+ {
+  "id": "art6/II",
+  "label": "II",
+  "text": "anzol simples ou múltiplo;"
+ },
+ {
+  "id": "art6/III",
+  "label": "III",
+  "text": "linha de mão; GOVERNO DO ESTADO DE MINAS GERAIS"
+ },
+ {
+  "id": "art6/IV",
+  "label": "IV",
+  "text": "vara ou caniço;"
+ },
+ {
+  "id": "art6/V",
+  "label": "V",
+  "text": "molinete ou carretilha;"
+ },
+ {
+  "id": "art6/VI",
+  "label": "VI",
+  "text": "espinhel;"
+ },
+ {
+  "id": "art6/VII",
+  "label": "VII",
+  "text": "caçador;"
+ },
+ {
+  "id": "art6/VIII",
+  "label": "VIII",
+  "text": "pinda ou anzol de galha;"
+ },
+ {
+  "id": "art6/IX",
+  "label": "IX",
+  "text": "joão bobo, galão ou cavalinha;"
+ },
+ {
+  "id": "art6/X",
+  "label": "X",
+  "text": "embarcação."
+ },
+ {
+  "id": "art7",
+  "label": "Art. 7",
+  "text": "Ficam vedados todos os petrechos e artes de pesca não explicitamente autorizados nesta portaria, especialmente o uso de redes de emalhe."
+ },
+ {
+  "id": "art8",
+  "label": "Art. 8",
+  "text": "A vedações previstas nesta portaria não se aplicam:"
+ },
+ {
+  "id": "art8/I",
+  "label": "I",
+  "text": "a pesca de caráter científico autorizada pelo órgão ambiental competente;"
+ },
+ {
+  "id": "art8/II",
+  "label": "II",
+  "text": "a pesca de subsistência;"
+ },
+ {
+  "id": "art8/III",
+  "label": "III",
+  "text": "as medidas de manejo previstas nos Planos de Manejo das Unidades de Conservação da bacia."
+ },
+ {
+  "id": "art9",
+  "label": "Art. 9",
+  "text": "Fica revogada a Portaria IEF nº 40, de 11 de maio de 2017."
+ },
+ {
+  "id": "art10",
+  "label": "Art. 10",
+  "text": "Esta portaria entra em vigor na data de sua publicação. Belo Horizonte, 29 de abril de 2025 Breno Esteves Lasmar Diretor-Geral do IEF"
+ }
+]

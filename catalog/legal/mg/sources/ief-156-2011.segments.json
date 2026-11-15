@@ -1,0 +1,297 @@
+[
+ {
+  "id": "preamble",
+  "label": "Preâmbulo",
+  "text": "GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA PORTARIA Nº 156, 13 DE OUTUBRO DE 2011 Dispõe sobre a regulamentação da pesca nas Bacias Hidrográficas dos Rios Grande e Paranaíba, no Estado de Minas Gerais, no período de piracema e dá outras providências. O Diretor Geral do Instituto Estadual de Florestas - IEF, no uso das atribuições a ele conferidas pelo Decreto nº 44.807, de 12 de maio de 2008, e com respaldo na Lei Delegada nº 180 de 20 de janeiro de 2011, Lei Delegada nº 79, de 29 de janeiro de 2003, alterada pela Lei Delegada nº 158 de 25 de janeiro de 2007, pela Lei n.º 2.606, de 5 de janeiro de 1962, alterada pela Lei n.º 8.666, de 21 de setembro de 1984 e, em especial, pela Lei n.º 14.181, de 17 de janeiro de 2002, regulamentada pelo Decreto nº 43.713, de 14 de janeiro de 2004, alterado pelo Decreto nº 43.854, de 13 de agosto de 2004 e Decreto nº 44.844 de 25 de junho de 2008, assim como pelo contido na Lei Federal nº 11.959, de 29 de junho de 2009; RESOLVE:"
+ },
+ {
+  "id": "art1",
+  "label": "Art. 1",
+  "text": "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, anualmente, de 1º de novembro a 28 de fevereiro, na bacia hidrográfica dos Rios Grande e Paranaíba, no Estado de Minas Gerais."
+ },
+ {
+  "id": "art1/par1",
+  "label": "§ 1",
+  "text": "Entende-se por bacia hidrográfica: o rio principal, seus formadores, afluentes, lagos, lagoas marginais, reservatórios e demais coleções de água inseridas na bacia de contribuição do rio."
+ },
+ {
+  "id": "art2",
+  "label": "Art. 2",
+  "text": "Proibir a captura, o transporte e o armazenamento de espécies nativas da bacia hidrográfica dos Rios Grande e Paranaíba, inclusive espécies utilizadas para fins ornamentais e de aquariofilia assim como a utilização, o porte, a guarda e o transporte nos locais de pesca de peixes sem couro ou escamas, dificultando a sua identificação;"
+ },
+ {
+  "id": "art2/par1",
+  "label": "§ 1",
+  "text": "Entende-se por espécies nativas da bacia hidrográfica dos Rios Grande e Paranaíba: todas as espécies de peixes que, sendo de origem e ocorrência natural da bacia hidrográfica em questão, devam ser preservadas no período."
+ },
+ {
+  "id": "art2/par2",
+  "label": "§ 2",
+  "text": "Este artigo não se aplica a manutenção de espécies para fins de aquariofilia mantidos em residências, sem finalidade comercial, ou aquários públicos de exposição devidamente registrados junto aos órgãos ambientais como Zoológicos e criadouros científicos."
+ },
+ {
+  "id": "art3",
+  "label": "Art. 3",
+  "text": "Proibir a pesca para todas as categorias e modalidades:"
+ },
+ {
+  "id": "art3/I",
+  "label": "I",
+  "text": "Nas lagoas marginais;"
+ },
+ {
+  "id": "art3/II",
+  "label": "II",
+  "text": "a menos de quinhentos metros (500m) de confluências e desembocaduras de rios, lagoas, canais e tubulações de esgoto; GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA"
+ },
+ {
+  "id": "art3/III",
+  "label": "III",
+  "text": "Até um mil e quinhentos metros (1.500m) a montante e a jusante das barragens de reservatórios de empreendimento hidrelétrico, e de mecanismos de transposição de peixes;"
+ },
+ {
+  "id": "art3/IV",
+  "label": "IV",
+  "text": "Até um mil e quinhentos metros (1.500m) a montante e a jusante de cachoeiras e corredeiras;"
+ },
+ {
+  "id": "art3/V",
+  "label": "V",
+  "text": "Até quinhentos metros (500 m) a jusante dos demais barramentos;"
+ },
+ {
+  "id": "art3/VI",
+  "label": "VI",
+  "text": "No trecho do Rio das Mortes, desde a sua nascente até a cachoeira das Lavras a jusante de Severiano Rezende;"
+ },
+ {
+  "id": "art3/VII",
+  "label": "VII",
+  "text": "No Rio Grande, em Minas Gerais, no trecho compreendido entre a ponte rodoferroviária do município de Ribeirão Vermelho e o barramento da UHE de Camargos;"
+ },
+ {
+  "id": "art3/VIII",
+  "label": "VIII",
+  "text": "No rio Grande, no trecho a jusante da barragem da UHE de Porto Colômbia até a ponte Engenheiro Gumercindo Penteado (nos municípios de Planura/MG e Colômbia/SP), exceto para fins de transporte, embarque e desembarque, em que se considera como ponto de referência o Porto Sakuma na margem do estado de São Paulo e o Porto Rio Grande na margem do estado de Minas Gerais."
+ },
+ {
+  "id": "art3/IX",
+  "label": "IX",
+  "text": "No Rio Paranaíba, da sua nascente, até o município de Lagamar;"
+ },
+ {
+  "id": "art3/X",
+  "label": "X",
+  "text": "No rio Paranaíba, no trecho compreendido entre a jusante da UHE de Emborcação até a ponte Estelita Campos na BR 050;"
+ },
+ {
+  "id": "art3/XI",
+  "label": "XI",
+  "text": "no rio Paranaíba, no trecho compreendido entre a UHE Itumbiara e a ponte rodoviária da BR 153 nos municípios de Itumbiara (GO) e Araporã (MG);"
+ },
+ {
+  "id": "art3/XII",
+  "label": "XII",
+  "text": "No rio Paranaíba, no trecho compreendido entre a jusante da UHE de Cachoeira Dourada até 500 metros a jusante da confluência com o Rio Meia Ponte;"
+ },
+ {
+  "id": "art3/XIII",
+  "label": "XIII",
+  "text": "No rio Paranaíba, no trecho compreendido entre a jusante da barragem da UHE São Simão e a ponte rodoviária da BR 365 (nos municípios de Santa Vitória/MG e São Simão/GO);"
+ },
+ {
+  "id": "art3/XIV",
+  "label": "XIV",
+  "text": "Nos rios Quebra-Anzol, Araguari e seus respectivos afluentes, incluindo aqueles formadores do reservatório de Nova Ponte no estado de Minas Gerais;"
+ },
+ {
+  "id": "art3/XV",
+  "label": "XV",
+  "text": "No Rio Tijuco ou Tejuco, de sua nascente no município de Uberaba até sua foz no Reservatório de São Simão, até a travessia da balsa, entre os municípios de Santa Vitória e Ipiaçu e seus afluentes;"
+ },
+ {
+  "id": "art3/XVI",
+  "label": "XVI",
+  "text": "No Rio da Prata, de sua nascente no município de Veríssimo até a sua foz no Rio Tijuco e seus afluentes;"
+ },
+ {
+  "id": "art3/XVII",
+  "label": "XVII",
+  "text": "No Rio Araguari, do barramento do PCH Amador Aguiar II(Capim Branco II), até a ponte de Tupaciguara na rodovia MG223."
+ },
+ {
+  "id": "art3/XVIII",
+  "label": "XVIII",
+  "text": "Nos corpos d’água de domínio do estado em que a legislação estadual e federal específica assim o determinar;"
+ },
+ {
+  "id": "art3/IX#2",
+  "label": "IX",
+  "text": "Com o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta portaria; GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA"
+ },
+ {
+  "id": "art3/par1",
+  "label": "§ 1",
+  "text": "Para efeito desta portaria entende-se por lagoa marginal os alagados, alagadiços, lagos, lagoas, banhados, canais ou poços naturais situados em áreas alagáveis da planície de inundação, que apresentam comunicação permanente ou intermitente com o rio principal ou canais secundários, podendo, em alguns casos, ser alimentados exclusivamente pelo lençol freático."
+ },
+ {
+  "id": "art3/par2",
+  "label": "§ 2",
+  "text": "Entende-se por corredeiras: trechos de rio onde o leito apresenta-se atulhado de blocos de rochas e pedras ou grandes lajeados, onde as águas, por diferença de nível, correm mais velozes;"
+ },
+ {
+  "id": "art4",
+  "label": "Art. 4",
+  "text": "Proibir a realização de competições de pesca, tais como: torneios, campeonatos e gincanas."
+ },
+ {
+  "id": "art4/par1",
+  "label": "§ 1",
+  "text": "Esta proibição não se aplica a competições de pesca realizadas em reservatórios, visando a captura de espécies não nativas (alóctones e exóticas) e híbridos, devidamente autorizadas pelos órgãos competentes."
+ },
+ {
+  "id": "art4/par2",
+  "label": "§ 2",
+  "text": "Entende-se por: a) Espécie alóctone: espécie de origem e ocorrência natural em outras bacias hidrográficas brasileiras; b) Espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, que tenha ou não sida introduzida em águas brasileiras; c) Híbrido: organismo resultante do cruzamento de duas espécies."
+ },
+ {
+  "id": "art5",
+  "label": "Art. 5",
+  "text": "Proibir, nos rios da bacia, o uso de trapiche ou plataforma flutuante de qualquer natureza para atividades de pesca."
+ },
+ {
+  "id": "art6",
+  "label": "Art. 6",
+  "text": "Proibir a pesca subaquática. Parágrafo único. Fica proibido o uso de materiais perfurantes, tais como: arpão, arbalete, fisga, bicheiro e lança."
+ },
+ {
+  "id": "art7",
+  "label": "Art. 7",
+  "text": "Permitir a pesca em rios da bacia, somente na modalidade desembarcada e a pesca em reservatórios, nas modalidades embarcada e desembarcada, sendo ambas com a utilização exclusivamente de linha de mão, vara simples, caniço com molinete ou carretilha, com o uso de iscas naturais e artificiais, respeitando-se os locais onde haja proibição:"
+ },
+ {
+  "id": "art7/I",
+  "label": "I",
+  "text": "Fica limitado a 05 (cinco) o número de varas ou caniços por pescador licenciado."
+ },
+ {
+  "id": "art7/II",
+  "label": "II",
+  "text": "Exclusivamente espécies não nativas (alóctones, exóticas e híbridos)"
+ },
+ {
+  "id": "art7/III",
+  "label": "III",
+  "text": "Nas áreas não mencionadas no art. 3º desta portaria;"
+ },
+ {
+  "id": "art7/IV",
+  "label": "IV",
+  "text": "Captura e transporte de 3 (três) kg de peixes mais um exemplar para o pescador profissional e cota de 3 (três) kg mais um exemplar para o pescador amador, por dia ou jornada de pesca, somente das espécies não nativas (alóctones e exóticas) e híbridos tais como: apaiari (Astronotus ocelatus); bagre-africano (Clarias sp.); black-bass (Micropterus sp.); carpa (todas as espécies); corvina ou pescada-do-Piauí (Plagioscion squamosissimus); peixe-rei (Odontesthis sp.); sardinha-de-águadoce (Triportheus angulatus); piranha preta (Serrassalmus rombeus) tilápias (Oreochromis spp. e Tilapia spp.); tucunaré (Cichla spp.); zoiudo GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA (Geophagus surinamensis e Geophagus proximus) e híbridos. §1º Excetua-se desta permissão o piauçu (Leporinus macrocephalus). Entende-se por:"
+ },
+ {
+  "id": "art7/I#2",
+  "label": "I",
+  "text": "Isca natural todo o atrativo (vivo ou morto, vegetal ou animal, em partes ou na forma integral, manufaturada ou industrializada) que serve como alimento aos peixes;"
+ },
+ {
+  "id": "art7/II#2",
+  "label": "II",
+  "text": "Isca artificial todo artefato não alimentar usado como atrativo na pesca."
+ },
+ {
+  "id": "art7/III#2",
+  "label": "III",
+  "text": "Entende-se por jornada de pesca, período de tempo igual ou superior a 1 (um) dia, a que o pescador se dedicar à sua atividade, sendo vedada a acumulação diária do pescado no local da pesca, bem como a sua condução;"
+ },
+ {
+  "id": "art7/par2",
+  "label": "§ 2",
+  "text": "Proibir a utilização de animais aquáticos, inclusive peixes, camarões, caramujos, caranguejos, vivos ou mortos (inteiros ou em pedaços), como iscas."
+ },
+ {
+  "id": "art7/par2/I",
+  "label": "I",
+  "text": "Excluem-se desta proibição os peixes vivos de ocorrência natural da bacia hidrográfica, oriundos de criações, acompanhados de nota fiscal ou nota de produtor. Exceto o sarapó ou tuvira ou morenita."
+ },
+ {
+  "id": "art7/par3",
+  "label": "§ 3",
+  "text": "Fica estabelecida a cota para a pesca profissional exclusivamente para consumo familiar, sendo vetado a comercialização dos peixes capturados durante o período de defeso, de acordo com o disposto nas Lei n° 10.779/2003, Lei n° 7.998, de 11 de Janeiro de 1990 e Lei n° 9605/98."
+ },
+ {
+  "id": "art8",
+  "label": "Art. 8",
+  "text": "Permitir aos pescadores profissionais e amadores o transporte de pescado por via fluvial somente em locais cuja pesca embarcada é permitida."
+ },
+ {
+  "id": "art9",
+  "label": "Art. 9",
+  "text": "O produto da pesca oriundo de locais com período de defeso diferenciado ou de outros países, deverá estar acompanhado de comprovante de origem, sob pena de apreensão do pescado e dos petrechos, equipamentos e instrumentos utilizados na pesca."
+ },
+ {
+  "id": "art9/par-unico",
+  "label": "Parágrafo único",
+  "text": "Entende-se por comprovante de origem, o documento emitido pelos órgãos federal, estadual, municipal, colônia de pescadores ou pescador devidamente registrado."
+ },
+ {
+  "id": "art10",
+  "label": "Art. 10",
+  "text": "Os materiais de pesca apreendidos em decorrência do não cumprimento das normas estabelecidas nesta portaria não serão restituídos, cabendo ao órgão competente a sua destinação final, em cumprimento a Lei n o 9.605/98."
+ },
+ {
+  "id": "art11",
+  "label": "Art. 11",
+  "text": "Esta portaria não se aplica ao pescado proveniente de piscicultura ou pesque-pagues/pesqueiros registrados nos órgãos ambientais competentes, devendo estar acompanhado de nota fiscal."
+ },
+ {
+  "id": "art12",
+  "label": "Art. 12",
+  "text": "Fica estabelecido o segundo dia útil após o início do defeso, como data limite para declaração ao IEF, dos estoques de peixe in natura, congelados ou não, provenientes de águas continentais, existentes nos frigoríficos, peixarias, colônias e associações de pescadores, armazenados por pescadores profissionais, GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA entrepostos, postos de venda, depósitos e câmaras frias, em posse de feirantes, ambulantes, bares, restaurantes, hotéis e similares, conforme modelo anexo."
+ },
+ {
+  "id": "art12/I",
+  "label": "I",
+  "text": "A declaração deverá será elaborada em duas vias, não podendo conter rasuras."
+ },
+ {
+  "id": "art12/I/a",
+  "label": "a)",
+  "text": "01 (uma) via deverá ser entregue no Escritório do Instituto Estadual de Florestas - IEF ou nas Frações da Polícia Militar de Meio Ambiente, no prazo estabelecido, e a outra será o comprovante da entrega, devendo ser datada e assinada pelo servidor que a recebeu e conter o carimbo que identifique o órgão ambiental."
+ },
+ {
+  "id": "art12/I/b",
+  "label": "b)",
+  "text": "O comprovante da entrega deverá ser mantido em poder do declarante, com assinatura, carimbo e data da entrega no órgão ambiental competente ou na Fração de Polícia Militar de Meio Ambiente, para apresentação á fiscalização ambiental."
+ },
+ {
+  "id": "art12/I/c",
+  "label": "c)",
+  "text": "O produto de que trata este artigo deverá estar acompanhado das respectivas notas fiscais e ou documentos de prova de origem;"
+ },
+ {
+  "id": "art13",
+  "label": "Art. 13",
+  "text": "Excluir das proibições previstas nesta portaria, a pesca de caráter técnico ou científico, previamente autorizada ou licenciada pelos órgãos ambientais competente."
+ },
+ {
+  "id": "art14",
+  "label": "Art. 14",
+  "text": "Aos infratores da presente Portaria serão aplicadas as penalidades previstas no Decreto nº 44.844, de 25 de junho de 2008, na Lei nº 14.181, de 17 de janeiro de 2002, e no que couber, o contido na Lei Federal nº 11.959, de 29 de junho de 2009 e nas demais regulamentações pertinentes, sem prejuízo das sanções penais previstas na Lei 9.605/98 e no Decreto n° 6.514, de 22 de julho de 2008."
+ },
+ {
+  "id": "art14/par-unico",
+  "label": "Parágrafo único",
+  "text": "As infrações praticadas por pescadores artesanais/profissionais deverão ser comunicadas pelo IEF ao Ministério da Aqüicultura e Pesca - MAP, ao Ministério do Trabalho e a Procuradoria da República, para fins do cumprimento a Lei nº 10.779, de 25 de novembro de 2003."
+ },
+ {
+  "id": "art15",
+  "label": "Art. 15",
+  "text": "Esta Portaria entra em vigor na data da sua publicação."
+ },
+ {
+  "id": "art16",
+  "label": "Art. 16",
+  "text": "Suspendem-se as disposições em contrário durante o período de vigência desta norma. Belo Horizonte, aos 13 de outubro de 2011; 223º da Inconfidência Mineira e 190º da Independência do Brasil. Marcos Affonso Ortiz Gomes - Diretor Geral assinatura, carimbo e data da entrega no órgão ambiental GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA ANEXO I - DECLARAÇÃO DE ESTOQUE DE PESCADO Nº _____ CONFORME PORTARIA PIRACEMA EMPRESA/PESSOA FISICA: CNPJ/CPF: Nº REGISTRO (IEF, MAP, IBAMA): CATEGORIA: COMERCIANTE DE PESCADO ( ) OUTROS ( ) PESCADOR PROFISSIONAL ( ) ENDEREÇO: MUNICÍPIO ENDEREÇO DE ARMAZENAMENTO DO PESCADO MUNICÍPIO DESCRIÇÃO DO PRODUTO ESPECIE/NOME PESO (Kg) TOTAL GERAL GRAU DE INDUSTRIALIZAÇÃO (MARCAR COM X) INTEIRO FILÉ POSTA OUTROS GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA Por ser verdade firmo a presente declaração em 02 vias de igual teor para um só efeito. _____________________ ____________________ Assinatura do declarante Data ______________________ ______________________ Assinatura IEF/PMMG Matricula"
+ }
+]
