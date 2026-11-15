@@ -1,0 +1,68 @@
+{
+ "ief-154-2011": {
+  "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf",
+  "official": false,
+  "sha256": "fd440b22bf9e3ecc267fc46440898dbf091066a469c76473cde75e605176cb44",
+  "bytes": 469723,
+  "kind": "pdf",
+  "retrieved_at": "2026-11-15T01:56:28+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 56,
+  "text_chars": 12982
+ },
+ "ief-155-2011": {
+  "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_155_2.pdf",
+  "official": false,
+  "sha256": "a0fe027b7ffa8b8b9a236d2e15699308c63d7be17f516a6148b0b3283b159aa6",
+  "bytes": 459374,
+  "kind": "pdf",
+  "retrieved_at": "2026-11-15T01:56:32+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 39,
+  "text_chars": 8826
+ },
+ "ief-156-2011": {
+  "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_156_2.pdf",
+  "official": false,
+  "sha256": "fa1d6c75d070b543123d3980030b5b0905ffe8ac351c54fe5b01b38892c9a1ac",
+  "bytes": 470060,
+  "kind": "pdf",
+  "retrieved_at": "2026-11-15T01:56:34+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 62,
+  "text_chars": 12918
+ },
+ "ief-31-2025": {
+  "url": "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf",
+  "official": true,
+  "sha256": "60b203a89f28352d08076d4623416b355bf360a7c7dc5305ebbdd0cb7fb9afa7",
+  "bytes": 145263,
+  "kind": "pdf",
+  "retrieved_at": "2026-11-15T01:56:36+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 44,
+  "text_chars": 3924
+ },
+ "ief-40-2017": {
+  "url": "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf",
+  "official": true,
+  "sha256": "5af54f6697c316daf7d4176c7bedf91d2383205c48f1dccbec2443517eae1864",
+  "bytes": 324317,
+  "kind": "pdf",
+  "retrieved_at": "2026-11-15T01:56:38+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 15,
+  "text_chars": 4874
+ },
+ "mg-lei-15082-2004": {
+  "url": "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf",
+  "official": false,
+  "sha256": "00d467da04d4f33f9c2654eef6745c6d1562f5f8d1e6c9609d0bfc74ea36fd31",
+  "bytes": 81588,
+  "kind": "pdf",
+  "retrieved_at": "2026-11-15T01:58:41+00:00",
+  "extractor": "legal-sources/2",
+  "segments": 23,
+  "text_chars": 2809
+ }
+}

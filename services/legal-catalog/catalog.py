@@ -6,8 +6,10 @@ reimplement the same rules in Laravel; this module keeps the catalog honest
 """
 
 import argparse
+import json
 import re
 import tomllib
+import unicodedata
 from dataclasses import dataclass, field
 from datetime import date
 from pathlib import Path
@@ -25,6 +27,8 @@ class Catalog:
     rules: list
     basins: dict
     species_lists: list
+    segments: dict = field(default_factory=dict)  # act id -> {segment id: text}
+    sources: dict = field(default_factory=dict)  # act id -> manifest entry
 
 
 @dataclass
@@ -43,7 +47,44 @@ def load(directory: Path) -> Catalog:
 
     acts = {act["id"]: act for act in read("acts.toml")["act"]}
     basins = {basin["id"]: basin for basin in read("basins.toml")["basin"]}
-    return Catalog(acts, read("rules.toml")["rule"], basins, read("species.toml")["list"])
+    sources_dir = directory / "sources"
+    manifest_path = sources_dir / "manifest.json"
+    sources = json.loads(manifest_path.read_text()) if manifest_path.exists() else {}
+    segments = {
+        act_id: {unit["id"]: unit["text"] for unit in json.loads((sources_dir / f"{act_id}.segments.json").read_text())}
+        for act_id in sources
+        if (sources_dir / f"{act_id}.segments.json").exists()
+    }
+    return Catalog(acts, read("rules.toml")["rule"], basins, read("species.toml")["list"], segments, sources)
+
+
+def normalize(text: str) -> str:
+    """Same canonical form as sources.normalize, kept local to avoid coupling."""
+    text = unicodedata.normalize("NFKC", text).replace("\u00ad", "")
+    text = re.sub(r"-\s*\n\s*", "", text)
+    return re.sub(r"\s+", " ", text).strip().casefold()
+
+
+def evidence_errors(catalog: Catalog, rule: dict) -> list[str]:
+    where = f"rule {rule.get('id')}"
+    act_id = rule.get("act")
+    evidence = rule.get("evidence", [])
+    if act_id not in catalog.segments:
+        return [f"{where}: evidence given but {act_id} has no stored text"] if evidence else []
+    if not evidence:
+        return [f"{where}: {act_id} text is stored, so the rule needs evidence"]
+    errors = []
+    for item in evidence:
+        text = catalog.segments[act_id].get(item.get("segment"))
+        if text is None:
+            errors.append(f"{where}: segment {item.get('segment')} not found in {act_id}")
+        elif not item.get("quote") or normalize(item["quote"]) not in normalize(text):
+            errors.append(f"{where}: quote not found in {act_id} {item['segment']}: {item.get('quote', '')[:60]!r}")
+    return errors
+
+
+def is_verified(catalog: Catalog, rule: dict) -> bool:
+    return rule.get("act") in catalog.segments and bool(rule.get("evidence")) and not evidence_errors(catalog, rule)
 
 
 def validate(catalog: Catalog) -> list[str]:
@@ -89,6 +130,7 @@ def validate(catalog: Catalog) -> list[str]:
             errors.append(f"{where}: unknown or missing basin")
         if not rule.get("summary") or not rule.get("articles"):
             errors.append(f"{where}: summary and articles are required")
+        errors += evidence_errors(catalog, rule)
         period = rule.get("period", {})
         if period.get("kind") == "annual":
             if not (MMDD.match(period.get("start", "")) and MMDD.match(period.get("end", ""))):
@@ -155,9 +197,9 @@ def evaluate(catalog: Catalog, basin_id: str, day: date, species: str) -> Evalua
         result.gaps.append("nenhuma regra de bacia carregada para este caso")
 
     for rule_id in result.rules:
-        act = catalog.acts[next(r for r in catalog.rules if r["id"] == rule_id)["act"]]
-        if act["text_status"] != "full_text_read":
-            result.gaps.append(f"{act['id']}: regra baseada em resumo oficial; conferir texto integral")
+        rule = next(r for r in catalog.rules if r["id"] == rule_id)
+        if not is_verified(catalog, rule):
+            result.gaps.append(f"{rule_id}: sem trecho literal conferido no texto armazenado")
     if species == "non_native":
         result.gaps.append("classificação da espécie como não nativa precisa constar de lista oficial da bacia")
     return result
@@ -183,16 +225,46 @@ def matrix_markdown(catalog: Catalog) -> str:
     return "\n".join(lines)
 
 
+EXPORT_FORMAT = "fishing-regulation-legal-catalog/1"
+
+
+def export_json(catalog: Catalog, jurisdiction: str) -> str:
+    """Canonical JSON consumed by the Laravel importer (`php artisan legal:import`)."""
+    document = {
+        "format": EXPORT_FORMAT,
+        "jurisdiction": jurisdiction,
+        "acts": sorted(catalog.acts.values(), key=lambda act: act["id"]),
+        "areas": sorted(catalog.basins.values(), key=lambda basin: basin["id"]),
+        "rules": sorted(catalog.rules, key=lambda rule: rule["id"]),
+        "species_lists": sorted(catalog.species_lists, key=lambda item: item["id"]),
+        "sources": dict(sorted(catalog.sources.items())),
+        "verified_rules": sorted(rule["id"] for rule in catalog.rules if is_verified(catalog, rule)),
+    }
+    return json.dumps(document, ensure_ascii=False, indent=1, sort_keys=True) + "\n"
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("directory", type=Path, help="catalog directory, e.g. catalog/legal/mg")
-    parser.add_argument("--matrix", action="store_true", help="print the per-basin matrix")
+    mode = parser.add_mutually_exclusive_group()
+    mode.add_argument("--matrix", action="store_true", help="print the per-basin matrix")
+    mode.add_argument("--export", type=Path, help="write the canonical JSON export to this path")
+    mode.add_argument("--check-export", type=Path, help="fail if this JSON export is out of date")
     args = parser.parse_args()
     catalog = load(args.directory)
     errors = validate(catalog)
     if errors:
         parser.exit(1, "\n".join(errors) + "\n")
-    print(matrix_markdown(catalog) if args.matrix else f"OK: {len(catalog.acts)} atos, {len(catalog.rules)} regras")
+    if args.matrix:
+        print(matrix_markdown(catalog))
+        return
+    exported = export_json(catalog, args.directory.name)
+    if args.export:
+        args.export.write_text(exported)
+    if args.check_export:
+        if not args.check_export.exists() or args.check_export.read_text() != exported:
+            parser.exit(1, f"{args.check_export} is out of date; run catalog.py --export\n")
+    print(f"OK: {len(catalog.acts)} atos, {len(catalog.rules)} regras")
 
 
 if __name__ == "__main__":

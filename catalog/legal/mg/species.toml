@@ -16,7 +16,15 @@ native_listed_as_capturable = ["Piranha (Pygocentrus piraya)", "Pirambeba", "Cam
 id = "ief-155-2011-art7"
 act = "ief-155-2011"
 basin = "leste"
-non_native = ["Tucunaré", "Tilápia", "Bagre africano", "Tambaqui", "Carpas (todas)", "Catfish", "Pacu", "Piranha", "Cachara", "Tambacu", "Camarão gigante da Malásia"]
+segment = "art7"
+note = "Lista exemplificativa (\"tais como\"). Pirambeba, piranha e caboge são nativas no São Francisco, mas a portaria as trata como não nativas no Leste."
+non_native = [
+  "Pescada-do-piauí (Plagioscion squamosissimus)", "Tucunaré (Cichla spp.)", "Tilápia (Oreochromis spp. e Tilapia sp)",
+  "Bagre-africano (Clarias spp.)", "Apaiari (Astronotus ocellatus)", "Tambaqui (Colossoma macropomum)", "Carpas (todas as espécies)",
+  "Catfish (Ictalurus punctatus)", "Caranha preta / pirapitinga / pacu (Piaractus brachypomus)", "Pirambeba (Serrasalmus brandtii)",
+  "Piranha (Pygocentrus piraya)", "Caboge / tamoatá (Hoplosternum sp. e Callichthys callichthys)", "Cachara (Pseudoplatystoma fasciatum)",
+  "Tambacu (híbrido)", "Camarão gigante da Malásia (Macrobrachium rosembergii)",
+]
 
 [[list]]
 id = "ief-156-2011-art7"

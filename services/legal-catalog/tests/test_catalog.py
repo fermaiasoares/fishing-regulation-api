@@ -3,7 +3,7 @@ import unittest
 from datetime import date
 from pathlib import Path
 
-from catalog import evaluate, in_period, load, matrix_markdown, validate
+from catalog import evaluate, export_json, in_period, is_verified, load, matrix_markdown, validate
 
 CATALOG_DIR = Path(__file__).resolve().parents[3] / "catalog" / "legal" / "mg"
 DEFESO = date(2026, 12, 15)
@@ -70,6 +70,34 @@ class CatalogTest(unittest.TestCase):
         self.assertTrue(in_period(piracema, date(2027, 2, 28)))
         self.assertTrue(in_period(piracema, date(2028, 2, 29)))
         self.assertFalse(in_period(piracema, date(2027, 3, 1)))
+
+    def test_every_rule_with_stored_text_is_verified_against_it(self):
+        stored = [rule for rule in self.catalog.rules if rule["act"] in self.catalog.segments]
+        self.assertGreaterEqual(len(stored), 13)
+        self.assertTrue(all(is_verified(self.catalog, rule) for rule in stored))
+
+    def test_altered_quote_is_rejected(self):
+        broken = copy.deepcopy(self.catalog)
+        rule = next(r for r in broken.rules if r["id"] == "doce-nao-nativas")
+        rule["evidence"][1]["quote"] = "limite de cota de 20 kg (vinte quilogramas)"
+        self.assertIn("quote not found in ief-31-2025 art4/I/b", " ".join(validate(broken)))
+
+    def test_missing_evidence_or_segment_is_rejected(self):
+        broken = copy.deepcopy(self.catalog)
+        rule = next(r for r in broken.rules if r["id"] == "sf-defeso-nativas")
+        rule["evidence"][0]["segment"] = "art99"
+        self.assertIn("segment art99 not found", " ".join(validate(broken)))
+        rule["evidence"] = []
+        self.assertIn("needs evidence", " ".join(validate(broken)))
+
+    def test_unverified_rules_are_flagged_as_gaps(self):
+        result = evaluate(self.catalog, "paraopeba", OFF_SEASON, "native")
+        self.assertIn("paraopeba-nativas-permanente: sem trecho literal conferido no texto armazenado", result.gaps)
+
+    def test_export_is_canonical_and_lists_verified_rules(self):
+        exported = export_json(self.catalog, "mg")
+        self.assertEqual(exported, export_json(load(CATALOG_DIR), "mg"))
+        self.assertIn('"doce-nativas-permanente"', exported.split('"verified_rules"')[1])
 
     def test_matrix_lists_every_basin_and_period(self):
         table = matrix_markdown(self.catalog)
