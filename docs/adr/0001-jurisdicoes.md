@@ -29,6 +29,8 @@ Do ponto de vista jurídico (a conferir caso a caso):
 
 ## Próximas etapas (fora desta mudança)
 
+O plano de execução destas etapas em escala nacional está no [ADR 0002](0002-cobertura-nacional.md).
+
 | Etapa | O que resolve |
 | --- | --- |
 | Malha estadual do IBGE no PostGIS | `location.states` passa a vir da divisa oficial, e não só das áreas legais carregadas |
