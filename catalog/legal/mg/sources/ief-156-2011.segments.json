@@ -2,7 +2,7 @@
  {
   "id": "preamble",
   "label": "Preâmbulo",
-  "text": "GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA PORTARIA Nº 156, 13 DE OUTUBRO DE 2011 Dispõe sobre a regulamentação da pesca nas Bacias Hidrográficas dos Rios Grande e Paranaíba, no Estado de Minas Gerais, no período de piracema e dá outras providências. O Diretor Geral do Instituto Estadual de Florestas - IEF, no uso das atribuições a ele conferidas pelo Decreto nº 44.807, de 12 de maio de 2008, e com respaldo na Lei Delegada nº 180 de 20 de janeiro de 2011, Lei Delegada nº 79, de 29 de janeiro de 2003, alterada pela Lei Delegada nº 158 de 25 de janeiro de 2007, pela Lei n.º 2.606, de 5 de janeiro de 1962, alterada pela Lei n.º 8.666, de 21 de setembro de 1984 e, em especial, pela Lei n.º 14.181, de 17 de janeiro de 2002, regulamentada pelo Decreto nº 43.713, de 14 de janeiro de 2004, alterado pelo Decreto nº 43.854, de 13 de agosto de 2004 e Decreto nº 44.844 de 25 de junho de 2008, assim como pelo contido na Lei Federal nº 11.959, de 29 de junho de 2009; RESOLVE:"
+  "text": "PORTARIA Nº 156, 13 DE OUTUBRO DE 2011 Dispõe sobre a regulamentação da pesca nas Bacias Hidrográficas dos Rios Grande e Paranaíba, no Estado de Minas Gerais, no período de piracema e dá outras providências. O Diretor Geral do Instituto Estadual de Florestas - IEF, no uso das atribuições a ele conferidas pelo Decreto nº 44.807, de 12 de maio de 2008, e com respaldo na Lei Delegada nº 180 de 20 de janeiro de 2011, Lei Delegada nº 79, de 29 de janeiro de 2003, alterada pela Lei Delegada nº 158 de 25 de janeiro de 2007, pela Lei n.º 2.606, de 5 de janeiro de 1962, alterada pela Lei n.º 8.666, de 21 de setembro de 1984 e, em especial, pela Lei n.º 14.181, de 17 de janeiro de 2002, regulamentada pelo Decreto nº 43.713, de 14 de janeiro de 2004, alterado pelo Decreto nº 43.854, de 13 de agosto de 2004 e Decreto nº 44.844 de 25 de junho de 2008, assim como pelo contido na Lei Federal nº 11.959, de 29 de junho de 2009; RESOLVE:"
  },
  {
   "id": "art1",
@@ -42,7 +42,7 @@
  {
   "id": "art3/II",
   "label": "II",
-  "text": "a menos de quinhentos metros (500m) de confluências e desembocaduras de rios, lagoas, canais e tubulações de esgoto; GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA"
+  "text": "a menos de quinhentos metros (500m) de confluências e desembocaduras de rios, lagoas, canais e tubulações de esgoto;"
  },
  {
   "id": "art3/III",
@@ -127,7 +127,7 @@
  {
   "id": "art3/IX#2",
   "label": "IX",
-  "text": "Com o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta portaria; GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA"
+  "text": "Com o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta portaria;"
  },
  {
   "id": "art3/par1",
@@ -152,7 +152,22 @@
  {
   "id": "art4/par2",
   "label": "§ 2",
-  "text": "Entende-se por: a) Espécie alóctone: espécie de origem e ocorrência natural em outras bacias hidrográficas brasileiras; b) Espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, que tenha ou não sida introduzida em águas brasileiras; c) Híbrido: organismo resultante do cruzamento de duas espécies."
+  "text": "Entende-se por:"
+ },
+ {
+  "id": "art4/par2/a",
+  "label": "a)",
+  "text": "Espécie alóctone: espécie de origem e ocorrência natural em outras bacias hidrográficas brasileiras;"
+ },
+ {
+  "id": "art4/par2/b",
+  "label": "b)",
+  "text": "Espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, que tenha ou não sida introduzida em águas brasileiras;"
+ },
+ {
+  "id": "art4/par2/c",
+  "label": "c)",
+  "text": "Híbrido: organismo resultante do cruzamento de duas espécies."
  },
  {
   "id": "art5",
@@ -187,7 +202,7 @@
  {
   "id": "art7/IV",
   "label": "IV",
-  "text": "Captura e transporte de 3 (três) kg de peixes mais um exemplar para o pescador profissional e cota de 3 (três) kg mais um exemplar para o pescador amador, por dia ou jornada de pesca, somente das espécies não nativas (alóctones e exóticas) e híbridos tais como: apaiari (Astronotus ocelatus); bagre-africano (Clarias sp.); black-bass (Micropterus sp.); carpa (todas as espécies); corvina ou pescada-do-Piauí (Plagioscion squamosissimus); peixe-rei (Odontesthis sp.); sardinha-de-águadoce (Triportheus angulatus); piranha preta (Serrassalmus rombeus) tilápias (Oreochromis spp. e Tilapia spp.); tucunaré (Cichla spp.); zoiudo GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA (Geophagus surinamensis e Geophagus proximus) e híbridos. §1º Excetua-se desta permissão o piauçu (Leporinus macrocephalus). Entende-se por:"
+  "text": "Captura e transporte de 3 (três) kg de peixes mais um exemplar para o pescador profissional e cota de 3 (três) kg mais um exemplar para o pescador amador, por dia ou jornada de pesca, somente das espécies não nativas (alóctones e exóticas) e híbridos tais como: apaiari (Astronotus ocelatus); bagre-africano (Clarias sp.); black-bass (Micropterus sp.); carpa (todas as espécies); corvina ou pescada-do-Piauí (Plagioscion squamosissimus); peixe-rei (Odontesthis sp.); sardinha-de-águadoce (Triportheus angulatus); piranha preta (Serrassalmus rombeus) tilápias (Oreochromis spp. e Tilapia spp.); tucunaré (Cichla spp.); zoiudo (Geophagus surinamensis e Geophagus proximus) e híbridos. §1º Excetua-se desta permissão o piauçu (Leporinus macrocephalus). Entende-se por:"
  },
  {
   "id": "art7/I#2",
@@ -247,7 +262,7 @@
  {
   "id": "art12",
   "label": "Art. 12",
-  "text": "Fica estabelecido o segundo dia útil após o início do defeso, como data limite para declaração ao IEF, dos estoques de peixe in natura, congelados ou não, provenientes de águas continentais, existentes nos frigoríficos, peixarias, colônias e associações de pescadores, armazenados por pescadores profissionais, GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA entrepostos, postos de venda, depósitos e câmaras frias, em posse de feirantes, ambulantes, bares, restaurantes, hotéis e similares, conforme modelo anexo."
+  "text": "Fica estabelecido o segundo dia útil após o início do defeso, como data limite para declaração ao IEF, dos estoques de peixe in natura, congelados ou não, provenientes de águas continentais, existentes nos frigoríficos, peixarias, colônias e associações de pescadores, armazenados por pescadores profissionais, entrepostos, postos de venda, depósitos e câmaras frias, em posse de feirantes, ambulantes, bares, restaurantes, hotéis e similares, conforme modelo anexo."
  },
  {
   "id": "art12/I",
@@ -292,6 +307,6 @@
  {
   "id": "art16",
   "label": "Art. 16",
-  "text": "Suspendem-se as disposições em contrário durante o período de vigência desta norma. Belo Horizonte, aos 13 de outubro de 2011; 223º da Inconfidência Mineira e 190º da Independência do Brasil. Marcos Affonso Ortiz Gomes - Diretor Geral assinatura, carimbo e data da entrega no órgão ambiental GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA ANEXO I - DECLARAÇÃO DE ESTOQUE DE PESCADO Nº _____ CONFORME PORTARIA PIRACEMA EMPRESA/PESSOA FISICA: CNPJ/CPF: Nº REGISTRO (IEF, MAP, IBAMA): CATEGORIA: COMERCIANTE DE PESCADO ( ) OUTROS ( ) PESCADOR PROFISSIONAL ( ) ENDEREÇO: MUNICÍPIO ENDEREÇO DE ARMAZENAMENTO DO PESCADO MUNICÍPIO DESCRIÇÃO DO PRODUTO ESPECIE/NOME PESO (Kg) TOTAL GERAL GRAU DE INDUSTRIALIZAÇÃO (MARCAR COM X) INTEIRO FILÉ POSTA OUTROS GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA Por ser verdade firmo a presente declaração em 02 vias de igual teor para um só efeito. _____________________ ____________________ Assinatura do declarante Data ______________________ ______________________ Assinatura IEF/PMMG Matricula"
+  "text": "Suspendem-se as disposições em contrário durante o período de vigência desta norma. Belo Horizonte, aos 13 de outubro de 2011; 223º da Inconfidência Mineira e 190º da Independência do Brasil. Marcos Affonso Ortiz Gomes - Diretor Geral assinatura, carimbo e data da entrega no órgão ambiental ANEXO I - DECLARAÇÃO DE ESTOQUE DE PESCADO Nº _____ CONFORME PORTARIA PIRACEMA EMPRESA/PESSOA FISICA: CNPJ/CPF: Nº REGISTRO (IEF, MAP, IBAMA): CATEGORIA: COMERCIANTE DE PESCADO ( ) OUTROS ( ) PESCADOR PROFISSIONAL ( ) ENDEREÇO: MUNICÍPIO ENDEREÇO DE ARMAZENAMENTO DO PESCADO MUNICÍPIO DESCRIÇÃO DO PRODUTO ESPECIE/NOME PESO (Kg) TOTAL GERAL GRAU DE INDUSTRIALIZAÇÃO (MARCAR COM X) INTEIRO FILÉ POSTA OUTROS Por ser verdade firmo a presente declaração em 02 vias de igual teor para um só efeito. _____________________ ____________________ Assinatura do declarante Data ______________________ ______________________ Assinatura IEF/PMMG Matricula"
  }
 ]

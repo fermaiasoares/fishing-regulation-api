@@ -69,10 +69,10 @@ issuer = "IEF/MG"
 jurisdiction = "estadual"
 published = "2025-04-29"
 official_url = "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf"
-read_from = "https://www.ief.mg.gov.br/web/ief/pesca-no-rio-doce"
-text_status = "official_summary"
+read_from = "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf"
+text_status = "full_text_read"
 in_force_evidence = "https://www.ief.mg.gov.br/web/ief/pesca-no-rio-doce"
-in_force_note = "Página do IEF aplica a Portaria 31/2025. O PDF oficial bloqueia leitura automática; limites de captura vieram de fonte secundária e precisam de conferência no texto."
+in_force_note = "PDF oficial baixado pelo workflow legal-sources (ver sources/manifest.json). Art. 9º revoga a Portaria IEF 40/2017; art. 10 dá vigência na publicação (30/04/2025)."
 revokes = ["ief-40-2017"]
 download_urls = [
   "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf",
@@ -190,4 +190,16 @@ official_url = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientai
 read_from = "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais"
 text_status = "official_summary"
 in_force_note = "Página de orientação, sem data. Usada só para regras cujo ato não foi localizado; a regra fica marcada como orientação oficial."
+review = "pending"
+
+[[act]]
+id = "ibama-in-195-2008"
+title = "Instrução Normativa IBAMA nº 195, de 02/10/2008 — defeso nas bacias do Sudeste"
+issuer = "IBAMA"
+jurisdiction = "federal"
+published = "2008-10-03"
+official_url = ""
+read_from = ""
+text_status = "not_read"
+in_force_note = "Cobre as bacias do Sudeste exceto Paraná e São Francisco; pode se sobrepor à IN 196/2008 em MG (ex.: Paraíba do Sul). Ler antes de gerar regra."
 review = "pending"

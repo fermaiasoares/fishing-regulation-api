@@ -2,7 +2,7 @@
  {
   "id": "preamble",
   "label": "Preâmbulo",
-  "text": "GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA PORTARIA Nº 155, 13 DE OUTUBRO DE 2011 Dispõe sobre a regulamentação da pesca nas Bacias Hidrográficas do Leste, no Estado de Minas Gerais, excetuando-se as bacias dos rios Grande, Paranaíba e São Francisco, no período de piracema e dá outras providências. O Diretor Geral do Instituto Estadual de Florestas - IEF, no uso das atribuições a ele conferidas pelo Decreto nº 44.807, de 12 de maio de 2008, e com respaldo na Lei Delegada nº 180 de 20 de janeiro de 2011, Lei Delegada nº 79, de 29 de janeiro de 2003, alterada pela Lei Delegada nº 158 de 25 de janeiro de 2007, pela Lei n.º 2.606, de 5 de janeiro de 1962, alterada pela Lei n.º 8.666, de 21 de setembro de 1984 e, em especial, pela Lei n.º 14.181, de 17 de janeiro de 2002, regulamentada pelo Decreto nº 43.713, de 14 de janeiro de 2004, alterado pelo Decreto nº 43.854, de 13 de agosto de 2004 e Decreto nº 44.844 de 25 de junho de 2008, assim como pelo contido na Lei Federal nº 11.959, de 29 de junho de 2009; Resolve:"
+  "text": "PORTARIA Nº 155, 13 DE OUTUBRO DE 2011 Dispõe sobre a regulamentação da pesca nas Bacias Hidrográficas do Leste, no Estado de Minas Gerais, excetuando-se as bacias dos rios Grande, Paranaíba e São Francisco, no período de piracema e dá outras providências. O Diretor Geral do Instituto Estadual de Florestas - IEF, no uso das atribuições a ele conferidas pelo Decreto nº 44.807, de 12 de maio de 2008, e com respaldo na Lei Delegada nº 180 de 20 de janeiro de 2011, Lei Delegada nº 79, de 29 de janeiro de 2003, alterada pela Lei Delegada nº 158 de 25 de janeiro de 2007, pela Lei n.º 2.606, de 5 de janeiro de 1962, alterada pela Lei n.º 8.666, de 21 de setembro de 1984 e, em especial, pela Lei n.º 14.181, de 17 de janeiro de 2002, regulamentada pelo Decreto nº 43.713, de 14 de janeiro de 2004, alterado pelo Decreto nº 43.854, de 13 de agosto de 2004 e Decreto nº 44.844 de 25 de junho de 2008, assim como pelo contido na Lei Federal nº 11.959, de 29 de junho de 2009; Resolve:"
  },
  {
   "id": "art1",
@@ -57,7 +57,7 @@
  {
   "id": "art3",
   "label": "Art. 3",
-  "text": "Proibir o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta portaria GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA"
+  "text": "Proibir o uso de aparelhos, petrechos e métodos de pesca não mencionados nesta portaria"
  },
  {
   "id": "art4",
@@ -97,12 +97,37 @@
  {
   "id": "art7/par2",
   "label": "§ 2",
-  "text": "Entende-se por: a) Espécie alóctone: espécie de origem e ocorrência natural em outras bacias hidrográficas brasileiras; b) Espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, que tenha ou não sida introduzida em águas brasileiras; c) Híbrido: organismo resultante do cruzamento de duas espécies. d) Isca natural todo o atrativo (vivo ou morto, vegetal ou animal, em partes ou na forma integral, manufaturada ou industrializada) que serve como alimento aos peixes; e) Isca artificial todo artefato não alimentar usado como atrativo na pesca."
+  "text": "Entende-se por:"
+ },
+ {
+  "id": "art7/par2/a",
+  "label": "a)",
+  "text": "Espécie alóctone: espécie de origem e ocorrência natural em outras bacias hidrográficas brasileiras;"
+ },
+ {
+  "id": "art7/par2/b",
+  "label": "b)",
+  "text": "Espécie exótica: espécie de origem e ocorrência natural somente em águas de outros países, que tenha ou não sida introduzida em águas brasileiras;"
+ },
+ {
+  "id": "art7/par2/c",
+  "label": "c)",
+  "text": "Híbrido: organismo resultante do cruzamento de duas espécies."
+ },
+ {
+  "id": "art7/par2/d",
+  "label": "d)",
+  "text": "Isca natural todo o atrativo (vivo ou morto, vegetal ou animal, em partes ou na forma integral, manufaturada ou industrializada) que serve como alimento aos peixes;"
+ },
+ {
+  "id": "art7/par2/e",
+  "label": "e)",
+  "text": "Isca artificial todo artefato não alimentar usado como atrativo na pesca."
  },
  {
   "id": "art8",
   "label": "Art. 8",
-  "text": "O produto de pesca oriundo de locais com período de defeso diferenciado ou de outros países deverá estar acompanhado de comprovante de origem ou nota GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA fiscal, sob pena de apreensão do pescado e dos petrechos, equipamentos e instrumentos utilizados na pesca."
+  "text": "O produto de pesca oriundo de locais com período de defeso diferenciado ou de outros países deverá estar acompanhado de comprovante de origem ou nota fiscal, sob pena de apreensão do pescado e dos petrechos, equipamentos e instrumentos utilizados na pesca."
  },
  {
   "id": "art9",
@@ -117,7 +142,7 @@
  {
   "id": "art10",
   "label": "Art. 10",
-  "text": "s materiais de pesca apreendidos em decorrência do não cumprimento das normas estabelecidas nesta portaria não serão restituídos, cabendo ao órgão competente a sua destinação final, em cumprimento a Lei n o 9.605/98."
+  "text": "Os materiais de pesca apreendidos em decorrência do não cumprimento das normas estabelecidas nesta portaria não serão restituídos, cabendo ao órgão competente a sua destinação final, em cumprimento a Lei n o 9.605/98."
  },
  {
   "id": "art11",
@@ -162,11 +187,11 @@
  {
   "id": "art14",
   "label": "Art. 14",
-  "text": "Esta Portaria entra em vigor na data da sua publicação. GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA"
+  "text": "Esta Portaria entra em vigor na data da sua publicação."
  },
  {
   "id": "art15",
   "label": "Art. 15",
-  "text": "Suspendem-se as disposições em contrário durante o período de vigência desta norma. Belo Horizonte, aos 13 de outubro de 2011; 223º da Inconfidência Mineira e 190º da Independência do Brasil. Marcos Affonso Ortiz Gomes - Diretor Geral ANEXO I - DECLARAÇÃO DE ESTOQUE DE PESCADO Nº _____ CONFORME PORTARIA PIRACEMA EMPRESA/PESSOA FISICA: CNPJ/CPF: Nº REGISTRO (IEF, MAP, IBAMA): CATEGORIA: COMERCIANTE DE PESCADO ( ) OUTROS ( ) PESCADOR PROFISSIONAL ( ) ENDEREÇO: MUNICÍPIO ENDEREÇO DE ARMAZENAMENTO DO PESCADO MUNICÍPIO DESCRIÇÃO DO PRODUTO ESPECIE/NOME PESO (Kg) GRAU DE INDUSTRIALIZAÇÃO (MARCAR COM X) INTEIRO FILÉ POSTA OUTROS GOVERNO DO ESTADO DE MINAS GERAIS Secretaria de Estado de Meio Ambiente e Desenvolvimento SustentÁvel SUBSECRETARIA DE CONTROLE E FISCALIZAÇÃO AMBIENTAL INTEGRADA TOTAL GERAL Por ser verdade firmo a presente declaração em 02 vias de igual teor para um só efeito. _____________________ ____________________ Assinatura do declarante Data ______________________ ______________________ Assinatura IEF/PMMG Matricula"
+  "text": "Suspendem-se as disposições em contrário durante o período de vigência desta norma. Belo Horizonte, aos 13 de outubro de 2011; 223º da Inconfidência Mineira e 190º da Independência do Brasil. Marcos Affonso Ortiz Gomes - Diretor Geral ANEXO I - DECLARAÇÃO DE ESTOQUE DE PESCADO Nº _____ CONFORME PORTARIA PIRACEMA EMPRESA/PESSOA FISICA: CNPJ/CPF: Nº REGISTRO (IEF, MAP, IBAMA): CATEGORIA: COMERCIANTE DE PESCADO ( ) OUTROS ( ) PESCADOR PROFISSIONAL ( ) ENDEREÇO: MUNICÍPIO ENDEREÇO DE ARMAZENAMENTO DO PESCADO MUNICÍPIO DESCRIÇÃO DO PRODUTO ESPECIE/NOME PESO (Kg) GRAU DE INDUSTRIALIZAÇÃO (MARCAR COM X) INTEIRO FILÉ POSTA OUTROS TOTAL GERAL Por ser verdade firmo a presente declaração em 02 vias de igual teor para um só efeito. _____________________ ____________________ Assinatura do declarante Data ______________________ ______________________ Assinatura IEF/PMMG Matricula"
  }
 ]

@@ -1,0 +1,1115 @@
+{
+ "acts": [
+  {
+   "download_urls": [
+    "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
+   ],
+   "id": "ibama-50-2007",
+   "in_force_note": "Vigência atual não confirmada em base oficial consolidada; a planilha de defesos do MPA (versão de 02/07/2026) não pôde ser lida.",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf",
+   "published": "2007-11-05",
+   "read_from": "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria IBAMA nº 50, de 05/11/2007 — defeso na bacia do rio São Francisco"
+  },
+  {
+   "id": "ibama-in-195-2008",
+   "in_force_note": "Cobre as bacias do Sudeste exceto Paraná e São Francisco; pode se sobrepor à IN 196/2008 em MG (ex.: Paraíba do Sul). Ler antes de gerar regra.",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2008-10-03",
+   "read_from": "",
+   "review": "pending",
+   "text_status": "not_read",
+   "title": "Instrução Normativa IBAMA nº 195, de 02/10/2008 — defeso nas bacias do Sudeste"
+  },
+  {
+   "download_urls": [
+    "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
+   ],
+   "id": "ibama-in-196-2008",
+   "in_force_note": "Texto lido em agregador. Trecho da planilha oficial do MPA indexado em busca lista a IN 196/2008 entre os defesos vigentes; confirmar no PDF oficial.",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2008-10-03",
+   "read_from": "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Instrução Normativa IBAMA nº 196, de 02/10/2008 — defeso nas bacias do Leste"
+  },
+  {
+   "download_urls": [
+    "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html"
+   ],
+   "id": "ibama-in-25-2009",
+   "in_force_note": "Citada por órgãos estaduais como vigente. Página do texto falhou na leitura; inclui rios de MG (Prata, Tejuco, Quebra-Anzol, Salitre).",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2009-09-02",
+   "read_from": "",
+   "review": "pending",
+   "text_status": "not_read",
+   "title": "Instrução Normativa IBAMA nº 25, de 01/09/2009 — defeso na bacia do rio Paraná"
+  },
+  {
+   "download_urls": [
+    "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_154_2.pdf",
+    "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf"
+   ],
+   "id": "ief-154-2011",
+   "in_force_evidence": "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos",
+   "in_force_note": "Agência Minas (05/11/2026) cita as Portarias 154, 155 e 156 como base da piracema até 28/02/2027.",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "official_url": "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_154_2.pdf",
+   "published": "2011-10-13",
+   "read_from": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria IEF nº 154, de 13/10/2011 — piracema na bacia do rio São Francisco"
+  },
+  {
+   "download_urls": [
+    "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_155_2.pdf",
+    "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_155_2.pdf"
+   ],
+   "id": "ief-155-2011",
+   "in_force_evidence": "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos",
+   "in_force_note": "Mesma notícia oficial de 05/11/2026.",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "official_url": "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_155_2.pdf",
+   "published": "2011-10-13",
+   "read_from": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_155_2.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria IEF nº 155, de 13/10/2011 — piracema nas bacias do Leste"
+  },
+  {
+   "download_urls": [
+    "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_156_2.pdf",
+    "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_156_2.pdf"
+   ],
+   "id": "ief-156-2011",
+   "in_force_evidence": "https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos",
+   "in_force_note": "Mesma notícia oficial de 05/11/2026.",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "official_url": "http://www.ief.mg.gov.br/images/stories/pesca/portaria_n_156_2.pdf",
+   "published": "2011-10-13",
+   "read_from": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_156_2.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria IEF nº 156, de 13/10/2011 — piracema nas bacias dos rios Grande e Paranaíba"
+  },
+  {
+   "id": "ief-16-2019",
+   "in_force_note": "Página do IEF diz que a pesca de nativas segue proibida em toda a bacia até nova portaria. Texto integral não localizado.",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "official_url": "",
+   "published": "2019-02-28",
+   "read_from": "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais",
+   "review": "pending",
+   "text_status": "official_summary",
+   "title": "Portaria IEF nº 16, de 28/02/2019 — pesca na bacia do rio Paraopeba"
+  },
+  {
+   "download_urls": [
+    "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf"
+   ],
+   "id": "ief-31-2025",
+   "in_force_evidence": "https://www.ief.mg.gov.br/web/ief/pesca-no-rio-doce",
+   "in_force_note": "PDF oficial baixado pelo workflow legal-sources (ver sources/manifest.json). Art. 9º revoga a Portaria IEF 40/2017; art. 10 dá vigência na publicação (30/04/2025).",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "official_url": "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf",
+   "published": "2025-04-29",
+   "read_from": "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf",
+   "review": "pending",
+   "revokes": [
+    "ief-40-2017"
+   ],
+   "text_status": "full_text_read",
+   "title": "Portaria IEF nº 31, de 29/04/2025 — ordenamento pesqueiro da bacia do rio Doce"
+  },
+  {
+   "download_urls": [
+    "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf"
+   ],
+   "id": "ief-40-2017",
+   "in_force_note": "Substituída pela Portaria IEF 31/2025. Mantida só como histórico; nenhuma regra ativa aponta para ela.",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "official_url": "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf",
+   "published": "2017-05-12",
+   "read_from": "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf",
+   "review": "pending",
+   "status": "revoked",
+   "text_status": "full_text_read",
+   "title": "Portaria IEF nº 40, de 11/05/2017 — proibição da pesca de nativas na bacia do rio Doce"
+  },
+  {
+   "id": "ief-guia-restricoes",
+   "in_force_note": "Página de orientação, sem data. Usada só para regras cujo ato não foi localizado; a regra fica marcada como orientação oficial.",
+   "issuer": "IEF/MG",
+   "jurisdiction": "estadual",
+   "kind": "guidance",
+   "official_url": "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais",
+   "published": "",
+   "read_from": "https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais",
+   "review": "pending",
+   "text_status": "official_summary",
+   "title": "IEF — página Restrições Ambientais à Pesca em Minas Gerais"
+  },
+  {
+   "download_urls": [
+    "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf"
+   ],
+   "id": "mg-lei-15082-2004",
+   "in_force_note": "Não proíbe a pesca expressamente; veda atividade que ameace extinguir espécie aquática (art. 3º, III). Tratada como alerta, não como proibição.",
+   "issuer": "ALMG",
+   "jurisdiction": "estadual",
+   "official_url": "https://www.almg.gov.br/legislacao-mineira/texto/LEI/15082/2004/",
+   "published": "2004-04-27",
+   "read_from": "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Lei Estadual nº 15.082, de 27/04/2004 — rios de preservação permanente"
+  },
+  {
+   "id": "mma-300-2022",
+   "in_force_note": "Atualizada pela Portaria GM/MMA nº 1.667, de 27/04/2026. Lista de espécies ainda não extraída.",
+   "issuer": "MMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2022-12-14",
+   "read_from": "https://www.lex.com.br/portaria-mma-no-300-de-13-de-dezembro-de-2022/",
+   "review": "pending",
+   "text_status": "not_read",
+   "title": "Portaria MMA nº 300, de 13/12/2022 — Lista Nacional de Espécies Ameaçadas (Anexo III: peixes)"
+  }
+ ],
+ "areas": [
+  {
+   "definition": "Rio principal e todos os corpos d'água que drenam para ele, incluindo cabeceiras, afluentes, lagos, lagoas e reservatórios.",
+   "geo_mapping": "pending",
+   "id": "doce",
+   "name": "Bacia do rio Doce (porção mineira)",
+   "parent": "leste"
+  },
+  {
+   "definition": "Rio principal, formadores, afluentes, lagos, lagoas marginais e reservatórios (Portaria IEF 156/2011, art. 1º, § 1º).",
+   "geo_mapping": "pending",
+   "id": "grande",
+   "name": "Bacia do rio Grande (porção mineira)",
+   "parent": "mg"
+  },
+  {
+   "definition": "Todas as bacias de MG exceto Grande, Paranaíba e São Francisco (Portaria IEF 155/2011, art. 1º): Doce, Jequitinhonha, Mucuri, Pardo, Paraíba do Sul e demais bacias atlânticas.",
+   "geo_mapping": "pending",
+   "id": "leste",
+   "name": "Bacias do Leste de Minas Gerais",
+   "parent": "mg"
+  },
+  {
+   "definition": "Limite estadual oficial (malha IBGE).",
+   "geo_mapping": "pending",
+   "id": "mg",
+   "name": "Território de Minas Gerais"
+  },
+  {
+   "definition": "Idem Portaria IEF 156/2011.",
+   "geo_mapping": "pending",
+   "id": "paranaiba",
+   "name": "Bacia do rio Paranaíba (porção mineira)",
+   "parent": "mg"
+  },
+  {
+   "definition": "Sub-bacia do São Francisco.",
+   "geo_mapping": "pending",
+   "id": "paraopeba",
+   "name": "Bacia do rio Paraopeba",
+   "parent": "sao_francisco"
+  },
+  {
+   "definition": "Rio principal, afluentes, lagos, lagoas, reservatórios e demais corpos d'água da bacia (Portaria IEF 154/2011, art. 1º, parágrafo único).",
+   "geo_mapping": "pending",
+   "id": "sao_francisco",
+   "name": "Bacia do rio São Francisco (porção mineira)",
+   "parent": "mg"
+  }
+ ],
+ "format": "fishing-regulation-legal-catalog/1",
+ "jurisdiction": "mg",
+ "rules": [
+  {
+   "act": "ief-31-2025",
+   "articles": "art. 4º; arts. 5º a 7º",
+   "basins": [
+    "doce"
+   ],
+   "conditions": [
+    "licença de pesca",
+    "amador: 10 kg + 1 exemplar de qualquer tamanho acima do mínimo legal",
+    "profissional: sem limite de cota",
+    "amador: anzol simples ou múltiplo, linha de mão, vara ou caniço, molinete ou carretilha, iscas, embarcação",
+    "profissional: também tarrafa, espinhel, caçador, pinda, joão bobo e similares (art. 6º)",
+    "vedados petrechos não listados, especialmente redes de emalhe",
+    "durante o defeso valem também as regras da Portaria IEF 155/2011 (mais restritivas)"
+   ],
+   "effect": "conditional",
+   "evidence": [
+    {
+     "quote": "É permitida a captura e o transporte de espécies alóctones, de espécies exóticas e de espécimes híbridos",
+     "segment": "art4"
+    },
+    {
+     "quote": "limite de cota de 10 kg (dez quilogramas) mais um exemplar de qualquer tamanho acima do mínimo estabelecido pela legislação vigente",
+     "segment": "art4/I/b"
+    },
+    {
+     "quote": "sem limite de cota.",
+     "segment": "art4/II/b"
+    },
+    {
+     "quote": "Os petrechos empregados para pesca amadora na bacia do rio Doce",
+     "segment": "art5"
+    },
+    {
+     "quote": "Os petrechos empregados na pesca profissional na bacia do rio Doce",
+     "segment": "art6"
+    },
+    {
+     "quote": "Ficam vedados todos os petrechos e artes de pesca não explicitamente autorizados nesta portaria, especialmente o uso de redes de emalhe.",
+     "segment": "art7"
+    }
+   ],
+   "id": "doce-nao-nativas",
+   "period": {
+    "kind": "permanent"
+   },
+   "scope": "basin",
+   "species": "non_native",
+   "summary": "Captura de alóctones, exóticas e híbridos permitida com licença, cotas e petrechos listados; redes de emalhe vedadas."
+  },
+  {
+   "act": "ief-31-2025",
+   "articles": "art. 3º; art. 4º, parágrafo único",
+   "basins": [
+    "doce"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Fica vedada a pesca de espécies autóctones em toda a bacia do rio Doce, nos limites do Estado de Minas Gerais.",
+     "segment": "art3"
+    },
+    {
+     "quote": "Em caso de captura acidental de espécie autóctone, os espécimes deverão ser devolvidos imediatamente ao corpo d’água",
+     "segment": "art4/par-unico"
+    }
+   ],
+   "id": "doce-nativas-permanente",
+   "period": {
+    "kind": "permanent"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Pesca de espécies autóctones vedada o ano todo em toda a bacia do Doce em MG; capturas acidentais devolvidas, com tolerância de 1 kg + 1 exemplar em caso de morte no manuseio."
+  },
+  {
+   "act": "ief-156-2011",
+   "articles": "art. 3º, I a V",
+   "basins": [
+    "grande",
+    "paranaiba"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Nas lagoas marginais",
+     "segment": "art3/I"
+    },
+    {
+     "quote": "a menos de quinhentos metros (500m) de confluências e desembocaduras de rios, lagoas, canais e tubulações de esgoto",
+     "segment": "art3/II"
+    },
+    {
+     "quote": "Até um mil e quinhentos metros (1.500m) a montante e a jusante das barragens de reservatórios de empreendimento hidrelétrico, e de mecanismos de transposição de peixes",
+     "segment": "art3/III"
+    },
+    {
+     "quote": "Até um mil e quinhentos metros (1.500m) a montante e a jusante de cachoeiras e corredeiras",
+     "segment": "art3/IV"
+    },
+    {
+     "quote": "Até quinhentos metros (500 m) a jusante dos demais barramentos",
+     "segment": "art3/V"
+    }
+   ],
+   "geo_mapping": "pending",
+   "id": "gp-defeso-faixas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "buffer",
+   "species": "all",
+   "summary": "Proibida a pesca em lagoas marginais; 500 m de confluências e esgotos; 1.500 m a montante e jusante de barragens de UHE, mecanismos de transposição, cachoeiras e corredeiras; 500 m a jusante de outras barragens."
+  },
+  {
+   "act": "ief-156-2011",
+   "articles": "art. 7º, I a IV, §§ 2º e 3º",
+   "basins": [
+    "grande",
+    "paranaiba"
+   ],
+   "conditions": [
+    "limite de 3 kg + 1 exemplar por dia ou jornada (amador e profissional)",
+    "nos rios só desembarcada; em reservatórios embarcada ou desembarcada",
+    "linha de mão, vara simples, caniço com molinete ou carretilha; até 5 varas por pescador",
+    "proibido usar animais aquáticos como isca, salvo peixes de criação com nota fiscal",
+    "piauçu (Leporinus macrocephalus) excluído da permissão",
+    "pesca profissional só para consumo familiar, sem comercialização"
+   ],
+   "effect": "conditional",
+   "evidence": [
+    {
+     "quote": "Permitir a pesca em rios da bacia, somente na modalidade desembarcada e a pesca em reservatórios, nas modalidades embarcada e desembarcada",
+     "segment": "art7"
+    },
+    {
+     "quote": "Fica limitado a 05 (cinco) o número de varas ou caniços por pescador licenciado.",
+     "segment": "art7/I"
+    },
+    {
+     "quote": "Exclusivamente espécies não nativas (alóctones, exóticas e híbridos)",
+     "segment": "art7/II"
+    },
+    {
+     "quote": "Captura e transporte de 3 (três) kg de peixes mais um exemplar para o pescador profissional e cota de 3 (três) kg mais um exemplar para o pescador amador, por dia ou jornada de pesca",
+     "segment": "art7/IV"
+    },
+    {
+     "quote": "Excetua-se desta permissão o piauçu (Leporinus macrocephalus)",
+     "segment": "art7/IV"
+    },
+    {
+     "quote": "Proibir a utilização de animais aquáticos, inclusive peixes, camarões, caramujos, caranguejos, vivos ou mortos (inteiros ou em pedaços), como iscas.",
+     "segment": "art7/par2"
+    },
+    {
+     "quote": "Fica estabelecida a cota para a pesca profissional exclusivamente para consumo familiar, sendo vetado a comercialização dos peixes capturados durante o período de defeso",
+     "segment": "art7/par3"
+    }
+   ],
+   "id": "gp-defeso-nao-nativas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "non_native",
+   "summary": "Só espécies não nativas, fora das áreas do art. 3º."
+  },
+  {
+   "act": "ief-156-2011",
+   "articles": "art. 1º; art. 2º",
+   "basins": [
+    "grande",
+    "paranaiba"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "de 1º de novembro a 28 de fevereiro, na bacia hidrográfica dos Rios Grande e Paranaíba",
+     "segment": "art1"
+    },
+    {
+     "quote": "Proibir a captura, o transporte e o armazenamento de espécies nativas da bacia hidrográfica dos Rios Grande e Paranaíba",
+     "segment": "art2"
+    }
+   ],
+   "id": "gp-defeso-nativas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Proibidos captura, transporte e armazenamento de espécies nativas durante o defeso."
+  },
+  {
+   "act": "ief-156-2011",
+   "articles": "art. 3º, VI a XVII",
+   "basins": [
+    "grande",
+    "paranaiba"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "No trecho do Rio das Mortes, desde a sua nascente até a cachoeira das Lavras a jusante de Severiano Rezende",
+     "segment": "art3/VI"
+    },
+    {
+     "quote": "No Rio Grande, em Minas Gerais, no trecho compreendido entre a ponte rodoferroviária do município de Ribeirão Vermelho e o barramento da UHE de Camargos",
+     "segment": "art3/VII"
+    },
+    {
+     "quote": "No rio Grande, no trecho a jusante da barragem da UHE de Porto Colômbia até a ponte Engenheiro Gumercindo Penteado",
+     "segment": "art3/VIII"
+    },
+    {
+     "quote": "No Rio Paranaíba, da sua nascente, até o município de Lagamar",
+     "segment": "art3/IX"
+    },
+    {
+     "quote": "No rio Paranaíba, no trecho compreendido entre a jusante da UHE de Emborcação até a ponte Estelita Campos na BR 050",
+     "segment": "art3/X"
+    },
+    {
+     "quote": "no rio Paranaíba, no trecho compreendido entre a UHE Itumbiara e a ponte rodoviária da BR 153",
+     "segment": "art3/XI"
+    },
+    {
+     "quote": "No rio Paranaíba, no trecho compreendido entre a jusante da UHE de Cachoeira Dourada até 500 metros a jusante da confluência com o Rio Meia Ponte",
+     "segment": "art3/XII"
+    },
+    {
+     "quote": "No rio Paranaíba, no trecho compreendido entre a jusante da barragem da UHE São Simão e a ponte rodoviária da BR 365",
+     "segment": "art3/XIII"
+    },
+    {
+     "quote": "Nos rios Quebra-Anzol, Araguari e seus respectivos afluentes, incluindo aqueles formadores do reservatório de Nova Ponte",
+     "segment": "art3/XIV"
+    },
+    {
+     "quote": "No Rio Tijuco ou Tejuco, de sua nascente no município de Uberaba até sua foz no Reservatório de São Simão",
+     "segment": "art3/XV"
+    },
+    {
+     "quote": "No Rio da Prata, de sua nascente no município de Veríssimo até a sua foz no Rio Tijuco e seus afluentes",
+     "segment": "art3/XVI"
+    },
+    {
+     "quote": "No Rio Araguari, do barramento do PCH Amador Aguiar II(Capim Branco II), até a ponte de Tupaciguara na rodovia MG223",
+     "segment": "art3/XVII"
+    }
+   ],
+   "geo_mapping": "pending",
+   "id": "gp-defeso-trechos-fechados",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "stretch",
+   "species": "all",
+   "stretches": [
+    "Rio das Mortes, da nascente à Cachoeira das Lavras, a jusante de Severiano Rezende",
+    "Rio Grande, entre a ponte rodoferroviária de Ribeirão Vermelho e a barragem da UHE Camargos",
+    "Rio Grande, da jusante da UHE Porto Colômbia à ponte Engenheiro Gumercindo Penteado (Planura/MG–Colômbia/SP)",
+    "Rio Paranaíba, da nascente ao município de Lagamar",
+    "Rio Paranaíba, da jusante da UHE Emborcação à ponte Estelita Campos (BR-050)",
+    "Rio Paranaíba, entre a UHE Itumbiara e a ponte da BR-153 (Itumbiara/GO–Araporã/MG)",
+    "Rio Paranaíba, da jusante da UHE Cachoeira Dourada até 500 m a jusante da confluência do Rio Meia Ponte",
+    "Rio Paranaíba, da jusante da UHE São Simão à ponte da BR-365 (Santa Vitória/MG–São Simão/GO)",
+    "Rios Quebra-Anzol e Araguari e afluentes, incluindo os formadores do reservatório de Nova Ponte",
+    "Rio Tijuco (Tejuco), da nascente em Uberaba à foz no reservatório de São Simão, e afluentes",
+    "Rio da Prata, da nascente em Veríssimo à foz no Rio Tijuco, e afluentes",
+    "Rio Araguari, da PCH Amador Aguiar II (Capim Branco II) à ponte de Tupaciguara (MG-223)"
+   ],
+   "summary": "Pesca proibida em todos os trechos listados durante o defeso."
+  },
+  {
+   "act": "ief-155-2011",
+   "articles": "art. 2º, I a V",
+   "basins": [
+    "leste"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Nas lagoas marginais",
+     "segment": "art2/I"
+    },
+    {
+     "quote": "Até 1000 (um mil) metros a montante e a jusante das barragens de reservatórios de usinas hidrelétricas, cachoeiras e corredeiras",
+     "segment": "art2/II"
+    },
+    {
+     "quote": "Até 300 metros dos demais barramentos",
+     "segment": "art2/III"
+    },
+    {
+     "quote": "A menos de 500m (quinhentos metros) da confluência do rio principal com seus afluentes e das saídas de esgotos urbanos",
+     "segment": "art2/IV"
+    },
+    {
+     "quote": "Nos cursos d’água, cuja lâmina d’água possua largura igual ou inferior a 20 metros",
+     "segment": "art2/V"
+    }
+   ],
+   "geo_mapping": "pending",
+   "id": "leste-defeso-faixas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "buffer",
+   "species": "all",
+   "summary": "Proibida a pesca em lagoas marginais; 1.000 m de barragens de UHEs, cachoeiras e corredeiras; 300 m de outros barramentos; 500 m de confluências e esgotos urbanos; cursos d'água com até 20 m de largura."
+  },
+  {
+   "act": "ibama-in-196-2008",
+   "articles": "arts. 1º a 3º",
+   "basins": [
+    "leste"
+   ],
+   "effect": "prohibited",
+   "id": "leste-defeso-federal",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Defeso federal nas bacias do Leste (exceto São Francisco); só não nativas podem ser capturadas. A cota federal (amador 10 kg + 1) é menos restritiva que a estadual."
+  },
+  {
+   "act": "ief-155-2011",
+   "articles": "art. 5º; art. 6º, I; art. 7º",
+   "basins": [
+    "leste"
+   ],
+   "conditions": [
+    "limite de 3 kg + 1 exemplar por jornada (amador e profissional)",
+    "nos rios, só pesca desembarcada com linha de mão, caniço, vara com molinete ou carretilha",
+    "nos reservatórios, embarcada ou desembarcada; proibida a lambada"
+   ],
+   "effect": "conditional",
+   "evidence": [
+    {
+     "quote": "com cota de 3 (três) kg mais um exemplar para a pesca profissional e amadora, por jornada de pesca",
+     "segment": "art7"
+    },
+    {
+     "quote": "Permitir, nos rios das bacias hidrográficas do leste, apenas a pesca desembarcada e utilizando somente linha de mão, caniço, vara com molinete ou carretilha",
+     "segment": "art5"
+    },
+    {
+     "quote": "Permitir, nos reservatórios das bacias hidrográficas referenciadas no art. 1º, a pesca embarcada e desembarcada",
+     "segment": "art6"
+    },
+    {
+     "quote": "exceto pelo processo de lambada",
+     "segment": "art6/I"
+    }
+   ],
+   "id": "leste-defeso-nao-nativas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "non_native",
+   "summary": "Captura de alóctones, exóticas e híbridos permitida com restrições de modalidade e cota."
+  },
+  {
+   "act": "ief-155-2011",
+   "articles": "art. 1º; art. 7º",
+   "basins": [
+    "leste"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Fixar anualmente o período de 1º de novembro a 28 de fevereiro, para o defeso da piracema na Bacia Hidrográfica do Leste",
+     "segment": "art1"
+    },
+    {
+     "quote": "Permitir a captura e o transporte somente de espécies não nativas (alóctones e exóticas e híbridos)",
+     "segment": "art7"
+    }
+   ],
+   "id": "leste-defeso-nativas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Durante o defeso só é permitida a captura e o transporte de espécies não nativas; nativas ficam proibidas."
+  },
+  {
+   "act": "ief-guia-restricoes",
+   "articles": "orientação oficial",
+   "basins": [
+    "mg"
+   ],
+   "effect": "prohibited",
+   "geo_mapping": "pending",
+   "id": "mg-ucs-estaduais",
+   "period": {
+    "kind": "permanent"
+   },
+   "scope": "buffer",
+   "species": "all",
+   "summary": "Qualquer modalidade de pesca proibida em Unidades de Conservação estaduais, salvo pesca científica autorizada."
+  },
+  {
+   "act": "ief-16-2019",
+   "articles": "texto integral não obtido",
+   "basins": [
+    "paraopeba"
+   ],
+   "conditions": [
+    "somente pesca amadora",
+    "petrechos e cotas a conferir no texto da portaria"
+   ],
+   "effect": "conditional",
+   "id": "paraopeba-nao-nativas",
+   "period": {
+    "kind": "permanent"
+   },
+   "scope": "basin",
+   "species": "non_native",
+   "summary": "Só exóticas, alóctones ou híbridas, com petrechos permitidos; pesca profissional proibida (Decretos 43.713/2004 e 47.383/2018, segundo o IEF)."
+  },
+  {
+   "act": "ief-16-2019",
+   "articles": "texto integral não obtido",
+   "basins": [
+    "paraopeba"
+   ],
+   "effect": "prohibited",
+   "id": "paraopeba-nativas-permanente",
+   "period": {
+    "kind": "permanent"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Pesca de nativas proibida em toda a bacia do Paraopeba até nova portaria, segundo a página oficial do IEF; capturas acidentais devolvidas."
+  },
+  {
+   "act": "ief-154-2011",
+   "articles": "art. 2º, III, a, b, d, e, f, i, k",
+   "basins": [
+    "sao_francisco"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "No perímetro compreendido entre 1.000 (um mil) metros à montante e à jusante das barragens, usinas hidrelétricas, cachoeiras e corredeiras",
+     "segment": "art2/III/a"
+    },
+    {
+     "quote": "A menos de 500 (quinhentos) metros à montante e à jusante da confluência e desembocadura de rios, lagoas, canais e tubulações de esgotos",
+     "segment": "art2/III/b"
+    },
+    {
+     "quote": "No interior das unidades de conservação e proteção integral e seu entorno num raio de 10 quilômetros, quando não houver plano de manejo",
+     "segment": "art2/III/d"
+    },
+    {
+     "quote": "Nas lagoas marginais temporárias ou permanentes e criadouros naturais",
+     "segment": "art2/III/e"
+    },
+    {
+     "quote": "A menos de 300m (trezentos metros) dos barramentos",
+     "segment": "art2/III/f"
+    },
+    {
+     "quote": "Nos cursos d’água, cuja lâmina d’água possua largura igual ou inferior a 20 metros",
+     "segment": "art2/III/i"
+    },
+    {
+     "quote": "Para todas as categorias e modalidades, nas lagoas marginais",
+     "segment": "art2/III/k"
+    }
+   ],
+   "geo_mapping": "pending",
+   "id": "sf-defeso-faixas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "buffer",
+   "species": "all",
+   "summary": "Proibida a pesca: 1.000 m a montante e a jusante de barragens, UHEs, cachoeiras e corredeiras; 500 m de confluências, desembocaduras, lagoas, canais e esgotos; 300 m de barramentos; lagoas marginais; cursos d'água com até 20 m de largura; UCs de proteção integral e 10 km no entorno sem plano de manejo."
+  },
+  {
+   "act": "ief-154-2011",
+   "articles": "art. 2º, § 2º; art. 4º, I a IV; art. 5º, I a III",
+   "basins": [
+    "sao_francisco"
+   ],
+   "conditions": [
+    "licença ou autorização do órgão ambiental",
+    "limite de 3 kg + 1 exemplar por pescador, por dia ou jornada",
+    "linha de mão, anzol simples, vara ou caniço, molinete e carretilha; garatéia só com isca artificial; até 5 varas por pescador",
+    "proibida a técnica da lambada",
+    "pesca profissional só para consumo familiar, sem comercialização"
+   ],
+   "effect": "conditional",
+   "evidence": [
+    {
+     "quote": "Permitir a pesca amadora, profissional, embarcada e desembarcada, somente para espécies exóticas, alóctones ou híbridas, constantes no art. 5º desta Portaria",
+     "segment": "art4"
+    },
+    {
+     "quote": "Portando a licença ou autorização do órgão ambiental competente",
+     "segment": "art4/I"
+    },
+    {
+     "quote": "Com limite para captura de 3 (três) kg de peixes mais um exemplar por pescador amador e 3 (três) kg de peixes mais um exemplar para o pescador profissional",
+     "segment": "art4/II"
+    },
+    {
+     "quote": "sendo vedado a prática da técnica da lambada",
+     "segment": "art4/IV"
+    },
+    {
+     "quote": "limitados a 05 (cinco) varas e caniços por pescador licenciado",
+     "segment": "art4/IV"
+    },
+    {
+     "quote": "Fica estabelecida a cota para a pesca profissional exclusivamente para consumo familiar, sendo vetada a comercialização dos peixes capturados durante o período de defeso",
+     "segment": "art2/par2"
+    }
+   ],
+   "id": "sf-defeso-nao-nativas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "non_native",
+   "summary": "Pesca amadora e profissional, embarcada ou desembarcada, só de espécies alóctones, exóticas ou híbridas listadas no art. 5º."
+  },
+  {
+   "act": "ief-154-2011",
+   "articles": "art. 1º; art. 2º, I",
+   "basins": [
+    "sao_francisco"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Fixar anualmente o período de 1º de novembro a 28 de fevereiro, para o defeso da piracema na Bacia Hidrográfica do Rio São Francisco",
+     "segment": "art1"
+    },
+    {
+     "quote": "A captura e o respectivo porte, transporte, comércio, armazenamento, consumo e utilização para qualquer finalidade de espécies nativas da bacia hidrográfica do Rio São Francisco",
+     "segment": "art2/I"
+    }
+   ],
+   "id": "sf-defeso-nativas",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Proibidos captura, porte, transporte, comércio e consumo de espécies nativas da bacia durante o defeso."
+  },
+  {
+   "act": "ief-154-2011",
+   "articles": "art. 2º, III, g, h, j, l, m",
+   "basins": [
+    "sao_francisco"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "No Rio Pandeiros e nos seus afluentes, em toda a sua extensão",
+     "segment": "art2/III/g"
+    },
+    {
+     "quote": "No Rio da Prata, de sua nascente até sua foz no Rio Paracatu, no Município de Lagoa Grande",
+     "segment": "art2/III/h"
+    },
+    {
+     "quote": "No rio Cipó e seus afluentes, da nascente à foz com o Rio Paraúna",
+     "segment": "art2/III/j"
+    },
+    {
+     "quote": "No rio Abaeté e seus afluentes, de sua nascente até a sua desembocadura no rio São Francisco",
+     "segment": "art2/III/l"
+    },
+    {
+     "quote": "No rio do Sono, da Cachoeira das Almas divisa de municípios de João Pinheiro e Buritizeiro até sua foz no rio Paracatu",
+     "segment": "art2/III/m"
+    }
+   ],
+   "geo_mapping": "pending",
+   "id": "sf-defeso-rios-fechados",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "stretch",
+   "species": "all",
+   "stretches": [
+    "Rio Pandeiros e todos os afluentes, em toda a extensão",
+    "Rio da Prata, da nascente à foz no Rio Paracatu, em Lagoa Grande",
+    "Rio Cipó e afluentes, da nascente à foz no Rio Paraúna",
+    "Rio Abaeté e afluentes, da nascente à foz no São Francisco",
+    "Rio do Sono, da Cachoeira das Almas (divisa João Pinheiro/Buritizeiro) à foz no Rio Paracatu"
+   ],
+   "summary": "Pesca proibida em todos os trechos listados durante o defeso."
+  },
+  {
+   "act": "ibama-50-2007",
+   "articles": "art. 1º, § 2º",
+   "basins": [
+    "sao_francisco"
+   ],
+   "effect": "prohibited",
+   "geo_mapping": "pending",
+   "id": "sf-lagoas-marginais-federal",
+   "period": {
+    "end": "04-30",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "buffer",
+   "species": "all",
+   "summary": "Pesca de qualquer categoria, modalidade e petrecho proibida nas lagoas marginais de 1º/11 a 30/04 (federal; estende o prazo estadual)."
+  }
+ ],
+ "sources": {
+  "ief-154-2011": {
+   "bytes": 469723,
+   "extractor": "legal-sources/2",
+   "kind": "pdf",
+   "official": false,
+   "retrieved_at": "2026-11-15T01:56:28+00:00",
+   "segments": 56,
+   "sha256": "fd440b22bf9e3ecc267fc46440898dbf091066a469c76473cde75e605176cb44",
+   "text_chars": 12982,
+   "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_154_2.pdf"
+  },
+  "ief-155-2011": {
+   "bytes": 459374,
+   "extractor": "legal-sources/2",
+   "kind": "pdf",
+   "official": false,
+   "retrieved_at": "2026-11-15T01:56:32+00:00",
+   "segments": 39,
+   "sha256": "a0fe027b7ffa8b8b9a236d2e15699308c63d7be17f516a6148b0b3283b159aa6",
+   "text_chars": 8826,
+   "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_155_2.pdf"
+  },
+  "ief-156-2011": {
+   "bytes": 470060,
+   "extractor": "legal-sources/2",
+   "kind": "pdf",
+   "official": false,
+   "retrieved_at": "2026-11-15T01:56:34+00:00",
+   "segments": 62,
+   "sha256": "fa1d6c75d070b543123d3980030b5b0905ffe8ac351c54fe5b01b38892c9a1ac",
+   "text_chars": 12918,
+   "url": "https://cdn.agenciapeixevivo.org.br/files/uploads/2012/10/pesca_portaria_n_156_2.pdf"
+  },
+  "ief-31-2025": {
+   "bytes": 145263,
+   "extractor": "legal-sources/2",
+   "kind": "pdf",
+   "official": true,
+   "retrieved_at": "2026-11-15T01:56:36+00:00",
+   "segments": 44,
+   "sha256": "60b203a89f28352d08076d4623416b355bf360a7c7dc5305ebbdd0cb7fb9afa7",
+   "text_chars": 3924,
+   "url": "https://www.ief.mg.gov.br/documents/d/ief/utf-8portaria-ief-31-de-2025-pdf"
+  },
+  "ief-40-2017": {
+   "bytes": 324317,
+   "extractor": "legal-sources/2",
+   "kind": "pdf",
+   "official": true,
+   "retrieved_at": "2026-11-15T01:56:38+00:00",
+   "segments": 15,
+   "sha256": "5af54f6697c316daf7d4176c7bedf91d2383205c48f1dccbec2443517eae1864",
+   "text_chars": 4874,
+   "url": "https://meioambiente.mg.gov.br/documents/d/ief/portaria_n-_40_-_2017-pdf"
+  },
+  "mg-lei-15082-2004": {
+   "bytes": 81588,
+   "extractor": "legal-sources/2",
+   "kind": "pdf",
+   "official": false,
+   "retrieved_at": "2026-11-15T01:58:41+00:00",
+   "segments": 23,
+   "sha256": "00d467da04d4f33f9c2654eef6745c6d1562f5f8d1e6c9609d0bfc74ea36fd31",
+   "text_chars": 2809,
+   "url": "https://www.cbhdoce.org.br/wp-content/uploads/2016/01/Lei-ordinaria-15082-2004-Minas-gerais-MG-1.pdf"
+  }
+ },
+ "species_lists": [
+  {
+   "act": "ief-154-2011",
+   "aloctone": [
+    "Tucunaré (Cichla spp.)",
+    "Tambaqui",
+    "Apaiari",
+    "Pescada-do-piauí",
+    "Pacu (caranha amarela)",
+    "Caranha preta / pirapitinga",
+    "Cachara",
+    "Trairão",
+    "Piranha vermelha",
+    "Piranha preta"
+   ],
+   "basin": "sao_francisco",
+   "exotic": [
+    "Tilápias",
+    "Bagre africano",
+    "Catfish",
+    "Carpa comum",
+    "Carpa espelho",
+    "Carpa capim",
+    "Carpa prateada",
+    "Carpa cabeçuda",
+    "Black bass"
+   ],
+   "hybrid": [
+    "Tambacu (tambaqui × pacu)",
+    "Pintachara (pintado × cachara)"
+   ],
+   "id": "ief-154-2011-art5",
+   "native_listed_as_capturable": [
+    "Piranha (Pygocentrus piraya)",
+    "Pirambeba",
+    "Camboge / tamoatá"
+   ],
+   "note": "Art. 5º, IV lista autóctones (piranha, pirambeba, camboge/tamoatá) entre as capturáveis, mas o art. 4º só permite não nativas; o texto não resolve o conflito. Tratar como undetermined."
+  },
+  {
+   "act": "ief-155-2011",
+   "basin": "leste",
+   "id": "ief-155-2011-art7",
+   "non_native": [
+    "Pescada-do-piauí (Plagioscion squamosissimus)",
+    "Tucunaré (Cichla spp.)",
+    "Tilápia (Oreochromis spp. e Tilapia sp)",
+    "Bagre-africano (Clarias spp.)",
+    "Apaiari (Astronotus ocellatus)",
+    "Tambaqui (Colossoma macropomum)",
+    "Carpas (todas as espécies)",
+    "Catfish (Ictalurus punctatus)",
+    "Caranha preta / pirapitinga / pacu (Piaractus brachypomus)",
+    "Pirambeba (Serrasalmus brandtii)",
+    "Piranha (Pygocentrus piraya)",
+    "Caboge / tamoatá (Hoplosternum sp. e Callichthys callichthys)",
+    "Cachara (Pseudoplatystoma fasciatum)",
+    "Tambacu (híbrido)",
+    "Camarão gigante da Malásia (Macrobrachium rosembergii)"
+   ],
+   "note": "Lista exemplificativa (\"tais como\"). Pirambeba, piranha e caboge são nativas no São Francisco, mas a portaria as trata como não nativas no Leste.",
+   "segment": "art7"
+  },
+  {
+   "act": "ief-156-2011",
+   "basin": "grande,paranaiba",
+   "excluded": [
+    "Piauçu (Leporinus macrocephalus)"
+   ],
+   "id": "ief-156-2011-art7",
+   "non_native": [
+    "Apaiari",
+    "Bagre africano",
+    "Black bass",
+    "Carpas (todas)",
+    "Pescada-do-piauí",
+    "Peixe-rei",
+    "Sardinha-de-água-doce",
+    "Piranha preta",
+    "Tilápia",
+    "Tucunaré",
+    "Zoiudo"
+   ]
+  },
+  {
+   "act": "ief-31-2025",
+   "basin": "doce",
+   "id": "ief-doce-autoctones",
+   "native": [
+    "Geophagus brasiliensis",
+    "Henochilus weatlandii",
+    "Rhamdia quelen",
+    "Crenicichla lacustris",
+    "Oligosarcus argenteus",
+    "Cichlasoma facetum",
+    "Delturus carinotus",
+    "Hypostomus luetkeni",
+    "Hypostomus affinis",
+    "Loricariichthys castaneus",
+    "Neoplecostomus espiritosantensis",
+    "Hypostomus sp.",
+    "Pachyurus adspersus",
+    "Trachelyopterus striatulus",
+    "Prochilodus vimboides",
+    "Pseudauchenipterus affinis",
+    "Astyanax scabripinnis",
+    "Astyanax bimaculatus",
+    "Astyanax fasciatus",
+    "Moenkhausia doceana",
+    "Astyanax aff. taeniatus",
+    "Oligosarcus solitarius",
+    "Pimelodus maculatus",
+    "Pimelodella aff. harttii",
+    "Lycengraulis sp.",
+    "Hoplerythrinus unitaeniatus",
+    "Brycon devillei",
+    "Leporinus steindachneri",
+    "Leporinus conirostris",
+    "Leporinus copelandii",
+    "Brycon opalinus",
+    "Brycon nattereri",
+    "Gymnotus carapo",
+    "Cyphocharax gilbert",
+    "Steindachneridion doceanum",
+    "Mugil sp.",
+    "Hypomasticus mormyrops",
+    "Hoplias malabaricus"
+   ],
+   "note": "Documento do IEF com cabeçalho da Portaria 40/2017, ainda publicado pela página da Portaria 31/2025. Lista não exaustiva.",
+   "source_url": "https://meioambiente.mg.gov.br/documents/d/ief/especies_de_peixes_autoctones_do_rio_doce"
+  }
+ ],
+ "verified_rules": [
+  "doce-nao-nativas",
+  "doce-nativas-permanente",
+  "gp-defeso-faixas",
+  "gp-defeso-nao-nativas",
+  "gp-defeso-nativas",
+  "gp-defeso-trechos-fechados",
+  "leste-defeso-faixas",
+  "leste-defeso-nao-nativas",
+  "leste-defeso-nativas",
+  "sf-defeso-faixas",
+  "sf-defeso-nao-nativas",
+  "sf-defeso-nativas",
+  "sf-defeso-rios-fechados"
+ ]
+}

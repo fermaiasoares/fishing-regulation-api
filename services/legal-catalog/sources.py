@@ -21,10 +21,13 @@ from pathlib import Path
 
 USER_AGENT = "fishing-regulation-api/legal-sources (+https://github.com/fermaiasoares/fishing-regulation-api)"
 TIMEOUT_SECONDS = 60
-EXTRACTOR = "legal-sources/1"
+EXTRACTOR = "legal-sources/2"
 
-ARTICLE = re.compile(r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:º|°|o)?\.?\s*(?:[-–—.:]\s*)?(?=\S)", re.IGNORECASE)
-PARAGRAPH = re.compile(r"^\s*(?:§\s*(\d+)\s*(?:º|°|o)?|Par[áa]grafo\s+[úu]nico)\s*[-–—.:]?\s*", re.IGNORECASE)
+# Case-sensitive on purpose: a wrapped line starting with "art. 4º da Lei..." is a
+# reference inside a sentence, not a new article.
+ARTICLE = re.compile(r"^\s*Art(?:igo)?\.?\s*(\d+)\s*(?:º|°|o)?\.?\s*(?:[-–—.:]\s*)?(?=\S)")
+PARAGRAPH = re.compile(r"^\s*(?:§\s*(\d+)\s*(?:º|°|o)?|Par[áa]grafo\s+[úÚuU]nico)\s*[-–—.:]?\s*")
+RUNNING_HEADER_MIN_REPEATS = 3
 INCISO = re.compile(r"^\s*([IVXLC]+)\s*[-–—]\s+")
 ALINEA = re.compile(r"^\s*([a-z])\s*\)\s+")
 
@@ -35,6 +38,24 @@ def normalize(text: str) -> str:
     text = text.replace("­", "")
     text = re.sub(r"-\s*\n\s*", "", text)  # words broken across lines
     return re.sub(r"\s+", " ", text).strip().casefold()
+
+
+def strip_running_headers(text: str) -> str:
+    """Drop page headers/footers: identical lines repeated on many pages.
+
+    Lines that open a legal unit are never dropped, even if repeated.
+    """
+    lines = text.splitlines()
+    counts: dict[str, int] = {}
+    for line in lines:
+        if line.strip():
+            counts[line.strip()] = counts.get(line.strip(), 0) + 1
+    def is_unit(line: str) -> bool:
+        return any(pattern.match(line) for pattern in (ARTICLE, PARAGRAPH, INCISO, ALINEA))
+    return "\n".join(
+        line for line in lines
+        if not (line.strip() and counts[line.strip()] >= RUNNING_HEADER_MIN_REPEATS and not is_unit(line))
+    )
 
 
 def segment(text: str) -> list[dict]:
@@ -76,9 +97,10 @@ def segment(text: str) -> list[dict]:
             base = f"{article}/{paragraph}" if paragraph else article
             current = open_unit(f"{base}/{inciso}", inciso, line[match.end():].strip())
             continue
-        if inciso and (match := ALINEA.match(line)):
+        if (inciso or paragraph) and (match := ALINEA.match(line)):
             base = f"{article}/{paragraph}" if paragraph else article
-            current = open_unit(f"{base}/{inciso}/{match.group(1)}", f"{match.group(1)})", line[match.end():].strip())
+            parent = f"{base}/{inciso}" if inciso else base
+            current = open_unit(f"{parent}/{match.group(1)}", f"{match.group(1)})", line[match.end():].strip())
             continue
         current["lines"].append(line.strip())
 
@@ -169,7 +191,7 @@ def acquire(catalog_dir: Path) -> dict:
             digest = hashlib.sha256(content).hexdigest()
             raw_path = sources_dir / f"{act['id']}.{kind}"
             raw_path.write_bytes(content)
-            text = pdf_to_text(raw_path) if kind == "pdf" else html_to_text(content)
+            text = extract(raw_path)
             (sources_dir / f"{act['id']}.txt").write_text(text)
             segments = segment(text)
             (sources_dir / f"{act['id']}.segments.json").write_text(json.dumps(segments, ensure_ascii=False, indent=1) + "\n")
@@ -199,11 +221,36 @@ def acquire(catalog_dir: Path) -> dict:
     return report
 
 
+def extract(raw_path: Path) -> str:
+    content = raw_path.read_bytes()
+    text = pdf_to_text(raw_path) if raw_path.suffix == ".pdf" else html_to_text(content)
+    return strip_running_headers(text)
+
+
+def reextract(catalog_dir: Path) -> dict:
+    """Rebuild text and segments from the stored raw files, without network access."""
+    sources_dir = catalog_dir / "sources"
+    manifest_path = sources_dir / "manifest.json"
+    manifest = json.loads(manifest_path.read_text())
+    for act_id, entry in manifest.items():
+        raw_path = sources_dir / f"{act_id}.{entry['kind']}"
+        if hashlib.sha256(raw_path.read_bytes()).hexdigest() != entry["sha256"]:
+            raise ValueError(f"{raw_path} does not match the SHA-256 in the manifest")
+        text = extract(raw_path)
+        segments = segment(text)
+        (sources_dir / f"{act_id}.txt").write_text(text)
+        (sources_dir / f"{act_id}.segments.json").write_text(json.dumps(segments, ensure_ascii=False, indent=1) + "\n")
+        entry.update({"extractor": EXTRACTOR, "segments": len(segments), "text_chars": len(text)})
+    manifest_path.write_text(json.dumps(dict(sorted(manifest.items())), ensure_ascii=False, indent=1) + "\n")
+    return manifest
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("catalog_dir", type=Path)
+    parser.add_argument("--reextract", action="store_true", help="rebuild texts from stored raw files only")
     args = parser.parse_args()
-    report = acquire(args.catalog_dir)
+    report = reextract(args.catalog_dir) if args.reextract else acquire(args.catalog_dir)
     print(json.dumps(report, ensure_ascii=False, indent=1))
 
 
