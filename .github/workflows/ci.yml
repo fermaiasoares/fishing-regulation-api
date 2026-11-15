@@ -57,8 +57,8 @@ jobs:
           docker compose -f infrastructure/compose.yaml exec -T api php artisan legal:import --publish | grep -q "already imported"
       - name: Verify geographic and legal migration rollback and reapply
         run: |
-          docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate:rollback --force --step=3
-          result="$(docker compose -f infrastructure/compose.yaml exec -T db psql -U fishing -d fishing_test -v ON_ERROR_STOP=1 -Atc "SELECT to_regclass('geographic_datasets') IS NULL AND to_regclass('geographic_dataset_versions') IS NULL AND to_regclass('hydrographic_basins') IS NULL AND to_regclass('river_segments') IS NULL AND to_regclass('legal_rules') IS NULL AND to_regclass('legal_catalog_versions') IS NULL AND PostGIS_Version() IS NOT NULL")"
+          docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate:rollback --force --step=4
+          result="$(docker compose -f infrastructure/compose.yaml exec -T db psql -U fishing -d fishing_test -v ON_ERROR_STOP=1 -Atc "SELECT to_regclass('geographic_datasets') IS NULL AND to_regclass('geographic_dataset_versions') IS NULL AND to_regclass('hydrographic_basins') IS NULL AND to_regclass('river_segments') IS NULL AND to_regclass('legal_rules') IS NULL AND to_regclass('legal_area_geometries') IS NULL AND to_regclass('legal_catalog_versions') IS NULL AND PostGIS_Version() IS NOT NULL")"
           test "$result" = t
           docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate --force --step
       - name: Audit Composer dependencies

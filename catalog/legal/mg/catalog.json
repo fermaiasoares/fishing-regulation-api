@@ -969,44 +969,48 @@
   {
    "act": "ief-154-2011",
    "aloctone": [
-    "Tucunaré (Cichla spp.)",
-    "Tambaqui",
-    "Apaiari",
-    "Pescada-do-piauí",
-    "Pacu (caranha amarela)",
-    "Caranha preta / pirapitinga",
-    "Cachara",
-    "Trairão",
-    "Piranha vermelha",
-    "Piranha preta"
+    "Tucunaré (Cicla spp.)",
+    "Tambaqui (Colossoma macropomum)",
+    "Apaiari (Astronotus ocellatus)",
+    "Pescada do Piauí (Plagioscion squamosissimus)",
+    "Caranha Amarela ou Pacu (Piaractus mesopotamicus)",
+    "Caranha Preta ou Pirapitinga ou Pacu (Piaractus brachypomus)",
+    "Cachara (Pseudoplatystoma fasciatum)",
+    "Trairão (Hoplias lacerdae)",
+    "Piranha Vermelha (Pygocentrus nattereri)",
+    "Piranha Preta (Serrassalmus rhombeus)"
    ],
    "basin": "sao_francisco",
    "exotic": [
-    "Tilápias",
-    "Bagre africano",
-    "Catfish",
-    "Carpa comum",
-    "Carpa espelho",
-    "Carpa capim",
-    "Carpa prateada",
-    "Carpa cabeçuda",
-    "Black bass"
+    "Tilápias (Oreochromis niloticus e Tilapia rendalli)",
+    "Bagre Africano (Clarias gariepinus)",
+    "Catfish (Ictalurus punctatus)",
+    "Carpa Comum (Cyprinus carpio)",
+    "Carpa Espelho (Cyprinus carpio specularis)",
+    "Carpa Capim (Ctenopharyngodon idella)",
+    "Carpa Prateada (Hypophtalmichthys molitrix)",
+    "Carpa Cabeçuda (Anstichtys nobilis)",
+    "Black Bass (Micropterus salmoides)"
    ],
    "hybrid": [
-    "Tambacu (tambaqui × pacu)",
-    "Pintachara (pintado × cachara)"
+    "Tambacu (Colossoma macropomum X Piaractus masopotamicus)",
+    "Ponto e Vírgula ou Pintachara (Pseudoplatystoma corruscans X Pseudoplatystoma fasciatum)"
    ],
    "id": "ief-154-2011-art5",
    "native_listed_as_capturable": [
     "Piranha (Pygocentrus piraya)",
-    "Pirambeba",
-    "Camboge / tamoatá"
+    "Pirambeba (Serrasalmus branditii)",
+    "Camboge ou Tamoatá (Hoplosternum sp e Callichthys callichthys)"
    ],
-   "note": "Art. 5º, IV lista autóctones (piranha, pirambeba, camboge/tamoatá) entre as capturáveis, mas o art. 4º só permite não nativas; o texto não resolve o conflito. Tratar como undetermined."
+   "note": "O art. 5º, IV lista autóctones entre as espécies autorizadas, mas o art. 4º só permite exóticas, alóctones ou híbridas. Essas espécies são tratadas como conflito (undetermined).",
+   "segment": "art5"
   },
   {
    "act": "ief-155-2011",
    "basin": "leste",
+   "hybrid": [
+    "Tambacu"
+   ],
    "id": "ief-155-2011-art7",
    "non_native": [
     "Pescada-do-piauí (Plagioscion squamosissimus)",
@@ -1017,12 +1021,11 @@
     "Tambaqui (Colossoma macropomum)",
     "Carpas (todas as espécies)",
     "Catfish (Ictalurus punctatus)",
-    "Caranha preta / pirapitinga / pacu (Piaractus brachypomus)",
+    "Caranha Preta ou Pirapitinga ou Pacu (Piaractus Brachypomus)",
     "Pirambeba (Serrasalmus brandtii)",
     "Piranha (Pygocentrus piraya)",
-    "Caboge / tamoatá (Hoplosternum sp. e Callichthys callichthys)",
+    "Caboge ou Tamoatá (Hoplosternum sp. e Callichthys callichthys)",
     "Cachara (Pseudoplatystoma fasciatum)",
-    "Tambacu (híbrido)",
     "Camarão gigante da Malásia (Macrobrachium rosembergii)"
    ],
    "note": "Lista exemplificativa (\"tais como\"). Pirambeba, piranha e caboge são nativas no São Francisco, mas a portaria as trata como não nativas no Leste.",
@@ -1036,18 +1039,20 @@
    ],
    "id": "ief-156-2011-art7",
    "non_native": [
-    "Apaiari",
-    "Bagre africano",
-    "Black bass",
-    "Carpas (todas)",
-    "Pescada-do-piauí",
-    "Peixe-rei",
-    "Sardinha-de-água-doce",
-    "Piranha preta",
-    "Tilápia",
-    "Tucunaré",
-    "Zoiudo"
-   ]
+    "Apaiari (Astronotus ocelatus)",
+    "Bagre-africano (Clarias sp.)",
+    "Black-bass (Micropterus sp.)",
+    "Carpa (todas as espécies)",
+    "Corvina ou Pescada-do-Piauí (Plagioscion squamosissimus)",
+    "Peixe-rei (Odontesthis sp.)",
+    "Sardinha-de-água-doce (Triportheus angulatus)",
+    "Piranha preta (Serrassalmus rombeus)",
+    "Tilápias (Oreochromis spp. e Tilapia spp.)",
+    "Tucunaré (Cichla spp.)",
+    "Zoiudo (Geophagus surinamensis e Geophagus proximus)"
+   ],
+   "note": "Lista exemplificativa (\"tais como\").",
+   "segment": "art7/IV"
   },
   {
    "act": "ief-31-2025",
@@ -1093,7 +1098,7 @@
     "Hypomasticus mormyrops",
     "Hoplias malabaricus"
    ],
-   "note": "Documento do IEF com cabeçalho da Portaria 40/2017, ainda publicado pela página da Portaria 31/2025. Lista não exaustiva.",
+   "note": "Documento do IEF com cabeçalho da Portaria 40/2017, ainda publicado pela página da Portaria 31/2025. Lista não exaustiva; arquivo ainda não armazenado em sources/.",
    "source_url": "https://meioambiente.mg.gov.br/documents/d/ief/especies_de_peixes_autoctones_do_rio_doce"
   }
  ],
