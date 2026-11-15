@@ -8,7 +8,9 @@
 #   official_summary    só a página oficial de resumo foi lida; texto integral não obtido
 #   not_read            citado por fonte oficial, texto não lido
 #
-# review: "pending" até aprovação do Fernando no PR.
+# review: "pending", "approved", "approved_with_reservations" ou "rejected", decidido pelo
+# agente consultor-juridico (.claude/agents/consultor-juridico.md), com reviewed_by,
+# reviewed_at e review_opinion (parecer em docs/pareceres/).
 
 collected_at = "2026-11-14"
 

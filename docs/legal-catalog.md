@@ -1,6 +1,6 @@
 # Catálogo jurídico — federal e Minas Gerais
 
-Atualizado em 14/11/2026. Todas as regras aguardam revisão do Fernando (`review = "pending"`). Nenhuma regra concede permissão: sem restrição carregada, a resposta é `undetermined`.
+Atualizado em 14/11/2026. Todas as regras aguardam revisão do agente [consultor-juridico](../.claude/agents/consultor-juridico.md) (`review = "pending"`); os pareceres ficam em [docs/pareceres](pareceres/). Nenhuma regra concede permissão: sem restrição carregada, a resposta é `undetermined`.
 
 ## Jurisdições
 
