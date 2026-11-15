@@ -34,7 +34,9 @@ python3 -m unittest discover -s tests -v
 | [Portaria IBAMA 50/2007](https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf) | São Francisco (federal) | Não (HTTP 403 para download automático) | 1, sem trecho conferido |
 | IN IBAMA 196/2008 | Leste (federal) | Não (timeout no agregador) | 1, sem trecho conferido |
 | IN IBAMA 195/2008, IN IBAMA 25/2009 | Sudeste / Paraná (federal) | Não | Nenhuma até leitura |
-| Portaria MMA 300/2022 (+ GM/MMA 1.667/2026) | Brasil | Não | Lista de ameaçadas a extrair |
+| Portaria GM/MMA 1.666/2026 | Brasil | Sim (LegisWeb; DOU não respondeu) | 1: proteção integral de espécies ameaçadas (art. 3º), conferida |
+| [Portaria GM/MMA 1.667/2026](https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf) | Brasil | Sim (PDF oficial) + Anexo I em CSV (`annex_1667.py`) | Lista com 351 peixes continentais e invertebrados de água doce |
+| Portaria MMA 300/2022 | Brasil | Não | Substituída pelas 1.666 e 1.667/2026 para fauna aquática |
 | [Página IEF de restrições](https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais) | MG | Orientação oficial | 1 (UCs estaduais) |
 
 13 das 18 regras têm trecho literal conferido no texto armazenado. As demais aparecem como lacuna em toda avaliação. A vigência das Portarias 154, 155 e 156 no ciclo atual está confirmada pela [Agência Minas em 05/11/2026](https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos): piracema até 28/02/2027.
@@ -59,7 +61,8 @@ Gerada por `catalog.py --matrix`. "Não nativas" pressupõe espécie presente na
 ## Lacunas antes da v1.0
 
 1. **Fora do defeso** quase tudo é `undetermined`: faltam tamanhos mínimos, cotas gerais e regras da Lei 14.181/2002 e do Decreto 43.713/2004.
-2. **Espécies ameaçadas**: extrair o Anexo III da Portaria MMA 300/2022 com a atualização de 2026; a proibição vale o ano todo em qualquer bacia.
+2. **Espécies ameaçadas**: carregadas (Portarias GM/MMA 1.666 e 1.667/2026). Pendências: Planos de Recuperação que autorizem uso sustentável (art. 4º) não estão catalogados; o anexo marca linhas com "*" sem legenda, então a data de 27/10/2026 do art. 12 vale para todas; a portaria não excetua populações introduzidas, e o catálogo aplica a proibição também fora da área nativa (ex.: tambaqui em MG), interpretação a revisar.
+8. **Nativas por bacia**: não foi encontrada lista oficial de espécies nativas para São Francisco, Grande, Paranaíba e Leste. Nativas não ameaçadas dessas bacias seguem `undetermined` na piracema. Candidatas: tabelas de tamanho mínimo da Portaria IBAMA 18/2008 (São Francisco) e da IN IBAMA 26/2009 (Paraná), que listam espécies sem declará-las nativas.
 3. **Textos federais e do Paraopeba**: sem texto armazenado, suas regras ficam sem trecho conferido. Se os PDFs forem anexados ao repositório, o fluxo `--reextract` os processa sem rede.
 4. **Mapeamento geográfico**: faixas de 300 a 1.500 m, lagoas marginais, trechos nomeados, cursos com até 20 m de largura e UCs dependem de camadas que ainda não estão no PostGIS.
 5. **Conflitos no texto da Portaria 154/2011**: o art. 5º, IV lista autóctones como capturáveis, mas o art. 4º só admite não nativas; o art. 2º, § 1º proíbe anzóis múltiplos, mas o art. 4º, IV permite garatéia com isca artificial. O primeiro conflito vira `undetermined`; o segundo fica nas condições, com a garatéia, até decisão.
