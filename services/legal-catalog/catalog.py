@@ -6,6 +6,7 @@ reimplement the same rules in Laravel; this module keeps the catalog honest
 """
 
 import argparse
+import csv
 import json
 import re
 import tomllib
@@ -15,7 +16,7 @@ from datetime import date
 from pathlib import Path
 
 EFFECTS = {"prohibited", "conditional"}
-SPECIES = {"native", "non_native", "all"}
+SPECIES = {"native", "non_native", "all", "threatened"}
 SCOPES = {"basin", "buffer", "stretch"}
 READ_STATUSES = {"full_text_read", "official_summary"}
 MMDD = re.compile(r"^(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$")
@@ -55,7 +56,21 @@ def load(directory: Path) -> Catalog:
         for act_id in sources
         if (sources_dir / f"{act_id}.segments.json").exists()
     }
-    return Catalog(acts, read("rules.toml")["rule"], basins, read("species.toml")["list"], segments, sources)
+    species_lists = read("species.toml")["list"]
+    for item in species_lists:
+        if "source_csv" in item:
+            item["threatened"] = load_threatened(directory / item["source_csv"], item.get("groups", []))
+    return Catalog(acts, read("rules.toml")["rule"], basins, species_lists, segments, sources)
+
+
+def load_threatened(path: Path, groups: list[str]) -> list[dict]:
+    with path.open(newline="") as handle:
+        rows = list(csv.DictReader(handle))
+    return [
+        {"name": row["species"], "category": row["category"], "row": int(row["row"]), "marked": row["marked"] == "yes", "group": row["group"]}
+        for row in rows
+        if not groups or row["group"] in groups
+    ]
 
 
 def normalize(text: str) -> str:
@@ -101,6 +116,12 @@ def species_list_errors(catalog: Catalog) -> list[str]:
         for area in str(item.get("basin", "")).split(","):
             if area.strip() not in catalog.basins:
                 errors.append(f"{where}: unknown basin {area.strip()}")
+        if "source_csv" in item:
+            if not item.get("threatened"):
+                errors.append(f"{where}: no rows loaded from {item['source_csv']}")
+            if item.get("valid_from") and not re.match(r"^\d{4}-\d{2}-\d{2}$", item["valid_from"]):
+                errors.append(f"{where}: valid_from must be YYYY-MM-DD")
+            continue
         segment = item.get("segment")
         units = catalog.segments.get(item["act"], {})
         if not segment or not units:
@@ -155,6 +176,10 @@ def validate(catalog: Catalog) -> list[str]:
             errors.append(f"{where}: location rules need geo_mapping = pending until mapped")
         if rule.get("scope") == "stretch" and not rule.get("stretches"):
             errors.append(f"{where}: stretch rule without stretches")
+        if rule.get("species") == "threatened":
+            listed = next((item for item in catalog.species_lists if item["id"] == rule.get("species_list")), None)
+            if not listed or not listed.get("threatened"):
+                errors.append(f"{where}: threatened rule needs a species_list with threatened entries")
         if rule.get("effect") == "conditional" and not rule.get("conditions"):
             errors.append(f"{where}: conditional rule without conditions")
         if not rule.get("basins") or any(b not in catalog.basins for b in rule.get("basins", [])):

@@ -82,3 +82,12 @@ native = [
   "Gymnotus carapo", "Cyphocharax gilbert", "Steindachneridion doceanum", "Mugil sp.",
   "Hypomasticus mormyrops", "Hoplias malabaricus",
 ]
+
+[[list]]
+id = "mma-1667-2026-anexo-i"
+act = "mma-1667-2026"
+basin = "mg"
+source_csv = "sources/mma-1667-2026.annex.csv"
+groups = ["Peixes Continentais", "Invertebrados de Água Doce"]
+valid_from = "2026-10-27"
+note = "Anexo I extraído do PDF oficial por annex_1667.py. Lista nacional: vale em qualquer bacia e para qualquer origem da espécie. valid_from segue o art. 12 da Portaria 1.666/2026 (180 dias após 28/04/2026 para espécies novas na lista); como o anexo não identifica quais são novas, a data é aplicada a todas. Só nomes científicos."

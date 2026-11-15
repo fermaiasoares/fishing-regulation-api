@@ -151,6 +151,7 @@ class CatalogImporter
                 'period_start' => $rule['period']['start'] ?? null,
                 'period_end' => $rule['period']['end'] ?? null,
                 'species_scope' => $rule['species'],
+                'species_list' => $rule['species_list'] ?? null,
                 'scope' => $rule['scope'],
                 'effect' => $rule['effect'],
                 'summary' => $rule['summary'],

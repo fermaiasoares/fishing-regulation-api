@@ -228,7 +228,7 @@ jurisdiction = "federal"
 published = "2026-04-28"
 official_url = "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf"
 read_from = "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf"
-text_status = "official_summary"
+text_status = "full_text_read"
 in_force_note = "Anexo I com a lista e as categorias; revoga a Portaria MMA 445/2014."
 download_urls = [
   "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf",

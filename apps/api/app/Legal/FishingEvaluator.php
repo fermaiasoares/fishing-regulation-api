@@ -63,6 +63,7 @@ final class FishingEvaluator
         $species = $this->species->classify($speciesName, $location['lineage'], $versionId);
         $result['species']['classification'] = $species['classification'];
         $result['species']['matches'] = $species['matches'];
+        $result['species']['threatened'] = $species['threatened'];
 
         $active = array_values(array_filter(
             $this->rulesFor($versionId, $location['lineage']),
@@ -76,6 +77,14 @@ final class FishingEvaluator
             SpeciesClassifier::EXCLUDED => self::decideExcluded($basin, $species['matches']),
             default => self::decideUnclassified($basin, $species['classification'], $result['gaps']),
         };
+
+        // A species on an official list (e.g. threatened species) is prohibited by
+        // that list's rule whatever its native status.
+        $listed = self::listedProhibitions($basin, $species['threatened'], $date, $result['gaps']);
+        if ($listed !== []) {
+            $status = self::PROHIBITED;
+            $applied = array_values(array_merge($listed, array_filter($applied, fn ($rule) => $rule['effect'] === self::PROHIBITED)));
+        }
 
         $result['status'] = $status;
         $result['rules'] = array_map(fn (array $rule) => self::present($rule), $applied);
@@ -98,6 +107,26 @@ final class FishingEvaluator
         }
 
         return $result;
+    }
+
+    private static function listedProhibitions(array $basinRules, array $threatened, CarbonImmutable $date, array &$gaps): array
+    {
+        $rules = [];
+        foreach ($threatened as $species) {
+            foreach ($basinRules as $rule) {
+                if ($rule['species_scope'] !== 'threatened' || $rule['species_list'] !== $species['list'] || $rule['effect'] !== self::PROHIBITED) {
+                    continue;
+                }
+                if ($species['valid_from'] !== null && $date->toDateString() < $species['valid_from']) {
+                    $gaps[] = "{$species['name']} ({$species['category']}) consta da lista {$species['list']}, mas a data é anterior a {$species['valid_from']}, quando as proibições passam a valer para espécies novas na lista.";
+
+                    continue;
+                }
+                $rules[$rule['code']] = $rule;
+            }
+        }
+
+        return array_values($rules);
     }
 
     /** @return array{string, list<array>} */
@@ -199,6 +228,7 @@ final class FishingEvaluator
             'period_start' => $row->period_start,
             'period_end' => $row->period_end,
             'species_scope' => $row->species_scope,
+            'species_list' => $row->species_list,
             'scope' => $row->scope,
             'effect' => $row->effect,
             'summary' => $row->summary,

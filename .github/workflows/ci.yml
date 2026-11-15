@@ -29,6 +29,9 @@ jobs:
         run: |
           python3 catalog.py ../../catalog/legal/mg --check-export ../../catalog/legal/mg/catalog.json
           python3 -m unittest discover -s tests -v
+          python3 -m venv /tmp/pdf-venv
+          /tmp/pdf-venv/bin/pip install --quiet pdfplumber==0.11.10
+          /tmp/pdf-venv/bin/python annex_1667.py ../../catalog/legal/mg --check
       - name: Validate geographic sources
         working-directory: services/geo-ingestion
         run: |
@@ -66,7 +69,7 @@ jobs:
           docker compose -f infrastructure/compose.yaml exec -T api php artisan geo:import-legal-areas | grep -q "already imported"
       - name: Verify geographic and legal migration rollback and reapply
         run: |
-          docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate:rollback --force --step=4
+          docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate:rollback --force --step=5
           result="$(docker compose -f infrastructure/compose.yaml exec -T db psql -U fishing -d fishing_test -v ON_ERROR_STOP=1 -Atc "SELECT to_regclass('geographic_datasets') IS NULL AND to_regclass('geographic_dataset_versions') IS NULL AND to_regclass('hydrographic_basins') IS NULL AND to_regclass('river_segments') IS NULL AND to_regclass('legal_rules') IS NULL AND to_regclass('legal_area_geometries') IS NULL AND to_regclass('legal_catalog_versions') IS NULL AND PostGIS_Version() IS NOT NULL")"
           test "$result" = t
           docker compose -f infrastructure/compose.yaml exec -T api php artisan migrate --force --step

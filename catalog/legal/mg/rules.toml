@@ -3,7 +3,7 @@
 # basins: identificadores de catalog/legal/mg/basins.toml.
 # period.kind: "annual" (start/end em MM-DD, podendo virar o ano) ou "permanent".
 # species: "native" (autóctones da bacia), "non_native" (alóctones, exóticas, híbridos),
-#          "all" (qualquer espécie).
+#          "all" (qualquer espécie), "threatened" (espécie presente em species_list).
 # scope: "basin" (vale para toda a bacia), "buffer" (faixas de distância, lagoas etc.),
 #        "stretch" (trechos de rio nomeados). Só regras "basin" entram na matriz por bacia;
 #        "buffer" e "stretch" dependem do mapeamento geográfico (geo_mapping = "pending").
@@ -374,3 +374,23 @@ scope = "buffer"
 effect = "prohibited"
 geo_mapping = "pending"
 summary = "Qualquer modalidade de pesca proibida em Unidades de Conservação estaduais, salvo pesca científica autorizada."
+
+# --- Espécies ameaçadas (federal, todo o território) --------------------------------
+
+[[rule]]
+id = "br-ameacadas-protecao-integral"
+act = "mma-1666-2026"
+articles = "art. 3º, caput e §§ 1º, 2º e 4º; art. 12"
+basins = ["mg"]
+period = { kind = "permanent" }
+species = "threatened"
+species_list = "mma-1667-2026-anexo-i"
+scope = "basin"
+effect = "prohibited"
+summary = "Espécies da Lista Nacional (Portaria GM/MMA 1.667/2026) nas categorias EW, CR, EN e VU: captura, transporte, armazenamento e comercialização proibidos o ano todo, em qualquer bacia. Exceções: pesquisa autorizada, exemplares de aquicultura licenciada e captura incidental liberada viva. A portaria não excetua populações introduzidas fora da área nativa."
+evidence = [
+  { segment = "art3", quote = "ficam protegidas de modo integral, incluindo, entre outras medidas, a proibição de captura, transporte, armazenamento, guarda, manejo, beneficiamento e comercialização." },
+  { segment = "art3/par2", quote = "As restrições estabelecidas no caput não se aplicam a exemplares provenientes do cultivo na aquicultura em estabelecimentos devidamente licenciados pelo órgão ambiental competente." },
+  { segment = "art3/par4", quote = "As restrições estabelecidas no caput não se aplicam a exemplares capturados incidentalmente, desde que liberados vivos ou descartados no ato da captura" },
+  { segment = "art12", quote = "as proibições de que trata o art. 3º entrarão em vigor após o prazo de cento e oitenta dias contados da publicação desta Portaria." },
+]

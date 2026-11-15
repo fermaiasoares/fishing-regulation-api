@@ -119,7 +119,7 @@ class LegalAreaImportTest extends TestCase
         $this->assertFalse($resolver->at(-23.5505, -46.6333, $catalog['version_id'])['geographic_match'], 'São Paulo is outside MG');
 
         $this->postJson('/api/fishing/evaluate', [
-            'latitude' => -19.7895, 'longitude' => -42.1393, 'species' => 'Prochilodus vimboides', 'date' => '2027-06-15',
+            'latitude' => -19.7895, 'longitude' => -42.1393, 'species' => 'Pimelodus maculatus', 'date' => '2027-06-15',
         ])->assertOk()->assertJsonPath('status', 'prohibited')->assertJsonPath('rules.0.code', 'doce-nativas-permanente');
     }
 }

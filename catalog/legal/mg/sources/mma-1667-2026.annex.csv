@@ -1,0 +1,491 @@
+row,marked,group,class,order,family,species,category
+1,no,Peixes Continentais,Actinopterygii,Atheriniformes,Atherinopsidae,Odontesthes bicudo,EN
+2,yes,Peixes Continentais,Actinopterygii,Characiformes,Anostomidae,Hypomasticus santanai,EN
+3,no,Peixes Continentais,Actinopterygii,Characiformes,Anostomidae,Leporinus guttatus,EN
+4,no,Peixes Continentais,Actinopterygii,Characiformes,Anostomidae,Leporinus pitingai,EN
+5,yes,Peixes Continentais,Actinopterygii,Characiformes,Anostomidae,Megaleporinus gaiero,VU
+6,no,Peixes Continentais,Actinopterygii,Characiformes,Anostomidae,Sartor tucuruiensis,EN
+7,yes,Peixes Continentais,Actinopterygii,Characiformes,Bryconidae,Brycon dulcis,VU
+8,no,Peixes Continentais,Actinopterygii,Characiformes,Bryconidae,Brycon gouldingi,VU
+9,no,Peixes Continentais,Actinopterygii,Characiformes,Bryconidae,Brycon orbignyanus,CR
+10,no,Peixes Continentais,Actinopterygii,Characiformes,Bryconidae,Brycon vermelha,EN
+11,yes,Peixes Continentais,Actinopterygii,Characiformes,Bryconidae,Brycon vonoi,EN
+12,yes,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Astyanax brucutu,CR
+13,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Astyanax eremus,CR
+14,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hasemania maxillaris,CR
+15,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hasemania melanura,CR
+16,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hasemania piatan,EN
+17,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hollandichthys taramandahy,VU
+18,yes,Peixes Continentais,Actinopterygii,Characiformes,Acestrorhamphidae,Hyphessobrycon cantoi,EN
+19,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hyphessobrycon duragenys,EN
+20,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hyphessobrycon flammeus,EN
+21,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hyphessobrycon taurocephalus,CR
+22,yes,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Hyphessobrycon veredus,EN
+23,yes,Peixes Continentais,Actinopterygii,Characiformes,Stevardiidae,Knodus dorsomaculatus,EN
+24,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Kolpotocheirodon figueiredoi,CR
+25,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Lepidocharax diamantina,EN
+26,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Mimagoniates lateralis,VU
+27,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Mimagoniates sylvicola,EN
+28,yes,Peixes Continentais,Actinopterygii,Characiformes,Acestrorhamphidae,Moenkhausia parecis,EN
+29,yes,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Nematocharax varii,EN
+30,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Psalidodon crenuchoides,EN
+31,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Psalidodon uberaba,EN
+32,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Rachoviscus crassiceps,VU
+33,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Rachoviscus graciliceps,EN
+34,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Spintherobolus ankoseion,VU
+35,no,Peixes Continentais,Actinopterygii,Characiformes,Characidae,Stygichthys typhlops,CR
+36,yes,Peixes Continentais,Actinopterygii,Characiformes,Crenuchidae,Characidium onca,EN
+37,no,Peixes Continentais,Actinopterygii,Characiformes,Crenuchidae,Characidium vestigipinne,EN
+38,yes,Peixes Continentais,Actinopterygii,Characiformes,Curimatidae,Cyphocharax jagunco,CR
+39,no,Peixes Continentais,Actinopterygii,Characiformes,Lebiasinidae,Lebiasina marilynae,VU
+40,no,Peixes Continentais,Actinopterygii,Characiformes,Lebiasinidae,Lebiasina minuta,VU
+41,no,Peixes Continentais,Actinopterygii,Characiformes,Prochilodontidae,Prochilodus britskii,VU
+42,yes,Peixes Continentais,Actinopterygii,Characiformes,Prochilodontidae,Prochilodus harttii,VU
+43,no,Peixes Continentais,Actinopterygii,Characiformes,Prochilodontidae,Prochilodus vimboides,VU
+44,yes,Peixes Continentais,Actinopterygii,Characiformes,Serrasalmidae,Colossoma macropomum,VU
+45,no,Peixes Continentais,Actinopterygii,Cichliformes,Cichlidae,Crenicichla jupiaensis,EN
+46,no,Peixes Continentais,Actinopterygii,Cichliformes,Cichlidae,Teleocichla centisquama,VU
+47,no,Peixes Continentais,Actinopterygii,Cichliformes,Cichlidae,Wallaciia urosema,VU
+48,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Anablepidae,Jenynsia sanctaecatarinae,EN
+49,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Cnesterodon carnegiei,VU
+50,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Cnesterodon omorgmatos,CR
+51,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Phalloptychus eigenmanni,EN
+52,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Phalloptychus iheringii,VU
+53,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Phallotorynus fasciolatus,CR
+54,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Poecilia akroa,EN
+55,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Poeciliidae,Poecilia pertapeh,CR
+56,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Acrolebias carvalhoi,CR
+57,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Anablepsoides cearensis,VU
+58,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Atlantirivulus lazzarotoi,CR
+59,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Atlantirivulus maricensis,CR
+60,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Atlantirivulus nudiventris,CR
+61,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Atlantirivulus simplicis,EN
+62,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Acantholebias quirogai,CR
+63,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Austrolebias ephemerus,EN
+64,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Austrolebias univentripinnis,EN
+65,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Amatolebias varzeae,CR
+66,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Campellolebias brucei,CR
+67,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Campellolebias chrysolineatus,CR
+68,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Campellolebias dorsimaculatus,CR
+69,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Campellolebias intermedius,CR
+70,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynolebias akroa,VU
+71,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynolebias elegans,CR
+72,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynolebias gorutuba,EN
+73,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynolebias griseus,EN
+74,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynolebias leptocephalus,EN
+75,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynolebias parnaibensis,CR
+76,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynopoecilus feltrini,VU
+77,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cynopoecilus intimus,EN
+78,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Cypholebias cinereus,CR
+79,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias adloffi,EN
+80,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias arachan,VU
+81,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias araucarianus,VU
+82,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias bagual,CR
+83,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias botocudo,CR
+84,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias cheffei,CR
+85,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias lourenciano,CR
+86,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias nachtigalli,VU
+87,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias nigrofasciatus,EN
+88,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias nubium,CR
+89,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias pelotapes,EN
+90,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias pongondo,EN
+91,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Garcialebias reicherti,EN
+92,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Gymnolebias jaegari,EN
+93,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias adornatus,CR
+94,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias alternatus,EN
+95,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias auratus,CR
+96,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias brunoi,VU
+97,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias carlettoi,EN
+98,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias delucai,VU
+99,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias faouri,VU
+100,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias fasciatus,VU
+101,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias flammeus,VU
+102,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias flavicaudatus,EN
+103,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias fulminantis,CR
+104,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias gardneri,EN
+105,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias ghisolfii,EN
+106,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias gibberatus,VU
+107,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias gilbertobrasili,CR
+108,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias guanambi,VU
+109,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias hamadryades,CR
+110,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias harmonicus,VU
+111,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias hellneri,EN
+112,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias igneus,EN
+113,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias janaubensis,CR
+114,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias longignatus,VU
+115,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias lopesi,CR
+116,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias macaubensis,EN
+117,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias magnificus,EN
+118,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias marginatus,CR
+119,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias mediopapillatus,VU
+120,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias multiradiatus,EN
+121,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias nielseni,EN
+122,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias notatus,EN
+123,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias nudiorbitatus,VU
+124,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias picturatus,EN
+125,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias radiosus,CR
+126,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias radiseriatus,EN
+127,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias rufus,CR
+128,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias shibattai,VU
+129,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias splendissimus,VU
+130,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias stellatus,EN
+131,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias tocantinensis,CR
+132,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias trilineatus,CR
+133,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Hypsolebias virgulatus,CR
+134,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Kryptolebias brasiliensis,EN
+135,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Kryptolebias gracilis,CR
+136,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Leptolebias marmoratus,CR
+137,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Leptopanchax citrinipinnis,CR
+138,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Leptopanchax itanhaensis,CR
+139,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Leptopanchax opalescens,CR
+140,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Leptopanchax sanguineus,CR
+141,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Leptopanchax splendens,CR
+142,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Maratecoara formosa,EN
+143,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Maratecoara splendida,EN
+144,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Matilebias alexandri,EN
+145,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Matilebias camaquensis,EN
+146,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Matilebias cyaneus,EN
+147,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Matilebias ibicuiensis,EN
+148,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Matilebias litzi,VU
+149,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Matilebias paucisquama,VU
+150,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus amambaiensis,CR
+151,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus egens,CR
+152,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus interruptus,VU
+153,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus leali,VU
+154,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus linearis,VU
+155,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus paracatuensis,VU
+156,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus pinima,EN
+157,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus rutilicaudus,VU
+158,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Melanorivulus vittatus,EN
+159,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Moema piriana,CR
+160,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Nematolebias catimbau,CR
+161,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Nematolebias papilliferus,CR
+162,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Nematolebias whitei,EN
+163,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Notholebias cruzi,CR
+164,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Notholebias fractifasciatus,CR
+165,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Notholebias minimus,EN
+166,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Notholebias vermiculatus,CR
+167,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Ophthalmolebias bokermanni,CR
+168,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Ophthalmolebias constanciae,CR
+169,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Ophthalmolebias ilheusensis,EN
+170,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Ophthalmolebias perpendicularis,CR
+171,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Ophthalmolebias rosaceus,CR
+172,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Ophthalmolebias suzarti,VU
+173,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Pituna brevirostrata,CR
+174,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Plesiolebias xavantei,EN
+175,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys boitonei,CR
+176,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys cholopteryx,EN
+177,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys espinhacensis,EN
+178,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys nigromaculatus,VU
+179,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys parallelus,EN
+180,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys punctulatus,CR
+181,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys santanae,EN
+182,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Simpsonichthys zonatus,CR
+183,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Titanolebias cheradophilus,CR
+184,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Trigonectes strigabundus,EN
+185,no,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Xenurolebias myersi,EN
+186,yes,Peixes Continentais,Actinopterygii,Cyprinodontiformes,Rivulidae,Xenurolebias pataxo,EN
+187,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchogiton zuanoni,EN
+188,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus caboclo,VU
+189,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus higuchii,CR
+190,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus inpai,VU
+191,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus jaimei,CR
+192,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus kokraimoro,EN
+193,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus mareikeae,VU
+194,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus severii,VU
+195,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Apteronotidae,Sternarchorhynchus villasboasi,EN
+196,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Sternopygidae,Archolaemus ferreirai,VU
+197,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Sternopygidae,Archolaemus santosi,VU
+198,no,Peixes Continentais,Actinopterygii,Gymnotiformes,Sternopygidae,Eigenmannia vicentespelaea,EN
+199,no,Peixes Continentais,Actinopterygii,Siluriformes,Ariidae,Paragenidens grandoculis,CR
+200,yes,Peixes Continentais,Actinopterygii,Siluriformes,Callichthyidae,Aspidoras mephisto,CR
+201,no,Peixes Continentais,Actinopterygii,Siluriformes,Heptapteridae,Chasmocranus brachynemus,EN
+202,no,Peixes Continentais,Actinopterygii,Siluriformes,Heptapteridae,Heptapterus multiradiatus,CR
+203,no,Peixes Continentais,Actinopterygii,Siluriformes,Heptapteridae,Pimelodella kronei,EN
+204,no,Peixes Continentais,Actinopterygii,Siluriformes,Heptapteridae,Pimelodella spelaea,VU
+205,yes,Peixes Continentais,Actinopterygii,Siluriformes,Heptapteridae,Rhamdia enfurnada,VU
+206,no,Peixes Continentais,Actinopterygii,Siluriformes,Heptapteridae,Rhamdiopsis krugi,EN
+207,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Ancistrus cryptophthalmus,EN
+208,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Ancistrus formoso,EN
+209,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Ancistrus minutus,EN
+210,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Baryancistrus longipinnis,EN
+211,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Baryancistrus niveatus,VU
+212,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Delturus parahybae,CR
+213,yes,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Eurycheilichthys apocremnus,CR
+214,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Harttia depressa,EN
+215,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Harttia panara,VU
+216,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Harttia villasboas,VU
+217,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Hemiancistrus megalopteryx,EN
+218,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Hypancistrus zebra,CR
+219,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Hypostomus subcarinatus,CR
+220,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Isbrueckerichthys saxicola,EN
+221,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Microlepidogaster perforata,CR
+222,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Neoplecostomus botucatu,CR
+223,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Otothyris juquiae,EN
+224,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Parancistrus nudiventris,EN
+225,yes,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Parotocinclus cesarpintoi,EN
+226,yes,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Parotocinclus seridoensis,EN
+227,yes,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Parotocinclus spilosoma,EN
+228,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Parotocinclus spilurus,EN
+229,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Plesioptopoma curvidens,CR
+230,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Pogonopoma obscurum,VU
+231,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Pogonopoma parahybae,EN
+232,no,Peixes Continentais,Actinopterygii,Siluriformes,Loricariidae,Pseudotocinclus tietensis,EN
+233,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Conorhynchos conirostris,EN
+234,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Pseudoplatystoma corruscans,VU
+235,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Steindachneridion amblyurum,VU
+236,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Steindachneridion doceanum,EN
+237,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Steindachneridion melanodermatum,EN
+238,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Steindachneridion parahybae,EN
+239,yes,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Steindachneridion punctatum,EN
+240,no,Peixes Continentais,Actinopterygii,Siluriformes,Pimelodidae,Steindachneridion scriptum,VU
+241,no,Peixes Continentais,Actinopterygii,Siluriformes,Pseudopimelodidae,Lophiosilurus alexandri,VU
+242,no,Peixes Continentais,Actinopterygii,Siluriformes,Pseudopimelodidae,Microglanis maculatus,CR
+243,no,Peixes Continentais,Actinopterygii,Siluriformes,Pseudopimelodidae,Microglanis robustus,EN
+244,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Cambeva crassicaudata,EN
+245,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Cambeva igobi,VU
+246,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Cambeva mboycy,EN
+247,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Cambeva papillifera,EN
+248,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Cambeva pascuali,CR
+249,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Cambeva tropeiro,EN
+250,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Ituglanis bambui,CR
+251,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Ituglanis epikarsticus,CR
+252,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Ituglanis mambai,CR
+253,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Ituglanis passensis,CR
+254,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Ituglanis ramiroi,VU
+255,yes,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Listrura depinnai,EN
+256,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Listrura nematopteryx,EN
+257,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Trichogenes claviger,EN
+258,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Trichomycterus dali,EN
+259,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Trichomycterus itacarambiensis,VU
+260,no,Peixes Continentais,Actinopterygii,Siluriformes,Trichomycteridae,Trichomycterus rubbioli,VU
+261,no,Peixes Marinhos (ósseos),Actinopterygii,Elopiformes,Megalopidae,Megalops atlanticus,VU
+262,yes,Peixes Marinhos (ósseos),Actinopterygii,Gobiesociformes,Gobiesocidae,Acyrtus pauciradiatus,VU
+263,no,Peixes Marinhos (ósseos),Actinopterygii,Ophidiiformes,Ophidiidae,Otophidium chickcharney,CR
+264,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Blenniidae,Hypleurochilus brasil,VU
+265,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Blenniidae,Scartella itajobi,VU
+266,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Blenniidae,Scartella poiti,VU
+267,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Chaetodontidae,Prognathodes obliquus,VU
+268,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Epinephelus itajara,CR
+269,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Epinephelus marginatus,VU
+270,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Epinephelus morio,EN
+271,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Gobiidae,Bathygobius brasiliensis,VU
+272,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Gobiidae,Elacatinus figaro,EN
+273,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Gobiidae,Elacatinus phthirophagus,VU
+274,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Istiophoridae,Makaira nigricans,VU
+275,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Labridae,Halichoeres rubrovirens,VU
+276,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Labrisomidae,Malacoctenus brunoi,VU
+277,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Labrisomidae,Starksia multilepis,VU
+278,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Lutjanidae,Lutjanus cyanopterus,VU
+279,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Lutjanidae,Lutjanus purpureus,EN
+280,no,Peixes Marinhos (ósseos),Actinopterygii,Acanthuriformes,Latilidae,Lopholatilus villarii,VU
+281,no,Peixes Marinhos (ósseos),Actinopterygii,Gobiiformes,Gobiidae,Cerdale fasciata,EN
+282,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Pempheridae,Pempheris gasparinii,VU
+283,no,Peixes Marinhos (ósseos),Actinopterygii,Acropomatiformes,Polyprionidae,Polyprion americanus,CR
+284,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Pomacentridae,Microspathodon chrysurus,VU
+285,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Pomacentridae,Stegastes rocasensis,VU
+286,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Pomacentridae,Stegastes sanctipauli,VU
+287,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Pomacentridae,Stegastes trindadensis,VU
+288,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scaridae,Scarus trispinosus,CR
+289,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scaridae,Scarus zelindae,EN
+290,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scaridae,Sparisoma amplum,VU
+291,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scaridae,Sparisoma axillare,VU
+292,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scaridae,Sparisoma frondosum,VU
+293,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scaridae,Sparisoma rocha,VU
+294,no,Peixes Marinhos (ósseos),Actinopterygii,Acanthuriformes,Sciaenidae,Pogonias courbina,CR
+295,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Scombridae,Thunnus thynnus,EN
+296,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Anthiadidae,Choranthias salmopunctatus,VU
+297,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Hyporthodus flavolimbatus,EN
+298,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Hyporthodus nigritus,EN
+299,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Hyporthodus niveatus,VU
+300,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Mycteroperca acutirostris,EN
+301,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Mycteroperca bonaci,EN
+302,no,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Epinephelidae,Mycteroperca interstitialis,VU
+303,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Anthiadidae,Odontanthias cauoh,VU
+304,yes,Peixes Marinhos (ósseos),Actinopterygii,Perciformes,Anthiadidae,Tosanoides aphrodite,VU
+305,no,Peixes Marinhos (ósseos),Actinopterygii,Blenniiformes,Tripterygiidae,Enneanectes smithi,VU
+306,no,Peixes Marinhos (ósseos),Actinopterygii,Pleuronectiformes,Achiridae,Achirus mucuri,EN
+307,no,Peixes Marinhos (ósseos),Actinopterygii,Siluriformes,Ariidae,Genidens barbus,EN
+308,no,Peixes Marinhos (ósseos),Actinopterygii,Siluriformes,Ariidae,Genidens planifrons,EN
+309,no,Peixes Marinhos (ósseos),Actinopterygii,Siluriformes,Ariidae,Sciades parkeri,VU
+310,no,Peixes Marinhos (ósseos),Actinopterygii,Syngnathiformes,Syngnathidae,Hippocampus erectus,VU
+311,no,Peixes Marinhos (ósseos),Actinopterygii,Syngnathiformes,Syngnathidae,Hippocampus patagonicus,VU
+312,no,Peixes Marinhos (ósseos),Actinopterygii,Syngnathiformes,Syngnathidae,Hippocampus reidi,VU
+313,yes,Peixes Marinhos (ósseos),Actinopterygii,Tetraodontiformes,Balistidae,Balistes capriscus,EN
+314,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus acronotus,VU
+315,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus brevipinna,VU
+316,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus falciformis,CR
+317,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus galapagensis,CR
+318,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus leucas,VU
+319,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus longimanus,CR
+320,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus obscurus,EN
+321,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus perezi,VU
+322,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus plumbeus,CR
+323,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus porosus,CR
+324,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Carcharhinus signatus,EN
+325,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Isogomphodon oxyrhynchus,CR
+326,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Carcharhinidae,Negaprion brevirostris,EN
+327,yes,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna gilberti,CR
+328,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna lewini,CR
+329,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna media,CR
+330,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna mokarran,CR
+331,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna tiburo,CR
+332,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna tudes,CR
+333,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Sphyrnidae,Sphyrna zygaena,CR
+334,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Triakidae,Galeorhinus galeus,CR
+335,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Triakidae,Mustelus canis,EN
+336,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Triakidae,Mustelus fasciatus,CR
+337,no,Tubarões e Raias,Elasmobranchii,Carcharhiniformes,Triakidae,Mustelus schmitti,CR
+338,no,Tubarões e Raias,Elasmobranchii,Hexanchiformes,Hexanchidae,Notorynchus cepedianus,CR
+339,no,Tubarões e Raias,Elasmobranchii,Lamniformes,Alopiidae,Alopias superciliosus,EN
+340,no,Tubarões e Raias,Elasmobranchii,Lamniformes,Alopiidae,Alopias vulpinus,CR
+341,no,Tubarões e Raias,Elasmobranchii,Lamniformes,Carchariidae,Carcharias taurus,CR
+342,no,Tubarões e Raias,Elasmobranchii,Lamniformes,Cetorhinidae,Cetorhinus maximus,CR
+343,no,Tubarões e Raias,Elasmobranchii,Lamniformes,Lamnidae,Carcharodon carcharias,VU
+344,no,Tubarões e Raias,Elasmobranchii,Lamniformes,Lamnidae,Isurus oxyrinchus,CR
+345,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Dasyatidae,Bathytoshia centroura,CR
+346,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Dasyatidae,Fontitrygon colarensis,VU
+347,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Dasyatidae,Hypanus berthalutzae,VU
+348,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Dasyatidae,Hypanus marianae,VU
+349,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Gymnuridae,Gymnura altavela,CR
+350,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Mobulidae,Mobula birostris,VU
+351,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Mobulidae,Mobula mobular,VU
+352,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Mobulidae,Mobula tarapacana,VU
+353,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Mobulidae,Mobula thurstoni,VU
+354,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Myliobatidae,Myliobatis freminvillei,EN
+355,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Myliobatidae,Myliobatis goodei,CR
+356,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Myliobatidae,Myliobatis ridens,CR
+357,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Potamotrygonidae,Paratrygon aiereba,CR
+358,yes,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Potamotrygonidae,Potamotrygon leopoldi,VU
+359,yes,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Potamotrygonidae,Potamotrygon marquesi,VU
+360,yes,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Potamotrygonidae,Potamotrygon signata,EN
+361,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Rhinopteridae,Rhinoptera brasiliensis,CR
+362,no,Tubarões e Raias,Elasmobranchii,Myliobatiformes,Urotrygonidae,Urotrygon microphthalmum,VU
+363,no,Tubarões e Raias,Elasmobranchii,Orectolobiformes,Ginglymostomatidae,Ginglymostoma cirratum,VU
+364,no,Tubarões e Raias,Elasmobranchii,Orectolobiformes,Rhincodontidae,Rhincodon typus,VU
+365,no,Tubarões e Raias,Elasmobranchii,Rajiformes,Arhynchobatidae,Atlantoraja castelnaui,EN
+366,no,Tubarões e Raias,Elasmobranchii,Rajiformes,Arhynchobatidae,Atlantoraja cyclophora,VU
+367,no,Tubarões e Raias,Elasmobranchii,Rajiformes,Arhynchobatidae,Rioraja agassizii,VU
+368,no,Tubarões e Raias,Elasmobranchii,Rajiformes,Arhynchobatidae,Sympterygia acuta,EN
+369,no,Tubarões e Raias,Elasmobranchii,Rajiformes,Arhynchobatidae,Sympterygia bonapartii,EN
+370,no,Tubarões e Raias,Elasmobranchii,Rhinopristiformes,Pristidae,Pristis pectinata,CR
+371,no,Tubarões e Raias,Elasmobranchii,Rhinopristiformes,Pristidae,Pristis pristis,CR
+372,no,Tubarões e Raias,Elasmobranchii,Rhinopristiformes,Rhinobatidae,Pseudobatos horkelii,CR
+373,no,Tubarões e Raias,Elasmobranchii,Rhinopristiformes,Rhinobatidae,Pseudobatos percellens,VU
+374,no,Tubarões e Raias,Elasmobranchii,Rhinopristiformes,Trygonorhinidae,Zapteryx brevirostris,VU
+375,no,Tubarões e Raias,Elasmobranchii,Squatiniformes,Squatinidae,Squatina argentina,CR
+376,no,Tubarões e Raias,Elasmobranchii,Squatiniformes,Squatinidae,Squatina guggenheim,CR
+377,no,Tubarões e Raias,Elasmobranchii,Squatiniformes,Squatinidae,Squatina occulta,CR
+378,no,Tubarões e Raias,Elasmobranchii,Torpediniformes,Narcinidae,Narcine brasiliensis,VU
+379,no,Invertebrados de Água Doce,Bivalvia,Sphaeriida,Sphaeriidae,Eupera troglobia,CR
+380,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Hyriidae,Castalia martensi,VU
+381,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Hyriidae,Diplodon fontainianus,VU
+382,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Hyriidae,Rhipidodonta garbei,VU
+383,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Hyriidae,Rhipidodonta iheringi,EN
+384,no,Invertebrados de Água Doce,Bivalvia,Unionida,Hyriidae,Rhipidodonta koseritzi,EN
+385,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Anodontites ferrarisii,EN
+386,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Anodontites iheringi,EN
+387,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Haasica balzani,VU
+388,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Leila blainvilliana,CR
+389,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Monocondylaea franciscana,VU
+390,yes,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Monocondylaea paraguayana,VU
+391,no,Invertebrados de Água Doce,Bivalvia,Unionida,Mycetopodidae,Mycetopoda legumen,EN
+392,yes,Invertebrados de Água Doce,Bivalvia,Venerida,Cyrenidae,Cyanocyclas guahybensis,EN
+393,no,Invertebrados de Água Doce,Demospongiae,Spongillida,Spongillidae,Racekiela cavernicola,CR
+394,yes,Invertebrados de Água Doce,Demospongiae,Incertae Sedis,Incertae Sedis,Arinosaster patriciae,CR
+395,no,Invertebrados de Água Doce,Gastropoda,Caenogastropoda,Hydrobiidae,Potamolithus troglobius,CR
+396,no,Invertebrados de Água Doce,Gastropoda,Caenogastropoda,Tateidae,Potamolithus karsticus,EN
+397,yes,Invertebrados de Água Doce,Gastropoda,Caenogastropoda,Thiaridae,Aylacostoma tenuilabris,VU
+398,no,Invertebrados de Água Doce,Gastropoda,Littorinimorpha,Pomatiopsidae,Spiripockia punctata,CR
+399,no,Invertebrados de Água Doce,Insecta,Coleoptera,Dytiscidae,Copelatus cessaima,EN
+400,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Baetidae,Adebrotus lugoi,VU
+401,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Baetidae,Camelobaetidius juparana,VU
+402,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Baetidae,Camelobaetidius maranhensis,VU
+403,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Baetidae,Camelobaetidius spinosus,VU
+404,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Leptophlebiidae,Hermanella amere,EN
+405,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Leptophlebiidae,Hermanella nigra,VU
+406,yes,Invertebrados de Água Doce,Insecta,Ephemeroptera,Leptophlebiidae,Miroculis stenopterus,EN
+407,no,Invertebrados de Água Doce,Insecta,Ephemeroptera,Leptophlebiidae,Simothraulopsis eurybasis,VU
+408,yes,Invertebrados de Água Doce,Insecta,Ephemeroptera,Oligoneuriidae,Lachlania aldinae,VU
+409,yes,Invertebrados de Água Doce,Insecta,Ephemeroptera,Oligoneuriidae,Oligoneuria amandae,VU
+410,yes,Invertebrados de Água Doce,Insecta,Ephemeroptera,Oligoneuriidae,Oligoneuria macabaiba,EN
+411,yes,Invertebrados de Água Doce,Insecta,Hemiptera,Hydrometridae,Spelaeometra hypogea,CR
+412,yes,Invertebrados de Água Doce,Insecta,Odonata,Coenagrionidae,Forcepsioneura machadorum,CR
+413,yes,Invertebrados de Água Doce,Insecta,Odonata,Coenagrionidae,Franciscobasis franciscoi,EN
+414,no,Invertebrados de Água Doce,Insecta,Odonata,Coenagrionidae,Kiautagrion acutum,EN
+415,no,Invertebrados de Água Doce,Insecta,Odonata,Coenagrionidae,Leptagrion bocainense,VU
+416,yes,Invertebrados de Água Doce,Insecta,Odonata,Coenagrionidae,Machadagrion garbei,VU
+417,yes,Invertebrados de Água Doce,Insecta,Odonata,Coenagrionidae,Minagrion canaanense,VU
+418,yes,Invertebrados de Água Doce,Insecta,Odonata,Megapodagrionidae,Heteragrion mantiqueirae,EN
+419,no,Invertebrados de Água Doce,Insecta,Zygoptera,Coenagrionidae,Fluminagrion taxaense,CR
+420,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus bahiensis,VU
+421,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus ginae,CR
+422,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus sanctus,CR
+423,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus santanensis,CR
+424,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus spinilacertus,EN
+425,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus titan,CR
+426,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Artesiidae,Spelaeogammarus trajanoae,EN
+427,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Bogidiellidae,Megagidiella azul,VU
+428,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Hyalellidae,Hyalella caeca,VU
+429,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Hyalellidae,Hyalella epikarstica,CR
+430,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Hyalellidae,Hyalella formosa,CR
+431,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Hyalellidae,Hyalella imbya,CR
+432,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Hyalellidae,Hyalella veredae,VU
+433,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Mesogammaridae,Potiberaba porakuara,VU
+434,no,Invertebrados de Água Doce,Malacostraca,Amphipoda,Seborgiidae,Seborgia potiguar,CR
+435,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla brevipalma,CR
+436,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla camargoi,EN
+437,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla cavernicola,CR
+438,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla charon,CR
+439,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla franca,EN
+440,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla georginae,EN
+441,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla inconspicua,VU
+442,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla inermis,EN
+443,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla itacolomiensis,EN
+444,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla leachi,EN
+445,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla leptochela,CR
+446,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla loyolai,EN
+447,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla ludwigi,EN
+448,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla manuinflata,EN
+449,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla meloi,EN
+450,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla microphthalma,CR
+451,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla oblata,EN
+452,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla obstipa,EN
+453,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla okora,EN
+454,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla perobae,EN
+455,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla renana,EN
+456,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla rosanae,EN
+457,no,Invertebrados de Água Doce,Malacostraca,Decapoda,Aeglidae,Aegla violacea,EN
+458,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Palaemonidae,Macrobrachium denticulatum,VU
+459,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Parastacidae,Parastacus tuerkayi,EN
+460,yes,Invertebrados de Água Doce,Malacostraca,Decapoda,Pseudothelphusidae,Kingsleya attenboroughi,EN
+461,no,Invertebrados de Água Doce,Malacostraca,Isopoda,Brasileirinidae,Brasileirinho cavaticus,CR
+462,no,Invertebrados de Água Doce,Malacostraca,Isopoda,Calabozoidae,Pongycarcinia xiphidiourus,EN
+463,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Dugesiidae,Girardia arenicola,CR
+464,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Dugesiidae,Girardia desiderensis,CR
+465,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Dugesiidae,Girardia multidiverticulata,CR
+466,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Dugesiidae,Girardia paucipunctata,CR
+467,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Dugesiidae,Girardia spelaea,VU
+468,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Uteriporidae,Sluysia triapertura,CR
+469,no,Invertebrados de Água Doce,Rhabditophora,Tricladida,Dimarcusidae,Hausera hauseri,VU
+470,no,Invertebrados Marinhos,Anthozoa,Actiniaria,Actiniidae,Condylactis gigantea,VU
+471,yes,Invertebrados Marinhos,Anthozoa,Alcyonacea,Plexauridae,Plexaurella obesa,CR
+472,no,Invertebrados Marinhos,Anthozoa,Scleractinia,Faviidae,Mussismilia braziliensis,VU
+473,no,Invertebrados Marinhos,Anthozoa,Scleractinia,Faviidae,Mussismilia harttii,EN
+474,no,Invertebrados Marinhos,Asteroidea,Paxillosida,Astropectinidae,Astropecten marginatus,VU
+475,no,Invertebrados Marinhos,Asteroidea,Valvatida,Ophidiasteridae,Linckia guildingi,VU
+476,no,Invertebrados Marinhos,Asteroidea,Valvatida,Oreasteridae,Oreaster reticulatus,VU
+477,no,Invertebrados Marinhos,Bivalvia,Pectinida,Pectinidae,Euvola ziczac,EN
+478,yes,Invertebrados Marinhos,Echinoidea,Cassiduloida,Cassidulidae,Cassidulus infidus,EN
+479,no,Invertebrados Marinhos,Echinoidea,Cassiduloida,Cassidulidae,Cassidulus mitis,VU
+480,yes,Invertebrados Marinhos,Gastropoda,Littorinimorpha,Cassidae,Cassis tuberosa,VU
+481,no,Invertebrados Marinhos,Gastropoda,Littorinimorpha,Strombidae,Eustrombus goliath,EN
+482,no,Invertebrados Marinhos,Gastropoda,Littorinimorpha,Strombidae,Macrostrombus costatus,VU
+483,no,Invertebrados Marinhos,Gastropoda,Littorinimorpha,Vermetidae,Petaloconchus myrakeenae,VU
+484,no,Invertebrados Marinhos,Holothuroidea,Apodida,Synaptidae,Synaptula secreta,CR
+485,yes,Invertebrados Marinhos,Holothuroidea,Dendrochirotida,Cucumariidae,Parathyone surinamensis,VU
+486,yes,Invertebrados Marinhos,Hydrozoa,Anthoathecata,Milleporidae,Millepora braziliensis,CR
+487,no,Invertebrados Marinhos,Hydrozoa,Anthoathecata,Milleporidae,Millepora laboreli,VU
+488,no,Invertebrados Marinhos,Malacostraca,Decapoda,Gecarcinidae,Cardisoma guanhumi,VU
+489,no,Invertebrados Marinhos,Malacostraca,Decapoda,Gecarcinidae,Johngarthia lagostoma,EN
+490,yes,Invertebrados Marinhos,Polychaeta,Eunicida,Onuphidae,Diopatra victoriae,EN

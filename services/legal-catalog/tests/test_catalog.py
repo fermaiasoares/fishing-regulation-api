@@ -96,6 +96,20 @@ class CatalogTest(unittest.TestCase):
         species["non_native"].append("Dourado (Salminus brasiliensis)")
         self.assertIn("'Salminus brasiliensis' not found in ief-156-2011 art7/IV", " ".join(validate(broken)))
 
+    def test_threatened_list_is_loaded_from_the_official_annex(self):
+        listed = next(item for item in self.catalog.species_lists if item["id"] == "mma-1667-2026-anexo-i")
+        names = {entry["name"]: entry["category"] for entry in listed["threatened"]}
+        self.assertEqual(names["Pseudoplatystoma corruscans"], "VU")
+        self.assertEqual(names["Steindachneridion doceanum"], "EN")
+        self.assertTrue(all(entry["group"] in listed["groups"] for entry in listed["threatened"]))
+        rule = next(r for r in self.catalog.rules if r["id"] == "br-ameacadas-protecao-integral")
+        self.assertTrue(is_verified(self.catalog, rule))
+
+    def test_threatened_rules_need_a_list(self):
+        broken = copy.deepcopy(self.catalog)
+        next(r for r in broken.rules if r["id"] == "br-ameacadas-protecao-integral")["species_list"] = "inexistente"
+        self.assertIn("threatened rule needs a species_list", " ".join(validate(broken)))
+
     def test_unverified_rules_are_flagged_as_gaps(self):
         result = evaluate(self.catalog, "paraopeba", OFF_SEASON, "native")
         self.assertIn("paraopeba-nativas-permanente: sem trecho literal conferido no texto armazenado", result.gaps)

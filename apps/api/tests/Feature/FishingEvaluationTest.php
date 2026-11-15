@@ -58,10 +58,11 @@ class FishingEvaluationTest extends TestCase
 
     public function test_native_species_are_prohibited_all_year_in_the_doce_basin(): void
     {
-        $result = $this->evaluate('doce', 'Prochilodus vimboides', '2027-06-15');
+        $result = $this->evaluate('doce', 'Pimelodus maculatus', '2027-06-15');
 
         $this->assertSame('prohibited', $result['status']);
         $this->assertSame('native', $result['species']['classification']);
+        $this->assertSame([], $result['species']['threatened']);
         $this->assertSame(['doce', 'leste', 'mg'], array_column($result['location']['areas'], 'code'));
         $this->assertSame(['doce-nativas-permanente'], array_column($result['rules'], 'code'));
         $this->assertTrue($result['rules'][0]['verified']);
@@ -152,6 +153,38 @@ class FishingEvaluationTest extends TestCase
         $this->assertTrue(SpeciesClassifier::entryMatches('Tucunaré (Cichla spp.)', SpeciesClassifier::normalize('Cichla kelberi')));
         $this->assertFalse(SpeciesClassifier::entryMatches('Hypostomus sp.', SpeciesClassifier::normalize('Hypostomus garmani')));
         $this->assertTrue(SpeciesClassifier::entryMatches('Bagre-africano (Clarias sp.)', SpeciesClassifier::normalize('bagre africano')));
+    }
+
+    public function test_threatened_species_are_prohibited_all_year_in_any_basin(): void
+    {
+        $surubim = $this->evaluate('sao_francisco', 'Pseudoplatystoma corruscans', '2027-06-15');
+        $this->assertSame('prohibited', $surubim['status']);
+        $this->assertSame(['br-ameacadas-protecao-integral'], array_column($surubim['rules'], 'code'));
+        $this->assertSame('VU', $surubim['species']['threatened'][0]['category']);
+        $this->assertTrue($surubim['rules'][0]['verified']);
+
+        $doce = $this->evaluate('doce', 'Prochilodus vimboides', '2027-06-15');
+        $this->assertSame(['br-ameacadas-protecao-integral', 'doce-nativas-permanente'], array_column($doce['rules'], 'code'));
+    }
+
+    public function test_a_threatened_non_native_is_prohibited_even_when_the_state_allows_it(): void
+    {
+        // Tambaqui is listed as capturable by Portaria IEF 154/2011 and as VU nationally.
+        $result = $this->evaluate('sao_francisco', 'tambaqui', '2026-12-15');
+
+        $this->assertSame('prohibited', $result['status']);
+        $this->assertSame('non_native', $result['species']['classification']);
+        $this->assertSame('Colossoma macropomum', $result['species']['threatened'][0]['name']);
+        $this->assertSame(['br-ameacadas-protecao-integral'], array_column($result['rules'], 'code'));
+        $this->assertSame([], $result['conditions']);
+    }
+
+    public function test_threatened_list_waits_for_its_transition_date(): void
+    {
+        $result = $this->evaluate('sao_francisco', 'Pseudoplatystoma corruscans', '2026-09-01');
+
+        $this->assertSame('undetermined', $result['status']);
+        $this->assertNotEmpty(array_filter($result['gaps'], fn ($gap) => str_contains($gap, '2026-10-27')));
     }
 
     public function test_invalid_input_is_rejected(): void
