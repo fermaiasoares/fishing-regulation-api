@@ -1,0 +1,2736 @@
+{
+ "acts": [
+  {
+   "download_urls": [
+    "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf"
+   ],
+   "id": "ibama-50-2007",
+   "in_force_note": "Vigência atual não confirmada em base oficial consolidada; a planilha de defesos do MPA (versão de 02/07/2026) não pôde ser lida.",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf",
+   "published": "2007-11-05",
+   "read_from": "https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria IBAMA nº 50, de 05/11/2007 — defeso na bacia do rio São Francisco"
+  },
+  {
+   "id": "ibama-in-195-2008",
+   "in_force_note": "Cobre as bacias do Sudeste exceto Paraná e São Francisco; pode se sobrepor à IN 196/2008 em MG (ex.: Paraíba do Sul). Ler antes de gerar regra.",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2008-10-03",
+   "read_from": "",
+   "review": "pending",
+   "text_status": "not_read",
+   "title": "Instrução Normativa IBAMA nº 195, de 02/10/2008 — defeso nas bacias do Sudeste"
+  },
+  {
+   "download_urls": [
+    "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
+   ],
+   "id": "ibama-in-196-2008",
+   "in_force_note": "Texto lido em agregador. Trecho da planilha oficial do MPA indexado em busca lista a IN 196/2008 entre os defesos vigentes; confirmar no PDF oficial.",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2008-10-03",
+   "read_from": "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Instrução Normativa IBAMA nº 196, de 02/10/2008 — defeso nas bacias do Leste"
+  },
+  {
+   "download_urls": [
+    "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html"
+   ],
+   "id": "ibama-in-25-2009",
+   "in_force_note": "Citada por órgãos estaduais como vigente. Página do texto falhou na leitura; inclui rios de MG (Prata, Tejuco, Quebra-Anzol, Salitre).",
+   "issuer": "IBAMA",
+   "jurisdiction": "federal",
+   "official_url": "",
+   "published": "2009-09-02",
+   "read_from": "",
+   "review": "pending",
+   "text_status": "not_read",
+   "title": "Instrução Normativa IBAMA nº 25, de 01/09/2009 — defeso na bacia do rio Paraná"
+  },
+  {
+   "download_urls": [
+    "https://www.legisweb.com.br/legislacao/?id=494853"
+   ],
+   "id": "mma-1666-2026",
+   "in_force_note": "Art. 3º: proteção integral (captura, transporte, armazenamento, comercialização proibidos) para EW, CR, EN e VU; exceções para pesquisa, aquicultura licenciada e captura incidental liberada viva. Art. 12: espécies novas na lista só a partir de 180 dias. Uso sustentável só com Plano de Recuperação aprovado (art. 4º).",
+   "issuer": "MMA",
+   "jurisdiction": "federal",
+   "official_url": "https://www.in.gov.br/web/dou/-/portaria-gm/mma-n-1.666-de-27-de-abril-de-2026",
+   "published": "2026-04-28",
+   "read_from": "https://www.legisweb.com.br/legislacao/?id=494853",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria GM/MMA nº 1.666, de 27/04/2026 — regras para peixes e invertebrados aquáticos ameaçados"
+  },
+  {
+   "download_urls": [
+    "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf"
+   ],
+   "id": "mma-1667-2026",
+   "in_force_note": "Anexo I com a lista e as categorias; revoga a Portaria MMA 445/2014.",
+   "issuer": "MMA",
+   "jurisdiction": "federal",
+   "official_url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf",
+   "published": "2026-04-28",
+   "read_from": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf",
+   "review": "pending",
+   "text_status": "full_text_read",
+   "title": "Portaria GM/MMA nº 1.667, de 27/04/2026 — Lista Nacional Oficial de Peixes e Invertebrados Aquáticos Ameaçados"
+  },
+  {
+   "id": "mma-300-2022",
+   "in_force_note": "Para peixes e invertebrados aquáticos, substituída pelas Portarias GM/MMA 1.666/2026 (regras) e 1.667/2026 (lista). Não gera regra.",
+   "issuer": "MMA",
+   "jurisdiction": "federal",
+   "official_url": "https://www.icmbio.gov.br/cepsul/images/stories/legislacao/Portaria/2022/P_gm_mma_300_2022_reconhece_lista_nacional_spp_ameacadas_extincao.pdf",
+   "published": "2022-12-14",
+   "read_from": "",
+   "review": "pending",
+   "status": "revoked",
+   "text_status": "not_read",
+   "title": "Portaria GM/MMA nº 300, de 13/12/2022 — Lista Nacional de Espécies Ameaçadas"
+  }
+ ],
+ "areas": [
+  {
+   "definition": "Todo o território brasileiro. Normas de alcance nacional, como a Lista Nacional de espécies ameaçadas.",
+   "geo_mapping": "derived",
+   "id": "br",
+   "name": "Território nacional"
+  },
+  {
+   "definition": "Bacias hidrográficas do Leste em Sergipe, Bahia, Minas Gerais e Espírito Santo, exceto a bacia do rio São Francisco (IN IBAMA 196/2008, art. 1º). Em MG está ligada às bacias do Leste da Portaria IEF 155/2011.",
+   "geo_mapping": "derived",
+   "id": "br:leste",
+   "name": "Bacias hidrográficas do Leste (IN IBAMA 196/2008)",
+   "parent": "br"
+  },
+  {
+   "definition": "Bacia inteira, em todos os estados que atravessa (Portaria IBAMA 50/2007).",
+   "geo_mapping": "derived",
+   "id": "br:sao_francisco",
+   "name": "Bacia hidrográfica do rio São Francisco",
+   "parent": "br"
+  }
+ ],
+ "format": "fishing-regulation-legal-catalog/2",
+ "jurisdiction": "br",
+ "rules": [
+  {
+   "act": "mma-1666-2026",
+   "articles": "art. 3º, caput e §§ 1º, 2º e 4º; art. 12",
+   "basins": [
+    "br"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "ficam protegidas de modo integral, incluindo, entre outras medidas, a proibição de captura, transporte, armazenamento, guarda, manejo, beneficiamento e comercialização.",
+     "segment": "art3"
+    },
+    {
+     "quote": "As restrições estabelecidas no caput não se aplicam a exemplares provenientes do cultivo na aquicultura em estabelecimentos devidamente licenciados pelo órgão ambiental competente.",
+     "segment": "art3/par2"
+    },
+    {
+     "quote": "As restrições estabelecidas no caput não se aplicam a exemplares capturados incidentalmente, desde que liberados vivos ou descartados no ato da captura",
+     "segment": "art3/par4"
+    },
+    {
+     "quote": "as proibições de que trata o art. 3º entrarão em vigor após o prazo de cento e oitenta dias contados da publicação desta Portaria.",
+     "segment": "art12"
+    }
+   ],
+   "id": "br-ameacadas-protecao-integral",
+   "period": {
+    "kind": "permanent"
+   },
+   "scope": "basin",
+   "species": "threatened",
+   "species_list": "mma-1667-2026-anexo-i",
+   "summary": "Espécies da Lista Nacional (Portaria GM/MMA 1.667/2026) nas categorias EW, CR, EN e VU: captura, transporte, armazenamento e comercialização proibidos o ano todo, em qualquer bacia. Exceções: pesquisa autorizada, exemplares de aquicultura licenciada e captura incidental liberada viva. A portaria não excetua populações introduzidas fora da área nativa."
+  },
+  {
+   "act": "ibama-in-196-2008",
+   "articles": "arts. 1º, 2º e 7º",
+   "basins": [
+    "br:leste"
+   ],
+   "effect": "prohibited",
+   "evidence": [
+    {
+     "quote": "Estabelecer normas de pesca para o período de proteção à reprodução natural dos peixes, nas áreas de abrangência das bacias hidrográficas do Leste, nos estados de Sergipe, Bahia, Minas Gerais e Espírito Santo, excetuando-se a área da bacia hidrográfica do rio São Francisco",
+     "segment": "art1"
+    },
+    {
+     "quote": "Proibir a pesca, anualmente, no período de 1º de novembro a 28 de fevereiro",
+     "segment": "art2"
+    },
+    {
+     "quote": "Permitir a captura e o transporte somente de espécies não nativas (alóctones e exóticas), híbridos e camarão gigante da Malásia (Macrobrachium rosembergii)",
+     "segment": "art7"
+    }
+   ],
+   "id": "leste-defeso-federal",
+   "period": {
+    "end": "02-28",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "basin",
+   "species": "native",
+   "summary": "Defeso federal nas bacias do Leste em SE, BA, MG e ES (exceto São Francisco): no período de proteção à reprodução só podem ser capturadas e transportadas espécies não nativas (alóctones e exóticas), híbridos e camarão-da-malásia. A cota federal do amador (10 kg + 1 exemplar) é menos restritiva que a estadual."
+  },
+  {
+   "act": "ibama-50-2007",
+   "articles": "art. 1º, § 2º",
+   "basins": [
+    "br:sao_francisco"
+   ],
+   "effect": "prohibited",
+   "geo_mapping": "pending",
+   "id": "sf-lagoas-marginais-federal",
+   "period": {
+    "end": "04-30",
+    "kind": "annual",
+    "start": "11-01"
+   },
+   "scope": "buffer",
+   "species": "all",
+   "summary": "Pesca de qualquer categoria, modalidade e petrecho proibida nas lagoas marginais de 1º/11 a 30/04 (federal; estende o prazo estadual)."
+  }
+ ],
+ "sources": {
+  "ibama-in-196-2008": {
+   "bytes": 14703,
+   "extractor": "legal-sources/3",
+   "kind": "html",
+   "official": false,
+   "retrieved_at": "2026-11-15T21:30:44+00:00",
+   "segments": 26,
+   "sha256": "a1b05f62c29da2aefc16de945b4bb453041afbc034f921c740fe1bea38434701",
+   "text_chars": 6083,
+   "url": "https://www.normasbrasil.com.br/norma/instrucao-normativa-196-2008_76900.html"
+  },
+  "ibama-in-25-2009": {
+   "bytes": 21494,
+   "extractor": "legal-sources/3",
+   "kind": "html",
+   "official": false,
+   "retrieved_at": "2026-11-15T21:30:45+00:00",
+   "segments": 63,
+   "sha256": "b5ccac5dea888fe6f3ce7a73939f90be3d219810a186fa66cdc74faa2fa93746",
+   "text_chars": 12303,
+   "url": "https://www.normasbrasil.com.br/norma/instrucao-normativa-25-2009_77415.html"
+  },
+  "mma-1666-2026": {
+   "bytes": 69155,
+   "extractor": "legal-sources/3",
+   "kind": "html",
+   "official": false,
+   "retrieved_at": "2026-11-15T03:33:13+00:00",
+   "segments": 52,
+   "sha256": "e6dd71390e3f8a1f846740dc0d1af2f040d6220e8c7409f6fd49a273cc07ed38",
+   "text_chars": 13419,
+   "url": "https://www.legisweb.com.br/legislacao/?id=494853"
+  },
+  "mma-1667-2026": {
+   "bytes": 1666102,
+   "extractor": "legal-sources/3",
+   "kind": "pdf",
+   "official": true,
+   "retrieved_at": "2026-11-15T03:33:18+00:00",
+   "segments": 4,
+   "sha256": "08020c02535a13add8f7295817922dcfa5a7594be9b22a2dd97469a76a429870",
+   "text_chars": 23280,
+   "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf"
+  }
+ },
+ "species_lists": [
+  {
+   "act": "mma-1667-2026",
+   "basin": "br",
+   "groups": [
+    "Peixes Continentais",
+    "Invertebrados de Água Doce"
+   ],
+   "id": "mma-1667-2026-anexo-i",
+   "note": "Anexo I extraído do PDF oficial por annex_1667.py. Lista nacional: vale em qualquer bacia e para qualquer origem da espécie. valid_from segue o art. 12 da Portaria 1.666/2026 (180 dias após 28/04/2026 para espécies novas na lista); como o anexo não identifica quais são novas, a data é aplicada a todas. Só nomes científicos.",
+   "source_csv": "sources/mma-1667-2026.annex.csv",
+   "threatened": [
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Odontesthes bicudo",
+     "row": 1
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Hypomasticus santanai",
+     "row": 2
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leporinus guttatus",
+     "row": 3
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leporinus pitingai",
+     "row": 4
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Megaleporinus gaiero",
+     "row": 5
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sartor tucuruiensis",
+     "row": 6
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Brycon dulcis",
+     "row": 7
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Brycon gouldingi",
+     "row": 8
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Brycon orbignyanus",
+     "row": 9
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Brycon vermelha",
+     "row": 10
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Brycon vonoi",
+     "row": 11
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Astyanax brucutu",
+     "row": 12
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Astyanax eremus",
+     "row": 13
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hasemania maxillaris",
+     "row": 14
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hasemania melanura",
+     "row": 15
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hasemania piatan",
+     "row": 16
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hollandichthys taramandahy",
+     "row": 17
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Hyphessobrycon cantoi",
+     "row": 18
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hyphessobrycon duragenys",
+     "row": 19
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hyphessobrycon flammeus",
+     "row": 20
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hyphessobrycon taurocephalus",
+     "row": 21
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Hyphessobrycon veredus",
+     "row": 22
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Knodus dorsomaculatus",
+     "row": 23
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Kolpotocheirodon figueiredoi",
+     "row": 24
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Lepidocharax diamantina",
+     "row": 25
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Mimagoniates lateralis",
+     "row": 26
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Mimagoniates sylvicola",
+     "row": 27
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Moenkhausia parecis",
+     "row": 28
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Nematocharax varii",
+     "row": 29
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Psalidodon crenuchoides",
+     "row": 30
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Psalidodon uberaba",
+     "row": 31
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Rachoviscus crassiceps",
+     "row": 32
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Rachoviscus graciliceps",
+     "row": 33
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Spintherobolus ankoseion",
+     "row": 34
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Stygichthys typhlops",
+     "row": 35
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Characidium onca",
+     "row": 36
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Characidium vestigipinne",
+     "row": 37
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Cyphocharax jagunco",
+     "row": 38
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Lebiasina marilynae",
+     "row": 39
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Lebiasina minuta",
+     "row": 40
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Prochilodus britskii",
+     "row": 41
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Prochilodus harttii",
+     "row": 42
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Prochilodus vimboides",
+     "row": 43
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Colossoma macropomum",
+     "row": 44
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Crenicichla jupiaensis",
+     "row": 45
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Teleocichla centisquama",
+     "row": 46
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Wallaciia urosema",
+     "row": 47
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Jenynsia sanctaecatarinae",
+     "row": 48
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cnesterodon carnegiei",
+     "row": 49
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cnesterodon omorgmatos",
+     "row": 50
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Phalloptychus eigenmanni",
+     "row": 51
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Phalloptychus iheringii",
+     "row": 52
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Phallotorynus fasciolatus",
+     "row": 53
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Poecilia akroa",
+     "row": 54
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Poecilia pertapeh",
+     "row": 55
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Acrolebias carvalhoi",
+     "row": 56
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Anablepsoides cearensis",
+     "row": 57
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Atlantirivulus lazzarotoi",
+     "row": 58
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Atlantirivulus maricensis",
+     "row": 59
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Atlantirivulus nudiventris",
+     "row": 60
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Atlantirivulus simplicis",
+     "row": 61
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Acantholebias quirogai",
+     "row": 62
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Austrolebias ephemerus",
+     "row": 63
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Austrolebias univentripinnis",
+     "row": 64
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Amatolebias varzeae",
+     "row": 65
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Campellolebias brucei",
+     "row": 66
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Campellolebias chrysolineatus",
+     "row": 67
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Campellolebias dorsimaculatus",
+     "row": 68
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Campellolebias intermedius",
+     "row": 69
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynolebias akroa",
+     "row": 70
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynolebias elegans",
+     "row": 71
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynolebias gorutuba",
+     "row": 72
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynolebias griseus",
+     "row": 73
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynolebias leptocephalus",
+     "row": 74
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynolebias parnaibensis",
+     "row": 75
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynopoecilus feltrini",
+     "row": 76
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cynopoecilus intimus",
+     "row": 77
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cypholebias cinereus",
+     "row": 78
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias adloffi",
+     "row": 79
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias arachan",
+     "row": 80
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias araucarianus",
+     "row": 81
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias bagual",
+     "row": 82
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Garcialebias botocudo",
+     "row": 83
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Garcialebias cheffei",
+     "row": 84
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Garcialebias lourenciano",
+     "row": 85
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias nachtigalli",
+     "row": 86
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias nigrofasciatus",
+     "row": 87
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Garcialebias nubium",
+     "row": 88
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias pelotapes",
+     "row": 89
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Garcialebias pongondo",
+     "row": 90
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Garcialebias reicherti",
+     "row": 91
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Gymnolebias jaegari",
+     "row": 92
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias adornatus",
+     "row": 93
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias alternatus",
+     "row": 94
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias auratus",
+     "row": 95
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias brunoi",
+     "row": 96
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias carlettoi",
+     "row": 97
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias delucai",
+     "row": 98
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias faouri",
+     "row": 99
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias fasciatus",
+     "row": 100
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias flammeus",
+     "row": 101
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias flavicaudatus",
+     "row": 102
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias fulminantis",
+     "row": 103
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias gardneri",
+     "row": 104
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias ghisolfii",
+     "row": 105
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias gibberatus",
+     "row": 106
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias gilbertobrasili",
+     "row": 107
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias guanambi",
+     "row": 108
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias hamadryades",
+     "row": 109
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias harmonicus",
+     "row": 110
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias hellneri",
+     "row": 111
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias igneus",
+     "row": 112
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias janaubensis",
+     "row": 113
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias longignatus",
+     "row": 114
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias lopesi",
+     "row": 115
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias macaubensis",
+     "row": 116
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias magnificus",
+     "row": 117
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias marginatus",
+     "row": 118
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias mediopapillatus",
+     "row": 119
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias multiradiatus",
+     "row": 120
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias nielseni",
+     "row": 121
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias notatus",
+     "row": 122
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias nudiorbitatus",
+     "row": 123
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias picturatus",
+     "row": 124
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Hypsolebias radiosus",
+     "row": 125
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias radiseriatus",
+     "row": 126
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias rufus",
+     "row": 127
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias shibattai",
+     "row": 128
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias splendissimus",
+     "row": 129
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias stellatus",
+     "row": 130
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias tocantinensis",
+     "row": 131
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias trilineatus",
+     "row": 132
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypsolebias virgulatus",
+     "row": 133
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Kryptolebias brasiliensis",
+     "row": 134
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Kryptolebias gracilis",
+     "row": 135
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leptolebias marmoratus",
+     "row": 136
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leptopanchax citrinipinnis",
+     "row": 137
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leptopanchax itanhaensis",
+     "row": 138
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leptopanchax opalescens",
+     "row": 139
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Leptopanchax sanguineus",
+     "row": 140
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Leptopanchax splendens",
+     "row": 141
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Maratecoara formosa",
+     "row": 142
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Maratecoara splendida",
+     "row": 143
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Matilebias alexandri",
+     "row": 144
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Matilebias camaquensis",
+     "row": 145
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Matilebias cyaneus",
+     "row": 146
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Matilebias ibicuiensis",
+     "row": 147
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Matilebias litzi",
+     "row": 148
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Matilebias paucisquama",
+     "row": 149
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Melanorivulus amambaiensis",
+     "row": 150
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Melanorivulus egens",
+     "row": 151
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Melanorivulus interruptus",
+     "row": 152
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Melanorivulus leali",
+     "row": 153
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Melanorivulus linearis",
+     "row": 154
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Melanorivulus paracatuensis",
+     "row": 155
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Melanorivulus pinima",
+     "row": 156
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Melanorivulus rutilicaudus",
+     "row": 157
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Melanorivulus vittatus",
+     "row": 158
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Moema piriana",
+     "row": 159
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Nematolebias catimbau",
+     "row": 160
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Nematolebias papilliferus",
+     "row": 161
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Nematolebias whitei",
+     "row": 162
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Notholebias cruzi",
+     "row": 163
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Notholebias fractifasciatus",
+     "row": 164
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Notholebias minimus",
+     "row": 165
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Notholebias vermiculatus",
+     "row": 166
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ophthalmolebias bokermanni",
+     "row": 167
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ophthalmolebias constanciae",
+     "row": 168
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ophthalmolebias ilheusensis",
+     "row": 169
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ophthalmolebias perpendicularis",
+     "row": 170
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ophthalmolebias rosaceus",
+     "row": 171
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ophthalmolebias suzarti",
+     "row": 172
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pituna brevirostrata",
+     "row": 173
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Plesiolebias xavantei",
+     "row": 174
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys boitonei",
+     "row": 175
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys cholopteryx",
+     "row": 176
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys espinhacensis",
+     "row": 177
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys nigromaculatus",
+     "row": 178
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys parallelus",
+     "row": 179
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys punctulatus",
+     "row": 180
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys santanae",
+     "row": 181
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Simpsonichthys zonatus",
+     "row": 182
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Titanolebias cheradophilus",
+     "row": 183
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Trigonectes strigabundus",
+     "row": 184
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Xenurolebias myersi",
+     "row": 185
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Xenurolebias pataxo",
+     "row": 186
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchogiton zuanoni",
+     "row": 187
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus caboclo",
+     "row": 188
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus higuchii",
+     "row": 189
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus inpai",
+     "row": 190
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus jaimei",
+     "row": 191
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus kokraimoro",
+     "row": 192
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus mareikeae",
+     "row": 193
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus severii",
+     "row": 194
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Sternarchorhynchus villasboasi",
+     "row": 195
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Archolaemus ferreirai",
+     "row": 196
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Archolaemus santosi",
+     "row": 197
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Eigenmannia vicentespelaea",
+     "row": 198
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Paragenidens grandoculis",
+     "row": 199
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Aspidoras mephisto",
+     "row": 200
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Chasmocranus brachynemus",
+     "row": 201
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Heptapterus multiradiatus",
+     "row": 202
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pimelodella kronei",
+     "row": 203
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pimelodella spelaea",
+     "row": 204
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Rhamdia enfurnada",
+     "row": 205
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Rhamdiopsis krugi",
+     "row": 206
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ancistrus cryptophthalmus",
+     "row": 207
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ancistrus formoso",
+     "row": 208
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ancistrus minutus",
+     "row": 209
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Baryancistrus longipinnis",
+     "row": 210
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Baryancistrus niveatus",
+     "row": 211
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Delturus parahybae",
+     "row": 212
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Eurycheilichthys apocremnus",
+     "row": 213
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Harttia depressa",
+     "row": 214
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Harttia panara",
+     "row": 215
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Harttia villasboas",
+     "row": 216
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hemiancistrus megalopteryx",
+     "row": 217
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypancistrus zebra",
+     "row": 218
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Hypostomus subcarinatus",
+     "row": 219
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Isbrueckerichthys saxicola",
+     "row": 220
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Microlepidogaster perforata",
+     "row": 221
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Neoplecostomus botucatu",
+     "row": 222
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Otothyris juquiae",
+     "row": 223
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Parancistrus nudiventris",
+     "row": 224
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Parotocinclus cesarpintoi",
+     "row": 225
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Parotocinclus seridoensis",
+     "row": 226
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Parotocinclus spilosoma",
+     "row": 227
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Parotocinclus spilurus",
+     "row": 228
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Plesioptopoma curvidens",
+     "row": 229
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pogonopoma obscurum",
+     "row": 230
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pogonopoma parahybae",
+     "row": 231
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pseudotocinclus tietensis",
+     "row": 232
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Conorhynchos conirostris",
+     "row": 233
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Pseudoplatystoma corruscans",
+     "row": 234
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Steindachneridion amblyurum",
+     "row": 235
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Steindachneridion doceanum",
+     "row": 236
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Steindachneridion melanodermatum",
+     "row": 237
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Steindachneridion parahybae",
+     "row": 238
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Steindachneridion punctatum",
+     "row": 239
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Steindachneridion scriptum",
+     "row": 240
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Lophiosilurus alexandri",
+     "row": 241
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Microglanis maculatus",
+     "row": 242
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Microglanis robustus",
+     "row": 243
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cambeva crassicaudata",
+     "row": 244
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cambeva igobi",
+     "row": 245
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cambeva mboycy",
+     "row": 246
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cambeva papillifera",
+     "row": 247
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cambeva pascuali",
+     "row": 248
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Cambeva tropeiro",
+     "row": 249
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ituglanis bambui",
+     "row": 250
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ituglanis epikarsticus",
+     "row": 251
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ituglanis mambai",
+     "row": 252
+    },
+    {
+     "category": "CR",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ituglanis passensis",
+     "row": 253
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Ituglanis ramiroi",
+     "row": 254
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": true,
+     "name": "Listrura depinnai",
+     "row": 255
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Listrura nematopteryx",
+     "row": 256
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Trichogenes claviger",
+     "row": 257
+    },
+    {
+     "category": "EN",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Trichomycterus dali",
+     "row": 258
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Trichomycterus itacarambiensis",
+     "row": 259
+    },
+    {
+     "category": "VU",
+     "group": "Peixes Continentais",
+     "marked": false,
+     "name": "Trichomycterus rubbioli",
+     "row": 260
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Eupera troglobia",
+     "row": 379
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Castalia martensi",
+     "row": 380
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Diplodon fontainianus",
+     "row": 381
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Rhipidodonta garbei",
+     "row": 382
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Rhipidodonta iheringi",
+     "row": 383
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Rhipidodonta koseritzi",
+     "row": 384
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Anodontites ferrarisii",
+     "row": 385
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Anodontites iheringi",
+     "row": 386
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Haasica balzani",
+     "row": 387
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Leila blainvilliana",
+     "row": 388
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Monocondylaea franciscana",
+     "row": 389
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Monocondylaea paraguayana",
+     "row": 390
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Mycetopoda legumen",
+     "row": 391
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Cyanocyclas guahybensis",
+     "row": 392
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Racekiela cavernicola",
+     "row": 393
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Arinosaster patriciae",
+     "row": 394
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Potamolithus troglobius",
+     "row": 395
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Potamolithus karsticus",
+     "row": 396
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aylacostoma tenuilabris",
+     "row": 397
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spiripockia punctata",
+     "row": 398
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Copelatus cessaima",
+     "row": 399
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Adebrotus lugoi",
+     "row": 400
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Camelobaetidius juparana",
+     "row": 401
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Camelobaetidius maranhensis",
+     "row": 402
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Camelobaetidius spinosus",
+     "row": 403
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hermanella amere",
+     "row": 404
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hermanella nigra",
+     "row": 405
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Miroculis stenopterus",
+     "row": 406
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Simothraulopsis eurybasis",
+     "row": 407
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Lachlania aldinae",
+     "row": 408
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Oligoneuria amandae",
+     "row": 409
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Oligoneuria macabaiba",
+     "row": 410
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Spelaeometra hypogea",
+     "row": 411
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Forcepsioneura machadorum",
+     "row": 412
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Franciscobasis franciscoi",
+     "row": 413
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Kiautagrion acutum",
+     "row": 414
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Leptagrion bocainense",
+     "row": 415
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Machadagrion garbei",
+     "row": 416
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Minagrion canaanense",
+     "row": 417
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Heteragrion mantiqueirae",
+     "row": 418
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Fluminagrion taxaense",
+     "row": 419
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus bahiensis",
+     "row": 420
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus ginae",
+     "row": 421
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus sanctus",
+     "row": 422
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus santanensis",
+     "row": 423
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus spinilacertus",
+     "row": 424
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus titan",
+     "row": 425
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Spelaeogammarus trajanoae",
+     "row": 426
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Megagidiella azul",
+     "row": 427
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hyalella caeca",
+     "row": 428
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hyalella epikarstica",
+     "row": 429
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hyalella formosa",
+     "row": 430
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hyalella imbya",
+     "row": 431
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hyalella veredae",
+     "row": 432
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Potiberaba porakuara",
+     "row": 433
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Seborgia potiguar",
+     "row": 434
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla brevipalma",
+     "row": 435
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla camargoi",
+     "row": 436
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla cavernicola",
+     "row": 437
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla charon",
+     "row": 438
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla franca",
+     "row": 439
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aegla georginae",
+     "row": 440
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla inconspicua",
+     "row": 441
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla inermis",
+     "row": 442
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla itacolomiensis",
+     "row": 443
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla leachi",
+     "row": 444
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla leptochela",
+     "row": 445
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aegla loyolai",
+     "row": 446
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aegla ludwigi",
+     "row": 447
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla manuinflata",
+     "row": 448
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aegla meloi",
+     "row": 449
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla microphthalma",
+     "row": 450
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla oblata",
+     "row": 451
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla obstipa",
+     "row": 452
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aegla okora",
+     "row": 453
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla perobae",
+     "row": 454
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla renana",
+     "row": 455
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Aegla rosanae",
+     "row": 456
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Aegla violacea",
+     "row": 457
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Macrobrachium denticulatum",
+     "row": 458
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Parastacus tuerkayi",
+     "row": 459
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": true,
+     "name": "Kingsleya attenboroughi",
+     "row": 460
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Brasileirinho cavaticus",
+     "row": 461
+    },
+    {
+     "category": "EN",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Pongycarcinia xiphidiourus",
+     "row": 462
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Girardia arenicola",
+     "row": 463
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Girardia desiderensis",
+     "row": 464
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Girardia multidiverticulata",
+     "row": 465
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Girardia paucipunctata",
+     "row": 466
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Girardia spelaea",
+     "row": 467
+    },
+    {
+     "category": "CR",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Sluysia triapertura",
+     "row": 468
+    },
+    {
+     "category": "VU",
+     "group": "Invertebrados de Água Doce",
+     "marked": false,
+     "name": "Hausera hauseri",
+     "row": 469
+    }
+   ],
+   "valid_from": "2026-10-27"
+  }
+ ],
+ "verified_rules": [
+  "br-ameacadas-protecao-integral",
+  "leste-defeso-federal"
+ ]
+}

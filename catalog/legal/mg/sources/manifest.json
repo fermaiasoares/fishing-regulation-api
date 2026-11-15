@@ -6,7 +6,7 @@
   "bytes": 469723,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:28+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 56,
   "text_chars": 12982
  },
@@ -17,7 +17,7 @@
   "bytes": 459374,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:32+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 39,
   "text_chars": 8826
  },
@@ -28,7 +28,7 @@
   "bytes": 470060,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:34+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 62,
   "text_chars": 12918
  },
@@ -39,7 +39,7 @@
   "bytes": 145263,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:36+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 44,
   "text_chars": 3924
  },
@@ -50,7 +50,7 @@
   "bytes": 324317,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:56:38+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 15,
   "text_chars": 4874
  },
@@ -61,30 +61,8 @@
   "bytes": 81588,
   "kind": "pdf",
   "retrieved_at": "2026-11-15T01:58:41+00:00",
-  "extractor": "legal-sources/2",
+  "extractor": "legal-sources/3",
   "segments": 23,
   "text_chars": 2809
- },
- "mma-1666-2026": {
-  "url": "https://www.legisweb.com.br/legislacao/?id=494853",
-  "official": false,
-  "sha256": "e6dd71390e3f8a1f846740dc0d1af2f040d6220e8c7409f6fd49a273cc07ed38",
-  "bytes": 69155,
-  "kind": "html",
-  "retrieved_at": "2026-11-15T03:33:13+00:00",
-  "extractor": "legal-sources/2",
-  "segments": 52,
-  "text_chars": 13419
- },
- "mma-1667-2026": {
-  "url": "https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf",
-  "official": true,
-  "sha256": "08020c02535a13add8f7295817922dcfa5a7594be9b22a2dd97469a76a429870",
-  "bytes": 1666102,
-  "kind": "pdf",
-  "retrieved_at": "2026-11-15T03:33:18+00:00",
-  "extractor": "legal-sources/2",
-  "segments": 4,
-  "text_chars": 23280
  }
 }

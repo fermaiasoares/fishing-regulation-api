@@ -1,21 +1,31 @@
-# Catálogo jurídico — Minas Gerais
+# Catálogo jurídico — federal e Minas Gerais
 
 Atualizado em 14/11/2026. Todas as regras aguardam revisão do Fernando (`review = "pending"`). Nenhuma regra concede permissão: sem restrição carregada, a resposta é `undetermined`.
 
+## Jurisdições
+
+Cada diretório de `catalog/legal` é uma jurisdição com catálogo próprio ([ADR 0001](adr/0001-jurisdicoes.md)):
+
+- `br`: normas federais (IBAMA, MMA). Áreas `br`, `br:sao_francisco`, `br:leste`, por ora derivadas das áreas estaduais.
+- `mg`: normas de Minas Gerais. Cada área pode declarar `within = ["br:<id>"]`; assim `mg:sao_francisco` recebe as regras federais da bacia do São Francisco.
+
+Ids de área são locais nos TOML e viram `<jurisdição>:<id>` no `catalog.json`. Ids de regra são únicos em todo o repositório.
+
 ## Pipeline
 
-1. **Coleta** (`services/legal-catalog/sources.py`, workflow `legal-sources`): baixa a primeira URL que responder de cada ato, grava o arquivo original em `catalog/legal/mg/sources/` e registra URL, SHA-256, tamanho e data no `manifest.json`. Roda no runner do PR, que tem internet, e faz commit no próprio branch.
+1. **Coleta** (`services/legal-catalog/sources.py`, workflow `legal-sources`): baixa a primeira URL que responder de cada ato, grava o arquivo original em `catalog/legal/<jurisdição>/sources/` e registra URL, SHA-256, tamanho e data no `manifest.json`. Roda no runner do PR, que tem internet, e faz commit no próprio branch.
 2. **Extração e segmentação**: `pdftotext` ou HTML → texto sem cabeçalhos de página → segmentos com ids estáveis (`art2/III/g`, `art4/par-unico`). `sources.py --reextract` refaz essa etapa a partir dos originais, conferindo o SHA-256.
 3. **Estruturação**: regras em `rules.toml`, cada uma com `evidence` (segmento + trecho literal). Extração feita por Claude e revisada em PR.
 4. **Validação** (`catalog.py`): rejeita regra com ato revogado ou não lido, trecho que não existe no segmento citado, ou regra sem evidência quando o texto do ato está armazenado.
 5. **Exportação**: `catalog.py --export` gera `catalog.json` canônico. O CI falha se o arquivo estiver desatualizado.
-6. **Carga** (`php artisan legal:import [--publish]`): grava uma versão imutável no PostgreSQL, identificada pelo SHA-256 do `catalog.json`. Reimportar o mesmo arquivo não cria nada. A API responde pela versão publicada mais recente.
+6. **Carga** (`php artisan legal:import [--publish]`): importa todos os `catalog/legal/*/catalog.json`, cada um como versão imutável da sua jurisdição, identificada pelo SHA-256. Reimportar o mesmo arquivo não cria nada. A API responde pela versão publicada mais recente de cada jurisdição.
 
 ```bash
 cd services/legal-catalog
-python3 catalog.py ../../catalog/legal/mg                                   # valida
-python3 catalog.py ../../catalog/legal/mg --matrix                          # matriz por bacia
-python3 catalog.py ../../catalog/legal/mg --export ../../catalog/legal/mg/catalog.json
+for j in br mg; do                                                          # valida e exporta
+  python3 catalog.py ../../catalog/legal/$j --export ../../catalog/legal/$j/catalog.json
+done
+python3 catalog.py ../../catalog/legal/mg --matrix                          # matriz por bacia (inclui federais)
 python3 sources.py ../../catalog/legal/mg --reextract                       # refaz textos sem rede
 python3 -m unittest discover -s tests -v
 ```
@@ -32,14 +42,15 @@ python3 -m unittest discover -s tests -v
 | [Lei 15.082/2004](https://www.almg.gov.br/legislacao-mineira/texto/LEI/15082/2004/) | Rios de preservação permanente | Sim (espelho CBH Doce) | Nenhuma: não proíbe pesca expressamente |
 | Portaria IEF 16/2019 | Paraopeba | Não localizado | 2, sem trecho conferido |
 | [Portaria IBAMA 50/2007](https://www.ibama.gov.br/phocadownload/noticias/noticias2016/portaria_ibama_50_2007.pdf) | São Francisco (federal) | Não (HTTP 403 para download automático) | 1, sem trecho conferido |
-| IN IBAMA 196/2008 | Leste (federal) | Não (timeout no agregador) | 1, sem trecho conferido |
-| IN IBAMA 195/2008, IN IBAMA 25/2009 | Sudeste / Paraná (federal) | Não | Nenhuma até leitura |
+| IN IBAMA 196/2008 | Leste em SE, BA, MG e ES, exceto São Francisco (federal) | Sim (agregador NormasBrasil) | 1, conferida (arts. 1º, 2º e 7º); art. 2º (lagoas marginais e 1.000 m de barragens) ainda sem regra |
+| IN IBAMA 25/2009 | Paraná (federal; inclui rios de MG) | Sim (agregador), ainda não lido | Nenhuma até leitura |
+| IN IBAMA 195/2008 | Sudeste (federal) | Não | Nenhuma até leitura |
 | Portaria GM/MMA 1.666/2026 | Brasil | Sim (LegisWeb; DOU não respondeu) | 1: proteção integral de espécies ameaçadas (art. 3º), conferida |
 | [Portaria GM/MMA 1.667/2026](https://www.gov.br/icmbio/pt-br/assuntos/biodiversidade/pan/saiba-mais/documentos-e-downloads/9-portaria-gm_mma-no-1-667-de-27-de-abril-de-2026.pdf) | Brasil | Sim (PDF oficial) + Anexo I em CSV (`annex_1667.py`) | Lista com 351 peixes continentais e invertebrados de água doce |
 | Portaria MMA 300/2022 | Brasil | Não | Substituída pelas 1.666 e 1.667/2026 para fauna aquática |
 | [Página IEF de restrições](https://www.ief.mg.gov.br/web/ief/restri%C3%A7%C3%B5es-ambientais-%C3%A0-pesca-em-minas-gerais) | MG | Orientação oficial | 1 (UCs estaduais) |
 
-13 das 18 regras têm trecho literal conferido no texto armazenado. As demais aparecem como lacuna em toda avaliação. A vigência das Portarias 154, 155 e 156 no ciclo atual está confirmada pela [Agência Minas em 05/11/2026](https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos): piracema até 28/02/2027.
+15 das 19 regras (3 federais, 16 de MG) têm trecho literal conferido no texto armazenado. As demais aparecem como lacuna em toda avaliação. A vigência das Portarias 154, 155 e 156 no ciclo atual está confirmada pela [Agência Minas em 05/11/2026](https://www.agenciaminas.mg.gov.br/noticia/piracema-comeca-em-minas-gerais-e-restringe-pesca-para-proteger-reproducao-dos-peixes-nativos): piracema até 28/02/2027.
 
 ## Situação por bacia
 

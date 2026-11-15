@@ -2,7 +2,7 @@
 
 ## `POST /api/fishing/evaluate`
 
-Avalia se a pesca de uma espécie é proibida ou condicionada num ponto de Minas Gerais numa data, usando apenas a versão publicada do catálogo jurídico (`php artisan legal:import --publish`).
+Avalia se a pesca de uma espécie é proibida ou condicionada num ponto numa data, combinando as normas federais e as dos estados cujas áreas contêm o ponto. Usa apenas as versões publicadas dos catálogos jurídicos (`php artisan legal:import --publish`), uma por jurisdição: `br` (federal) e uma por estado (hoje só `mg`). Ver [ADR 0001](adr/0001-jurisdicoes.md).
 
 A API **nunca responde `allowed`**: o catálogo só registra restrições. Sem restrição aplicável, ou com informação insuficiente, a resposta é `undetermined` com a lista de lacunas.
 
@@ -26,34 +26,39 @@ Limite: 60 requisições por minuto por cliente.
 | Campo | Conteúdo |
 | --- | --- |
 | `status` | `prohibited`, `conditional` ou `undetermined` |
-| `location.areas` | áreas legais do ponto, da mais específica à mais ampla (ex.: `doce`, `leste`, `mg`) |
+| `location.areas` | áreas legais do ponto, da mais específica à mais ampla, com `code`, `name` e `jurisdiction` (ex.: `mg:doce`, `mg:leste`, `mg`, `br:leste`, `br`) |
+| `location.states` | estados cujas áreas contêm o ponto (ex.: `["mg"]`); perto de divisas poderá ter mais de um |
+| `location.jurisdictions` | jurisdições cujas normas foram avaliadas (ex.: `["br", "mg"]`) |
+| `location.water_domain` | domínio do corpo d'água (`federal`, `state` ou `undetermined`); por ora sempre `undetermined` |
 | `species.threatened` | categoria na Lista Nacional de ameaçadas, quando houver |
 | `species.classification` | `native`, `non_native`, `excluded` (excluída de uma permissão), `conflicting` ou `unknown`, com as entradas das listas oficiais que casaram |
-| `rules` | regras que decidiram o status: ato, artigos, período, `verified` e `evidence` (segmento + trecho literal da norma) |
-| `conditions` | condições a cumprir quando `conditional` |
-| `location_restrictions` | faixas, lagoas, trechos e UCs ativos na data, ainda não verificados geograficamente |
+| `rules` | regras que decidiram o status: `jurisdiction`, ato, artigos, período, `verified` e `evidence` (segmento + trecho literal da norma) |
+| `conditions` | condições a cumprir quando `conditional`, cada uma com `text`, `rule` e `jurisdiction` |
+| `location_restrictions` | faixas, lagoas, trechos e UCs ativos na data, ainda não verificados geograficamente, cada um com `jurisdiction` |
 | `gaps` | o que impede uma resposta mais firme |
-| `catalog` | versão, SHA-256 e data de publicação do catálogo usado |
+| `catalogs` | um item por catálogo usado: `jurisdiction`, `version_id`, `checksum_sha256`, `published_at` |
 | `disclaimer` | aviso de que a resposta não substitui a norma oficial |
 
 ### Regras de decisão
 
-1. Áreas: o ponto é localizado em `legal_area_geometries` e recebe as áreas-mãe (`doce` → `leste` → `mg`). Sem área mapeada: `undetermined`.
+1. Áreas: o ponto é localizado em `legal_area_geometries` e recebe as áreas-mãe (`mg:doce` → `mg:leste` → `mg`) e as áreas federais a que elas estão ligadas por `within` (`mg:leste` → `br:leste`, `mg` → `br`). Sem área mapeada: `undetermined`. Área de um estado sem catálogo publicado: `undetermined`, com a lacuna.
 2. Espécie: classificada pelas listas oficiais das áreas do ponto. Nome fora das listas é `unknown`, nunca presumido não nativo. `Gênero spp.` casa com qualquer espécie do gênero; `sp.` não.
-3. Regras de bacia ativas na data: qualquer proibição aplicável → `prohibited`; senão, condição aplicável → `conditional` (condições somadas de todas as normas); senão `undetermined`.
-4. Espécie `unknown` ou `conflicting`: só há resposta se nativa e não nativa levarem ao mesmo status.
-5. Espécie ameaçada (Lista Nacional, Portaria GM/MMA 1.667/2026, categorias EW, CR, EN e VU): `prohibited` o ano todo em qualquer bacia, prevalecendo sobre permissões estaduais (ex.: tambaqui). O casamento é pelo nome científico, informado ou obtido das listas estaduais pelo nome comum. Antes de 27/10/2026, a espécie fica `undetermined`.
-6. Espécie `excluded` (ex.: piauçu na Portaria IEF 156/2011): `prohibited` enquanto a permissão de que foi excluída for a única via.
-7. Períodos que terminam em 28/02 incluem 29/02 em anos bissextos (decisão a aprovar).
+3. Jurisdições: valem as regras de todos os catálogos alcançados. Uma proibição de qualquer jurisdição prevalece; condições de jurisdições diferentes se somam.
+4. Regras de bacia ativas na data: qualquer proibição aplicável → `prohibited`; senão, condição aplicável → `conditional` (condições somadas de todas as normas); senão `undetermined`.
+5. Espécie `unknown` ou `conflicting`: só há resposta se nativa e não nativa levarem ao mesmo status.
+6. Espécie ameaçada (Lista Nacional, Portaria GM/MMA 1.667/2026, categorias EW, CR, EN e VU): `prohibited` o ano todo em qualquer bacia, prevalecendo sobre permissões estaduais (ex.: tambaqui). O casamento é pelo nome científico, informado ou obtido das listas estaduais pelo nome comum. Antes de 27/10/2026, a espécie fica `undetermined`.
+7. Espécie `excluded` (ex.: piauçu na Portaria IEF 156/2011): `prohibited` enquanto a permissão de que foi excluída for a única via.
+8. Períodos que terminam em 28/02 incluem 29/02 em anos bissextos (decisão a aprovar).
 
 ### Outros códigos
 
 - `422`: entrada inválida, com `errors` por campo.
-- `503`: nenhum catálogo publicado; a API não avalia.
+- `503`: catálogo federal (`br`) não publicado; a API não avalia, porque sem ele uma espécie ameaçada poderia sair `conditional`.
 
 ### Limitações conhecidas
 
 - As áreas legais vêm das 43 Circunscrições Hidrográficas oficiais de MG (IDE-Sisema/Igam, `catalog/geo/mg`), carregadas com `php artisan geo:import-legal-areas`. Pontos fora de MG retornam `undetermined`.
+- Rios de divisa e de domínio federal: o estado do ponto vem só das áreas legais carregadas. A malha estadual do IBGE, a faixa de divisa e a dominialidade da ANA são as próximas etapas do [ADR 0001](adr/0001-jurisdicoes.md).
 - A CH PJ1 (rios Piracicaba e Jaguari, que drenam para o Tietê) não tem regras até a decisão sobre seu enquadramento; consultas nela retornam `undetermined`.
 - A escala da camada é 1:100.000: pontos a poucas centenas de metros de um divisor de águas podem cair na bacia vizinha.
 - Não há lista oficial de nativas do São Francisco, Grande, Paranaíba e Leste no catálogo; nativas dessas bacias ficam `unknown` e, na piracema, `undetermined`.

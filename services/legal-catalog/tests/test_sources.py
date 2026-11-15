@@ -1,6 +1,6 @@
 import unittest
 
-from sources import detect_kind, html_to_text, normalize, segment
+from sources import decode_html, detect_kind, html_to_text, normalize, segment
 
 # Fictional text shaped like a Brazilian normative act; not real legislation.
 SAMPLE = """PORTARIA DE EXEMPLO
@@ -53,6 +53,17 @@ class ContentTest(unittest.TestCase):
     def test_html_to_text_drops_scripts_and_keeps_blocks(self):
         text = html_to_text(b"<html><script>x=1</script><p>Art. 1\xc2\xba Texto.</p><p>I - item;</p></html>")
         self.assertEqual(text, "Art. 1º Texto.\nI - item;")
+
+
+class DecodeTest(unittest.TestCase):
+    def test_undeclared_latin1_pages_keep_their_accents(self):
+        page = "<html><body><p>Art. 1º Proibir a pesca nas lagoas marginais.</p></body></html>".encode("cp1252")
+        self.assertIn("Art. 1º Proibir", html_to_text(page))
+
+    def test_utf8_and_declared_charsets_win(self):
+        self.assertEqual(decode_html("ação".encode()), "ação")
+        page = '<meta charset="iso-8859-1"><p>ação</p>'.encode("latin-1")
+        self.assertIn("ação", decode_html(page))
 
 
 if __name__ == "__main__":

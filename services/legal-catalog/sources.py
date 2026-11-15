@@ -21,7 +21,7 @@ from pathlib import Path
 
 USER_AGENT = "fishing-regulation-api/legal-sources (+https://github.com/fermaiasoares/fishing-regulation-api)"
 TIMEOUT_SECONDS = 120
-EXTRACTOR = "legal-sources/2"
+EXTRACTOR = "legal-sources/3"
 
 # Case-sensitive on purpose: a wrapped line starting with "art. 4º da Lei..." is a
 # reference inside a sentence, not a new article.
@@ -141,9 +141,27 @@ class _TextExtractor(html.parser.HTMLParser):
             self.parts.append(data)
 
 
+CHARSET = re.compile(rb"""<meta[^>]+charset=["']?([A-Za-z0-9_-]+)""", re.IGNORECASE)
+
+
+def decode_html(content: bytes) -> str:
+    """Declared charset first; otherwise UTF-8, falling back to Windows-1252
+    (many official Brazilian pages are Latin-1 without declaring it)."""
+    declared = CHARSET.search(content[:4096])
+    if declared:
+        try:
+            return content.decode(declared.group(1).decode("ascii"))
+        except (LookupError, UnicodeDecodeError):
+            pass
+    try:
+        return content.decode("utf-8")
+    except UnicodeDecodeError:
+        return content.decode("cp1252", errors="replace")
+
+
 def html_to_text(content: bytes) -> str:
     parser = _TextExtractor()
-    parser.feed(content.decode("utf-8", errors="replace"))
+    parser.feed(decode_html(content))
     lines = (re.sub(r"[ \t]+", " ", line).strip() for line in "".join(parser.parts).splitlines())
     return "\n".join(line for line in lines if line)
 

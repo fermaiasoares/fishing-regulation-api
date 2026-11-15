@@ -15,10 +15,10 @@ use JsonException;
  */
 class CatalogImporter
 {
-    public const FORMAT = 'fishing-regulation-legal-catalog/1';
+    public const FORMAT = 'fishing-regulation-legal-catalog/2';
 
     /**
-     * @return array{version_id: int, created: bool, published: bool, checksum_sha256: string}
+     * @return array{version_id: int, jurisdiction: string, created: bool, published: bool, checksum_sha256: string}
      */
     public function import(string $path, bool $publish = false): array
     {
@@ -39,11 +39,29 @@ class CatalogImporter
 
             return [
                 'version_id' => (int) $versionId,
+                'jurisdiction' => $catalog['jurisdiction'],
                 'created' => $existing === null,
                 'published' => $publish,
                 'checksum_sha256' => $checksum,
             ];
         });
+    }
+
+    /**
+     * Latest published version of every jurisdiction, keyed by jurisdiction code.
+     *
+     * @return array<string, object{id: int, jurisdiction: string, checksum_sha256: string, published_at: string}>
+     */
+    public static function publishedVersions(): array
+    {
+        $versions = DB::select(<<<'SQL'
+            SELECT DISTINCT ON (jurisdiction) id, jurisdiction, checksum_sha256, published_at
+            FROM legal_catalog_versions
+            WHERE published_at IS NOT NULL
+            ORDER BY jurisdiction, published_at DESC, id DESC
+            SQL);
+
+        return array_column($versions, null, 'jurisdiction');
     }
 
     /**
@@ -77,8 +95,26 @@ class CatalogImporter
             }
         }
 
+        $jurisdiction = $catalog['jurisdiction'];
+        if (! is_string($jurisdiction) || preg_match('/^[a-z]{2}$/', $jurisdiction) !== 1) {
+            throw new InvalidArgumentException('Catalog jurisdiction must be a two-letter code');
+        }
         $acts = array_column($catalog['acts'], null, 'id');
         $areas = array_column($catalog['areas'], null, 'id');
+        if (! isset($areas[$jurisdiction])) {
+            throw new InvalidArgumentException("Catalog has no root area \"{$jurisdiction}\"");
+        }
+        foreach ($areas as $code => $area) {
+            if ($code !== $jurisdiction && ! str_starts_with((string) $code, $jurisdiction.':')) {
+                throw new InvalidArgumentException("Area {$code} is not qualified with the catalog jurisdiction {$jurisdiction}");
+            }
+            foreach ($area['within'] ?? [] as $outer) {
+                $outerJurisdiction = explode(':', (string) $outer, 2)[0];
+                if ($outerJurisdiction === $jurisdiction || preg_match('/^[a-z]{2}(:[a-z0-9_]+)?$/', (string) $outer) !== 1) {
+                    throw new InvalidArgumentException("Area {$code}: within {$outer} must be an area of another jurisdiction");
+                }
+            }
+        }
         foreach ($catalog['rules'] as $rule) {
             $code = $rule['id'] ?? '?';
             if (! isset($acts[$rule['act'] ?? ''])) {
@@ -138,6 +174,7 @@ class CatalogImporter
                 'parent_code' => $area['parent'] ?? null,
                 'definition' => $area['definition'],
                 'geo_mapping' => $area['geo_mapping'],
+                'within_codes' => json_encode(array_values($area['within'] ?? [])),
             ]);
         }
 
