@@ -18,7 +18,7 @@ trait SyntheticLegalAreas
         'mg' => [5, 5],
     ];
 
-    protected function setUpSyntheticLegalAreas(): void
+    protected function seedSyntheticLegalAreas(): void
     {
         $this->importLegalCatalogs();
 

@@ -21,7 +21,7 @@ class SpeciesCatalogTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->setUpSyntheticLegalAreas();
+        $this->seedSyntheticLegalAreas();
     }
 
     private function areaSpecies(string $area, string $date, ?string $status = null): array

@@ -19,7 +19,7 @@ class FishingEvaluationTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
-        $this->setUpSyntheticLegalAreas();
+        $this->seedSyntheticLegalAreas();
     }
 
     private function evaluate(string $area, string $species, string $date): array
