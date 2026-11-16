@@ -5,53 +5,27 @@ namespace Tests\Feature;
 use App\Legal\SpeciesClassifier;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 use Illuminate\Support\Facades\DB;
+use Tests\Concerns\SyntheticLegalAreas;
 use Tests\TestCase;
 
 /**
- * Scenarios run against the repository catalog. The area footprints below are
- * synthetic squares for tests only; real footprints come from imported datasets.
+ * Scenarios run against the repository catalog, on synthetic area footprints.
  */
 class FishingEvaluationTest extends TestCase
 {
     use DatabaseTransactions;
-
-    private const SQUARES = [
-        'doce' => [10, 10],
-        'sao_francisco' => [20, 20],
-        'grande' => [30, 30],
-        'leste' => [40, 40],
-        'mg' => [5, 5],
-    ];
+    use SyntheticLegalAreas;
 
     protected function setUp(): void
     {
         parent::setUp();
-        $this->importLegalCatalogs();
-
-        $datasetId = DB::table('geographic_datasets')->insertGetId([
-            'slug' => 'test-legal-areas', 'name' => 'Synthetic legal areas', 'publisher' => 'tests',
-            'created_at' => now(), 'updated_at' => now(),
-        ]);
-        $versionId = DB::table('geographic_dataset_versions')->insertGetId([
-            'dataset_id' => $datasetId, 'version' => 'test', 'source_url' => 'test://synthetic',
-            'checksum_sha256' => str_repeat('0', 64), 'created_at' => now(), 'updated_at' => now(),
-        ]);
-        foreach (self::SQUARES as $code => [$x, $y]) {
-            $size = $code === 'mg' ? 40 : 1;
-            DB::insert(
-                'INSERT INTO legal_area_geometries (legal_area_code, dataset_version_id, source_feature_id, geometry, created_at, updated_at)
-                 VALUES (?, ?, ?, ST_Multi(ST_MakeEnvelope(?, ?, ?, ?, 4326)), now(), now())',
-                [$code === 'mg' ? 'mg' : "mg:{$code}", $versionId, "test-{$code}", $x, $y, $x + $size, $y + $size],
-            );
-        }
+        $this->setUpSyntheticLegalAreas();
     }
 
     private function evaluate(string $area, string $species, string $date): array
     {
-        [$x, $y] = self::SQUARES[$area];
-
-        return $this->postJson('/api/fishing/evaluate', [
-            'latitude' => $y + 0.5, 'longitude' => $x + 0.5, 'species' => $species, 'date' => $date,
+        return $this->postJson('/api/fishing/evaluate', $this->pointIn($area) + [
+            'species' => $species, 'date' => $date,
         ])->assertOk()->json();
     }
 

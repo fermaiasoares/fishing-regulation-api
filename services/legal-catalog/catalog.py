@@ -96,7 +96,10 @@ def load_threatened(path: Path, groups: list[str]) -> list[dict]:
     with path.open(newline="") as handle:
         rows = list(csv.DictReader(handle))
     return [
-        {"name": row["species"], "category": row["category"], "row": int(row["row"]), "marked": row["marked"] == "yes", "group": row["group"]}
+        {
+            "name": row["species"], "category": row["category"], "row": int(row["row"]), "marked": row["marked"] == "yes",
+            "group": row["group"], "family": row["family"],
+        }
         for row in rows
         if not groups or row["group"] in groups
     ]
@@ -132,6 +135,22 @@ def is_verified(catalog: Catalog, rule: dict) -> bool:
 
 
 SPECIES_KEYS = ("native", "non_native", "aloctone", "exotic", "hybrid", "excluded", "native_listed_as_capturable")
+SCIENTIFIC_NAME = re.compile(r"^[A-Z][a-z]+ (?:[a-z]+|spp?\.)$")
+
+
+def spelling_errors(item: dict, where: str) -> list[str]:
+    """Each correction maps a scientific name written in one of the list's entries to a valid name."""
+    errors = []
+    spelling = item.get("spelling", {})
+    if not isinstance(spelling, dict):
+        return [f"{where}: spelling must be a table"]
+    written = " ".join(entry for key in SPECIES_KEYS for entry in item.get(key, []))
+    for original, valid in spelling.items():
+        if not re.search(r"(?<![A-Za-z])" + re.escape(original) + r"(?![A-Za-z])", written):
+            errors.append(f"{where}: spelling {original!r} does not appear in the list entries")
+        if not isinstance(valid, str) or not SCIENTIFIC_NAME.match(valid) or valid == original:
+            errors.append(f"{where}: spelling of {original!r} must be a different binomial or 'Genus spp.'")
+    return errors
 
 
 def species_list_errors(catalog: Catalog) -> list[str]:
@@ -145,6 +164,7 @@ def species_list_errors(catalog: Catalog) -> list[str]:
         for area in str(item.get("basin", "")).split(","):
             if area.strip() not in catalog.basins:
                 errors.append(f"{where}: unknown basin {area.strip()}")
+        errors.extend(spelling_errors(item, where))
         if "source_csv" in item:
             if not item.get("threatened"):
                 errors.append(f"{where}: no rows loaded from {item['source_csv']}")

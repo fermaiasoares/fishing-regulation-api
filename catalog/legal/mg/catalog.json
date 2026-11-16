@@ -915,7 +915,14 @@
     "Camboge ou Tamoatá (Hoplosternum sp e Callichthys callichthys)"
    ],
    "note": "O art. 5º, IV lista autóctones entre as espécies autorizadas, mas o art. 4º só permite exóticas, alóctones ou híbridas. Essas espécies são tratadas como conflito (undetermined).",
-   "segment": "art5"
+   "segment": "art5",
+   "spelling": {
+    "Anstichtys nobilis": "Hypophthalmichthys nobilis",
+    "Cicla spp.": "Cichla spp.",
+    "Hypophtalmichthys molitrix": "Hypophthalmichthys molitrix",
+    "Serrasalmus branditii": "Serrasalmus brandtii",
+    "Serrassalmus rhombeus": "Serrasalmus rhombeus"
+   }
   },
   {
    "act": "ief-155-2011",
@@ -941,7 +948,10 @@
     "Camarão gigante da Malásia (Macrobrachium rosembergii)"
    ],
    "note": "Lista exemplificativa (\"tais como\"). Pirambeba, piranha e caboge são nativas no São Francisco, mas a portaria as trata como não nativas no Leste.",
-   "segment": "art7"
+   "segment": "art7",
+   "spelling": {
+    "Macrobrachium rosembergii": "Macrobrachium rosenbergii"
+   }
   },
   {
    "act": "ief-156-2011",
@@ -964,7 +974,12 @@
     "Zoiudo (Geophagus surinamensis e Geophagus proximus)"
    ],
    "note": "Lista exemplificativa (\"tais como\").",
-   "segment": "art7/IV"
+   "segment": "art7/IV",
+   "spelling": {
+    "Astronotus ocelatus": "Astronotus ocellatus",
+    "Odontesthis sp.": "Odontesthes sp.",
+    "Serrassalmus rombeus": "Serrasalmus rhombeus"
+   }
   },
   {
    "act": "ief-31-2025",
@@ -1011,7 +1026,10 @@
     "Hoplias malabaricus"
    ],
    "note": "Documento do IEF com cabeçalho da Portaria 40/2017, ainda publicado pela página da Portaria 31/2025. Lista não exaustiva; arquivo ainda não armazenado em sources/.",
-   "source_url": "https://meioambiente.mg.gov.br/documents/d/ief/especies_de_peixes_autoctones_do_rio_doce"
+   "source_url": "https://meioambiente.mg.gov.br/documents/d/ief/especies_de_peixes_autoctones_do_rio_doce",
+   "spelling": {
+    "Henochilus weatlandii": "Henochilus wheatlandii"
+   }
   }
  ],
  "verified_rules": [

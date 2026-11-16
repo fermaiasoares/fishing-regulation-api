@@ -102,12 +102,26 @@ class CatalogTest(unittest.TestCase):
         species["non_native"].append("Dourado (Salminus brasiliensis)")
         self.assertIn("'Salminus brasiliensis' not found in ief-156-2011 art7/IV", " ".join(validate(broken)))
 
+    def test_spelling_corrections_point_from_a_written_name_to_a_valid_one(self):
+        listed = next(item for item in self.catalog.species_lists if item["id"] == "ief-154-2011-art5")
+        self.assertEqual(listed["spelling"]["Cicla spp."], "Cichla spp.")
+        self.assertIn("Tucunaré (Cicla spp.)", listed["aloctone"])
+        broken = copy.deepcopy(self.catalog)
+        species = next(item for item in broken.species_lists if item["id"] == "ief-154-2011-art5")
+        species["spelling"]["Cichlla spp."] = "Cichla spp."
+        species["spelling"]["Cicla spp."] = "tucunaré"
+        errors = " ".join(validate(broken))
+        self.assertIn("spelling 'Cichlla spp.' does not appear in the list entries", errors)
+        self.assertIn("spelling of 'Cicla spp.' must be a different binomial", errors)
+
     def test_threatened_list_is_loaded_from_the_official_annex(self):
         listed = next(item for item in self.federal.species_lists if item["id"] == "mma-1667-2026-anexo-i")
         names = {entry["name"]: entry["category"] for entry in listed["threatened"]}
         self.assertEqual(names["Pseudoplatystoma corruscans"], "VU")
         self.assertEqual(names["Steindachneridion doceanum"], "EN")
         self.assertTrue(all(entry["group"] in listed["groups"] for entry in listed["threatened"]))
+        families = {entry["name"]: entry["family"] for entry in listed["threatened"]}
+        self.assertEqual(families["Steindachneridion doceanum"], "Pimelodidae")
         rule = next(r for r in self.federal.rules if r["id"] == "br-ameacadas-protecao-integral")
         self.assertTrue(is_verified(self.federal, rule))
 

@@ -11,6 +11,31 @@ Cada diretório de `catalog/legal` é uma jurisdição com catálogo próprio ([
 
 Ids de área são locais nos TOML e viram `<jurisdição>:<id>` no `catalog.json`. Ids de regra são únicos em todo o repositório.
 
+## Grafias e índice de espécies
+
+As listas de `species.toml` preservam a grafia das normas, com erros ("Cicla spp.", "Serrassalmus rhombeus"). A tabela `spelling` de cada lista liga o nome escrito ao nome válido:
+
+```toml
+spelling = { "Cicla spp." = "Cichla spp.", "Anstichtys nobilis" = "Hypophthalmichthys nobilis" }
+```
+
+`catalog.py` exige que o nome escrito apareça numa entrada da lista e que o nome válido seja um binômio ou `Gênero spp.`. A classificação passa a casar o nome válido também, e o índice de espécies da API (`GET /api/species`) agrupa as duas grafias numa entrada. As correções são taxonômicas e aguardam revisão:
+
+| Lista | Escrito | Válido |
+| --- | --- | --- |
+| IEF 154/2011 | Cicla spp. | Cichla spp. |
+| IEF 154/2011 | Serrassalmus rhombeus | Serrasalmus rhombeus |
+| IEF 154/2011 | Hypophtalmichthys molitrix | Hypophthalmichthys molitrix |
+| IEF 154/2011 | Anstichtys nobilis | Hypophthalmichthys nobilis (sinônimo de Aristichthys nobilis) |
+| IEF 154/2011 | Serrasalmus branditii | Serrasalmus brandtii |
+| IEF 155/2011 | Macrobrachium rosembergii | Macrobrachium rosenbergii |
+| IEF 156/2011 | Astronotus ocelatus | Astronotus ocellatus |
+| IEF 156/2011 | Serrassalmus rombeus | Serrasalmus rhombeus |
+| IEF 156/2011 | Odontesthis sp. | Odontesthes sp. |
+| Autóctones do Doce (IEF) | Henochilus weatlandii | Henochilus wheatlandii |
+
+O índice também junta entradas só com nome comum à espécie que já tem esse nome: "Tambacu" da Portaria 155/2011 vira a mesma entrada do cruzamento citado na 154/2011. A família das espécies ameaçadas vem do Anexo I da Portaria GM/MMA 1.667/2026.
+
 ## Pipeline
 
 1. **Coleta** (`services/legal-catalog/sources.py`, workflow `legal-sources`): baixa a primeira URL que responder de cada ato, grava o arquivo original em `catalog/legal/<jurisdição>/sources/` e registra URL, SHA-256, tamanho e data no `manifest.json`. Roda no runner do PR, que tem internet, e faz commit no próprio branch.
