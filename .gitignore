@@ -4,3 +4,4 @@ apps/api/vendor/
 apps/api/node_modules/
 __pycache__/
 *.pyc
+/.archive/

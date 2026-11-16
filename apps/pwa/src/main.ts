@@ -191,6 +191,20 @@ function rulesByJurisdiction(rules: Rule[], restriction = false): string {
     .join('');
 }
 
+// Matches the API's river_match_meters: beyond it the river is only "the nearest one".
+const RIVER_MATCH_METERS = 500;
+
+function distanceText(meters: number): string {
+  return meters < 1000 ? `${meters} m` : `${(meters / 1000).toFixed(1).replace('.', ',')} km`;
+}
+
+function riverText(ev: Evaluation): string {
+  const river = ev.location.nearest_river;
+  if (!river) return 'Nenhum rio da base da ANA a menos de 2 km';
+  const name = river.name ?? 'Curso d’água sem nome na base';
+  return river.distance_m <= RIVER_MATCH_METERS ? name : `Mais próximo: ${name}, a ${distanceText(river.distance_m)}`;
+}
+
 function placeCard(ev: Evaluation): string {
   const loc = ev.location;
   if (!loc.geographic_match) {
@@ -199,11 +213,11 @@ function placeCard(ev: Evaluation): string {
   const district = loc.districts[0];
   const basin = loc.areas.find((a) => a.jurisdiction !== 'br' && a.code.includes(':'));
   const federalBasin = loc.areas.find((a) => a.jurisdiction === 'br' && a.code.includes(':'));
-  const domain = loc.water_domain === 'federal' ? 'Federal' : loc.water_domain === 'state' ? 'Estadual' : 'Ainda não identificado';
+  const domain = loc.water_domain === 'federal' ? 'Federal (rio da União)' : loc.water_domain === 'state' ? 'Estadual' : 'Não identificado';
   const rows: [string, string][] = [
     ['Bacia (norma estadual)', basin?.name ?? 'Não identificada'],
     ['Circunscrição Hidrográfica', district ? district.name : 'Não identificada'],
-    ['Rio no ponto', 'Ainda não identificado'],
+    ['Rio no ponto', riverText(ev)],
     ['Bacia (norma federal)', federalBasin?.name ?? 'Nenhuma norma federal por bacia'],
     ['Estado', loc.states.map(jurisdictionName).join(', ') || 'Não identificado'],
     ['Domínio do rio', domain],
@@ -211,6 +225,7 @@ function placeCard(ev: Evaluation): string {
   return `
     <div class="card">
       <dl class="facts">${rows.map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join('')}</dl>
+      ${loc.nearest_river ? `<p class="note" style="margin:8px 0 0">Rio pela ${esc(loc.nearest_river.source)}, trecho a ${esc(distanceText(loc.nearest_river.distance_m))} do ponto. Numa represa larga o trecho passa pelo meio da água.</p>` : ''}
       ${district ? `<p class="note" style="margin:8px 0 0">A Circunscrição Hidrográfica é a unidade de gestão das águas do ${esc(district.source)}. Ela reúne vários rios e leva o nome do principal, então não indica o rio exato do ponto.</p>` : ''}
     </div>`;
 }

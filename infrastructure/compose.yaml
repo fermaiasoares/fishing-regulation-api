@@ -64,6 +64,9 @@ services:
     working_dir: /workspace
     volumes:
       - ../services/geo-ingestion:/workspace
+      - ../catalog:/catalog
+      # Local backend of the originals archive (ADR 0002, section 3); never committed.
+      - ${ARCHIVE_DIR:-../.archive}:/archive
       - geo_data:/data
     environment:
       PGHOST: db

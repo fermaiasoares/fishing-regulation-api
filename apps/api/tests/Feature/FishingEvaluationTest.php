@@ -202,6 +202,38 @@ class FishingEvaluationTest extends TestCase
             ->assertJsonValidationErrors(['latitude', 'species', 'date']);
     }
 
+    public function test_the_nearest_river_fills_the_water_domain_only_when_close(): void
+    {
+        $this->assertNull($this->evaluate('doce', 'tilápia', '2026-12-15')['location']['nearest_river']);
+
+        $datasetId = DB::table('geographic_datasets')->insertGetId([
+            'slug' => \App\Geography\RiverLookup::DATASET, 'name' => 'BHAE (test)', 'publisher' => 'tests',
+            'created_at' => now(), 'updated_at' => now(),
+        ]);
+        $versionId = DB::table('geographic_dataset_versions')->insertGetId([
+            'dataset_id' => $datasetId, 'version' => 'test', 'source_url' => 'test://bhae',
+            'checksum_sha256' => str_repeat('2', 64), 'created_at' => now(), 'updated_at' => now(),
+        ]);
+        // Through the centre of the Doce square, where evaluate() places the point.
+        DB::insert(
+            "INSERT INTO river_segments (dataset_version_id, source_feature_id, name, river_code, domain, geometry, created_at, updated_at)
+             VALUES (?, 's1', 'Rio Doce', '7', 'federal', ST_Multi(ST_MakeLine(ST_MakePoint(10.2, 10.5), ST_MakePoint(10.8, 10.5))), now(), now())",
+            [$versionId],
+        );
+        $location = $this->evaluate('doce', 'tilápia', '2026-12-15')['location'];
+        $this->assertSame('federal', $location['water_domain']);
+        $this->assertSame('Rio Doce', $location['nearest_river']['name']);
+        // Geodesic distance to a two-vertex segment: the great-circle arc drifts a few metres from the parallel.
+        $this->assertLessThan(50, $location['nearest_river']['distance_m']);
+
+        // About 1.1 km away: still reported as the nearest river, but too far to set the domain.
+        DB::update("UPDATE river_segments SET geometry = ST_Multi(ST_MakeLine(ST_MakePoint(10.2, 10.51), ST_MakePoint(10.8, 10.51))) WHERE source_feature_id = 's1'");
+        $location = $this->evaluate('doce', 'tilápia', '2026-12-15')['location'];
+        $this->assertSame('undetermined', $location['water_domain']);
+        $this->assertSame('Rio Doce', $location['nearest_river']['name']);
+        $this->assertGreaterThan(500, $location['nearest_river']['distance_m']);
+    }
+
     public function test_federal_and_state_rules_combine_and_name_their_jurisdiction(): void
     {
         $result = $this->evaluate('doce', 'Pimelodus maculatus', '2026-12-15');

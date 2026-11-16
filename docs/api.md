@@ -30,7 +30,8 @@ Limite: 60 requisições por minuto por cliente.
 | `location.districts` | feições oficiais que localizaram o ponto, com `code`, `name`, `area` e `source` (em MG, a Circunscrição Hidrográfica, ex.: `DO5: Rio Caratinga`) |
 | `location.states` | estados cujas áreas contêm o ponto (ex.: `["mg"]`); perto de divisas poderá ter mais de um |
 | `location.jurisdictions` | jurisdições cujas normas foram avaliadas (ex.: `["br", "mg"]`) |
-| `location.water_domain` | domínio do corpo d'água (`federal`, `state` ou `undetermined`); por ora sempre `undetermined` |
+| `location.water_domain` | domínio do rio (`federal`, `state` ou `undetermined`), tirado de `nearest_river` quando ele está a até 500 m do ponto |
+| `location.nearest_river` | trecho de rio da ANA (BHAE) mais próximo, até 2 km: `name` (pode ser nulo), `code` (Pfafstetter), `domain`, `segment`, `distance_m`, `source`; `null` se não houver |
 | `species.threatened` | categoria na Lista Nacional de ameaçadas, quando houver |
 | `species.classification` | `native`, `non_native`, `excluded` (excluída de uma permissão), `conflicting` ou `unknown`, com as entradas das listas oficiais que casaram |
 | `rules` | regras que decidiram o status: `jurisdiction`, ato, artigos, período, `verified` e `evidence` (segmento + trecho literal da norma) |
@@ -61,7 +62,7 @@ Limite: 60 requisições por minuto por cliente.
 ### Limitações conhecidas
 
 - As áreas legais vêm das 43 Circunscrições Hidrográficas oficiais de MG (IDE-Sisema/Igam, `catalog/geo/mg`), carregadas com `php artisan geo:import-legal-areas`. Pontos fora de MG retornam `undetermined`.
-- Rios de divisa e de domínio federal: o estado do ponto vem só das áreas legais carregadas. A malha estadual do IBGE, a faixa de divisa e a dominialidade da ANA são as próximas etapas do [ADR 0001](adr/0001-jurisdicoes.md).
+- Rios de divisa: o estado do ponto vem só das áreas legais carregadas. A malha estadual do IBGE e a faixa de divisa são as próximas etapas do [ADR 0002](adr/0002-cobertura-nacional.md). O domínio do rio já vem da ANA, mas ainda não muda nenhuma regra.
 - A CH PJ1 (rios Piracicaba e Jaguari, que drenam para o Tietê) não tem regras até a decisão sobre seu enquadramento; consultas nela retornam `undetermined`.
 - A escala da camada é 1:100.000: pontos a poucas centenas de metros de um divisor de águas podem cair na bacia vizinha.
 - Não há lista oficial de nativas do São Francisco, Grande, Paranaíba e Leste no catálogo; nativas dessas bacias ficam `unknown` e, na piracema, `undetermined`.

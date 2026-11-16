@@ -2,6 +2,7 @@
 
 namespace App\Legal;
 
+use App\Geography\RiverLookup;
 use Carbon\CarbonImmutable;
 use Illuminate\Support\Facades\DB;
 
@@ -26,12 +27,13 @@ final class FishingEvaluator
 
     public const UNDETERMINED = 'undetermined';
 
-    /** Domain of the water body (federal or state); not mapped yet. */
+    /** Domain of the water body (federal or state) when no river segment is close enough. */
     public const WATER_DOMAIN_UNDETERMINED = 'undetermined';
 
     public function __construct(
         private readonly LegalAreaResolver $areas,
         private readonly SpeciesClassifier $species,
+        private readonly RiverLookup $rivers,
     ) {}
 
     public function evaluate(float $latitude, float $longitude, string $speciesName, CarbonImmutable $date): array
@@ -43,6 +45,11 @@ final class FishingEvaluator
             throw new CatalogUnavailable('No published federal legal catalog ('.LegalAreaResolver::FEDERAL.')');
         }
         $location = $this->areas->at($latitude, $longitude, array_map(fn ($version) => (int) $version->id, array_values($published)));
+        $river = $this->rivers->nearest($latitude, $longitude, (int) config('legal.river_search_meters', 2000));
+        // Rivers that cross or form a border with another country are federal property too (CF, art. 20, III).
+        $waterDomain = $river !== null && $river['distance_m'] <= (int) config('legal.river_match_meters', 500)
+            ? (['federal' => 'federal', 'international' => 'federal', 'state' => 'state'][$river['domain']] ?? self::WATER_DOMAIN_UNDETERMINED)
+            : self::WATER_DOMAIN_UNDETERMINED;
         $used = array_intersect_key($published, array_flip($location['jurisdictions'] ?: [LegalAreaResolver::FEDERAL]));
         $versionIds = array_map(fn ($version) => (int) $version->id, array_values($used));
 
@@ -56,7 +63,8 @@ final class FishingEvaluator
                 'matched' => $location['matched'],
                 'states' => $location['states'],
                 'jurisdictions' => $location['jurisdictions'],
-                'water_domain' => self::WATER_DOMAIN_UNDETERMINED,
+                'water_domain' => $waterDomain,
+                'nearest_river' => $river,
                 'lineage' => $location['lineage'],
                 'districts' => $location['districts'],
                 'areas' => $location['areas'],

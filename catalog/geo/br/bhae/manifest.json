@@ -1,0 +1,33 @@
+{
+ "dataset": "ana-bhae-trecho-drenagem",
+ "publisher": "ANA",
+ "name": "Base Hidrográfica Atlas-Estudos (BHAE) — trechos de drenagem",
+ "url": "https://metadados.snirh.gov.br/files/8ad07d33-1677-481d-bc61-ed5ca204926f/geoft_bhae_trecho_drenagem.gpkg",
+ "metadata_url": "https://metadados.snirh.gov.br/geonetwork/srv/api/records/8ad07d33-1677-481d-bc61-ed5ca204926f",
+ "license": "Acesso livre (metadado SNIRH/ANA); sem licença nomeada",
+ "source_srid": 4674,
+ "sha256": "02ae9bed2309a6c35bb4adfc4970f294d705c271edf36501d3549cd42eea011d",
+ "bytes": 985841664,
+ "archive_path": "sha256/02/02ae9bed2309a6c35bb4adfc4970f294d705c271edf36501d3549cd42eea011d.gpkg",
+ "source_last_modified": "Mon, 04 Dec 2023 17:11:57 GMT",
+ "retrieved_at": "2026-11-16T00:05:34+00:00",
+ "layer": "geoft_bhae_trecho_drenagem",
+ "geometry_type": "MultiLineString",
+ "feature_count": 482349,
+ "domains": {
+  "Estadual": 401352,
+  "Federal": 22926,
+  "Internacional": 56779,
+  "Linha de Costa": 1292
+ },
+ "source_versions": {
+  "distinct": 23,
+  "most_common": {
+   "BHO bhae_v_01_01 de 2023-03-23": 481135,
+   "BHO ilha_caviana_de_dentro_e_janauacu de 2018-02-20": 255,
+   "BHO ilha_caviana_de_fora de 2018-02-20": 235,
+   "BHO ilha_sao_luis de 2018-02-19": 215,
+   "BHO ilha_mexiana de 2018-02-19": 127
+  }
+ }
+}

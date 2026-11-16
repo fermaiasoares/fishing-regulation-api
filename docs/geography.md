@@ -29,3 +29,37 @@ Fluxo:
 4. `php artisan geo:import-legal-areas` carrega as CHs em `legal_area_geometries`, corrigindo anéis inválidos com `ST_MakeValid`. Cada versão do dataset é carregada uma vez; uma versão nova substitui as geometrias da anterior na mesma transação.
 
 A área `mg` não tem geometria própria: todo ponto dentro de uma CH herda `mg` pela hierarquia (`doce` → `leste` → `mg`).
+
+## Rio mais próximo (ANA, BHAE)
+
+Os trechos de drenagem da Base Hidrográfica Atlas-Estudos (BHAE) da ANA preenchem `river_segments` em todo o
+país ([ADR 0002](adr/0002-cobertura-nacional.md)).
+
+| Item | Valor |
+| --- | --- |
+| Fonte | ANA, BHAE v1.0, camada `geoft_bhae_trecho_drenagem` ([metadados SNIRH](https://metadados.snirh.gov.br/geonetwork/srv/api/records/8ad07d33-1677-481d-bc61-ed5ca204926f)) |
+| Conteúdo | Cursos d'água com 10 km² ou mais de área de drenagem e todos os de domínio da União |
+| CRS de origem | SIRGAS 2000 (EPSG:4674); transformado para EPSG:4326 no PostGIS |
+| Registro | `catalog/geo/br/bhae/manifest.json` (URL, SHA-256, tamanho, datas, contagens). O GeoPackage (cerca de 1 GB) fica no arquivo de originais, nunca no git |
+| Campos usados | `cotrecho` (id), `noriocomp` (nome), `cocursodag` e `cobacia` (Pfafstetter), `dedominial` (domínio), `nustrahler` |
+| Carga de 16/11/2026 | 482.349 trechos: 401.352 estaduais, 22.926 federais, 56.779 internacionais (bacias que seguem fora do Brasil) e 1.292 de linha de costa |
+
+```sh
+C="docker compose --env-file infrastructure/.env -f infrastructure/compose.yaml"
+$C up -d --wait db && $C up -d geo-worker
+$C exec geo-worker python bhae.py acquire --archive /archive --manifest-dir /catalog/geo/br/bhae
+$C exec geo-worker python bhae.py load --archive /archive --manifest-dir /catalog/geo/br/bhae
+```
+
+`acquire` baixa o arquivo em `.archive/sha256/<2>/<hash>.gpkg` (o diretório `ARCHIVE_DIR`), confere camada,
+CRS, campos, unicidade de `cotrecho` e os valores de `dedominial`, e grava o manifesto. Um valor de domínio
+desconhecido faz a execução falhar. `check` refaz a conferência do hash sem rede. `load` copia a camada para uma
+tabela temporária com `ogr2ogr`, confere a contagem e substitui os trechos da versão anterior numa transação.
+Cada versão é carregada uma vez.
+
+`App\Geography\RiverLookup::nearest` devolve o trecho mais próximo do ponto até `LEGAL_RIVER_SEARCH_METERS`
+(padrão 2.000 m), com a distância geodésica, em cerca de 50 ms. O ponto vai escrito direto na consulta: por uma CTE, o PostGIS deixa de usar o índice espacial e varre a tabela (1,1 s). A API mostra esse trecho em `location.nearest_river`. Ela só usa o
+domínio dele em `location.water_domain` quando a distância é de até `LEGAL_RIVER_MATCH_METERS` (padrão 500 m):
+mais longe, o trecho pode ser de outro rio. Rio internacional conta como federal (CF, art. 20, III). Numa represa larga, o trecho passa pelo meio do espelho d'água, e
+um ponto na margem pode ficar a mais de 500 m dele. A camada de massas d'água resolve esse caso numa etapa
+seguinte.

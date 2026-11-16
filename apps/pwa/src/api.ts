@@ -30,6 +30,7 @@ export interface Evaluation {
     jurisdictions: string[];
     water_domain: string;
     districts: { code: string; name: string; area: string; source: string }[];
+    nearest_river: { name: string | null; code: string | null; domain: string | null; segment: string; distance_m: number; source: string } | null;
     areas: { code: string; name: string; jurisdiction: string }[];
   };
   species: {
