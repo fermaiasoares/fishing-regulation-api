@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\DB;
 use Tests\Concerns\SyntheticLegalAreas;
 use Tests\TestCase;
@@ -21,6 +22,8 @@ class SpeciesCatalogTest extends TestCase
     protected function setUp(): void
     {
         parent::setUp();
+        // The consistency test calls the API far more than the per-minute limit allows.
+        $this->withoutMiddleware(ThrottleRequests::class);
         $this->seedSyntheticLegalAreas();
     }
 
