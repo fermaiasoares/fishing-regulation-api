@@ -270,6 +270,7 @@
    "threatened": [
     {
      "category": "EN",
+     "family": "Atherinopsidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Odontesthes bicudo",
@@ -277,6 +278,7 @@
     },
     {
      "category": "EN",
+     "family": "Anostomidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Hypomasticus santanai",
@@ -284,6 +286,7 @@
     },
     {
      "category": "EN",
+     "family": "Anostomidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leporinus guttatus",
@@ -291,6 +294,7 @@
     },
     {
      "category": "EN",
+     "family": "Anostomidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leporinus pitingai",
@@ -298,6 +302,7 @@
     },
     {
      "category": "VU",
+     "family": "Anostomidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Megaleporinus gaiero",
@@ -305,6 +310,7 @@
     },
     {
      "category": "EN",
+     "family": "Anostomidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sartor tucuruiensis",
@@ -312,6 +318,7 @@
     },
     {
      "category": "VU",
+     "family": "Bryconidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Brycon dulcis",
@@ -319,6 +326,7 @@
     },
     {
      "category": "VU",
+     "family": "Bryconidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Brycon gouldingi",
@@ -326,6 +334,7 @@
     },
     {
      "category": "CR",
+     "family": "Bryconidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Brycon orbignyanus",
@@ -333,6 +342,7 @@
     },
     {
      "category": "EN",
+     "family": "Bryconidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Brycon vermelha",
@@ -340,6 +350,7 @@
     },
     {
      "category": "EN",
+     "family": "Bryconidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Brycon vonoi",
@@ -347,6 +358,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Astyanax brucutu",
@@ -354,6 +366,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Astyanax eremus",
@@ -361,6 +374,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hasemania maxillaris",
@@ -368,6 +382,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hasemania melanura",
@@ -375,6 +390,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hasemania piatan",
@@ -382,6 +398,7 @@
     },
     {
      "category": "VU",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hollandichthys taramandahy",
@@ -389,6 +406,7 @@
     },
     {
      "category": "EN",
+     "family": "Acestrorhamphidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Hyphessobrycon cantoi",
@@ -396,6 +414,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hyphessobrycon duragenys",
@@ -403,6 +422,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hyphessobrycon flammeus",
@@ -410,6 +430,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hyphessobrycon taurocephalus",
@@ -417,6 +438,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Hyphessobrycon veredus",
@@ -424,6 +446,7 @@
     },
     {
      "category": "EN",
+     "family": "Stevardiidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Knodus dorsomaculatus",
@@ -431,6 +454,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Kolpotocheirodon figueiredoi",
@@ -438,6 +462,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Lepidocharax diamantina",
@@ -445,6 +470,7 @@
     },
     {
      "category": "VU",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Mimagoniates lateralis",
@@ -452,6 +478,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Mimagoniates sylvicola",
@@ -459,6 +486,7 @@
     },
     {
      "category": "EN",
+     "family": "Acestrorhamphidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Moenkhausia parecis",
@@ -466,6 +494,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Nematocharax varii",
@@ -473,6 +502,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Psalidodon crenuchoides",
@@ -480,6 +510,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Psalidodon uberaba",
@@ -487,6 +518,7 @@
     },
     {
      "category": "VU",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Rachoviscus crassiceps",
@@ -494,6 +526,7 @@
     },
     {
      "category": "EN",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Rachoviscus graciliceps",
@@ -501,6 +534,7 @@
     },
     {
      "category": "VU",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Spintherobolus ankoseion",
@@ -508,6 +542,7 @@
     },
     {
      "category": "CR",
+     "family": "Characidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Stygichthys typhlops",
@@ -515,6 +550,7 @@
     },
     {
      "category": "EN",
+     "family": "Crenuchidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Characidium onca",
@@ -522,6 +558,7 @@
     },
     {
      "category": "EN",
+     "family": "Crenuchidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Characidium vestigipinne",
@@ -529,6 +566,7 @@
     },
     {
      "category": "CR",
+     "family": "Curimatidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Cyphocharax jagunco",
@@ -536,6 +574,7 @@
     },
     {
      "category": "VU",
+     "family": "Lebiasinidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Lebiasina marilynae",
@@ -543,6 +582,7 @@
     },
     {
      "category": "VU",
+     "family": "Lebiasinidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Lebiasina minuta",
@@ -550,6 +590,7 @@
     },
     {
      "category": "VU",
+     "family": "Prochilodontidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Prochilodus britskii",
@@ -557,6 +598,7 @@
     },
     {
      "category": "VU",
+     "family": "Prochilodontidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Prochilodus harttii",
@@ -564,6 +606,7 @@
     },
     {
      "category": "VU",
+     "family": "Prochilodontidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Prochilodus vimboides",
@@ -571,6 +614,7 @@
     },
     {
      "category": "VU",
+     "family": "Serrasalmidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Colossoma macropomum",
@@ -578,6 +622,7 @@
     },
     {
      "category": "EN",
+     "family": "Cichlidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Crenicichla jupiaensis",
@@ -585,6 +630,7 @@
     },
     {
      "category": "VU",
+     "family": "Cichlidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Teleocichla centisquama",
@@ -592,6 +638,7 @@
     },
     {
      "category": "VU",
+     "family": "Cichlidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Wallaciia urosema",
@@ -599,6 +646,7 @@
     },
     {
      "category": "EN",
+     "family": "Anablepidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Jenynsia sanctaecatarinae",
@@ -606,6 +654,7 @@
     },
     {
      "category": "VU",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cnesterodon carnegiei",
@@ -613,6 +662,7 @@
     },
     {
      "category": "CR",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cnesterodon omorgmatos",
@@ -620,6 +670,7 @@
     },
     {
      "category": "EN",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Phalloptychus eigenmanni",
@@ -627,6 +678,7 @@
     },
     {
      "category": "VU",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Phalloptychus iheringii",
@@ -634,6 +686,7 @@
     },
     {
      "category": "CR",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Phallotorynus fasciolatus",
@@ -641,6 +694,7 @@
     },
     {
      "category": "EN",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Poecilia akroa",
@@ -648,6 +702,7 @@
     },
     {
      "category": "CR",
+     "family": "Poeciliidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Poecilia pertapeh",
@@ -655,6 +710,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Acrolebias carvalhoi",
@@ -662,6 +718,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Anablepsoides cearensis",
@@ -669,6 +726,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Atlantirivulus lazzarotoi",
@@ -676,6 +734,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Atlantirivulus maricensis",
@@ -683,6 +742,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Atlantirivulus nudiventris",
@@ -690,6 +750,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Atlantirivulus simplicis",
@@ -697,6 +758,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Acantholebias quirogai",
@@ -704,6 +766,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Austrolebias ephemerus",
@@ -711,6 +774,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Austrolebias univentripinnis",
@@ -718,6 +782,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Amatolebias varzeae",
@@ -725,6 +790,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Campellolebias brucei",
@@ -732,6 +798,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Campellolebias chrysolineatus",
@@ -739,6 +806,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Campellolebias dorsimaculatus",
@@ -746,6 +814,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Campellolebias intermedius",
@@ -753,6 +822,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynolebias akroa",
@@ -760,6 +830,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynolebias elegans",
@@ -767,6 +838,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynolebias gorutuba",
@@ -774,6 +846,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynolebias griseus",
@@ -781,6 +854,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynolebias leptocephalus",
@@ -788,6 +862,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynolebias parnaibensis",
@@ -795,6 +870,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynopoecilus feltrini",
@@ -802,6 +878,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cynopoecilus intimus",
@@ -809,6 +886,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cypholebias cinereus",
@@ -816,6 +894,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias adloffi",
@@ -823,6 +902,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias arachan",
@@ -830,6 +910,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias araucarianus",
@@ -837,6 +918,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias bagual",
@@ -844,6 +926,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Garcialebias botocudo",
@@ -851,6 +934,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Garcialebias cheffei",
@@ -858,6 +942,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Garcialebias lourenciano",
@@ -865,6 +950,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias nachtigalli",
@@ -872,6 +958,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias nigrofasciatus",
@@ -879,6 +966,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Garcialebias nubium",
@@ -886,6 +974,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias pelotapes",
@@ -893,6 +982,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Garcialebias pongondo",
@@ -900,6 +990,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Garcialebias reicherti",
@@ -907,6 +998,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Gymnolebias jaegari",
@@ -914,6 +1006,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias adornatus",
@@ -921,6 +1014,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias alternatus",
@@ -928,6 +1022,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias auratus",
@@ -935,6 +1030,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias brunoi",
@@ -942,6 +1038,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias carlettoi",
@@ -949,6 +1046,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias delucai",
@@ -956,6 +1054,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias faouri",
@@ -963,6 +1062,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias fasciatus",
@@ -970,6 +1070,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias flammeus",
@@ -977,6 +1078,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias flavicaudatus",
@@ -984,6 +1086,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias fulminantis",
@@ -991,6 +1094,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias gardneri",
@@ -998,6 +1102,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias ghisolfii",
@@ -1005,6 +1110,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias gibberatus",
@@ -1012,6 +1118,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias gilbertobrasili",
@@ -1019,6 +1126,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias guanambi",
@@ -1026,6 +1134,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias hamadryades",
@@ -1033,6 +1142,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias harmonicus",
@@ -1040,6 +1150,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias hellneri",
@@ -1047,6 +1158,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias igneus",
@@ -1054,6 +1166,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias janaubensis",
@@ -1061,6 +1174,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias longignatus",
@@ -1068,6 +1182,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias lopesi",
@@ -1075,6 +1190,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias macaubensis",
@@ -1082,6 +1198,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias magnificus",
@@ -1089,6 +1206,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias marginatus",
@@ -1096,6 +1214,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias mediopapillatus",
@@ -1103,6 +1222,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias multiradiatus",
@@ -1110,6 +1230,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias nielseni",
@@ -1117,6 +1238,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias notatus",
@@ -1124,6 +1246,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias nudiorbitatus",
@@ -1131,6 +1254,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias picturatus",
@@ -1138,6 +1262,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Hypsolebias radiosus",
@@ -1145,6 +1270,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias radiseriatus",
@@ -1152,6 +1278,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias rufus",
@@ -1159,6 +1286,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias shibattai",
@@ -1166,6 +1294,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias splendissimus",
@@ -1173,6 +1302,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias stellatus",
@@ -1180,6 +1310,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias tocantinensis",
@@ -1187,6 +1318,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias trilineatus",
@@ -1194,6 +1326,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypsolebias virgulatus",
@@ -1201,6 +1334,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Kryptolebias brasiliensis",
@@ -1208,6 +1342,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Kryptolebias gracilis",
@@ -1215,6 +1350,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leptolebias marmoratus",
@@ -1222,6 +1358,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leptopanchax citrinipinnis",
@@ -1229,6 +1366,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leptopanchax itanhaensis",
@@ -1236,6 +1374,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leptopanchax opalescens",
@@ -1243,6 +1382,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Leptopanchax sanguineus",
@@ -1250,6 +1390,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Leptopanchax splendens",
@@ -1257,6 +1398,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Maratecoara formosa",
@@ -1264,6 +1406,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Maratecoara splendida",
@@ -1271,6 +1414,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Matilebias alexandri",
@@ -1278,6 +1422,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Matilebias camaquensis",
@@ -1285,6 +1430,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Matilebias cyaneus",
@@ -1292,6 +1438,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Matilebias ibicuiensis",
@@ -1299,6 +1446,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Matilebias litzi",
@@ -1306,6 +1454,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Matilebias paucisquama",
@@ -1313,6 +1462,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Melanorivulus amambaiensis",
@@ -1320,6 +1470,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Melanorivulus egens",
@@ -1327,6 +1478,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Melanorivulus interruptus",
@@ -1334,6 +1486,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Melanorivulus leali",
@@ -1341,6 +1494,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Melanorivulus linearis",
@@ -1348,6 +1502,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Melanorivulus paracatuensis",
@@ -1355,6 +1510,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Melanorivulus pinima",
@@ -1362,6 +1518,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Melanorivulus rutilicaudus",
@@ -1369,6 +1526,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Melanorivulus vittatus",
@@ -1376,6 +1534,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Moema piriana",
@@ -1383,6 +1542,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Nematolebias catimbau",
@@ -1390,6 +1550,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Nematolebias papilliferus",
@@ -1397,6 +1558,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Nematolebias whitei",
@@ -1404,6 +1566,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Notholebias cruzi",
@@ -1411,6 +1574,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Notholebias fractifasciatus",
@@ -1418,6 +1582,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Notholebias minimus",
@@ -1425,6 +1590,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Notholebias vermiculatus",
@@ -1432,6 +1598,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ophthalmolebias bokermanni",
@@ -1439,6 +1606,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ophthalmolebias constanciae",
@@ -1446,6 +1614,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ophthalmolebias ilheusensis",
@@ -1453,6 +1622,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ophthalmolebias perpendicularis",
@@ -1460,6 +1630,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ophthalmolebias rosaceus",
@@ -1467,6 +1638,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ophthalmolebias suzarti",
@@ -1474,6 +1646,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pituna brevirostrata",
@@ -1481,6 +1654,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Plesiolebias xavantei",
@@ -1488,6 +1662,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys boitonei",
@@ -1495,6 +1670,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys cholopteryx",
@@ -1502,6 +1678,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys espinhacensis",
@@ -1509,6 +1686,7 @@
     },
     {
      "category": "VU",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys nigromaculatus",
@@ -1516,6 +1694,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys parallelus",
@@ -1523,6 +1702,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys punctulatus",
@@ -1530,6 +1710,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys santanae",
@@ -1537,6 +1718,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Simpsonichthys zonatus",
@@ -1544,6 +1726,7 @@
     },
     {
      "category": "CR",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Titanolebias cheradophilus",
@@ -1551,6 +1734,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Trigonectes strigabundus",
@@ -1558,6 +1742,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Xenurolebias myersi",
@@ -1565,6 +1750,7 @@
     },
     {
      "category": "EN",
+     "family": "Rivulidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Xenurolebias pataxo",
@@ -1572,6 +1758,7 @@
     },
     {
      "category": "EN",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchogiton zuanoni",
@@ -1579,6 +1766,7 @@
     },
     {
      "category": "VU",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus caboclo",
@@ -1586,6 +1774,7 @@
     },
     {
      "category": "CR",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus higuchii",
@@ -1593,6 +1782,7 @@
     },
     {
      "category": "VU",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus inpai",
@@ -1600,6 +1790,7 @@
     },
     {
      "category": "CR",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus jaimei",
@@ -1607,6 +1798,7 @@
     },
     {
      "category": "EN",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus kokraimoro",
@@ -1614,6 +1806,7 @@
     },
     {
      "category": "VU",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus mareikeae",
@@ -1621,6 +1814,7 @@
     },
     {
      "category": "VU",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus severii",
@@ -1628,6 +1822,7 @@
     },
     {
      "category": "EN",
+     "family": "Apteronotidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Sternarchorhynchus villasboasi",
@@ -1635,6 +1830,7 @@
     },
     {
      "category": "VU",
+     "family": "Sternopygidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Archolaemus ferreirai",
@@ -1642,6 +1838,7 @@
     },
     {
      "category": "VU",
+     "family": "Sternopygidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Archolaemus santosi",
@@ -1649,6 +1846,7 @@
     },
     {
      "category": "EN",
+     "family": "Sternopygidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Eigenmannia vicentespelaea",
@@ -1656,6 +1854,7 @@
     },
     {
      "category": "CR",
+     "family": "Ariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Paragenidens grandoculis",
@@ -1663,6 +1862,7 @@
     },
     {
      "category": "CR",
+     "family": "Callichthyidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Aspidoras mephisto",
@@ -1670,6 +1870,7 @@
     },
     {
      "category": "EN",
+     "family": "Heptapteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Chasmocranus brachynemus",
@@ -1677,6 +1878,7 @@
     },
     {
      "category": "CR",
+     "family": "Heptapteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Heptapterus multiradiatus",
@@ -1684,6 +1886,7 @@
     },
     {
      "category": "EN",
+     "family": "Heptapteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pimelodella kronei",
@@ -1691,6 +1894,7 @@
     },
     {
      "category": "VU",
+     "family": "Heptapteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pimelodella spelaea",
@@ -1698,6 +1902,7 @@
     },
     {
      "category": "VU",
+     "family": "Heptapteridae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Rhamdia enfurnada",
@@ -1705,6 +1910,7 @@
     },
     {
      "category": "EN",
+     "family": "Heptapteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Rhamdiopsis krugi",
@@ -1712,6 +1918,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ancistrus cryptophthalmus",
@@ -1719,6 +1926,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ancistrus formoso",
@@ -1726,6 +1934,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ancistrus minutus",
@@ -1733,6 +1942,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Baryancistrus longipinnis",
@@ -1740,6 +1950,7 @@
     },
     {
      "category": "VU",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Baryancistrus niveatus",
@@ -1747,6 +1958,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Delturus parahybae",
@@ -1754,6 +1966,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Eurycheilichthys apocremnus",
@@ -1761,6 +1974,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Harttia depressa",
@@ -1768,6 +1982,7 @@
     },
     {
      "category": "VU",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Harttia panara",
@@ -1775,6 +1990,7 @@
     },
     {
      "category": "VU",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Harttia villasboas",
@@ -1782,6 +1998,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hemiancistrus megalopteryx",
@@ -1789,6 +2006,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypancistrus zebra",
@@ -1796,6 +2014,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Hypostomus subcarinatus",
@@ -1803,6 +2022,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Isbrueckerichthys saxicola",
@@ -1810,6 +2030,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Microlepidogaster perforata",
@@ -1817,6 +2038,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Neoplecostomus botucatu",
@@ -1824,6 +2046,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Otothyris juquiae",
@@ -1831,6 +2054,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Parancistrus nudiventris",
@@ -1838,6 +2062,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Parotocinclus cesarpintoi",
@@ -1845,6 +2070,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Parotocinclus seridoensis",
@@ -1852,6 +2078,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Parotocinclus spilosoma",
@@ -1859,6 +2086,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Parotocinclus spilurus",
@@ -1866,6 +2094,7 @@
     },
     {
      "category": "CR",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Plesioptopoma curvidens",
@@ -1873,6 +2102,7 @@
     },
     {
      "category": "VU",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pogonopoma obscurum",
@@ -1880,6 +2110,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pogonopoma parahybae",
@@ -1887,6 +2118,7 @@
     },
     {
      "category": "EN",
+     "family": "Loricariidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pseudotocinclus tietensis",
@@ -1894,6 +2126,7 @@
     },
     {
      "category": "EN",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Conorhynchos conirostris",
@@ -1901,6 +2134,7 @@
     },
     {
      "category": "VU",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Pseudoplatystoma corruscans",
@@ -1908,6 +2142,7 @@
     },
     {
      "category": "VU",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Steindachneridion amblyurum",
@@ -1915,6 +2150,7 @@
     },
     {
      "category": "EN",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Steindachneridion doceanum",
@@ -1922,6 +2158,7 @@
     },
     {
      "category": "EN",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Steindachneridion melanodermatum",
@@ -1929,6 +2166,7 @@
     },
     {
      "category": "EN",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Steindachneridion parahybae",
@@ -1936,6 +2174,7 @@
     },
     {
      "category": "EN",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Steindachneridion punctatum",
@@ -1943,6 +2182,7 @@
     },
     {
      "category": "VU",
+     "family": "Pimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Steindachneridion scriptum",
@@ -1950,6 +2190,7 @@
     },
     {
      "category": "VU",
+     "family": "Pseudopimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Lophiosilurus alexandri",
@@ -1957,6 +2198,7 @@
     },
     {
      "category": "CR",
+     "family": "Pseudopimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Microglanis maculatus",
@@ -1964,6 +2206,7 @@
     },
     {
      "category": "EN",
+     "family": "Pseudopimelodidae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Microglanis robustus",
@@ -1971,6 +2214,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cambeva crassicaudata",
@@ -1978,6 +2222,7 @@
     },
     {
      "category": "VU",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cambeva igobi",
@@ -1985,6 +2230,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cambeva mboycy",
@@ -1992,6 +2238,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cambeva papillifera",
@@ -1999,6 +2246,7 @@
     },
     {
      "category": "CR",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cambeva pascuali",
@@ -2006,6 +2254,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Cambeva tropeiro",
@@ -2013,6 +2262,7 @@
     },
     {
      "category": "CR",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ituglanis bambui",
@@ -2020,6 +2270,7 @@
     },
     {
      "category": "CR",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ituglanis epikarsticus",
@@ -2027,6 +2278,7 @@
     },
     {
      "category": "CR",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ituglanis mambai",
@@ -2034,6 +2286,7 @@
     },
     {
      "category": "CR",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ituglanis passensis",
@@ -2041,6 +2294,7 @@
     },
     {
      "category": "VU",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Ituglanis ramiroi",
@@ -2048,6 +2302,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": true,
      "name": "Listrura depinnai",
@@ -2055,6 +2310,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Listrura nematopteryx",
@@ -2062,6 +2318,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Trichogenes claviger",
@@ -2069,6 +2326,7 @@
     },
     {
      "category": "EN",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Trichomycterus dali",
@@ -2076,6 +2334,7 @@
     },
     {
      "category": "VU",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Trichomycterus itacarambiensis",
@@ -2083,6 +2342,7 @@
     },
     {
      "category": "VU",
+     "family": "Trichomycteridae",
      "group": "Peixes Continentais",
      "marked": false,
      "name": "Trichomycterus rubbioli",
@@ -2090,6 +2350,7 @@
     },
     {
      "category": "CR",
+     "family": "Sphaeriidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Eupera troglobia",
@@ -2097,6 +2358,7 @@
     },
     {
      "category": "VU",
+     "family": "Hyriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Castalia martensi",
@@ -2104,6 +2366,7 @@
     },
     {
      "category": "VU",
+     "family": "Hyriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Diplodon fontainianus",
@@ -2111,6 +2374,7 @@
     },
     {
      "category": "VU",
+     "family": "Hyriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Rhipidodonta garbei",
@@ -2118,6 +2382,7 @@
     },
     {
      "category": "EN",
+     "family": "Hyriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Rhipidodonta iheringi",
@@ -2125,6 +2390,7 @@
     },
     {
      "category": "EN",
+     "family": "Hyriidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Rhipidodonta koseritzi",
@@ -2132,6 +2398,7 @@
     },
     {
      "category": "EN",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Anodontites ferrarisii",
@@ -2139,6 +2406,7 @@
     },
     {
      "category": "EN",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Anodontites iheringi",
@@ -2146,6 +2414,7 @@
     },
     {
      "category": "VU",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Haasica balzani",
@@ -2153,6 +2422,7 @@
     },
     {
      "category": "CR",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Leila blainvilliana",
@@ -2160,6 +2430,7 @@
     },
     {
      "category": "VU",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Monocondylaea franciscana",
@@ -2167,6 +2438,7 @@
     },
     {
      "category": "VU",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Monocondylaea paraguayana",
@@ -2174,6 +2446,7 @@
     },
     {
      "category": "EN",
+     "family": "Mycetopodidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Mycetopoda legumen",
@@ -2181,6 +2454,7 @@
     },
     {
      "category": "EN",
+     "family": "Cyrenidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Cyanocyclas guahybensis",
@@ -2188,6 +2462,7 @@
     },
     {
      "category": "CR",
+     "family": "Spongillidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Racekiela cavernicola",
@@ -2195,6 +2470,7 @@
     },
     {
      "category": "CR",
+     "family": "Incertae Sedis",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Arinosaster patriciae",
@@ -2202,6 +2478,7 @@
     },
     {
      "category": "CR",
+     "family": "Hydrobiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Potamolithus troglobius",
@@ -2209,6 +2486,7 @@
     },
     {
      "category": "EN",
+     "family": "Tateidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Potamolithus karsticus",
@@ -2216,6 +2494,7 @@
     },
     {
      "category": "VU",
+     "family": "Thiaridae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aylacostoma tenuilabris",
@@ -2223,6 +2502,7 @@
     },
     {
      "category": "CR",
+     "family": "Pomatiopsidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spiripockia punctata",
@@ -2230,6 +2510,7 @@
     },
     {
      "category": "EN",
+     "family": "Dytiscidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Copelatus cessaima",
@@ -2237,6 +2518,7 @@
     },
     {
      "category": "VU",
+     "family": "Baetidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Adebrotus lugoi",
@@ -2244,6 +2526,7 @@
     },
     {
      "category": "VU",
+     "family": "Baetidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Camelobaetidius juparana",
@@ -2251,6 +2534,7 @@
     },
     {
      "category": "VU",
+     "family": "Baetidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Camelobaetidius maranhensis",
@@ -2258,6 +2542,7 @@
     },
     {
      "category": "VU",
+     "family": "Baetidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Camelobaetidius spinosus",
@@ -2265,6 +2550,7 @@
     },
     {
      "category": "EN",
+     "family": "Leptophlebiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hermanella amere",
@@ -2272,6 +2558,7 @@
     },
     {
      "category": "VU",
+     "family": "Leptophlebiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hermanella nigra",
@@ -2279,6 +2566,7 @@
     },
     {
      "category": "EN",
+     "family": "Leptophlebiidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Miroculis stenopterus",
@@ -2286,6 +2574,7 @@
     },
     {
      "category": "VU",
+     "family": "Leptophlebiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Simothraulopsis eurybasis",
@@ -2293,6 +2582,7 @@
     },
     {
      "category": "VU",
+     "family": "Oligoneuriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Lachlania aldinae",
@@ -2300,6 +2590,7 @@
     },
     {
      "category": "VU",
+     "family": "Oligoneuriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Oligoneuria amandae",
@@ -2307,6 +2598,7 @@
     },
     {
      "category": "EN",
+     "family": "Oligoneuriidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Oligoneuria macabaiba",
@@ -2314,6 +2606,7 @@
     },
     {
      "category": "CR",
+     "family": "Hydrometridae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Spelaeometra hypogea",
@@ -2321,6 +2614,7 @@
     },
     {
      "category": "CR",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Forcepsioneura machadorum",
@@ -2328,6 +2622,7 @@
     },
     {
      "category": "EN",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Franciscobasis franciscoi",
@@ -2335,6 +2630,7 @@
     },
     {
      "category": "EN",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Kiautagrion acutum",
@@ -2342,6 +2638,7 @@
     },
     {
      "category": "VU",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Leptagrion bocainense",
@@ -2349,6 +2646,7 @@
     },
     {
      "category": "VU",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Machadagrion garbei",
@@ -2356,6 +2654,7 @@
     },
     {
      "category": "VU",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Minagrion canaanense",
@@ -2363,6 +2662,7 @@
     },
     {
      "category": "EN",
+     "family": "Megapodagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Heteragrion mantiqueirae",
@@ -2370,6 +2670,7 @@
     },
     {
      "category": "CR",
+     "family": "Coenagrionidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Fluminagrion taxaense",
@@ -2377,6 +2678,7 @@
     },
     {
      "category": "VU",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus bahiensis",
@@ -2384,6 +2686,7 @@
     },
     {
      "category": "CR",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus ginae",
@@ -2391,6 +2694,7 @@
     },
     {
      "category": "CR",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus sanctus",
@@ -2398,6 +2702,7 @@
     },
     {
      "category": "CR",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus santanensis",
@@ -2405,6 +2710,7 @@
     },
     {
      "category": "EN",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus spinilacertus",
@@ -2412,6 +2718,7 @@
     },
     {
      "category": "CR",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus titan",
@@ -2419,6 +2726,7 @@
     },
     {
      "category": "EN",
+     "family": "Artesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Spelaeogammarus trajanoae",
@@ -2426,6 +2734,7 @@
     },
     {
      "category": "VU",
+     "family": "Bogidiellidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Megagidiella azul",
@@ -2433,6 +2742,7 @@
     },
     {
      "category": "VU",
+     "family": "Hyalellidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hyalella caeca",
@@ -2440,6 +2750,7 @@
     },
     {
      "category": "CR",
+     "family": "Hyalellidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hyalella epikarstica",
@@ -2447,6 +2758,7 @@
     },
     {
      "category": "CR",
+     "family": "Hyalellidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hyalella formosa",
@@ -2454,6 +2766,7 @@
     },
     {
      "category": "CR",
+     "family": "Hyalellidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hyalella imbya",
@@ -2461,6 +2774,7 @@
     },
     {
      "category": "VU",
+     "family": "Hyalellidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hyalella veredae",
@@ -2468,6 +2782,7 @@
     },
     {
      "category": "VU",
+     "family": "Mesogammaridae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Potiberaba porakuara",
@@ -2475,6 +2790,7 @@
     },
     {
      "category": "CR",
+     "family": "Seborgiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Seborgia potiguar",
@@ -2482,6 +2798,7 @@
     },
     {
      "category": "CR",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla brevipalma",
@@ -2489,6 +2806,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla camargoi",
@@ -2496,6 +2814,7 @@
     },
     {
      "category": "CR",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla cavernicola",
@@ -2503,6 +2822,7 @@
     },
     {
      "category": "CR",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla charon",
@@ -2510,6 +2830,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla franca",
@@ -2517,6 +2838,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aegla georginae",
@@ -2524,6 +2846,7 @@
     },
     {
      "category": "VU",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla inconspicua",
@@ -2531,6 +2854,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla inermis",
@@ -2538,6 +2862,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla itacolomiensis",
@@ -2545,6 +2870,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla leachi",
@@ -2552,6 +2878,7 @@
     },
     {
      "category": "CR",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla leptochela",
@@ -2559,6 +2886,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aegla loyolai",
@@ -2566,6 +2894,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aegla ludwigi",
@@ -2573,6 +2902,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla manuinflata",
@@ -2580,6 +2910,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aegla meloi",
@@ -2587,6 +2918,7 @@
     },
     {
      "category": "CR",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla microphthalma",
@@ -2594,6 +2926,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla oblata",
@@ -2601,6 +2934,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla obstipa",
@@ -2608,6 +2942,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aegla okora",
@@ -2615,6 +2950,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla perobae",
@@ -2622,6 +2958,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla renana",
@@ -2629,6 +2966,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Aegla rosanae",
@@ -2636,6 +2974,7 @@
     },
     {
      "category": "EN",
+     "family": "Aeglidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Aegla violacea",
@@ -2643,6 +2982,7 @@
     },
     {
      "category": "VU",
+     "family": "Palaemonidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Macrobrachium denticulatum",
@@ -2650,6 +2990,7 @@
     },
     {
      "category": "EN",
+     "family": "Parastacidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Parastacus tuerkayi",
@@ -2657,6 +2998,7 @@
     },
     {
      "category": "EN",
+     "family": "Pseudothelphusidae",
      "group": "Invertebrados de Água Doce",
      "marked": true,
      "name": "Kingsleya attenboroughi",
@@ -2664,6 +3006,7 @@
     },
     {
      "category": "CR",
+     "family": "Brasileirinidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Brasileirinho cavaticus",
@@ -2671,6 +3014,7 @@
     },
     {
      "category": "EN",
+     "family": "Calabozoidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Pongycarcinia xiphidiourus",
@@ -2678,6 +3022,7 @@
     },
     {
      "category": "CR",
+     "family": "Dugesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Girardia arenicola",
@@ -2685,6 +3030,7 @@
     },
     {
      "category": "CR",
+     "family": "Dugesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Girardia desiderensis",
@@ -2692,6 +3038,7 @@
     },
     {
      "category": "CR",
+     "family": "Dugesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Girardia multidiverticulata",
@@ -2699,6 +3046,7 @@
     },
     {
      "category": "CR",
+     "family": "Dugesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Girardia paucipunctata",
@@ -2706,6 +3054,7 @@
     },
     {
      "category": "VU",
+     "family": "Dugesiidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Girardia spelaea",
@@ -2713,6 +3062,7 @@
     },
     {
      "category": "CR",
+     "family": "Uteriporidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Sluysia triapertura",
@@ -2720,6 +3070,7 @@
     },
     {
      "category": "VU",
+     "family": "Dimarcusidae",
      "group": "Invertebrados de Água Doce",
      "marked": false,
      "name": "Hausera hauseri",

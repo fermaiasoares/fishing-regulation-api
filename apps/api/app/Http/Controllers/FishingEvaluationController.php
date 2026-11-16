@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Legal\CatalogUnavailable;
 use App\Legal\FishingEvaluator;
+use App\Legal\UnknownSpecies;
 use Carbon\CarbonImmutable;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -17,7 +18,8 @@ class FishingEvaluationController extends Controller
         $input = $request->validate([
             'latitude' => ['required', 'numeric', 'between:-90,90'],
             'longitude' => ['required', 'numeric', 'between:-180,180'],
-            'species' => ['required', 'string', 'min:2', 'max:120'],
+            'species' => ['required_without:species_id', 'nullable', 'string', 'min:2', 'max:120'],
+            'species_id' => ['required_without:species', 'nullable', 'string', 'max:160'],
             'date' => ['nullable', 'date_format:Y-m-d'],
         ]);
 
@@ -26,7 +28,18 @@ class FishingEvaluationController extends Controller
             : CarbonImmutable::now(self::TIMEZONE)->startOfDay();
 
         try {
-            $result = $evaluator->evaluate((float) $input['latitude'], (float) $input['longitude'], trim($input['species']), $date);
+            $result = $evaluator->evaluate(
+                (float) $input['latitude'],
+                (float) $input['longitude'],
+                isset($input['species']) ? trim($input['species']) : null,
+                $date,
+                $input['species_id'] ?? null,
+            );
+        } catch (UnknownSpecies) {
+            return response()->json([
+                'message' => 'Espécie não citada pelos catálogos publicados.',
+                'errors' => ['species_id' => ['Espécie não citada pelos catálogos publicados; use GET /api/species para buscar o id.']],
+            ], 422);
         } catch (CatalogUnavailable) {
             return response()->json([
                 'status' => 'undetermined',

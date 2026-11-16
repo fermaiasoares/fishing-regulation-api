@@ -6,6 +6,11 @@
 # nativa. Sem classificação, a avaliação resulta em "undetermined".
 # Formato de cada entrada: "Nome comum ou Outro nome (Nome científico e Outro)".
 # Em híbridos, o parêntese descreve o cruzamento e não classifica os genitores.
+#
+# "spelling" liga um nome científico grafado com erro na norma ao nome válido
+# ("Cicla spp." -> "Cichla spp."). A entrada original não muda; a correção só
+# serve para que a busca e a classificação também achem a espécie pelo nome
+# válido. Correções taxonômicas, pendentes de revisão do Fernando.
 
 [[list]]
 id = "ief-154-2011-art5"
@@ -13,6 +18,7 @@ act = "ief-154-2011"
 basin = "sao_francisco"
 segment = "art5"
 note = "O art. 5º, IV lista autóctones entre as espécies autorizadas, mas o art. 4º só permite exóticas, alóctones ou híbridas. Essas espécies são tratadas como conflito (undetermined)."
+spelling = { "Cicla spp." = "Cichla spp.", "Serrassalmus rhombeus" = "Serrasalmus rhombeus", "Hypophtalmichthys molitrix" = "Hypophthalmichthys molitrix", "Anstichtys nobilis" = "Hypophthalmichthys nobilis", "Serrasalmus branditii" = "Serrasalmus brandtii" }
 aloctone = [
   "Tucunaré (Cicla spp.)", "Tambaqui (Colossoma macropomum)", "Apaiari (Astronotus ocellatus)",
   "Pescada do Piauí (Plagioscion squamosissimus)", "Caranha Amarela ou Pacu (Piaractus mesopotamicus)",
@@ -40,6 +46,7 @@ act = "ief-155-2011"
 basin = "leste"
 segment = "art7"
 note = "Lista exemplificativa (\"tais como\"). Pirambeba, piranha e caboge são nativas no São Francisco, mas a portaria as trata como não nativas no Leste."
+spelling = { "Macrobrachium rosembergii" = "Macrobrachium rosenbergii" }
 non_native = [
   "Pescada-do-piauí (Plagioscion squamosissimus)", "Tucunaré (Cichla spp.)", "Tilápia (Oreochromis spp. e Tilapia sp)",
   "Bagre-africano (Clarias spp.)", "Apaiari (Astronotus ocellatus)", "Tambaqui (Colossoma macropomum)", "Carpas (todas as espécies)",
@@ -55,6 +62,7 @@ act = "ief-156-2011"
 basin = "grande,paranaiba"
 segment = "art7/IV"
 note = "Lista exemplificativa (\"tais como\")."
+spelling = { "Astronotus ocelatus" = "Astronotus ocellatus", "Serrassalmus rombeus" = "Serrasalmus rhombeus", "Odontesthis sp." = "Odontesthes sp." }
 non_native = [
   "Apaiari (Astronotus ocelatus)", "Bagre-africano (Clarias sp.)", "Black-bass (Micropterus sp.)", "Carpa (todas as espécies)",
   "Corvina ou Pescada-do-Piauí (Plagioscion squamosissimus)", "Peixe-rei (Odontesthis sp.)",
@@ -70,6 +78,7 @@ act = "ief-31-2025"
 basin = "doce"
 source_url = "https://meioambiente.mg.gov.br/documents/d/ief/especies_de_peixes_autoctones_do_rio_doce"
 note = "Documento do IEF com cabeçalho da Portaria 40/2017, ainda publicado pela página da Portaria 31/2025. Lista não exaustiva; arquivo ainda não armazenado em sources/."
+spelling = { "Henochilus weatlandii" = "Henochilus wheatlandii" }
 native = [
   "Geophagus brasiliensis", "Henochilus weatlandii", "Rhamdia quelen", "Crenicichla lacustris",
   "Oligosarcus argenteus", "Cichlasoma facetum", "Delturus carinotus", "Hypostomus luetkeni",

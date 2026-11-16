@@ -32,9 +32,154 @@ final class FishingEvaluator
     public function __construct(
         private readonly LegalAreaResolver $areas,
         private readonly SpeciesClassifier $species,
+        private readonly SpeciesIndex $index,
     ) {}
 
-    public function evaluate(float $latitude, float $longitude, string $speciesName, CarbonImmutable $date): array
+    /**
+     * Status of one species at a point on a date. The species is given by name
+     * (common or scientific) or by the id of a SpeciesIndex taxon.
+     *
+     * @throws CatalogUnavailable without the federal catalog
+     * @throws UnknownSpecies when $speciesId is not a taxon of the published catalogs
+     */
+    public function evaluate(float $latitude, float $longitude, ?string $speciesName, CarbonImmutable $date, ?string $speciesId = null): array
+    {
+        $context = $this->context($latitude, $longitude, $date);
+        $taxon = null;
+        if ($speciesId !== null) {
+            $taxon = $this->index->find($speciesId, $context['published_ids']) ?? throw new UnknownSpecies($speciesId);
+        }
+
+        $result = $context['result'];
+        $result['species'] = array_filter([
+            'input' => $speciesName ?? $speciesId,
+            'id' => $taxon['id'] ?? null,
+            'name' => $taxon['name'] ?? null,
+            'scientific_name' => $taxon['scientific_name'] ?? null,
+        ], fn ($value) => $value !== null) + ['classification' => null, 'matches' => [], 'threatened' => []];
+        $result += ['rules' => [], 'conditions' => [], 'location_restrictions' => []];
+        $result['gaps'] = $context['gaps'];
+        if (! $context['ready']) {
+            return self::ordered($result);
+        }
+
+        $species = $taxon !== null
+            ? self::classifyTaxon(SpeciesIndex::restrict($taxon, $context['lineage']))
+            : $this->species->classify($speciesName, $context['lineage'], $context['version_ids']);
+        $result['species']['classification'] = $species['classification'];
+        $result['species']['matches'] = $species['matches'];
+        $result['species']['threatened'] = $species['threatened'];
+
+        $decision = self::decideSpecies($context, $species, $date);
+        $result['status'] = $decision['status'];
+        $result['rules'] = array_map(fn (array $rule) => self::present($rule), $decision['applied']);
+        if ($decision['status'] === self::CONDITIONAL) {
+            $result['conditions'] = self::conditionsOf($decision['applied']);
+        }
+        $result['location_restrictions'] = array_map(fn (array $rule) => self::present($rule) + ['geo_mapping' => $rule['geo_mapping']], $context['local']);
+        array_push($result['gaps'], ...$decision['gaps']);
+        if ($context['local'] !== [] && $decision['status'] !== self::PROHIBITED) {
+            $result['gaps'][] = self::LOCAL_GAP;
+        }
+        foreach ($decision['applied'] as $rule) {
+            if (! $rule['verified']) {
+                $result['gaps'][] = self::unverifiedGap($rule);
+            }
+        }
+
+        return self::ordered($result);
+    }
+
+    /**
+     * Every species cited by the official lists that apply at a point, each with
+     * its status on the date, most restricted first. Species outside the lists
+     * are not enumerable: the "defaults" block says what applies to an unlisted
+     * native or non-native species.
+     *
+     * @param  list<string>|null  $statuses  keep only these statuses
+     *
+     * @throws CatalogUnavailable without the federal catalog
+     */
+    public function speciesAt(float $latitude, float $longitude, CarbonImmutable $date, ?array $statuses = null): array
+    {
+        $context = $this->context($latitude, $longitude, $date);
+        $result = $context['result'];
+        unset($result['status']);
+        $result += ['summary' => [self::PROHIBITED => 0, self::CONDITIONAL => 0, self::UNDETERMINED => 0], 'defaults' => null, 'species' => [], 'rules' => [], 'location_restrictions' => []];
+        $result['gaps'] = $context['gaps'];
+        if (! $context['ready']) {
+            return $result;
+        }
+
+        $rules = [];
+        $used = function (array $applied) use (&$rules): array {
+            foreach ($applied as $rule) {
+                $rules[$rule['code']] ??= $rule;
+            }
+
+            return array_column($applied, 'code');
+        };
+
+        foreach ([SpeciesClassifier::NATIVE, SpeciesClassifier::NON_NATIVE] as $classification) {
+            [$status, $applied] = self::decide($context['basin'], $classification);
+            $result['defaults'][$classification] = ['status' => $status, 'rules' => $used($applied)];
+        }
+
+        $rows = [];
+        foreach ($this->index->forLineage($context['published_ids'], $context['lineage']) as $taxon) {
+            $species = self::classifyTaxon($taxon);
+            $decision = self::decideSpecies($context, $species, $date);
+            $result['summary'][$decision['status']]++;
+            if ($statuses !== null && ! in_array($decision['status'], $statuses, true)) {
+                continue;
+            }
+            $threatened = $species['threatened'][0] ?? null;
+            $rows[] = array_filter([
+                'id' => $taxon['id'],
+                'name' => $taxon['name'],
+                'scientific_name' => $taxon['scientific_name'],
+                'rank' => $taxon['rank'],
+                'common_names' => $taxon['common_names'],
+                'family' => $taxon['family'],
+                'classification' => $species['classification'],
+                'threatened' => $threatened === null ? null : ['category' => $threatened['category'], 'list' => $threatened['list'], 'act' => $threatened['act']],
+                'status' => $decision['status'],
+                'rules' => $used($decision['applied']),
+                // A prohibition settles the answer; the classification gaps behind it add nothing.
+                'gaps' => $decision['status'] === self::PROHIBITED ? [] : $decision['gaps'],
+            ], fn ($value) => $value !== null);
+        }
+        $rank = [self::PROHIBITED => 0, self::CONDITIONAL => 1, self::UNDETERMINED => 2];
+        usort($rows, fn ($a, $b) => [$rank[$a['status']], SpeciesClassifier::normalize($a['name'])] <=> [$rank[$b['status']], SpeciesClassifier::normalize($b['name'])]);
+        $result['species'] = $rows;
+
+        ksort($rules);
+        $result['rules'] = array_values(array_map(fn (array $rule) => self::present($rule) + ['conditions' => $rule['conditions']], $rules));
+        $result['location_restrictions'] = array_map(fn (array $rule) => self::present($rule) + ['geo_mapping' => $rule['geo_mapping']], $context['local']);
+        if ($context['local'] !== []) {
+            $result['gaps'][] = self::LOCAL_GAP;
+        }
+        foreach ($rules as $rule) {
+            if (! $rule['verified']) {
+                $result['gaps'][] = self::unverifiedGap($rule);
+            }
+        }
+
+        return $result;
+    }
+
+    private const LOCAL_GAP = 'Há restrições por local (faixas, lagoas, trechos ou UCs) ainda não verificadas geograficamente; confira location_restrictions.';
+
+    private static function unverifiedGap(array $rule): string
+    {
+        return "A regra {$rule['code']} não tem trecho literal conferido no texto oficial armazenado.";
+    }
+
+    /**
+     * Location, catalogs and active rules at a point on a date; shared by the
+     * single-species evaluation and the per-area species list.
+     */
+    private function context(float $latitude, float $longitude, CarbonImmutable $date): array
     {
         $published = CatalogImporter::publishedVersions();
         // Without the federal catalog a threatened species could come out as
@@ -42,7 +187,8 @@ final class FishingEvaluator
         if (! isset($published[LegalAreaResolver::FEDERAL])) {
             throw new CatalogUnavailable('No published federal legal catalog ('.LegalAreaResolver::FEDERAL.')');
         }
-        $location = $this->areas->at($latitude, $longitude, array_map(fn ($version) => (int) $version->id, array_values($published)));
+        $publishedIds = array_map(fn ($version) => (int) $version->id, array_values($published));
+        $location = $this->areas->at($latitude, $longitude, $publishedIds);
         $used = array_intersect_key($published, array_flip($location['jurisdictions'] ?: [LegalAreaResolver::FEDERAL]));
         $versionIds = array_map(fn ($version) => (int) $version->id, array_values($used));
 
@@ -60,11 +206,6 @@ final class FishingEvaluator
                 'lineage' => $location['lineage'],
                 'areas' => $location['areas'],
             ],
-            'species' => ['input' => $speciesName, 'classification' => null, 'matches' => [], 'threatened' => []],
-            'rules' => [],
-            'conditions' => [],
-            'location_restrictions' => [],
-            'gaps' => [],
             'catalogs' => array_values(array_map(fn ($version) => [
                 'jurisdiction' => $version->jurisdiction,
                 'version_id' => (int) $version->id,
@@ -73,68 +214,91 @@ final class FishingEvaluator
             ], $used)),
             'disclaimer' => 'Resposta informativa baseada nos catálogos publicados; não substitui a consulta à norma oficial nem a orientação do órgão ambiental.',
         ];
+        $context = [
+            'result' => $result,
+            'published_ids' => $publishedIds,
+            'version_ids' => $versionIds,
+            'lineage' => $location['lineage'],
+            'gaps' => [],
+            'ready' => false,
+            'basin' => [],
+            'local' => [],
+        ];
 
         if (! $location['geographic_match']) {
-            $result['gaps'][] = 'O ponto não está em nenhuma área legal mapeada; o mapeamento geográfico das bacias pode estar incompleto.';
-            unset($result['location']['matched']);
+            $context['gaps'][] = 'O ponto não está em nenhuma área legal mapeada; o mapeamento geográfico das bacias pode estar incompleto.';
+            unset($context['result']['location']['matched']);
 
-            return $result;
+            return $context;
         }
         foreach ($location['unpublished'] as $code) {
             $jurisdiction = LegalAreaResolver::jurisdictionOf($code);
-            $result['gaps'][] = "O ponto está na área {$code}, mas o catálogo de {$jurisdiction} não está publicado; as normas dessa jurisdição não foram avaliadas.";
+            $context['gaps'][] = "O ponto está na área {$code}, mas o catálogo de {$jurisdiction} não está publicado; as normas dessa jurisdição não foram avaliadas.";
         }
         if ($location['lineage'] === []) {
-            return $result;
+            return $context;
         }
-
-        $species = $this->species->classify($speciesName, $location['lineage'], $versionIds);
-        $result['species']['classification'] = $species['classification'];
-        $result['species']['matches'] = $species['matches'];
-        $result['species']['threatened'] = $species['threatened'];
 
         $active = array_values(array_filter(
             $this->rulesFor($versionIds, $location['lineage']),
             fn (array $rule) => self::inPeriod($rule, $date),
         ));
-        $basin = array_values(array_filter($active, fn (array $rule) => $rule['scope'] === 'basin'));
-        $local = array_values(array_filter($active, fn (array $rule) => $rule['scope'] !== 'basin'));
+        $context['basin'] = array_values(array_filter($active, fn (array $rule) => $rule['scope'] === 'basin'));
+        $context['local'] = array_values(array_filter($active, fn (array $rule) => $rule['scope'] !== 'basin'));
+        $context['ready'] = true;
 
+        return $context;
+    }
+
+    /** Classification of a SpeciesIndex taxon from the citations it kept. */
+    private static function classifyTaxon(array $taxon): array
+    {
+        $strip = fn (array $citation, array $keys) => array_intersect_key($citation, array_flip($keys));
+
+        return [
+            'classification' => SpeciesClassifier::classificationOf($taxon['matches']),
+            'matches' => array_map(fn ($m) => $strip($m, ['list', 'act', 'entry', 'classification']), $taxon['matches']),
+            'threatened' => array_map(fn ($t) => $strip($t, ['list', 'act', 'name', 'category', 'valid_from']), $taxon['threatened']),
+        ];
+    }
+
+    /**
+     * Status of a classified species under the active basin rules.
+     *
+     * @return array{status: string, applied: list<array>, gaps: list<string>}
+     */
+    private static function decideSpecies(array $context, array $species, CarbonImmutable $date): array
+    {
+        $gaps = [];
+        $basin = $context['basin'];
         [$status, $applied] = match ($species['classification']) {
             SpeciesClassifier::NATIVE, SpeciesClassifier::NON_NATIVE => self::decide($basin, $species['classification']),
             SpeciesClassifier::EXCLUDED => self::decideExcluded($basin, $species['matches']),
-            default => self::decideUnclassified($basin, $species['classification'], $result['gaps']),
+            default => self::decideUnclassified($basin, $species['classification'], $gaps),
         };
 
         // A species on an official list (e.g. threatened species) is prohibited by
         // that list's rule whatever its native status.
-        $listed = self::listedProhibitions($basin, $species['threatened'], $date, $result['gaps']);
+        $listed = self::listedProhibitions($basin, $species['threatened'], $date, $gaps);
         if ($listed !== []) {
             $status = self::PROHIBITED;
             $applied = array_values(array_merge($listed, array_filter($applied, fn ($rule) => $rule['effect'] === self::PROHIBITED)));
         }
 
-        $result['status'] = $status;
-        $result['rules'] = array_map(fn (array $rule) => self::present($rule), $applied);
-        if ($status === self::CONDITIONAL) {
-            $result['conditions'] = self::conditionsOf($applied);
-        }
-        $result['location_restrictions'] = array_map(fn (array $rule) => self::present($rule) + ['geo_mapping' => $rule['geo_mapping']], $local);
-
         if ($status === self::UNDETERMINED && $applied === [] && $species['classification'] !== SpeciesClassifier::UNKNOWN
             && $species['classification'] !== SpeciesClassifier::CONFLICTING) {
-            $result['gaps'][] = 'Nenhuma regra carregada para esta espécie, área e data (ex.: tamanhos mínimos e cotas fora do defeso ainda não catalogados).';
-        }
-        if ($local !== [] && $status !== self::PROHIBITED) {
-            $result['gaps'][] = 'Há restrições por local (faixas, lagoas, trechos ou UCs) ainda não verificadas geograficamente; confira location_restrictions.';
-        }
-        foreach ($applied as $rule) {
-            if (! $rule['verified']) {
-                $result['gaps'][] = "A regra {$rule['code']} não tem trecho literal conferido no texto oficial armazenado.";
-            }
+            $gaps[] = 'Nenhuma regra carregada para esta espécie, área e data (ex.: tamanhos mínimos e cotas fora do defeso ainda não catalogados).';
         }
 
-        return $result;
+        return ['status' => $status, 'applied' => $applied, 'gaps' => $gaps];
+    }
+
+    /** Keeps the response keys in the documented order. */
+    private static function ordered(array $result): array
+    {
+        $order = ['status', 'date', 'location', 'species', 'rules', 'conditions', 'location_restrictions', 'gaps', 'catalogs', 'disclaimer'];
+
+        return array_merge(array_intersect_key(array_flip($order), $result), $result);
     }
 
     /**
